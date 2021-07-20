@@ -9,11 +9,11 @@ Installation guide
 
 a. Download Inter Font from Google Fonts and install it https://fonts.google.com/specimen/Inter
  
-! ![](https://i.gyazo.com/bc83d77e328b4c7b9b9d9786d851df5b.gif)
+![](https://i.gyazo.com/bc83d77e328b4c7b9b9d9786d851df5b.gif)
 
 2. Unzip and draig it in the \Steam\Skins\ folder found in the Steam folder, if it does not exist create it.
 
-![alt i2](https://i.gyazo.com/7f5df95874371dc73066501f52c0a6b1.gif)
+![](https://i.gyazo.com/7f5df95874371dc73066501f52c0a6b1.gif)
 
 3. Download the latest release of Unofficial Windows 11 Patch for Metro for Steam 4.4
 
