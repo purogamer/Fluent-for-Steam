@@ -1,8 +1,10 @@
 # MetroForSteamUnoRW11
 
-A simple patch for metro for steam to make it look like windows 11
+## A simple patch for metro for steam to make it look like windows 11
 ![reddit](https://user-images.githubusercontent.com/87723899/126405953-31b04cdd-ba46-4ca4-8b50-203f71397346.png)
+
 ![shupame ovo](https://user-images.githubusercontent.com/87723899/126405954-4d291bab-1ea7-4054-8802-d66ad9db2880.png)
+
 ![reddit 2](https://user-images.githubusercontent.com/87723899/126405955-90bcf2d5-9e66-4067-9e96-f634a809ef75.png)
 
 Installation Step x step guide
@@ -19,4 +21,4 @@ Installation Step x step guide
 
 6. Finally restart the steam and voila!
 
-Optional if you want you can download from
+If you want the dark and round web aspect of my profile you can download and install through this link https://steamcommunity.com/groups/metroskin/discussions/0/1761356057412667612/ 
