@@ -3,7 +3,9 @@
 A simple patch for metro for steam to make it look like windows 11
 
 Installation guide
-1. Download Metro for Steam 4.4 from its official website (https://metroforsteam.com/). * 
+1. Download Metro for Steam 4.4 from its official website (https://metroforsteam.com/). 
+
+ttps://gyazo.com/1b76e9d75ccf5ef78e5afdeaea453ef9
 
 a. Download Inter Font from Google Fonts and install it https://fonts.google.com/specimen/Inter 
 
