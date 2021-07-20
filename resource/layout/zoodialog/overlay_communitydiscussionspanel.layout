@@ -1,0 +1,54 @@
+"resource/layout/overlay_communitydiscussionspanel.layout"
+{
+	controls
+	{
+		CommunityDiscussionsDetailPanel 
+		{ 
+			controlname="COverlay_Details_CommunityDiscussions_Panel" 
+			style=detailsbox
+		}
+		TitleText { controlname="label" labeltext="#Overlay_CommunityDiscussions_Panel_Title" style=detailsboxtitle }
+		NumDiscussionsText { controlname="label" labeltext="#Overlay_CommunityDiscussions_Panel_NumDiscussions"  style=highlight }
+
+		ViewCommunityDiscussions { controlname="Button" labeltext="#Overlay_View_CommunityDiscussions" command="viewcommunitydiscussions" }
+	}
+	
+	colors
+	{
+
+	}	
+	
+	styles
+	{
+		PreviewImage
+		{
+		}
+
+		Button
+		{
+			bgcolor=none
+			image=graphics/metro/overlay/icons/discussions
+			inset-left=-6
+		}
+		
+		Button:hover
+		{
+			image=graphics/metro/overlay/icons/discussions_h		
+		}
+	
+		Button:active
+		{
+			image=graphics/metro/overlay/icons/discussions_p		
+		}
+	}
+	
+	layout
+	{		
+		//Left
+		place { controls=ViewCommunityDiscussions x=16 y=16 width=36 height=36 }
+
+		//Right
+		place { control="TitleText" x=68 y=11 }
+		place { control="NumDiscussionsText" x=68 y=37 }
+	}
+}

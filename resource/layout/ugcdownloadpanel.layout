@@ -1,0 +1,304 @@
+"resource/layout/ugcdownloadpanel.layout"
+{
+	controls
+	{
+		// this just sets the height
+		appsubscriptionsdownloadpanel {	tall="145" }
+		ugcdownloadpanel {	style="panelStyle" }
+
+		// black fill, used on the background
+
+		workshopminibanner { controlname="ImagePanel" zpos="2" image="resource/workshop_minibanner" }
+
+		// top row
+		namelabel	{ controlname="Label"	labelText="#steam_subscribed_files" style="ModuleHeading" }
+		dashlabel	{ controlname="Label"	labelText="" }
+		updatetypelabel	{ controlname="Label"	labelText="#steam_downloads_updating" style=ModuleHeading2 }
+		starttimelabel	{ controlname="Label"	labelText="#steam_downloads_initiated" style=Label2}
+		starttimefield	{ controlname="Label"	labelText="%time_started%" style=Label}
+		pauseresumebutton	{ controlname="Button" style="SmPauseButton" tooltiptext="#steam_downloads_pause" }
+
+		// second row
+		downloadtotallabel	{ controlname="Label"	labelText="#steam_downloads_gamesize_update" style="label2" }
+		downloadtotalfield	{ controlname="Label"	labelText="%download_totals%" style="label" }
+		downloadfileslabel { controlname="Label" labelText="#steam_subscribed_files_complete" style="Label2" }
+		downloadfilesfield { controlname="Label" labeltext="%download_files_totals%" style="label" }
+
+		timeremaininglabel	{ controlname="Label"	labelText="#steam_downloads_timeremaining" style="label2" group="HideOnCompletion" }
+		timeremainingfield	{ controlname="Label"	labelText="%time_remaining%"  style="label" group="HideOnCompletion" }
+
+		downloadprogressbar	{ controlname="ProgressBar" style="SlimProgressBar" barinset=0 continuous=1 group="HideOnCompletion" }
+
+
+		// right pane
+		graphdownloadrate	{ controlname="Label"	labelText="#steam_downloads_currentrate" zpos="1" style="label2" group="HideOnCompletion" }
+
+		//
+		viewmodsbutton { controlname="Button" labelText="#steam_downloads_view_on_workshop" style=ViewModsButton command=ViewMods }
+	}
+
+
+	colors
+	{
+		dark_blue_grad = "12 27 38 255"
+		light_blue_grad = "32 72 102 255"
+	}
+
+	styles
+	{
+	CAppSubscriptionsDownloadPanel
+	{
+		bgcolor=white05
+		render_bg
+		{
+			0="fill(x0,y0,x1,y0+1,ClientBG)"
+			1="image(x0+232,y0+10,x1,y1,graphics/metro/downloads/labels/progress)"
+			2="image(x0+232,y0+48,x1,y1,graphics/metro/downloads/labels/initiated)"
+			3="image(x0+232,y0+86,x1,y1,graphics/metro/downloads/labels/remaining)"
+		}
+	}
+
+	links
+	{
+		padding=10
+		font-size=14
+		font-style=uppercase
+		render
+		{
+			1="fill(x1-1,y0+8,x1,y1-8,white12)"
+		}
+	}
+
+	links:hover
+	{
+		textcolor=white
+	}
+
+	settingslink
+	{
+		padding=10
+		font-size=14
+		font-style=uppercase
+	}
+
+	settingslink:hover
+	{
+		textcolor=white
+	}
+
+	label2
+	{
+		textcolor=white
+		font-family=semibold
+		font-size=14
+		font-style=uppercase
+	}
+
+	ModuleHeading
+	{
+		font-family=basefont
+		font-size=14
+		textcolor=white
+	}
+
+	ModuleHeading2
+	{
+		padding-left=10
+		padding-right=10
+		font-family=basefont
+		font-size=14
+		font-style=uppercase
+	}
+
+	DetailsLaunchButton
+	{
+		textcolor=none
+		bgcolor=none
+		render
+		{
+			0="image( x0, y0, x1, y1, graphics/metro/downloads/icons/play_sm )"
+		}
+	}
+
+	DetailsLaunchButton:hover
+	{
+		render
+		{
+			0="image( x0, y0, x1, y1, graphics/metro/downloads/icons/play_sm_h )"
+		}
+	}
+
+	DetailsLaunchButton:active
+	{
+		render
+		{
+			0="image( x0, y0, x1, y1, graphics/metro/downloads/icons/play_sm_p )"
+		}
+	}
+
+	topOfQueueButton
+	{
+		textcolor=none
+		bgcolor=none
+		render
+		{
+			1="image( x0, y0, x1, y1, graphics/metro/icons/downloads/topofqueue )"
+		}
+	}
+
+	topOfQueueButton:hover
+	{
+		render
+		{
+			1="image( x0, y0, x1, y1, graphics/metro/icons/downloads/topofqueue_h )"
+		}
+	}
+
+	topOfQueueButton:active
+	{
+		render
+		{
+			1="image( x0, y0, x1, y1, graphics/metro/icons/downloads/topofqueue_p )"
+		}
+	}
+
+	SmPauseButton
+	{
+		textcolor=none
+		bgcolor=none
+		render
+		{
+			0="image(x0,y0,x1,y1,graphics/metro/icons/downloads/pause)"
+		}
+	}
+
+	SmPauseButton:hover
+	{
+		render
+		{
+			0="image(x0,y0,x1,y1,graphics/metro/icons/downloads/pause_h)"
+		}
+	}
+
+	SmPauseButton:active
+	{
+		render
+		{
+			0="image(x0,y0,x1,y1,graphics/metro/icons/downloads/pause_p)"
+		}
+	}
+
+	SmResumeButton
+	{
+		textcolor=none
+		bgcolor=none
+		render
+		{
+			0="image(x0,y0,x1,y1,graphics/metro/downloads/icons/play_sm)"
+		}
+	}
+
+	SmResumeButton:hover
+	{
+		render
+		{
+			0="image(x0,y0,x1,y1,graphics/metro/downloads/icons/play_sm_h)"
+		}
+	}
+
+	SmResumeButton:active
+	{
+		render
+		{
+			0="image(x0,y0,x1,y1,graphics/metro/downloads/icons/play_sm_p)"
+		}
+	}
+
+	SmRemoveButton
+	{
+		textcolor=none
+		bgcolor=none
+		render
+		{
+			0="image( x0, y0, x1, y1, graphics/metro/downloads/icons/close )"
+		}
+	}
+
+	SmRemoveButton:hover
+	{
+		render
+		{
+			0="image( x0, y0, x1, y1, graphics/metro/downloads/icons/close_h )"
+		}
+	}
+
+	SmRemoveButton:active
+	{
+		render
+		{
+			0="image( x0, y0, x1, y1, graphics/metro/downloads/icons/close_p )"
+		}
+	}
+
+	SlimProgressBar
+	{
+		alpha=63.75
+		textcolor=focus
+		render_bg {}
+		render {}
+	}
+	ViewModsButton
+	{
+		textcolor=none
+		bgcolor=none
+		render_bg
+		{
+			0="image( x0, y0, x1, y1, graphics/metro/downloads/icons/workshop_sm )"
+		}
+	}
+
+	ViewModsButton:hover
+	{
+		render_bg
+		{
+			0="image( x0, y0, x1, y1, graphics/metro/downloads/icons/workshop_sm_h )"
+		}
+	}
+
+	ViewModsButton:active
+	{
+		render_bg
+		{
+			0="image( x0, y0, x1, y1, graphics/metro/downloads/icons/workshop_sm_p )"
+		}
+	}
+}
+
+
+layout
+	{
+		region { name="column2" x=322 width=max }
+
+		//Full Width/Height Progress Bar
+		place { control="downloadprogressbar" width=max height=max margin-top=1 }
+
+		//Game Image
+		place { control="gameimage" align=left-center x=24 width=185 height=85 }
+
+		//Status
+		place { control="updatetypelabel" y=93 align=right height=30 }
+
+		//Stats
+		place { control="downloadtotalfield" region="column2" y=10 spacing=4 height=28 }
+		place { control="starttimefield" region="column2" y=48 height=28 }
+		place { control="timecompletedfield" region="column2" y=48 height=28 }
+		place { control="pausereasonfield" region="column2" y=48 height=28 }
+		place { control="timeremainingfield" region="column2" y=86 height=28 }
+
+		//Buttons
+		place { control="viewmodsbutton,pauseresumebutton" y=46 height=30 width=30 dir=right spacing=10 align=right margin-right=10 }
+
+		//Hidden
+		place { control="downloadprogressbar,graphdownloadrate,newslink,settingslink,namelabel,downloadfilesfield,downloadfileslabel,workshopminibanner,newslink,settingslink,namelabel,dashlabel,downloadtotallabel,starttimelabel,timecompletedlabel,pausereasonlabel,timeremaininglabel" width=0 height=0 }
+	}
+}

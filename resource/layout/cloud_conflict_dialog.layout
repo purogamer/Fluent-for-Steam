@@ -1,0 +1,132 @@
+
+"resource/layout/cloud_conflict_dialog.layout"
+{
+	controls
+	{
+		CloudSyncConflictDialog
+		{
+			controlname=CSyncConflictDialog
+		}
+		TextIntro
+		{
+			controlname=label
+			labeltext="#Steam_CloudConflict_Text"
+			style=intro
+			wrap=1
+		}
+		TextCloudFiles
+		{
+			controlname=label
+			labeltext="#Steam_CloudConflict_CloudFiles"
+			style=bold
+		}	
+		TextCloudFilesTime
+		{
+			controlname=label
+			labeltext="#Steam_CloudConflict_CloudFiles_Time"
+			wrap=1
+			style=text
+		}
+		TextLocalFiles
+		{
+			controlname=label
+			labeltext="#Steam_CloudConflict_LocalFiles"
+			style=bold
+		}	
+		TextLocalFilesTime
+		{
+			controlname=label
+			labeltext="#Steam_CloudConflict_LocalFiles_Time"
+			wrap=1
+			style=text
+		}		
+		AcceptLocalButton
+		{
+			controlname=button
+			labeltext="#Steam_CloudConflict_Accept_Local"
+		}
+		AcceptRemoteButton
+		{
+			controlname=button
+			labeltext="#Steam_CloudConflict_Accept_Remote"
+		}		
+		CancelButton
+		{
+			controlname=button
+			labeltext="#Steam_CloudConflict_Cancel"
+		}
+		TextCancelNote
+		{
+			controlname=label
+			labeltext="#Steam_CloudConflict_Note"
+			wrap=1
+		}
+		WarningIcon	{	controlname=imagepanel		image=graphics/cloud_uhoh	}
+		CloudFilesIcon	{	controlname=imagepanel	image=graphics/cloud_cloudfiles	}	
+		LocalFilesIcon	{ controlname=imagepanel	image=graphics/cloud_localfiles	}
+		UploadIcon	{ controlname=imagepanel	image=graphics/cloud_icon_up style=arrows	}
+		DownloadIcon	{ controlname=imagepanel	image=graphics/cloud_icon_down style=arrows	}
+		TopDivider { controlname=divider }
+		BottomDivider { controlname=divider }		
+	}
+	
+	styles
+	{
+		intro
+		{
+			textcolor=White45
+			font-size=16
+			font-family=basefont
+			font-weight=700
+		}
+		bold
+		{
+			textcolor=White45
+			font-size=16
+			font-family=basefont
+			font-weight=700
+			font-style=uppercase
+		}
+		text
+		{
+			textcolor=White45
+			font-size=14
+		}
+		arrows
+		{
+			inset="0 2 0 -2"
+		}
+	}
+	
+	layout
+	{
+		region { name=box margin-left=20 margin-right=20 margin-top=20 margin-bottom=20 }
+		
+		region { region=box name=intro margin-top=30 }
+		region { region=box name=cloud margin-top=130 }
+		region { region=box name=local margin-top=220 }
+		region { region=box name=cancel margin-top=310 }
+		
+		
+		place { region=intro control=WarningIcon x=20 y=0 }
+		place { region=intro controls=TextIntro x=165 y=10 width=310 height=80 }
+		place { region=intro controls=TopDivider y=80 width=max }
+		
+		place { region=cloud control=CloudFilesIcon x=0 y=0 }
+		place { region=cloud control=TextCloudFiles x=75 y=10 }
+		place { region=cloud control=TextCloudFilesTime x=75 y=35 width=max }
+		place { region=cloud controls=DownloadIcon x=200 y=8 }
+		place { region=cloud controls=AcceptRemoteButton x=225 y=8 width=max }
+		
+		place { region=local control=LocalFilesIcon x=0 y=0 }
+		place { region=local control=TextLocalFiles x=75 y=10 }
+		place { region=local control=TextLocalFilesTime x=75 y=35 width=max }
+		place { region=local controls=UploadIcon x=200 y=8 }
+		place { region=local controls=AcceptLocalButton x=225 y=8 width=max}
+		place { region=local controls=BottomDivider y=80 width=max }
+		
+		place { region=cancel control=CancelButton x=220 y=15 width=max }
+		place { region=cancel control=TextCancelNote x=220 y=40 width=max }
+	}
+
+}

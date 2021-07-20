@@ -1,0 +1,38 @@
+"resource/layout/overlay_broadcastpanel.layout"
+{
+	controls
+	{
+		TitleText { controlname="label" labeltext="#Overlay_Broadcast_Panel_Title" style=detailsboxtitle }
+		InstructionText { controlname="label" labeltext="#Overlay_Broadcast_Panel_Text"  style=highlight }
+
+		ShowBroadcast { controlname="Button" labeltext="#Overlay_Broadcast_ShowBroadcast" command="ShowBroadcast" }
+		ShowChat { controlname="Button" labeltext="#Overlay_Broadcast_ShowChat" command="ShowChat" }
+		StopBroadcast { controlname="Button" labeltext="#Overlay_Broadcast_Stop" command="StopBroadcast" }
+		ShowSettings { controlname="Button" labeltext="#Overlay_Broadcast_ShowSettings" command="ShowSettings" }
+	}
+	
+	styles
+	{
+		detailsbox
+		{
+			render_bg
+			{
+				0="image( x0+16, y0+16,x1,y1,graphics/metro/overlay/icons/broadcast )"
+			}
+		}
+		Button
+		{
+			//minimum-width=84
+			padding-left=3
+			padding-right=3
+		}
+	}
+	
+	layout
+	{
+		place { control="TitleText" x=68 y=11 }
+		place { control="InstructionText" x=68 y=37 }
+
+		place { control="ShowBroadcast,StopBroadcast,ShowChat,ShowSettings" x=68 align=bottom margin-bottom=8 spacing=8 height=28 margin-right=16 }
+	}
+}

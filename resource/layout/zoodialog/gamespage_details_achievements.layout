@@ -1,0 +1,68 @@
+"resource/layout/gamespage_details_achievements.layout"
+{
+	controls
+	{
+		achievementsdetails { controlname="CGamesPage_Details_Achievements" style="achievementsdetails" }
+
+		headerlabel { controlname="Label" style="gamedetails-headerlabel" labeltext="#Steam_Achievements" }
+		
+		mostrecent_area { controlname="CAchievementsMostRecentPanel" }
+		everythinglabel { controlname="Label" style="everythinglabel" labeltext="#Steam_EverythingAchieved" }
+		locked_area { controlname="CAchievementsLockedPanel" }	
+
+		viewall	{ controlname="Button" labeltext="#Steam_ViewAllAchievements" command="ViewAllAchievements" }
+	}
+
+	colors
+	{
+		
+
+		// Extra spacing beyond the flowing elements to account for header and button at the bottom
+		GameDetailsAchievements.ExtraVerticalSpacing "30"
+
+		// This is additional extra vertical spacing when the "You've unlocked everything" label is set
+		// You should test with a game with everything unlocked if you change vertical spacing as this may
+		// need adjustment.
+		GameDetailsAchievements.EverythingExtraSpacing "0"
+		RichText.InsetX "0"
+		RichText.InsetY "4" 
+	}
+
+	styles
+	{
+		everythinglabel
+		{
+			textcolor="White"
+			font-size=16
+		}	
+		
+		button
+		{
+			bgcolor=none
+			image=graphics/metro/overlay/icons/achievements
+			inset-left=-6
+		}
+
+		button:hover
+		{
+			image=graphics/metro/overlay/icons/achievements_h		
+		}
+
+		button:active
+		{
+			image=graphics/metro/overlay/icons/achievements_p		
+		}
+	}
+
+	layout
+	{
+		region { name=body margin=0 x=68 width=max height=max }
+
+		place { control=headerlabel width=0 height=0 }
+		place { control=viewall x=16 y=16 width=36 height=36 align=left margin-right=16 }
+		
+		place { region=body start=headerlabel margin-right=16 control=mostrecent_area dir=down width=max }
+		place { region=body start=mostrecent_area control=everythinglabel,locked_area margin-right=16 dir=down y=16 width=max }
+
+	}
+}

@@ -1,0 +1,50 @@
+"resource/layout/subpaneloptioncompat.layout"
+{
+	controls
+	{
+		TitleLabel { controlName=Label labelText="#Steam_Settings_Compat_Title" style=highlight }
+		CompatEnabledCheckbox {	controlName=Button labeltext="#Steam_Settings_Compat_Enable" }
+		CompatForcedCheckbox { controlName=Button labeltext="#Steam_Settings_Compat_Forced_Enable" }
+		CompatOverrideCheckbox { controlName=Button labeltext="#Steam_Settings_Compat_Forced_Override" }
+		DescriptionInfo { controlName=Label labelText="#Steam_Settings_Compat_Info" wrap=1 }
+		DescriptionLink  { controlName=URLLabel labelText="#Steam_Settings_Compat_Info_Link" URLText="https://store.steampowered.com/steamplay" wrap=1 }
+
+		Divider1 { controlName=Divider }
+		AdvancedTitle { controlName=Label labelText="#Steam_Settings_Compat_Advanced_Title" style=highlight wrap=1 }			
+		CompatForcedInfo { controlName=Label labelText="#Steam_Settings_Compat_Forced_Info" wrap=1 }
+
+		AdvancedToolLabel { controlname=label labeltext="#Steam_Settings_Compat_Default_Tool" wrap=1 }
+		AdvancedToolComboBox { controlname=ComboBox wrap=1 }
+	}
+	
+	colors
+	{
+	}	
+	
+	styles
+	{
+		checkbox 
+		{
+			padding-top=0
+			padding-bottom=0
+		}
+	}
+	
+	layout
+	{
+		region { name=box margin-left=16 margin-right=16 }
+		
+		place { region=box controls=TitleLabel,DescriptionInfo dir=down width=max spacing=6 }
+		place { start=DescriptionInfo controls=CompatEnabledCheckbox dir=down  }
+		place { start=CompatEnabledCheckbox controls=Divider1 y=6 width=max dir=down margin-right=16 }
+		
+		place { start=Divider1 control=AdvancedTitle y=6 dir=down }
+		place { start=AdvancedTitle control=CompatForcedInfo y=6 width=max dir=down }
+		place { start=CompatForcedInfo control=CompatForcedCheckbox,CompatOverrideCheckbox dir=down }
+		
+		place { start=CompatForcedCheckbox control=AdvancedToolLabel y=6 width=200 dir=down }
+		place { start=AdvancedToolLabel control=AdvancedToolComboBox width=max height=28 margin-right=16 }
+		
+		place { start=AdvancedToolLabel control=DescriptionLink y=16 width=max dir=down margin-right=16 }
+	}
+}

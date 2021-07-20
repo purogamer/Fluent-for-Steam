@@ -1,0 +1,159 @@
+"resource/layout/overlay_broadcastpanel.layout"
+{
+	controls
+	{
+		"BroadcastChatDialog"
+		{
+			"ControlName"		"COverlayBroadcastChatDialog"
+			"title"		"#Overlay_Broadcast_Chat_Title"
+		}
+		"TextEntry"
+		{
+			"ControlName"		"TextEntry"
+			"tabPosition"		"1"
+			"editable"		"1"
+			"maxchars"		"2048"
+			"unicode"		"1"
+			style="textentryfocus_chat"
+		}
+		"ChatHistory"
+		{
+			"ControlName"		"RichText"
+			"maxchars"		"-1"
+			"ScrollBar"		"1"
+			style="ChatListPanel"
+		}
+		"SendButton"
+		{
+			"ControlName"		"Button"
+			"tabPosition"		"2"
+			"paintbackground"		"1"
+			"labelText"		"#Friends_Chat_Send"
+			"textAlignment"		"west"
+			"Default"		"1"
+			style="button"
+			command="PostMessage"
+		}
+		"EmoticonButton"
+		{
+			"ControlName"		"CEmoticonButton"
+		}
+	}	
+	
+	styles
+	{
+		COverlayBroadcastChatDialog
+		{			
+			render_bg
+			{
+				0="fill( x0, y0, x1, y0+40, FrameBorder )"
+				1="fill( x0, y0, x1, y0+39, Header_Dark )"
+			}
+		}
+		
+		label
+		{
+		font-size=14
+		textcolor=White45
+		font-style=uppercase
+		}
+		
+		TextEntry
+		{
+			font-size=16  
+		}
+		
+		CChatActionsButton
+		{
+			//image="graphics/metro/icons/chat/cog"
+			render
+			{
+			0="image(x0,y0,x1,y1,graphics/metro/icons/chat/cog)"
+			}
+		}
+		
+		CChatActionsButton:hover
+		{
+			render
+			{
+			0="image(x0,y0,x1,y1,graphics/metro/icons/chat/cog_h)"
+			}
+		}
+
+		CChatActionsButton:selected
+		{
+			render
+			{
+			0="image(x0,y0,x1,y1,graphics/metro/icons/chat/cog_p)"
+			}
+		}
+		
+		controlbutton
+    {
+			textcolor=none
+			bgcolor=none
+			render_bg
+			{
+				0="image(x0,y0,x1,y1,graphics/tab_close_def)"
+			}
+			render
+			{
+				1="fill(x0,y0-4,x1+4,y0+50,white10)"
+			}
+    }
+
+		controlbutton:hover
+    {
+			bgcolor=White12
+			render_bg
+			{
+				0="image(x0,y0,x1,y1,graphics/tab_close_def)"
+			}
+    }
+		
+		controlbutton:active
+		{
+			bgcolor=White24
+			render_bg
+			{
+				0="image(x0,y0,x1,y1,graphics/tab_close_hov)"
+			}
+		}
+		
+		Button
+		{
+		//bgcolor=focus
+		}
+		
+		"RichText url"
+		{
+			font-style=uppercase
+			font-family=semibold
+		}
+	}
+	
+	layout
+	{
+		//Caption Buttons
+		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
+
+		// Voice Chat Close Button
+		place { control="VoiceChat" y=57 align=right margin=4 width=16 height=16 dir=right }
+
+		place { control="ChatActionsButton" height=34 width=34 margin=12 margin-top=11 align=right dir=right }
+		
+		place { control="TitlePanel" x=5 y=3 height=56 width=max margin-right=16 end-right=ChatActionsButton }
+		place { control="GameInviteBar,TradeInviteBar,ChatInfoBar,VoiceBar,BIBar,BABar" height=54 }
+		
+		place { control="VoiceBar" y=57 width=max height=54 dir=down end-right=VoiceChat }
+		place { control="TradeInviteBar,GameInviteBar,ChatInfoBar,BIBar,BABar,ChatHistory" start=VoiceBar y=40 width=max height=max align=right dir=down margin-bottom=81 margin-right=1 }
+		
+		region { name=bottom1 align=bottom height=89 width=max margin=8 }
+		region { name=bottom align=bottom height=56 margin=8 }
+
+		place { control="TextEntry" region=bottom height=max width=max spacing=8 end-right=EmoticonButton }
+		place { control="EmoticonButton" region=bottom height=max align=right spacing=8 }
+		place { control="StatusLabel" region=bottom1 height=25 }
+		
+		place { control="SendButton" height=0 width=0 }	}
+}

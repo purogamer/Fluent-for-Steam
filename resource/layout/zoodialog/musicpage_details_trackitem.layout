@@ -1,0 +1,48 @@
+"resource/layout/musicpage_details_trackitem.layout"
+{
+	controls
+	{	
+		PositionLabel	{	controlname=Label	style="PositionLabelStyle"	labeltext=""	textalignment="east" }
+		TrackLabel { controlname=Label style="TrackLabelStyle" labeltext="" }
+	}
+
+	styles
+	{
+		PositionLabelStyle	
+		{ 
+			padding-bottom=10
+			padding-top=1
+			font-size=14
+			textcolor=Labeldisabled
+			font-family=basefont
+			font-weight=400 
+			bgcolor=none				
+		}
+		
+		TrackLabelStyle 
+		{ 
+			padding-bottom=10
+			padding-top=0
+			font-size=15
+			textcolor=Text2
+			font-family=basefont
+			font-weight=400 
+			bgcolor=none		
+		}
+		
+		TrackLabelStyle:hover
+		{
+			textcolor="text"
+		}
+	}
+	
+	
+	layout
+	{
+		region { name=panelregion width=max }
+		
+		place {	control="PositionLabel" width=40 region="panelregion"  }
+		place {	control="TrackLabel" x=50 region="panelregion" width=max }
+	}
+	
+}

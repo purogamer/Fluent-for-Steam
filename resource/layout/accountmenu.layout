@@ -1,0 +1,47 @@
+"resource/layout/accountmenu.layout"
+{
+  styles
+  {
+    AccountMenuStyle
+    {
+      bgcolor=ClientBG
+      render_bg
+      {
+        1="fill( x0 + 1, y0, x1 - 1, y0 + 1, frameBorder )"  // top
+        2="fill( x0 + 1, y1 - 1, x1 - 1, y1, frameBorder )"  // bottom
+        3="fill( x0, y0 + 1, x0 + 1, y1 - 1, frameBorder )"  // left
+        4="fill( x1 - 1, y0 + 1, x1, y1 - 1, frameBorder )"  // right
+      }
+    }
+
+    account_menu_button
+    {
+      bgcolor=none
+      textcolor=white
+    }
+    account_menu_button:hover
+    {
+      bgcolor=white05
+    }
+    account_menu_button:active
+    {
+      bgcolor=white10
+    }
+    //Hidden
+    account_menu_label
+    {
+      textcolor=none
+    }
+  }
+
+  layout
+  {
+    place { control="view_profile_button" align=left margin-left=1 margin-top=4  height=24 width=max }
+    place { control="view_account_button" align=left margin-left=1 margin-top=28 height=24 width=max }
+    place { control="change_user_button" align=left margin-left=1 margin-top=100 height=24 width=max }
+    place { control="view_preferences_button" align=left margin-left=1 margin-top=52 height=24 width=max }
+    place { control="view_wallet_button" align=left margin-left=1 margin-top=76 height=24 width=max }
+    //Hidden
+    place { control=wallet_amount_label,account_name_label margin-left=-999 }
+  }
+}

@@ -1,0 +1,196 @@
+"resource/layout/musicpage_details_album.layout"
+{
+	controls
+	{
+		AlbumTitleLabel { controlname="Label" style="AlbumTitleStyle" }
+		ArtistLabel { controlname="Label" style="ArtistStyle" }
+		CoverImage { controlname="ImagePanel" style="CoverStyle" scaling=fit}
+
+		PlayTracksButton {
+			controlname="Button"
+			labeltext="#Music_Album_Details_PlayTracks"
+			style="ActionButtonStyle"
+			command="AlbumPlayTracksAction"
+		}
+
+		PlayTracksNextButton
+		{
+			controlname="Button"
+			labelText="#Music_Album_Details_PlayTracksNext"
+			style="AdditionalActionButtonStyle"
+			command="AlbumPlayTracksNextAction"
+		}
+
+		AddTracksToQueueButton
+		{
+			controlname="Button"
+			labelText="#Music_Album_Details_AddTracksToQueue"
+			style="AdditionalActionButtonStyle"
+			command="AlbumAddTracksToQueueAction"
+		}
+
+		ShowAlbumButton {
+			controlname="Button"
+			labeltext="#Music_Album_Details_ShowAlbum"
+			style="AdditionalActionButtonStyle"
+			command="AlbumShowAction"
+		}
+
+		PlayAlbumButton {
+			controlname="Button"
+			labeltext="#Music_Album_Details_Play"
+			style="ActionButtonStyle"
+			command="AlbumPlayAction"
+		}
+
+		PlayAlbumNextButton
+		{
+			controlname="Button"
+			labelText="#Music_Album_Details_PlayNext"
+			style="AdditionalActionButtonStyle"
+			command="AlbumPlayNextAction"
+		}
+
+		AddAlbumToQueueButton
+		{
+			controlname="Button"
+			labelText="#Music_Album_Details_AddToQueue"
+			style="AdditionalActionButtonStyle"
+			command="AlbumAddToQueueAction"
+		}
+
+		ShowAlbumInSystemButton
+		{
+			controlname="Button"
+			labelText="#Music_Album_Details_ShowAlbumInSystem"
+			style="AdditionalActionButtonStyle"
+			command="AlbumShowAlbumInSystemAction"
+		}
+
+
+	}
+
+	styles
+	{
+		CMusicPage_Details_Album
+		{
+			bgcolor=none
+
+		}
+
+		AlbumTitleStyle
+		{
+			font-size=36
+			textcolor=White
+			font-family=light
+			font-weight=400
+			bgcolor=BackgroundStart
+		}
+
+		ArtistStyle
+		{
+			font-size=24
+			textcolor=White75
+			font-family=basefont
+			font-weight=400
+			bgcolor=none
+		}
+
+		TrackStyle
+		{
+			padding-left=10
+			padding-bottom=10
+			padding-top=10
+			font-size=16
+			textcolor=White75
+			font-family=basefont
+			font-weight=400
+			bgcolor=none
+			render_bg
+			{
+				0="fill(x0,y0-1,x1,y0,White08)"
+			}
+		}
+
+		TrackStyle:hover
+		{
+			bgcolor=white03
+		}
+
+		TrackStyle:active
+		{
+			textcolor=white
+			bgcolor=focus
+		}
+
+		ActionButtonStyle
+		{
+			minimum-width=40
+			textcolor=none
+			bgcolor=none
+			render_bg
+			{
+			1="image( x0, y0, x1, y1, graphics/play )"
+			}
+		}
+
+		ActionButtonStyle:hover
+		{
+      render_bg
+      {
+       	1="image( x0, y0, x1, y1, graphics/play_h )"
+      }
+		}
+
+		ActionButtonStyle:active
+		{
+      render_bg
+      {
+       	1="image( x0, y0, x1, y1, graphics/play_p )"
+      }
+		}
+
+		ActionButtonStyle:disabled
+		{
+      render_bg
+      {
+       	1="image( x0, y0, x1, y1, graphics/play_d )"
+      }
+		}
+
+		CoverStyle
+		{
+			bgcolor=Black45
+		}
+
+		AdditionalActionButtonStyle
+		{
+		}
+
+		AdditionalActionButtonStyle:hover
+		{
+		}
+	}
+
+	layout
+	{
+		region { name=songs width=max height=max overflow=allow-vertical margin-right=16 }
+
+		//Album Art
+		place { region=songs dir=down y=8 control=CoverImage width=200 height=200 }
+
+		//Album and Artist
+		place { region=songs control=AlbumTitleLabel x=216 y=8 height=40 dir=down margin-left=56 }
+		place { region=songs start=AlbumTitleLabel control=ArtistLabel height=26 dir=down }
+		place { region=songs start=ArtistLabel control=TracksInfoLabel height=26 dir=down }
+
+		//Play Button
+		place { region=songs dir=down x=216 control=PlayTracksButton,PlayAlbumButton width=40 height=40 y=8 margin-top=16 }
+
+		//Other Buttons
+		place {	region=songs dir=down start=TracksInfoLabel x=0 y=8 margin-left=0 height=28 width=160 spacing=1 control=PlayTracksNextButton,AddTracksToQueueButton,PlayAlbumNextButton,AddAlbumToQueueButton,AddAlbumToPlaylistButton,ShowAlbumButton,ShowAlbumInSystemButton }
+
+		//Song List
+		place { region=songs control=*MusicPageDetailsTrack dir=down start=CoverImage width=max y=16 height=40 spacing=-3 }
+	}
+}

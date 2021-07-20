@@ -1,0 +1,31 @@
+"resource/layout/gamespage_details_nonsteam.layout"
+{
+	controls
+	{
+		nonsteamdetails { controlname="CGamesPage_Details_NonSteam" style="nonsteamdetails" }
+		headerlabel { controlname="Label" style="gamedetails-headerlabel" labeltext="#Steam_NonSteam" }
+		bodycontent { controlname="RichText" style="bodycontent" }
+	}
+
+	colors
+	{
+		RichText.InsetX "0"
+		RichText.InsetY "4"
+		GameDetailsNonSteam.ExtraVerticalSpacing "56"
+	}
+
+	styles
+	{
+		nonsteamdetails 
+		{ 
+			bgcolor=DetailsBackground
+		}
+	}
+
+	layout
+	{
+		region { name=body margin=8 margin-top=0 width=max height=max }
+		place { region=body control=headerlabel height=40 dir=down width=max }
+		place { region=body start=headerlabel control=bodycontent dir=down spacing=8 width=max }
+	}
+}

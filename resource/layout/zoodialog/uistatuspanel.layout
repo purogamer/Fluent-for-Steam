@@ -1,0 +1,103 @@
+"resource/layout/uistatuspanel.layout"
+{
+	controls
+	{
+		StatusDownloading { controlname=URLLabel style="StatusLabel" labelText="" URLText="steam://open/downloads" }
+		StatusPaused{ controlname=URLLabel style="StatusLabel" labelText="" URLText="steam://open/downloads" } 
+		StatusComplete { controlname=URLLabel style="StatusLabel" labelText="" URLText="steam://open/downloads" }
+		StatusProgressbar	{ controlname="ProgressBar" style="SlimProgressBar" barinset=0 continuous=1 } 
+	}
+	
+	styles
+	{
+		StatusLabel
+		{
+			textcolor="none"
+			render_bg 
+			{
+				0="fill (x0+6,y0+12,x1-6,y1-10, Header_Dark)"
+				1="image( x0+8, y0+13, x1, y1, graphics/metro/icons/navbar/downloads )"
+			}
+		}
+		
+		StatusLabel:hover
+		{
+			render_bg 
+			{
+				0="fill (x0+6,y0+12,x1-6,y1-10, Header_Dark)"
+				1="image( x0+8, y0+13, x1, y1, graphics/metro/icons/navbar/downloads )"
+				2="fill (x0,y0,x1,y1, White05)"
+			}
+		}
+		
+		StatusLabel:active
+		{
+			render_bg 
+			{
+				0="fill (x0+6,y0+12,x1-6,y1-10, Header_Dark)"
+				1="image( x0+8, y0+13, x1, y1, graphics/metro/icons/navbar/downloads )"
+				2="fill (x0,y0,x1,y1, White10)"
+			}
+		}
+
+		StatusLabelDim
+		{
+			textcolor="none"
+			render_bg 
+			{
+				0="fill (x0+6,y0+12,x1-6,y1-10, Header_Dark)"
+				1="image( x0+8, y0+13, x1, y1, graphics/metro/icons/navbar/downloads )"
+			}
+		}
+		
+		StatusLabelDim:hover
+		{
+			render_bg 
+			{
+				0="fill (x0+6,y0+12,x1-6,y1-10, Header_Dark)"
+				1="image( x0+8, y0+13, x1, y1, graphics/metro/icons/navbar/downloads )"
+				2="fill (x0,y0,x1,y1, White05)"
+			}
+		}
+		
+		StatusLabelDim:active
+		{
+			render_bg 
+			{
+				0="fill (x0+6,y0+12,x1-6,y1-10, Header_Dark)"
+				1="image( x0+8, y0+13, x1, y1, graphics/metro/icons/navbar/downloads )"
+				2="fill (x0,y0,x1,y1, White10)"
+			}
+		}
+		
+		StatusLabel:disabled
+		{
+		render_bg {}
+		bgcolor=none
+		}
+
+		SlimProgressBar
+		{
+			bgcolor=none
+			render_bg{}
+			render{}
+		}
+		
+		CUIStatusPanel
+		{
+		render_bg
+		{
+			0="fill(x0,y0,x1,y1-1,Header_Dark)"
+		}
+		}
+		
+	}
+	
+	layout
+	{	  
+		region { name="status" width=28 height=40 } 
+		place { region=status control="StatusDownloading,StatusPaused,StatusComplete" align="top-center" dir=down width=28 height=39 spacing=-39 }
+
+	  place { control=StatusProgressbar height=1 width=max align=bottom }
+	}
+}

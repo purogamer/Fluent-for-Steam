@@ -1,0 +1,1963 @@
+steam.styles
+{
+  include "custom.styles"
+  include "colors.styles"
+	include "controls.styles"
+	include "settings.styles"
+	include "caption.styles"
+	colors
+	{
+		ScrollBar.Wide "16"
+	}
+  styles
+  {
+		Slider
+		{
+			inset="0 -1 0 0"
+			textcolor=Grey3
+		}
+
+    ScrollBarButton.up
+    {
+      bgcolor=none
+			image=graphics/up_arrow
+			padding-bottom=2
+    }
+
+		ScrollBarButton.up:hover
+		{
+			image=graphics/up_arrow_h
+		}
+
+    ScrollBarButton.down
+    {
+      bgcolor=none
+			image=graphics/down_arrow
+			padding-top=3
+    }
+
+		ScrollBarButton.down:hover
+		{
+			image=graphics/down_arrow_h
+		}
+
+    ScrollBarButton.left
+    {
+      bgcolor=none
+      render_bg
+      {
+			0="image(x0+7,y0+5,x1,y1,graphics/left_arrow)"
+      }
+    }
+    ScrollBarButton.left:hover
+    {
+      bgcolor=none
+			render_bg
+			{
+				1="image(x0+7,y0+5,x1,y1,graphics/left_arrow_h)"
+			}
+    }
+    ScrollBarButton.right
+    {
+      bgcolor=none
+			render_bg
+			{
+				1="image(x0+7,y0+5,x1,y1,graphics/right_arrow)"
+			}
+    }
+    ScrollBarButton.right:hover
+    {
+      bgcolor=none
+			render_bg
+			{
+				1="image(x0+7,y0+5,x1,y1,graphics/right_arrow_h)"
+			}
+    }
+    ScrollBarHandle  //vertical scrollbar thumb
+    {
+		bgcolor=none
+		render_bg
+      {
+        // center fill
+        0="fill( x0, y0, x1, y1, White05 )"
+      }
+    }
+    "ScrollBarHandle:hover"
+    {
+      render_bg
+      {
+        // center fill
+        0="fill( x0, y0, x1, y1, White10 )"
+      }
+    }
+    "ScrollBarHandle:selected"
+    {
+      render_bg
+      {
+        // center fill
+        0="fill( x0, y0, x1-1, y1, White10 )"
+      }
+    }
+    "SliderHoriz"  //horizontal scrollbar thumb
+    {
+      render_bg {
+      	// center fill
+        0="fill( x0, y0+2, x1, y1-3, White05 )"
+		}
+    }
+    "SliderHoriz:hover"
+    {
+      render_bg
+			{
+      	// center fill
+        0="fill( x0, y0+2, x1, y1-3, White10 )"
+			}
+    }
+    "SliderHoriz:selected"
+    {
+      render_bg
+			{
+      	// center fill
+        0="fill( x0, y0+2, x1, y1-3, White10 )"
+			}
+    }
+
+		LibrarySearchIcon
+		{
+      textcolor=none
+			bgcolor=TextEntry
+			render
+			{
+				0="image(x0+12,y0+12,x1,y1,graphics/search_lg)"
+			}
+		}
+
+		FriendsSearchIcon
+		{
+      textcolor=none
+			bgcolor=TextEntry
+			render
+			{
+				0="image(x0+12,y0+12,x1,y1,graphics/search_lg)"
+			}
+		}
+
+		highlight
+		{
+			font-size=28
+			font-family=semilight
+			font-weight=300
+			textcolor=white
+		}
+		CSystemInfoDialog
+		{
+			minimum-width=440
+			minimum-height=420
+		}
+
+    CChatRoomDlg
+		{
+			bgcolor="none"
+			render_bg
+			{
+        0="fill( x0, y0-1, x1, y0, FrameBorder )"
+        1="fill( x0, y0, x1, y0+47, FrameBorder )"
+        2="fill( x0, y0, x1, y0+46, ClientBG )"
+
+        5="fill( x0, y1-61, x1, y1-60, Black25 )"
+        5="fill( x0, y1-60, x1, y1, ClientBG )"
+
+        4="fill( x0, y1-41, x1, y1, FrameBorder )"
+        4="fill( x0, y1-40, x1, y1, Header_Dark )"
+      }
+		}
+
+    CChatActionsButton
+		{
+			render_bg
+			{
+				0="image(x0+15,y0+17,x1,y1,graphics/metro/icons/navbar/menu)"
+			}
+			bgcolor=none
+      image=none
+		}
+
+		CChatActionsButton:hover
+		{
+			render
+			{
+				0="fill(x0,y0,x1,y1,white05)"
+			}
+		}
+
+		CChatActionsButton:selected
+		{
+			render
+			{
+				0="fill(x0,y0,x1,y1,white10)"
+			}
+		}
+
+		SimpleDialog
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				0="fill( x0, y1-44, x1, y1, FrameBorder )"
+				1="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+
+		CPreloadAppDialog
+		{
+			render_bg
+			{
+				//Top
+				0="fill( x0, y0, x1, y0+90, FrameBorder )"
+				1="fill( x0, y0, x1, y0+89, Header_Dark )"
+
+				//Bottom
+				3="fill( x0, y1-44, x1, y1, FrameBorder )"
+				4="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+
+		"HotkeyEntryClearButton"
+		{
+			minimum-width=24
+			minimum-height=16
+		}
+
+		"HotkeyEntryClearButton:hover"
+		{
+			render_bg
+			{
+				0="fill(x0+4,y0,x1-4,y1,white12)"
+			}
+		}
+
+		"TextEntryClearButton"
+		{
+			minimum-width=16
+			minimum-height=16
+		}
+
+		"TextEntryClearButton:hover"
+		{
+			bgcolor=white12
+		}
+
+		LabelEVCert
+		{
+			font-family=basefont
+			font-size=16
+			textcolor="White"
+			bgcolor="Friends.InGameColor"
+			inset-left=4
+			inset-right=4
+			inset-top=-1
+		}
+
+		URLStatusImage
+		{
+			bgcolor=none
+			inset="0 0 0 0"
+			render_bg={}
+			image="graphics/html_lock_disabled"
+ 		}
+
+		URLBarSecure
+		{
+			textcolor="Friends.InGameColor"
+		}
+
+		URLBarBrokenSecure
+		{
+			textcolor="html.insecureurl"
+		}
+
+		CPlayersDialog
+		{
+			render_bg
+			{
+				0="fill(x0,y0,x1,y0+54,FrameBorder)"
+				1="fill(x0,y0,x1,y0+53,Header_Dark)"
+
+				//Bottom
+				3="fill( x0, y1-44, x1, y1, FrameBorder )"
+				4="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+		"CPlayersSubRecentPlayers"
+		{
+			padding=0
+		}
+		CEditTagsPage
+		{
+			bgcolor=none
+		}
+		CEditTagsDialog
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				//Top
+				0="fill( x0, y0, x1, y0+76, FrameBorder )"
+				1="fill( x0, y0, x1, y0+75, Header_Dark )"
+				//Title
+				2="image(x0+16,y0+16,x1,y1, graphics/metro/labels/games/categories)"
+
+				//Bottom
+				3="fill( x0, y1-44, x1, y1, FrameBorder )"
+				4="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+		CFavoriteGames
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				0="fill( x0, y1-44, x1, y1, FrameBorder )"
+				1="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+		CHistoryGames
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				0="fill( x0, y1-44, x1, y1, FrameBorder )"
+				1="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+		CLanGames
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				0="fill( x0, y1-44, x1, y1, FrameBorder )"
+				1="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+		CFriendsGames
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				0="fill( x0, y1-44, x1, y1, FrameBorder )"
+				1="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+    Frame
+    {
+			bgcolor="ClientBG"
+      render
+      {
+        0="fill( x0 + 0, y0 + 0, x1 + 0, y0 + 1, FrameBorder )"	// Top
+        1="fill( x0 + 1, y1 - 1, x1 + 0, y1 + 0, FrameBorder )"	// Bottom
+        2="fill( x0 + 0, y0 + 1, x0 + 1, y1 + 0, FrameBorder )"	// Left
+        3="fill( x1 - 1, y0 + 1, x1 + 0, y1 - 1, FrameBorder )"	// Right
+      }
+    }
+
+		CDialogSettings
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				0="fill( x0, y0, x1, y1, ClientBG )"
+			}
+		}
+
+		COverlaySettingsDialog
+		{
+			minimum-height=630
+			bgcolor=ClientBG
+			render_bg
+			{
+				0="fill( x0, y0, x1, y1, ClientBG )"
+				2="fill( x0, y0, x1, y0+54, FrameBorder )"
+				3="fill( x0, y0, x1, y0+53, Header_Dark )"
+				5="fill( x0, y1-44, x1, y1, FrameBorder )"
+				6="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+
+		"COverlaySettingsDialog PropertySheet"
+		{
+			minimum-height="630"
+		}
+
+		COverlayFriendsDialog
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				0="fill( x0, y0, x1, y1, ClientBG )"
+				2="fill( x0, y0, x1, y0+54, FrameBorder )"
+				3="fill( x0, y0, x1, y0+53, Header_Dark )"
+				5="fill( x0, y1-44, x1, y1, FrameBorder )"
+				6="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+
+		COverlayViewFriendsDialog
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				0="fill( x0, y0, x1, y1, ClientBG )"
+				2="fill( x0, y0, x1, y0+54, FrameBorder )"
+				3="fill( x0, y0, x1, y0+53, Header_Dark )"
+				5="fill( x0, y1-44, x1, y1, FrameBorder )"
+				6="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+
+		CDownloadsPage
+		{
+			render_bg
+			{
+					0="fill( x0+8, y0-1, x1-8, y0+0, Black25 )"
+			}
+		}
+
+		CGamesPage_List
+		{
+			render_bg
+			{
+					0="fill( x0+0, y0+0, x1-0, y0+1, Black25 )"
+					1="fill( x0+0, y0+19, x1-0, y0+20, Black25 )"
+			}
+		}
+
+		CGamesPage_Grid
+		{
+			render_bg
+			{
+					0="fill( x0, y0, x1, y0+1, Black25 )"
+			}
+		}
+
+		bodycontent
+		{
+			font-size=16
+			textcolor=White50
+		}
+
+		CInstallAppWizard
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				5="fill( x0, y1-48, x1, y1, FrameBorder )"
+				6="fill( x0, y1-47, x1, y1, Header_Dark )"
+			}
+		}
+
+		CRegisterCDKeyWizard
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				5="fill( x0, y1-48, x1, y1, FrameBorder )"
+				6="fill( x0, y1-47, x1, y1, Header_Dark )"
+			}
+		}
+
+		CGamePropertiesDialog
+		{
+			render_bg
+			{
+				0="fill( x0, y0, x1, y1, ClientBG )"
+				1="fill( x0, y0, x1, y0+54, FrameBorder )"
+				2="fill( x0, y0, x1, y0+53, Header_Dark )"
+				3="fill( x0, y1-44, x1, y1, FrameBorder )"
+				4="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+
+		ZooDialog
+		{
+			bgcolor=ClientBG
+			render{}
+			render_bg
+			{
+				0="fill( x0, y0, x1, y1, ClientBG )"
+				2="fill( x0, y0, x1, y0+60, FrameBorder )"
+				3="fill( x0, y0, x1, y0+59, Header_Dark )"
+			}
+		}
+
+		CLaunchOptionsDialog
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				5="fill( x0, y1-42, x1, y1, FrameBorder )"
+				6="fill( x0, y1-41, x1, y1, Header_Dark )"
+			}
+		}
+
+		ProgressBox
+		{
+			//bgcolor=focus
+			render
+			{
+				1="image(x0+153,y0+24,x1,y0,graphics/login_logo)"
+			}
+		}
+		"ProgressBox Label"
+		{
+			inset="0 0 0 10"
+			textcolor=none
+			font-size=28
+			font-family=light
+			font-weight=300
+		}
+
+		"ProgressBox FrameCloseButton"
+		{
+			render_bg {}
+		}
+
+		"ProgressBox Button"
+		{
+			textcolor=none
+			bgcolor=none
+			render_bg {}
+		}
+
+		uparrow
+		{
+			image="graphics/icon_up_default"
+		}
+
+		uparrow
+		{
+			image="graphics/icon_up_hover"
+		}
+
+		downarrow
+		{
+			image="graphics/down_arrow"
+		}
+
+		downarrow:hover
+		{
+			image="graphics/down_arrow_h"
+			render_bg {}
+		}
+
+		rightarrow
+		{
+			image="graphics/right_arrow"
+		}
+
+
+		rightarrow:hover
+		{
+			image="graphics/right_arrow_h"
+		}
+
+    CFriendsListSectionAffordance
+    {
+      inset="0 0 0 0"
+      font-size=16
+      font-weight=400
+      textcolor="White50"
+    }
+
+		CFriendsListSectionHeader
+		{
+			inset=0
+			textcolor="White"
+			font-style="uppercase"
+			font-size=16
+			font-family=semibold
+			render_bg {}
+		}
+
+    CFriendPanel
+    {
+      inset="0 2 0 0"
+      bgcolor=none
+      font-family=basefont
+      font-size=14
+      font-weight=400
+      textcolor="White50"
+    }
+
+    CFriendPanel:hover
+    {
+        render_bg
+        {
+            1="fill( x0-3, y0, x1-1, y1, white05 )"  // top
+        }
+    }
+
+    RadioButton
+    {
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			textcolor="White50"
+			render_bg {}
+			image="graphics/radio_d"
+			bgcolor=none
+    }
+
+    RadioButton:hover
+    {
+			image="graphics/radio_h"
+    }
+
+    RadioButton:selected
+    {
+			render_bg {}
+			image="graphics/radio_s"
+    }
+
+    RadioButtonList
+    {
+		bgcolor="ClientBG"
+		inset="-2 0 0 0"
+
+		render_bg
+		{
+        // lines around
+        1="fill( x0, y0, x1, y0 + 1, White10 )"  // top
+        2="fill( x0, y1 - 1, x1, y1, White10 )"  // bottom
+        3="fill( x0 - 1, y0, x0, y1, White10 )"  // left
+        4="fill( x1, y0, x1 + 1, y1, White10 )"  // right
+		}
+    }
+
+    CheckButton
+    {
+      font-family=basefont
+      font-size=16
+      font-weight=400
+      textcolor="White50"
+			image=graphics/check_d
+    }
+
+    CheckButton:hover
+    {
+			image=graphics/check_h
+    }
+
+    CheckButton:selected
+    {
+			image=graphics/check_s
+    }
+
+    CheckButton:selected:hover
+    {
+			image=graphics/check_sh
+    }
+
+		CheckButton:active
+		{
+			image=graphics/check_p
+		}
+
+    CheckButton:disabled
+    {
+      textcolor="White24"
+      bgcolor=none
+			image=graphics/check_d
+    }
+
+    CheckButtonList
+    {
+        inset="0 1 1 1"
+        textcolor="White"
+        bgcolor=none
+        render_bg
+        {
+        // lines around
+        1="fill( x0, y0, x1, y0 + 1, White10 )"  // top
+        2="fill( x0, y1 - 1, x1, y1, White10 )"  // bottom
+				3="fill( x0, y0+1, x0+1, y1-1, White10 )"  // left
+				4="fill( x1-1, y0+1, x1, y1-1, White10 )"  // right
+      }
+    }
+
+    CheckButtonList:scrollbar
+    {
+        inset="1 1 1 1"
+        textcolor="White"
+        bgcolor=none
+				render {}
+        render_bg {}
+    }
+
+    "CheckbuttonList CheckButton"
+    {
+			textcolor=White
+		}
+
+		"ComboBox MenuItem"
+		{
+			padding-left=0
+		}
+
+    "ComboBox MenuItem:hover"
+    {
+			textcolor="White"
+			bgcolor="none"
+			render_bg
+			{
+				0="fill( x0+1, y0, x1-1, y1, white12 )"
+			}
+    }
+
+    ComboBox
+    {
+			inset="3 -1"
+			font-family=basefont
+			font-size=16
+			textcolor="White"
+			selectedtextcolor="White"
+			bgcolor=none
+			render_bg
+			{
+          1="fill(x0,y0,x1,y0+1,white12)"  // top
+          2="fill(x0,y1-1,x1,y1,white12)"  // bottom
+          3="fill(x0,y0+1,x0+1,y1-1,white12)"  // left
+          4="fill(x1-1,y0+1,x1,y1-1,white12)"  // right
+			}
+    }
+
+		ComboBox:hover
+    {
+			render_bg
+			{
+				1="fill(x0,y0,x1,y0+1,white24)"  // top
+				2="fill(x0,y1-1,x1,y1,white24)"  // bottom
+				3="fill(x0,y0+1,x0+1,y1-1,white24)"  // left
+				4="fill(x1-1,y0+1,x1,y1-1,white24)"  // right
+			}
+    }
+
+    ComboBox:disabled
+    {
+      textcolor="White50"
+      render_bg
+      {
+				1="fill(x0,y0,x1,y0+1,white12)"  // top
+				2="fill(x0,y1-1,x1,y1,white12)"  // bottom
+				3="fill(x0,y0+1,x0+1,y1-1,white12)"  // left
+				4="fill(x1-1,y0+1,x1,y1-1,white12)"  // right
+      }
+    }
+
+    ComboBoxButton
+    {
+			bgcolor=none
+			padding-left=2
+      image="graphics/icon_down_default"
+    }
+
+		ComboBoxButton:hover
+		{
+			image="graphics/icon_down_hover"
+		}
+
+    Divider
+    {
+      bgcolor="none"
+      render
+      {
+       0="fill( x0, y1 - 1, x1 + 1, y1, White10 )"
+      }
+    }
+
+    FrameBRGripPanel
+    {
+      image=graphics/resizer
+    }
+
+    FrameTitle
+    {
+			textcolor=none
+    }
+
+    GraphPanel
+    {
+			textcolor=Focus
+			bgcolor=none
+			inset="0 -3 0 0"
+			render_bg
+				{
+					// lines around
+					1="fill( x0, y0, x1, y0 + 1, White10 )"  // top
+					2="fill( x0, y1 - 1, x1, y1, White10 )"  // bottom
+					3="fill( x0 - 1, y0, x0, y1, White10 )"  // left
+					4="fill( x1, y0, x1 + 1, y1, White10 )"  // right
+        }
+    }
+
+    HTML
+    {
+			bgcolor="none"
+			render_bg {}
+		}
+
+    Label
+		{
+			textcolor="White50"
+			selectedtextcolor="White50"
+			bgcolor="none"
+			font-family=basefont
+			font-size=16
+			font-weight=400
+    }
+
+    ListPanel
+    {
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			padding-left=5
+			padding-right=5
+			textcolor="White50"
+			selectedtextcolor="White"
+			selectedbgcolor="Focus"
+			shadowtextcolor="White50"	// the color of disabled line items
+			render {}
+			render_bg {}
+		}
+
+    "CGamesListPanel"
+		{}
+
+    "GameItem_Uninstalled"
+    {
+      textcolor="White50"
+      selectedtextcolor="White"
+    }
+
+    "GameItem_Uninstalled:hover"
+    {
+			textcolor="White75"
+    }
+
+    "GameItem_Installed"
+    {
+      textcolor="white"
+      selectedtextcolor="white"
+		}
+
+    "GameItem_Installed:hover"
+    {
+			textcolor="white"
+    }
+
+		"GameItem_Shortcut"
+    {
+      textcolor="white"
+      selectedtextcolor="white"
+		}
+
+    "GameItem_Shortcut:hover"
+    {
+			textcolor="white"
+    }
+
+    "GameItem_Mod"
+    {
+      textcolor="white"
+      selectedtextcolor="white"
+      }
+
+    "GameItem_Mod:hover"
+    {
+			textcolor="white"
+    }
+
+    "GameItem_Updating"
+    {
+    	textcolor="Focus"
+    	selectedtextcolor="White"
+    }
+
+    "GameItem_Updating:hover"
+    {
+    	textcolor="Focus"
+    }
+
+    "GameItem_Decrypting"
+    {
+    	textcolor="Focus"
+    	selectedtextcolor="White"
+    }
+
+    "GameItem_Decrypting:hover"
+    {
+    	textcolor="Focus"
+    }
+
+		"GameItem_Syncing"
+    {
+    	textcolor="Focus"
+    	selectedtextcolor="White"
+    }
+
+    "GameItem_Syncing:hover"
+    {
+    	textcolor="Focus"
+    }
+
+    "GameColumn_BigText"
+		{
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			textcolor="white"
+    }
+
+    ListPanelColumnheader
+    {
+			font-family=semibold
+			font-size=14
+			textcolor="White"
+			font-style="Uppercase"
+			bgcolor="none"
+			render_bg
+			{
+				0="fill(x0,y1,x1,y1+1,Black25)"
+			}
+		}
+
+		ListPanelColumnHeader:hover
+		{
+			textcolor="White75"
+		}
+
+		"CSteamRootDialog ListPanelColumnHeader"
+		{
+			render_bg {}
+		}
+
+		ListPanelColumnSelectButton // the games list column chooser
+    {
+			render
+			{
+				0="image(x0+8,y0+4,x1,y1,graphics/metro/icons/plus)"
+			}
+		}
+
+    ListPanelColumnSelectButton:hover
+		{
+			render
+			{
+				0="image(x0+8,y0+4,x1,y1,graphics/metro/icons/plus_h)"
+			}
+		}
+
+    ListPanelColumnSelectButton:selected
+    {
+			render
+			{
+				0="image(x0+8,y0+4,x1,y1,graphics/metro/icons/plus_p)"
+			}
+		}
+
+		ListPanelDragger
+		{
+			bgcolor="none"
+			render
+			{
+				0="fill( x0, y0+0, x1-5, y1-0, Black25 )"
+			}
+		}
+
+		ListPanelInterior
+		{
+			font-size=16
+			textcolor="White"
+		}
+
+		ListPanelSectionHeader
+		{
+			minimum-height=30
+			font-family=semibold
+			font-style=uppercase
+			font-weight=400
+			font-size="18"
+			textcolor="Focus"
+			render_bg
+			{
+				//0="fill(x0,y1-1,x1,y1,White12)"
+			}
+		}
+
+    ListPanelSectionCollapser
+    {
+        bgcolor=none
+        font-size=20
+        inset="0 0 0 0"
+        padding-top=4
+        padding-bottom=6
+        padding-left=11
+        padding-right=12
+        image=none
+        render_bg
+        {
+            0="image(x0+10,y0+9,x1,y1,graphics/right_arrow)"
+        }
+    }
+
+    ListPanelSectionCollapser:hover
+    {
+        render_bg
+        {
+            0="image(x0+10,y0+9,x1,y1,graphics/right_arrow_h)"
+        }
+    }
+
+    ListPanelSectionCollapser:selected
+    {
+        render_bg
+        {
+            0="image(x0+10,y0+9,x1,y1,graphics/down_arrow)"
+        }
+    }
+
+    ListPanelSectionCollapser:selected:hover
+    {
+        render_bg
+        {
+            0="image(x0+10,y0+9,x1,y1,graphics/down_arrow_h)"
+        }
+    }
+
+    menuButtonStyle
+    {
+        bgcolor=none
+        font-size=20
+        inset="0 0 0 0"
+        padding-top=4
+        padding-bottom=6
+        padding-left=11
+        padding-right=12
+        image=none
+        render_bg
+        {
+            0="image(x0+10,y0+9,x1,y1,graphics/down_arrow)"
+        }
+        render {}
+    }
+
+    menuButtonStyle:hover
+    {
+        render_bg
+        {
+            0="image(x0+10,y0+9,x1,y1,graphics/down_arrow_h)"
+        }
+    }
+
+		MainNav
+    {
+			textcolor="White50"
+			selectedtextcolor="white"
+			bgcolor="none"
+			font-family=basefont
+			font-size=21
+			font-weight=700
+			font-style="uppercase"
+    }
+
+		Menu
+    {
+			bgcolor="ClientBG"
+			padding-right=0
+			inset="0 8 0 8"
+			render_bg
+			{
+				0="fill( x0 + 0, y0 + 0, x1 + 0, y0 + 1, FrameBorder )"	// Top
+				1="fill( x0 + 1, y1 - 1, x1 + 0, y1 + 0, FrameBorder )"	// Bottom
+				2="fill( x0 + 0, y0 + 1, x0 + 1, y1 + 0, FrameBorder )"	// Left
+				3="fill( x1 - 1, y0 + 1, x1 + 0, y1 - 1, FrameBorder )"	// Right
+			}
+			render {}
+			corner_rounding=0
+    }
+
+		MenuItem
+    {
+			font-family=basefont
+			textcolor="White"
+			font-size=16
+    }
+
+    MenuItem:hover
+    {
+			textcolor="White"
+			render_bg
+			{
+				0="fill( x0+1, y0, x1-1, y1, White05 )"
+			}
+    }
+
+    MenuItem:disabled
+    {
+			textcolor="White50"
+    }
+
+    MenuItem:disabled:hover
+    {
+			textcolor="White50"
+    }
+
+    MenuSeparator
+    {
+			textcolor=none
+			bgcolor=none
+			render_bg
+			{
+			0="fill(x0+9,y0+1,x1-9,y1-1,White05)"
+			}
+    }
+
+		SuperNavMenu
+		{
+			bgcolor=ClientBG
+			inset="0 8 0 8"
+
+			render {}
+
+			render_bg
+			{
+				0="fill( x0, y0, x0+1, y1, FrameBorder )"
+				1="fill( x1-1, y0, x1, y1, FrameBorder )"
+				2="fill( x0, y0, x1, y0+1, FrameBorder )"
+				3="fill( x0, y1-1, x1, y1, FrameBorder )"
+			}
+		}
+
+		SuperNavMenuItem
+		{
+			padding=0
+			font-size=16
+			textcolor=white
+			bgcolor=none
+			font-style="regular"
+		}
+		SuperNavMenuItem:hover
+		{
+			textcolor=white
+		}
+		SuperNavMenuItem:selected
+		{
+			textcolor="white"
+		}
+
+		"SuperNavMenuDivider"
+		{
+			textcolor="none"
+			render_bg
+			{
+				0="fill(x0+9,y0+1,x1-9,y1-1,White10)"
+			}
+		}
+
+		"MenuBar MenuButton"
+		{
+			minimum-width=38
+			render_bg
+			{
+				0="image(x0+11,y0+13,x1,y1,graphics/metro/icons/navbar/menu)"
+			}
+			bgcolor=none
+      image=none
+		}
+
+		"MenuBar MenuButton:hover"
+		{
+			render
+			{
+				0="fill(x0,y0,x1,y1,white05)"
+			}
+		}
+
+		"MenuBar MenuButton:selected"
+		{
+			render
+			{
+				0="fill(x0,y0,x1,y1,white10)"
+			}
+		}
+
+    Notification
+    {
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			bgcolor=ClientBG
+			render_bg {}
+			render
+			{
+				//Hotkey Border
+				//0="fill( x0+1, y0+73, x1+0, y0+74, Black )"
+
+				//Border
+				1="fill( x0 + 0, y0 + 0, x1 + 0, y0 + 1, FrameBorder )"	// Top
+				//2="fill( x0 + 1, y1 - 1, x1 + 0, y1 + 0, FrameBorder )"	// Bottom
+				3="fill( x0 + 0, y0 + 1, x0 + 1, y1 + 0, FrameBorder )"	// Left
+				//4="fill( x1 - 1, y0 + 1, x1 + 0, y1 - 1, FrameBorder )"	// Right
+			}
+			corner_rounding=0
+    }
+
+    Page
+    {
+			bgcolor="none"
+			render_bg
+			{}
+    }
+
+    PageTab
+    {
+        font-family=semibold
+        font-size=13
+        textcolor="White50"
+        bgcolor=none
+        render_bg {}
+    }
+
+    PageTab:hover
+    {
+        textcolor="White75"
+        render_bg
+        {
+            0="fill(x0+1,y0,x1-1,y1-1,white05)"
+        }
+    }
+
+    PageTab:selected
+    {
+        textcolor="White"
+        render{}
+        bgcolor=none
+        render_bg
+        {
+            0="fill(x0+1,y0,x1-1,y1-1,white05)"
+            1="fill(x0+1, y1-1, x1-1, y1, focus)"
+        }
+    }
+
+    "PageDragFrame PageTab"
+    {
+        font-size=14
+        font-style=""
+    }
+
+		TabCloseButton
+    {
+			image="graphics/metro/icons/caption/sm/close_sm"
+			inset-left=-5
+			inset-top=-1
+			render_bg {}
+    }
+
+		TabCloseButton:hover
+    {
+			image="graphics/metro/icons/caption/sm/close_sm_h"
+    }
+
+		TabCloseButton:active
+		{
+			image="graphics/metro/icons/caption/sm/close_sm_p"
+		}
+
+    Panel
+		{
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			textcolor="white"
+			bgcolor="none"
+    }
+
+    ProgressBar
+    {
+			textcolor="Focus"
+			bgcolor="none"
+			render
+			{
+				1="fill( x0, y0, x1, y0 + 1, White10 )"  // top
+				2="fill( x0, y1 - 1, x1, y1, White10 )"  // bottom
+				3="fill( x0, y0+1, x0+1, y1-1, White10 )"  // left
+				4="fill( x1-1, y0+1, x1, y1-1, White10 )"  // right
+			}
+		}
+
+    PropertyPage
+    {
+			bgcolor="ClientBG"
+    }
+
+    RichText
+    {
+		textcolor="White"
+		selectedtextcolor="White"
+		selectedbgcolor="Focus"
+		font-family=basefont
+		font-size=16
+		font-weight=400
+		inset="0 0 0 0"
+		render_bg {}
+    }
+
+    RichTextInterior
+		{
+			bgcolor=none
+    }
+
+		"RichText url"
+		{
+			font-size=16
+			textcolor="White50"
+			selectedtextcolor="White50"
+			font-style=underline
+		}
+
+		"RichText url:hover"
+		{
+			textcolor="White75"
+		}
+
+
+		"CFriendPanel RichText URL"
+		{
+		textcolor="white"
+		font-style=underline
+		font-size=14
+		}
+
+		// style of bold White in a rich White control
+		"RichText bold"
+		{
+			font-size=16
+			font-family=semibold
+		}
+
+		"RichText emphasis"
+		{
+			font-size=16
+			font-style=italic
+		}
+
+    SectionedListPanel
+    {
+		bgcolor="ClientBG"
+		font-family=basefont
+		font-size=16
+		font-weight=400
+		textcolor="white"
+		selectedtextcolor="White"
+		selectedbgcolor="Focus"
+		bgcolor="none"
+		inset="0 0 0 0"
+		render_bg {}
+    }
+
+    "CFriendsDialog CFriendPanel"
+    {
+        inset-left=0
+    }
+
+    SectionedListPanelCollapser
+    {
+        bgcolor=none
+        font-size=20
+        inset="0 0 0 0"
+        padding-top=4
+        padding-bottom=6
+        padding-left=0
+        padding-right=10
+        image=none
+        render
+        {
+            0="image(x0+7,y0+7,x1,y1,graphics/metro/icons/section_closed)"
+        }
+    }
+
+    SectionedListPanelCollapser:hover
+    {
+        render_bg
+        {
+            0="image(x0+7,y0+7,x1,y1,graphics/metro/icons/section_open)"
+        }
+    }
+
+    SectionedListPanelCollapser:selected
+    {
+        render_bg
+        {
+            0="image(x0+7,y0+7,x1,y1,graphics/metro/icons/section_open)"
+        }
+    }
+
+    SectionHeaderStyleLabel
+    {
+      font-style=uppercase
+    }
+
+    StatusLabel
+    {
+      font-family=basefont
+      font-size=14
+      font-weight=400
+      textcolor="White50"
+      font-style=uppercase
+    }
+
+    StatusLabel:hover
+    {
+      textcolor="white"
+    }
+
+    "TooltipWindow"
+    {
+			bgcolor=ClientBG
+			//bgcolor="Black"
+			//alpha=191.25
+			render_bg
+      {
+        0="fill( x0 + 0, y0 + 0, x1 + 0, y0 + 1, FrameBorder )"	// Top
+        1="fill( x0 + 1, y1 - 1, x1 + 0, y1 + 0, FrameBorder )"	// Bottom
+        2="fill( x0 + 0, y0 + 1, x0 + 1, y1 + 0, FrameBorder )"	// Left
+        3="fill( x1 - 1, y0 + 1, x1 + 0, y1 - 1, FrameBorder )"	// Right
+			}
+    }
+
+   	tooltip_headline
+   	{
+			font-family=basefont
+			font-size=18
+   		textcolor="White"
+   		padding-left=8
+			padding-right=8
+			padding-top=2
+			padding-bottom=2
+   	}
+
+    "TooltipWindow Label"
+    {
+      textcolor="White50"
+   		padding-left=8
+			padding-right=8
+			padding-top=2
+			padding-bottom=4
+    }
+
+    TreeNode
+    {
+      bgcolor=none
+      render_bg {}
+    }
+
+    TreeNodeImage
+    {
+      bgcolor=none
+    }
+
+    TreeViewSubPanel
+    {
+      bgcolor=none
+    }
+
+    TreeNodeText
+    {
+      font-family=basefont
+      font-size=13
+      textcolor="white"
+      selectedtextcolor="White"
+      selectedbgcolor="Focus"
+      bgcolor=none
+      render {}
+      render_bg {}
+    }
+
+    TreeView
+    {
+      render_bg{}
+    }
+
+    URLLabel
+    {
+      textcolor="White50"
+      selectedtextcolor="white"
+      bgcolor="none"
+      font-family=basefont
+      font-size=16
+      font-weight=400
+      font-style=underline
+    }
+
+		URLLabel:Hover
+		{
+			textcolor="White75"
+		}
+
+		URLLabelSimple
+    {
+      textcolor="White50"
+      selectedtextcolor="white"
+      bgcolor="none"
+      font-family=basefont
+      font-size=14
+      font-weight=400
+      font-style=regular
+    }
+
+    URLLabelSimple:Hover
+    {
+      font-style=underline
+      textcolor="White75"
+    }
+
+    GameColumnHeaderFavorites
+    {
+			inset-left=0
+      image="steam/cached/fav_remove"
+
+    }
+
+    CGamesListFavoritesToggle
+    {
+			minimum-width=27
+			inset-left=3
+      image="steam/cached/fav_addTo"
+    }
+
+    CGamesListFavoritesToggle:hover
+    {
+      image="steam/cached/fav_addTo_ovr"
+    }
+
+    CGamesListFavoritesToggle:selected
+    {
+      image="steam/cached/fav_remove"
+    }
+
+    CGamesListFavoritesToggle:selected:hover
+    {
+      image="steam/cached/fav_remove_ovr"
+    }
+
+    WrapPanel
+    {
+      inset="0 0 0 0"
+      font-family=basefont
+      font-size=14
+      font-weight=400
+      textcolor="white"
+      selectedtextcolor="White"
+      selectedbgcolor="Focus"
+      bgcolor=none
+      render_bg {}
+        inset="1 -1 1 1"
+    }
+
+		BackButton
+		{
+			inset="-5 0 0 0"
+			render_bg{}
+			bgcolor=none
+			image="graphics/metro/icons/navbar/back"
+			padding-left=12
+		}
+
+		BackButton:hover
+		{
+			image="graphics/metro/icons/navbar/back_h"
+			bgcolor=white05
+		}
+
+		BackButton:active
+		{
+			image="graphics/metro/icons/navbar/back_p"
+			bgcolor=white10
+		}
+
+		BackButton:disabled
+		{
+			image="graphics/metro/icons/navbar/back_d"
+		}
+
+		BackButtonSm
+		{
+			inset="-5 0 0 0"
+			render_bg{}
+			bgcolor=none
+			image="graphics/metro/icons/navbar/back"
+		}
+
+		BackButtonSm:hover
+		{
+			image="graphics/metro/icons/navbar/back_h"
+		}
+
+		BackButtonSm:active
+		{
+			image="graphics/metro/icons/navbar/back_p"
+		}
+
+		BackButtonSm:disabled
+		{
+			image="graphics/metro/icons/navbar/back_d"
+		}
+
+		ForwardButton
+		{
+			inset="-5 0 0 0"
+			render_bg{}
+			bgcolor=none
+			image="graphics/metro/icons/navbar/forward"
+			padding-left=12
+		}
+
+		ForwardButton:hover
+		{
+			image="graphics/metro/icons/navbar/forward_h"
+			bgcolor=white05
+		}
+
+		ForwardButton:active
+		{
+			image="graphics/metro/icons/navbar/forward_p"
+			bgcolor=white10
+		}
+
+		ForwardButton:disabled
+		{
+			image="graphics/metro/icons/navbar/forward_d"
+		}
+
+		ForwardButtonSm
+		{
+			inset="-5 0 0 0"
+			render_bg{}
+			bgcolor=none
+			image="graphics/metro/icons/navbar/forward"
+		}
+
+		ForwardButtonSm:hover
+		{
+			image="graphics/metro/icons/navbar/forward_h"
+		}
+
+		ForwardButtonSm:active
+		{
+			image="graphics/metro/icons/navbar/forward_p"
+		}
+
+		ForwardButtonSm:disabled
+		{
+			image="graphics/metro/icons/navbar/forward_d"
+		}
+
+		HomeButton
+		{
+			image=graphics/metro/urlbar/home
+			bgcolor=TextEntry
+		}
+
+		HomeButton:hover
+		{
+			image=graphics/metro/urlbar/home_h
+		}
+
+		HomeButton:active
+		{
+			image=graphics/metro/urlbar/home_p
+			bgcolor=focus
+		}
+
+		ReloadButton
+		{
+			image=graphics/metro/urlbar/reload
+			inset-left=1
+			bgcolor=none
+		}
+
+		ReloadButton:hover
+		{
+			image=graphics/metro/urlbar/reload_h
+		}
+
+		ReloadButton:active
+		{
+			image=graphics/metro/urlbar/reload_p
+		}
+		StopButton
+		{
+			image=graphics/metro/urlbar/stop
+			inset-left=1
+			bgcolor=none
+		}
+
+		StopButton:hover
+		{
+			image=graphics/metro/urlbar/stop_h
+		}
+
+		StopButton:active
+		{
+			image=graphics/metro/urlbar/stop_p
+		}
+
+		turnnotifications
+		{
+		}
+
+		friendsdetails
+		{
+			bgcolor=black45
+
+		}
+		achievementsdetails
+		{
+			bgcolor=black45
+
+		}
+		dlcdetails
+		{
+			bgcolor=black45
+
+		}
+		clouddetails
+		{
+			bgcolor=black45
+
+		}
+		communityfilesdetails
+		{
+			bgcolor=black45
+
+		}
+		newsdetails
+		{
+			bgcolor=black45
+
+		}
+		screenshotsdetails
+		{
+			bgcolor=black45
+		}
+
+	gamedetails-headerlabel
+	{
+		font-family=semibold
+		font-style=uppercase
+		font-weight=300
+		font-size="18"
+		textcolor="White"
+		padding-left=0
+		render_bg
+		{
+			//0="fill(x0,y1-2,x1,y1,focus)"
+		}
+	}
+
+	gamedetails-headerlabel-red
+	{
+		font-family=semibold
+		font-style=uppercase
+		font-weight=300
+		font-size="18"
+		textcolor="White"
+		padding-left=0
+		render_bg
+		{
+			//0="fill(x0,y1-2,x1,y1,focus)"
+		}
+	}
+
+	gamedetails-headerlabel-green
+	{
+		font-family=semibold
+		font-style=uppercase
+		font-weight=300
+		font-size="18"
+		textcolor="White"
+		padding-left=0
+		render_bg
+		{
+			//0="fill(x0,y1-2,x1,y1,focus)"
+		}
+	}
+
+	gamedetails-headerlabel-blue
+	{
+		font-family=semibold
+		font-style=uppercase
+		font-weight=300
+		font-size="18"
+		textcolor="White"
+		padding-left=0
+		render_bg
+		{
+			//0="fill(x0,y1-2,x1,y1,focus)"
+		}
+	}
+
+ 	"html-findbar"
+ 	{
+		bgcolor=ClientBG
+		render
+		{
+			0="fill( x0 + 0, y0 + 0, x1 + 0, y0 + 1, FrameBorder )"	// Top
+			1="fill( x0 + 1, y1 - 1, x1 + 0, y1 + 0, FrameBorder )"	// Bottom
+			2="fill( x0 + 0, y0 + 1, x0 + 1, y1 + 0, FrameBorder )"	// Left
+			3="fill( x1 - 1, y0 + 1, x1 + 0, y1 - 1, FrameBorder )"	// Right
+		}
+	}
+
+	// styles for White used in RichText controls in various places
+
+	console_text_error
+	{
+		textcolor="Focus"
+		font-size=16
+		selectedtextcolor="White"
+		selectedbgcolor="Focus"
+	}
+
+	console_text
+	{
+ 		font-family=basefont
+		font-size=16
+	    textcolor="white75"
+		selectedtextcolor="White"
+		selectedbgcolor="Focus"
+	}
+
+	friends_chat_text
+	{
+		textcolor="white75"
+		selectedtextcolor="white"
+		selectedbgcolor="focus"
+		font-size=16
+	}
+
+	friends_chat_text_self
+	{
+		textcolor="White50"
+		selectedtextcolor="White"
+		selectedbgcolor="focus"
+		font-size=16
+	}
+
+	friends_chat_history
+	{
+		textcolor="White50"
+		selectedtextcolor="White"
+		selectedbgcolor="focus"
+		font-size=16
+	}
+
+	//Friend Status Changes
+	friends_chat_event
+	{
+		textcolor="White50"
+		font-size=16
+		selectedtextcolor="White"
+		selectedbgcolor="Focus"
+		font-style=uppercase
+		font-family=semibold
+
+	}
+
+	//Your Status Changes/Connection/Game
+	friends_chat_bright_event
+	{
+		font-family=semibold
+		textcolor="Focus"
+		selectedtextcolor="White"
+		selectedbgcolor="Focus"
+		font-style=uppercase
+		font-size=16
+	}
+
+	friends_chat_url
+	{
+		textcolor="White75"
+		SelectedBgColor="focus"
+		font-style=underline
+		font-size=16
+		selectedtextcolor="White"
+	}
+
+	friends_chat_name_ingame
+	{
+		textcolor="Friends.InGameColor"
+		selectedtextcolor="White"
+		selectedbgcolor="focus"
+		font-size=16
+
+	}
+
+	friends_chat_self
+	{
+		textcolor="Friends.OnlineColor"
+		selectedtextcolor="White"
+		selectedbgcolor="focus"
+		font-size=16
+	}
+
+	friends_chat_name
+	{
+		textcolor="Friends.OnlineColor"
+		selectedtextcolor="White"
+		selectedbgcolor="focus"
+		font-size=16
+	}
+
+	friends_chat_accountid
+	{
+		selectedtextcolor="White"
+		selectedbgcolor="focus"
+		textcolor="white"
+		font-size=16
+	}
+
+	friends_chat_securitylink
+	{
+		textcolor="White75"
+		font-family=semibold
+		font-size=16
+		font-style=uppercase
+		selectedtextcolor="White"
+		selectedbgcolor="Focus"
+	}
+
+   	// used in friends tooltip and friends list for overriding regular styles with custom colors
+   	friends_offline
+   	{
+   		textcolor="White50"
+   	}
+   	friends_online
+   	{
+   		textcolor="Friends.OnlineColor"
+   	}
+   	friends_ingame
+   	{
+   		textcolor="Friends.InGameColor"
+   	}
+   	friends_ignored
+   	{
+   		textcolor="Friends.IgnoredColor"
+   	}
+
+   	TabPageCloseButton
+   	{
+   		padding-right=16
+   	}
+  }
+}

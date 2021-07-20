@@ -1,0 +1,71 @@
+"resource/layout/parentalunlockdialog.layout"
+{
+	controls
+	{
+		ParentalUnlockDialog { controlname="Frame" title="#steam_parental_unlocktitle" style="ParentalUnlockDialog" }
+
+		Instructions { controlname="Label" style="Hey" labeltext="#steam_parental_unlockinstructions" wrap=1 }
+
+		Instructions2 { controlname="Label" style="Hey2" labeltext="#steam_parental_unlockinstructions2" wrap=1 }
+
+		Password { controlname="TextEntry" style="Password" command="DoParentalUnlock" tabposition=1 }
+
+		KeyImage { controlname="Label" style="Key" zpos=-4 }
+
+		OK { controlname="Button" tabposition=2 command="DoParentalUnlock" labeltext="#PropertyDialog_OK" default=1 }
+		Cancel { controlname="Button" tabposition=3 command="Close" labeltext="#PropertyDialog_Cancel" }
+	}
+
+	styles
+	{
+		ParentalUnlockDialog
+		{
+			minimum-width = 400
+			minimum-height = 250
+		}
+
+		Password
+		{
+
+			minimum-height=50
+			font-size=40
+			font-family=semibold
+			bgcolor="Header_Dark"
+
+		}
+
+		Hey
+		{
+			font-size=24
+			font-family=semilight
+			textcolor="White"
+		}
+
+		Hey2
+		{
+		}
+
+		Key
+		{
+		}
+	}
+
+	layout
+	{
+		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
+
+		//Text
+		place { control="Instructions,Instructions2" x=16 y=40 spacing=8 width=max dir=down }
+
+		//Password
+		place { control="Password" margin-top="100" margin-left=155 width=80 }
+
+		//Footer
+		region { name=bottom align=bottom height=44 margin=8 }
+		place { control="Recovery" region=bottom margin-left=8 width=max height=28 end-right=OK }
+		place { control="OK,Cancel" region=bottom align=right spacing=8 width=84 height=28 }
+
+		//Hidden
+		place { control="KeyImage" width=0 height=0 }
+	}
+}

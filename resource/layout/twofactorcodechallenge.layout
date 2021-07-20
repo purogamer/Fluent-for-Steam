@@ -1,0 +1,54 @@
+"resource/layout/twofactorcodechallenge.layout"
+{
+	controls
+	{
+		TwoFactorCodeChallenge { controlname="Frame" title="#Steam_GetTwoFactorCode_Title" style="TwoFactorCodeChallenge" }
+
+		Label1 { controlname="Label" wrap=1 style="Instructions" labeltext="#Steam_GetTwoFactorCode_EnterCode" }
+		Label2 { controlname="Label" wrap=1 style="Instructions" labeltext="#Steam_GetTwoFactorCode_EnterCodeDetails" }
+
+		Key { controlname="Label" style="Key" }
+		AuthCode { controlname="TextEntry" style="AuthCode" command="AuthCodeEntered" tabposition=1 }
+		Background { controlname="ImagePanel" style="Background" image="graphics/bg_security_wizard" zpos=-4 }
+
+		OK { controlname="Button" tabposition=2 command="AuthCodeEntered" labeltext="#PropertyDialog_OK" default=1 enabled=false }
+		Cancel { controlname="Button" tabposition=3 command="Close" labeltext="#PropertyDialog_Cancel" }
+	}
+
+	styles
+	{
+		Key
+		{
+			image="graphics/icon_security_key"
+		}
+		AuthCode
+		{
+			minimum-height=50
+			font-size=40
+			bgcolor="TextEntry"
+		}
+		Instructions
+		{
+			font-size=14
+		}
+		Background
+		{
+			render_bg{}
+		}
+	}
+
+	layout
+	{
+		region { name="top" width=max height=80 margin=10 margin-top=44 }
+		region { name="middle" width=max y=70 height=160 margin=5 }
+		region { name="bottom" width=max align=bottom height=36 align="bottom" }
+
+		place { control="Background" align=left margin=10 y=42 margin-bottom=48 width=360 }
+		place { control="Label1" region="top" x=20 spacing=8 width=max height=48 dir=down }
+		place { control="Key" region="middle" margin-left=20 }
+		place { control="AuthCode, Label2" region="middle" dir=down spacing=8 margin-left=80 width=190 }
+
+		// bottom: OK/cancel
+		place { control="OK,Cancel" region="bottom" width=92 height=25 align=right margin-right=10 margin-top=0 margin-bottom=2 spacing=10 }
+	}
+}

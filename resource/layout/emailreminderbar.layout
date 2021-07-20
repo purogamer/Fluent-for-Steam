@@ -1,0 +1,114 @@
+"resource/layout/emailreminderbar.layout"
+{
+	controls
+	{
+		"emailreminderbar_nobutton"
+		{
+			"ControlName"		"URLLabel"
+			"labelText"		"#steam_emailaddress_query_no"
+			command="ChangeEmail"
+			style=bright
+		}
+		"emailreminderbar_yesbutton"
+		{
+			"ControlName"		"URLLabel"
+			"labelText"		"#steam_emailaddress_query_yes"
+			command="SendVerificationEmail"
+			style=bright
+		}
+		"emailreminderbaremail_email"
+		{
+			"ControlName"		"Label"
+			"labelText"		"%emailaddress%"
+			style=bright
+		}
+		"emailreminderbarlabel"
+		{
+			"ControlName"		"Label"
+			"labelText"		"#steam_emailaddress_query"
+			style=soft
+		}
+		"emailreminderbar_info"
+		{
+			"ControlName"		"Label"
+			"labelText"		"#steam_emailaddress_query_info"
+			style=soft
+		}
+		"emailreminderbar_infolink"
+		{
+			"ControlName"		"URLLabel"
+			"labelText"		"#steam_emailaddress_query_info_link"
+			"urltext" "#steam_emailaddress_query_info_url"
+			style=soft
+		}
+		"emailreminderbar_close"
+		{
+			"ControlName"		"Button"
+			"labelText"		""
+			"Command" "Close"
+
+			style=CloseStyle
+		}
+	}
+
+	styles
+	{
+		CEmailReminderBar
+		{
+			bgcolor="87 119 15 255"
+			render {}
+			render_bg
+			{
+				0="image( x0+12, y0+12, x1, y1, graphics/mail_h )"
+			}
+		}
+
+		soft
+		{
+			textcolor="white"
+		}
+
+		bright
+		{
+			textcolor="white"
+		}
+
+		CloseStyle
+		{
+		bgcolor=none
+    render_bg
+		{
+      0="image( x0, y0, x1, y1, graphics/win32_win_close )"
+    }
+
+		}
+
+		CloseStyle:hover
+		{
+      render_bg {
+        0="fill( x0, y0+1, x1-1, y1, white12 )"
+        1="image( x0, y0, x1, y1, graphics/win32_win_close )"
+      }
+		}
+
+		CloseStyle:active
+    {
+			render_bg {
+				0="fill( x0, y0+1, x1-1, y1, white24 )"
+				1="image( x0, y0, x1, y1, graphics/win32_win_close )"
+			}
+    }
+	}
+
+	layout
+	{
+		place { control="emailreminderbarlabel,emailreminderbaremail_email,emailreminderbar_yesbutton,emailreminderbar_nobutton,emailreminderbar_infolink" align=top-center margin-top=-1 height=40 spacing=8 }
+
+		place { control="emailreminderbar_close" align=right width=33 height=27 margin-top=-1 margin-right=-1 }
+
+		//Hidden
+
+		place { control="emailreminderbar_info" width=0 height=0 }
+	}
+
+}

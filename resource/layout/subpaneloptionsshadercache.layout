@@ -1,0 +1,17 @@
+"resource/layout/subpaneloptionsshadercache.layout"
+{
+  colors
+  {
+  }
+  styles
+  {
+  }
+  layout
+  {
+    region { name=box margin-left=16 margin-right=16 }
+
+    place { control=ShaderCacheInfo region=box y=6 width=max }
+    place { start=ShaderCacheInfo region=box control="ShaderCacheEnabledCheckbox,ShaderCacheBGProcessingEnabledCheckbox" y=6 width=450 dir=down }
+    place { start=ShaderCacheBGProcessingEnabledCheckbox region=box control="ShaderCacheBGProcessingProgress" width=max dir=down }
+  }
+}

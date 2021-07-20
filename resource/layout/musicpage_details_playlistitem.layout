@@ -1,0 +1,64 @@
+"resource/layout/musicpage_details_playlistitem.layout"
+{
+	controls
+	{	
+		PositionLabel	{	controlname=Label	style="PositionLabelStyle"	labeltext=""	textalignment="east" }
+		TrackLabel { controlname=Label style="TrackLabelStyle" labeltext="" }
+	}
+
+	styles
+	{
+		PositionLabelStyle	
+		{ 
+			padding-left=0
+			padding-bottom=10
+			padding-top=10
+			font-size=16
+			textcolor=White75
+			font-family=basefont
+			font-weight=400 
+			bgcolor=none
+			render_bg
+			{
+				0="fill(x0,y0-1,x1,y0,White08)"
+			}			
+		}
+		
+		TrackLabelStyle 
+		{ 
+			padding-left=10
+			padding-bottom=10
+			padding-top=10
+			font-size=16
+			textcolor=White75
+			font-family=basefont
+			font-weight=400 
+			bgcolor=none
+			render_bg
+			{
+				0="fill(x0,y1-1,x1,y1,White08)"
+			}
+		}
+		
+		TrackLabelStyle:hover
+		{ 
+			bgcolor=white03
+		}
+		
+		TrackStyle:active
+		{
+			textcolor=white
+			bgcolor=focus
+		}
+	}
+	
+	
+	layout
+	{
+		region { name=panelregion width=max }
+		
+		place {	control="PositionLabel" width=24 region="panelregion"  }
+		place {	control="TrackLabel" x=32 region="panelregion" width=max }
+	}
+	
+}

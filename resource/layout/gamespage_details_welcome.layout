@@ -1,0 +1,42 @@
+"resource/layout/gamespage_details_welcome.layout"
+{
+	controls
+	{
+		welcomedetails { controlname="CGamesPage_Details_Welcome" style="nonsteamdetails" }
+		headerlabel { controlname="Label" style="gamedetails-headerlabel" labeltext="#Steam_Welcome" }
+		bodybasic { controlname="RichText" style="bodycontent" }
+		bodynofriends { controlname="RichText" style="bodycontent" }
+		bodyhelp { controlname="RichText" style="bodycontent" }
+	}
+
+	colors
+	{
+
+		RichText.InsetX "0"
+		RichText.InsetY "4" 
+		GameDetailsWelcome.ExtraVerticalSpacing "80"
+		GameDetailsWelcome.WelcomeTextSpacing "0"
+	}
+
+	styles
+	{
+		nonsteamdetails 
+		{ 
+			bgcolor=DetailsBackground
+		}
+
+		"RichText url"
+		{
+			font-size=16
+		}
+	}
+
+	layout
+	{
+		region { name=body margin=8 margin-top=0 width=max height=max }
+		place { region=body control=headerlabel height=40 width=max }
+
+		place { region=body start=headerlabel control=bodybasic,bodynofriends,bodyhelp dir=down width=max spacing=8 }
+	}
+
+}

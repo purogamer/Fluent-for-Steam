@@ -1,0 +1,97 @@
+"resource/layout/overlaytaskbar.layout"
+{
+	controls
+	{
+		TaskbarPanel
+		{
+			controlname="EditablePanel"
+		}
+		SettingsButton
+		{
+			controlname="URLLabel"
+			labeltext="#Overlay_Taskbar_Settings"
+			style=taskbar
+		}
+		WebBrowserButton
+		{
+			controlname="URLLabel"
+			labeltext="#Overlay_Taskbar_WebBrowser"
+			style=taskbar
+		}
+
+		SteamLogo	
+		{ 
+			controlname="ImagePanel" zpos=1 image="resource/steam_logo_big"
+			scaleimage=1
+		}
+		
+		view_friends
+		{
+			ControlName=URLLabel
+			labelText="#Steam_ViewFriends"
+			command="OpenFriendsDialog"
+			
+			style="view_friends"
+			textAlignment=east
+		}
+		online_friends
+		{
+			ControlName=Label
+			labelText="#Steam_OnlineFriends"
+			style="online_friends"
+			textAlignment=east
+		}	
+	}
+	
+	styles
+	{
+		taskbar
+		{
+			font-family=basefont
+			font-size=24
+			textcolor=White45
+			font-style=regular
+		}
+		
+		taskbar:hover
+		{
+			font-family=basefont
+			font-size=24
+			textcolor=White
+			font-style=regular
+		}
+		
+		view_friends
+		{
+			textcolor="White"
+			bgcolor="none"
+			font-family=semibold
+			font-size=18
+			font-weight=400
+			font-style=regular,uppercase
+		}
+		view_friends:Hover
+		{
+			 textcolor="White75"
+		}
+
+		online_friends
+		{
+			textcolor="White45"
+			bgcolor="none"
+			font-family=basefont
+			font-size=16
+			font-style=regular
+		}		
+	}
+	
+	layout
+	{
+		//Links
+		place { control="WebBrowserButton,MusicPlayerButton,SettingsButton,ScreenshotsButton" align=right spacing=30 height=115 margin-right=30 }	
+
+		//Hidden
+		place { control="SteamLogo,FriendPanel,view_friends,online_friends" width=0 height=0 }
+
+	}	
+}

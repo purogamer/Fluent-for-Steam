@@ -1,0 +1,152 @@
+"resource/layout/overlaydashboard.layout"
+{
+	controls
+	{
+		BaseDashboardPanel
+		{
+			controlname="EditablePanel"
+			style="overlaymain"
+		}
+		TaskbarPanel
+		{
+			controlname="EditablePanel"
+		}
+		TopFadePanel
+		{
+			controlname="EditablePanel"
+			style=topfade
+			zpos=-1
+			mouseinputenabled=0
+		}
+		BottomFadePanel
+		{
+			controlname="EditablePanel"
+			style=bottomfade
+			zpos=-1
+		}
+		Clock
+		{
+			controlname="Label"
+			labeltext="10:43"
+			style=topbar
+		}
+		ClockSuffix
+		{
+			controlname="Label"
+			labeltext="am"
+			style=clocksuffix
+		}
+		GameName
+		{
+			controlname="Label"
+			labeltext="%gamename%"
+			style=topbar
+			textalignment=east
+		}
+		PowerMeterDim
+		{
+			controlname=	"ImagePanel"
+			image=			"resource/battery_dim"
+		}
+		PowerMeterBright
+		{
+			controlname=	"ImagePanel"
+			image=			"resource/battery_bright"
+		}
+
+		CloseButton	{ controlname="URLLabel" labeltext="#Overlay_Taskbar_Close" style="OverlayURLLabel"}
+		HotkeyLabel { controlname="Label" labeltext="%hotkey%" style="hotkey" }
+		HotkeyExplain { controlname="Label" labeltext="#Overlay_Hotkey_Explain" margin-left=4 style="LabelOverlay"}
+
+		SessionText { controlname=label style=TimeStrings labeltext="#Overlay_Playtime_Session" }
+		TwoWeeksText { controlname=label style=TimeStrings }
+		ForeverText { controlname=label style=TimeStrings }
+	}
+
+	colors
+	{
+		backgroundOverlayTop="0 0 0 127.5"
+	}
+
+	styles
+	{
+		overlaymain
+		{
+			bgcolor = "0 0 0 127.5"
+		}
+
+		//Back Button
+		OverlayURLLabel
+		{
+			image=graphics/metro/overlay/icons/close
+			textcolor=none
+		}
+
+		OverlayURLLabel:hover
+		{
+			image=graphics/metro/overlay/icons/close_h
+		}
+
+		TopFade
+		{
+			textcolor=none
+			render
+			{
+			}
+		}
+
+		hotkey
+		{
+			font-size=20
+			textcolor=White45
+		}
+
+		topbar
+		{
+			font-family=light
+			font-size=64
+			textcolor=White
+			font-style=regular
+		}
+
+		clocksuffix
+		{
+			font-family=light
+			font-size=64
+			textcolor=White
+			font-style=regular
+			font-style=uppercase
+		}
+
+		timeStrings
+		{
+			font-family=basefont
+			font-size=24
+			textcolor=White
+			font-style=regular
+		}
+
+		bottomfade
+		{
+		}
+	}
+
+	layout
+	{
+		//Close
+		place { control="CloseButton" x=30 y=45 width=26 height=26 }
+
+		//Time Panel
+		place { control="clock,clocksuffix" align=top-center y=20 }
+		place { control="SessionText" align=top-center start=clock dir=down }
+
+		//Links
+		place { control="TaskbarPanel" align=right width=500 height=115 }
+
+		//Battery Indicator
+		place { control="PowerMeterDim" region=overlay align=left width=95 }
+
+		//Hidden
+		place { control="BottomFadePanel,HotkeyExplain,gamename,HotkeyLabel,TopFadePanel,TwoWeeksText,ForeverText" width=0 height=0 }
+	}
+}

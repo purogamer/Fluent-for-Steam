@@ -1,0 +1,458 @@
+"resource/layout/uinavigatorpanel.layout"
+{
+	colors
+	{
+		TextEntry="39 39 39 255"
+	}
+
+	styles
+	{
+		FullscreenButton
+		{
+			inset-left=-1
+			image="graphics/View_BigPicture"
+			bgcolor=none
+		}
+
+		FullscreenButton:hover
+		{
+			bgcolor=white12
+		}
+
+		FullscreenButton:active
+		{
+			image="graphics/View_BigPicture_p"
+			render_bg
+			{
+				0="fill(x0,y0,x1,y1,focus)"
+				1="gradient_horizontal(x0,y0,x1,y1,none,White03)"
+				2="fill( x0 + 0, y0 + 0, x1 + 0, y0 + 1, White10 )"	// Top
+				3="fill( x0 + 1, y1 - 1, x1 + 0, y1 + 0, White10 )"	// Bottom
+				4="fill( x0 + 0, y0 + 1, x0 + 1, y1 + 0, White10 )"	// Left
+				5="fill( x1 - 1, y0 + 1, x1 + 0, y1 - 1, White10 )"	// Right
+			}
+		}
+
+		URLStatusImage
+		{
+			bgcolor=focus
+			inset="0 0 0 0"
+			render
+			{
+				//0="image( x1 - 40, y0 + 0, x1, y1, graphics/html_lock )"
+			}
+		}
+
+		CGameFilterMenuButton
+		{
+			font-family=basefont
+			textcolor=none
+            inset-left=-999
+			bgcolor=TextEntry
+			render_bg
+			{
+				0="image(x0+14,y0+14,x1,y1,graphics/down_arrow)"
+			}
+		}
+
+		CGameFilterMenuButton:hover
+		{
+			render_bg
+			{
+				0="image(x0+14,y0+14,x1,y1,graphics/down_arrow_h)"
+			}
+		}
+
+		CGameFilterMenuButton:selected
+		{
+			render_bg
+			{
+				0="image(x0+14,y0+14,x1,y1,graphics/down_arrow_p)"
+			}
+		}
+
+		downarrow
+		{
+		  image=none
+		}
+
+		downarrow:hover
+		{
+		  image=none
+		}
+
+		grouper
+		{
+			bgcolor=none
+			render_bg
+			{}
+
+		}
+
+		headertextlarge
+		{
+			padding-left=10
+			padding-top=5
+			padding-right=10
+			padding-bottom=5
+			font-size=30
+			textcolor=White
+			font-weight=400
+			bgcolor=ClientBG
+			minimum-width=200
+		}
+
+		LibrarySeparator
+		{
+			padding-left=0
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			textcolor=White45
+			inset="0 -2 0 0"
+		}
+
+		LibraryShow
+		{
+			padding-left=0
+			font-family=basefont
+			font-size=14
+			font-weight=400
+			textcolor="White45"
+			font-style=uppercase
+		}
+
+		NavLabel
+		{
+			font-family=basefont
+			font-size=14
+			font-weight=400
+			textcolor=White75
+			font-style=uppercase
+		}
+
+		NavLabelView
+		{
+			font-family=basefont
+			font-size=14
+			font-weight=400
+			textcolor="White45"
+			font-style=uppercase
+			padding-left=0
+		}
+
+		NavLabelZoom
+		{
+			font-family=basefont
+			font-size=14
+			font-weight=400
+			textcolor="White45"
+			font-style=uppercase
+			padding-right=5
+		}
+
+		NavLabel2
+		{
+			textcolor=white45
+		}
+
+		NavLabel2:hover
+		{
+			textcolor=white75
+		}
+
+		NavLabel2:selected
+		{
+			textcolor=white
+		}
+
+		Panel_transparent
+		{
+			bgcolor="none"
+		}
+
+		ViewListButton
+		{
+			render_bg
+			{
+				0="image(x0+6,y0+13,x1,y1,graphics/list)"
+			}
+		}
+
+		ViewListButton:hover
+		{
+			render_bg
+			{
+				0="image(x0+6,y0+13,x1,y1,graphics/list_h)"
+			}
+		}
+
+		ViewListButton:selected
+		{
+			render_bg
+			{
+				0="image(x0+6,y0+13,x1,y1,graphics/list_p)"
+			}
+		}
+
+		ViewDetailButton
+		{
+			render_bg
+			{
+				0="image(x0+6,y0+13,x1,y1,graphics/sort_details)"
+			}
+		}
+
+		ViewDetailButton:hover
+		{
+			render_bg
+			{
+				0="image(x0+6,y0+13,x1,y1,graphics/sort_details_h)"
+			}
+		}
+
+		ViewDetailButton:selected
+		{
+			render_bg
+			{
+				0="image(x0+6,y0+13,x1,y1,graphics/sort_details_p)"
+			}
+		}
+
+		ViewGridButton
+		{
+			render_bg
+			{
+				0="image(x0+7,y0+13,x1,y1,graphics/sort_grid)"
+			}
+		}
+
+		ViewGridButton:hover
+		{
+			render_bg
+			{
+				0="image(x0+7,y0+13,x1,y1,graphics/sort_grid_h)"
+			}
+		}
+
+		ViewGridButton:selected
+		{
+			render_bg
+			{
+				0="image(x0+7,y0+13,x1,y1,graphics/sort_grid_p)"
+			}
+		}
+
+		WebPanelStyle
+		{
+			bgcolor=ClientBG
+			render
+			{
+				0="fill(x0,y0,x1,y0+1,FrameBorder)"
+			}
+		}
+
+		CWebPanel
+		{
+		bgcolor=none
+		}
+
+		TextEntryURL
+		{
+			bgcolor=none
+			render_bg {}
+			render {}
+		}
+
+		CUINavButton
+		{
+			textcolor="White50"
+			bgcolor="none"
+			font-family=semibold
+			font-weight=400
+			font-size=16
+			font-style="uppercase"
+			padding-left=8
+			padding-right=8
+		}
+
+		CUINavButton:hover
+		{
+			textcolor="White75"
+			render_bg
+			{
+				0="fill(x0,y0,x1,y1-1,white05)"
+			}
+		}
+
+		CUINavButton:selected
+		{
+			textcolor="White"
+			render_bg
+			{
+				0="fill(x0,y0,x1,y1-1,white05)"
+				1="fill(x0, y1-1, x1, y1, focus)"
+			}
+		}
+
+		CUINavButton2
+		{
+			textcolor="White45"
+			bgcolor="none"
+			font-family=basefont
+			font-size=14
+			font-style="regular"
+			padding="8"
+		}
+
+		CUINavButton2:hover
+		{
+			textcolor="White75"
+		}
+
+		CUINavButton2:selected
+		{
+			textcolor="White"
+		}
+
+		MusicPlayerIcon
+		{
+			image="graphics/icon_music_player"
+			padding-left=3
+		}
+
+		MusicPlayerIcon:hover
+		{
+			bgcolor=white12
+		}
+
+		MusicAddButton
+		{
+			bgcolor=none
+			render_bg
+			{
+				5="image(x0+3,y0+5,x1,y1,graphics/icon_collapse)"
+			}
+		}
+
+		MusicAddButton:hover
+		{
+			bgcolor=none
+			render_bg
+			{
+				5="image(x0+3,y0+5,x1,y1,graphics/icon_collapse_over)"
+			}
+		}
+	}
+
+	layout [$WINDOWS]
+	{
+
+		//Header
+		region { name=top align=top y=40 height=40 x=0 margin-right=0 }
+		place { control="back,forward" x=39 y=1 height=38 width=40 margin-left=0 spacing=0 }
+		place { control="label_store,label_library,label_news,label_friends,label_community,label_me,label_console" x=120 y=0 spacing=1 height=40 }
+
+		//URLBar
+		place { control="URLBar" region=top align=left height=38 width=max end-right=PageLoadThrobber }
+		place { control="PageLoadThrobber,home,refresh,stop" start=URLBar y=7 width=24 height=24 align=right margin-right=7 }
+		place { control= region=top y=8 height=24 align=right }
+
+		//Community Sub-Links
+		place { control="label_community_friends,label_community_profile,label_community_groups,label_community_gamehubs,label_community_forums,label_community_workshop,label_community_greenlight,label_community_marketplace" region=top align=right x=0 y="0" spacing=0 height=39 }
+
+		//Search
+		place { control="label_search_icon" region=top height=38 width=38 }
+		place { control="library_search" region=top margin-left=38 height=38 width=186 }
+    	place { control="library_filters" region=top margin-left=224 height=38 width=38 start=DownloadsPage }
+
+		//Filters
+		place { control="library_zoom" region=top align=right end-right="library_filters_list" y=10 height=26 width=100 margin-right=8 }
+		place { control="library_filters_list,library_filters_details,library_filters_grid,library_music_menu,library_music_player_icon" align=right width=28 height=38 spacing=1 margin-right=1 y=40 }
+		place { control="library_music_player_icon" region=top align=right y=7 height=24 spacing=1 width=24 }
+		place { control="library_music_add_button,library_music_menu" region=top align=right end-right=library_Music_player_icon y=7 height=24 margin-right=0 }
+
+ 	  	place { control=emailreminderbar margin-top=79 width=max height=40 }
+ 	  	place { control=phonereminderbar margin-top=79 width=max height=40 }
+
+		// content pages - these are all pushed down by the email reminder bar (above) if it's visible
+    	place { control=DownloadsPage       width=max height=max margin-top=0 margin-left=0 margin-right=0 margin-bottom=1 start=URLBar dir=down }
+		place { control=NewLibraryPage		width=max height=max margin-top=0 margin-left=0 margin-right=0 margin-bottom=1 start=phonereminderbar dir=down }
+		place { control=GamesPage_List 		width=max height=max margin-top=0 margin-left=0 margin-right=0 margin-bottom=1 start=phonereminderbar dir=down }
+		place { control=GamesPage_Details 		width=max height=max margin-top=1 margin-left=0 margin-right=0 margin-bottom=1 start=phonereminderbar dir=down }
+		place { control=GamesPage_Grid 		width=max height=max margin-top=0 margin-left=0 margin-right=0 margin-bottom=0 start=phonereminderbar dir=down }
+		place { control=WebPanel			width=max height=max margin-left=0 margin-bottom=1 y=0 start=URLBar dir=down }
+
+		place { control=MusicPage_Details width=max height=max margin-top=1 margin-left=0 margin-right=-1 margin-bottom=1 start=phonereminderbar dir=down }
+		place { control=ScreenshotsPage width=max height=max margin-top=1 margin-left=0 margin-right=-1 margin-bottom=1 start=phonereminderbar dir=down }
+
+		place { control=ConsolePage 			width=max height=max margin-top=-38 margin-left=0 margin-right=0 margin-bottom=1 start=phonereminderbar dir=down }
+
+		place { control=MediaPage 		width=max height=max margin-top=0 margin-left=0 margin-right=0 margin-bottom=1 start=phonereminderbar dir=down }
+		place { control=ToolsPage 		width=max height=max margin-top=0 margin-left=0 margin-right=0 margin-bottom=1 start=phonereminderbar dir=down }
+
+		place { control=BroadcastPage			width=max height=max margin-top=0 margin-left=0 margin-right=0 margin-bottom=1 start=phonereminderbar dir=down }
+		place { control=BroadcastPageMin		width=300 height=168 margin-top=0 margin-left=0 margin-right=30 margin-bottom=26 dir=down align=bottom-right }
+		place { control=BroadcastPageMinHoriz	width=300 height=168 margin-top=0 margin-left=0 margin-right=30 margin-bottom=40 dir=down align=bottom-right }
+
+    //Hidden
+		place { control="fullscreen,EVCert,BetaFlagBigPicture,URLStatusImage,label_community_new,subnavgroup_library,label_library_zoom,label_zoom_separator,label_library_view" height=0 width=0 }
+	}
+	layout [$OSX||$LINUX] //Both OSX and Linux use OS provided menu bar, so this moves top elements left to hide the blank space
+	{
+
+		//Header
+		region { name=top align=top y=40 height=40 x=0 margin-right=0 }
+		place { control="back,forward" x=0 y=1 height=38 width=40 margin-left=0 spacing=0 }
+		place { control="label_store,label_library,label_news,label_friends,label_community,label_me,label_console" x=81 y=0 spacing=1 height=40 }
+
+		//URLBar
+		place { control="URLBar" region=top align=left height=38 width=max end-right=PageLoadThrobber }
+		place { control="PageLoadThrobber,home,refresh,stop" start=URLBar y=7 width=24 height=24 align=right margin-right=7 }
+		place { control= region=top y=8 height=24 align=right }
+
+		//Community Sub-Links
+		place { control="label_community_friends,label_community_profile,label_community_groups,label_community_gamehubs,label_community_forums,label_community_workshop,label_community_greenlight,label_community_marketplace" region=top align=right x=0 y="0" spacing=0 height=39 }
+
+		//Search
+		place { control="label_search_icon" region=top height=38 width=38 }
+		place { control="library_search" region=top margin-left=38 height=38 width=186 }
+		place { control="library_filters" region=top margin-left=224 height=38 width=38 }
+
+		// New
+		place { control=URLAnchor align=left y=54 height=28 width=max }
+		place { control=LibraryAnchor height=28 width=max start=URLAnchor dir=down }
+
+		//Filters
+		place { control="library_zoom" region=top align=right end-right="library_filters_list" y=10 height=26 width=100 margin-right=8 }
+		place { control="library_filters_list,library_filters_details,library_filters_grid,library_music_menu,library_music_player_icon" align=right width=28 height=38 spacing=1 margin-right=1 y=40 }
+		place { control="library_music_player_icon" region=top align=right y=7 height=24 spacing=1 width=24 }
+		place { control="library_music_add_button,library_music_menu" region=top align=right end-right=library_Music_player_icon y=7 height=24 margin-right=0 }
+
+ 	  	place { control=emailreminderbar margin-top=79 width=max height=40 }
+ 	  	place { control=phonereminderbar margin-top=79 width=max height=40 }
+
+		// content pages - these are all pushed down by the email reminder bar (above) if it's visible
+		place { control=DownloadsPage 		width=max height=max margin-top=0 margin-left=0 margin-right=0 margin-bottom=1 start=phonereminderbar dir=down }
+		place { control=GamesPage_List 		width=max height=max margin-top=0 margin-left=0 margin-right=0 margin-bottom=1 start=phonereminderbar dir=down }
+		place { control=GamesPage_Details 		width=max height=max margin-top=1 margin-left=0 margin-right=0 margin-bottom=1 start=phonereminderbar dir=down }
+		place { control=GamesPage_Grid 		width=max height=max margin-top=0 margin-left=0 margin-right=0 margin-bottom=0 start=phonereminderbar dir=down }
+		place { control=WebPanel			width=max height=max margin-left=0 margin-bottom=1 y=0 start=URLBar dir=down }
+		place { control=NewLibraryPage		width=max height=max margin-top=0 margin-left=0 margin-right=0 margin-bottom=1 start=phonereminderbar dir=down }
+
+		place { control=MusicPage_Details width=max height=max margin-top=1 margin-left=0 margin-right=-1 margin-bottom=1 start=phonereminderbar dir=down }
+		place { control=ScreenshotsPage width=max height=max margin-top=1 margin-left=0 margin-right=-1 margin-bottom=1 start=phonereminderbar dir=down }
+
+		place { control=ConsolePage 			width=max height=max margin-top=-38 margin-left=0 margin-right=0 margin-bottom=1 start=phonereminderbar dir=down }
+
+		place { control=MediaPage 		width=max height=max margin-top=0 margin-left=0 margin-right=0 margin-bottom=1 start=phonereminderbar dir=down }
+		place { control=ToolsPage 		width=max height=max margin-top=0 margin-left=0 margin-right=0 margin-bottom=1 start=phonereminderbar dir=down }
+
+		place { control=BroadcastPage			width=max height=max margin-top=0 margin-left=0 margin-right=0 margin-bottom=1 start=phonereminderbar dir=down }
+		place { control=BroadcastPageMin		width=300 height=168 margin-top=0 margin-left=0 margin-right=30 margin-bottom=26 dir=down align=bottom-right }
+		place { control=BroadcastPageMinHoriz	width=300 height=168 margin-top=0 margin-left=0 margin-right=30 margin-bottom=40 dir=down align=bottom-right }
+
+    //Hidden
+		place { control="fullscreen,EVCert,BetaFlagBigPicture,URLStatusImage,label_community_new,subnavgroup_library,label_library_zoom,label_zoom_separator,label_library_view" height=0 width=0 }
+	}
+}

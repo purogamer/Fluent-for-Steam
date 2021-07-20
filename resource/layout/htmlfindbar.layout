@@ -1,0 +1,129 @@
+"resource/layout/htmlfindbar.layout"
+{
+	controls
+	{
+		FindEntry { controlname=TextEntry default=1 unicode=1 tabposition=1 style="FindEntry" }
+		FindCount { controlname=Label labeltext="#vgui_HTMLSearchMatch" }
+		Close { controlname=Button command="Close" style="CloseButtonSm" }
+		Next { controlname=Button command="next" style="NextButtonSm" }
+		Previous { controlname=Button command="previous" style="PrevButtonSm" }
+		SearchThisPage { controlname=Label labeltext="#vgui_HTMLSearchThisPage" style="" }
+	}
+
+	styles
+	{
+		Label
+		{
+			textcolor=white
+		}
+		
+		FindEntry
+		{
+			inset-left=0
+			inset-top=-2
+			font-family=basefont
+			font-weight=300
+			font-size=16
+			textcolor=white
+			bgcolor=none
+			shadowtextcolor=white
+			render
+			{
+				//0="image( x1-20, y0+8, x1, y1, graphics/search_sm )"
+			}
+		}
+
+		NextButtonSm
+		{
+			inset="-6 0 0 0"
+			render_bg{}
+			bgcolor=none
+			image="graphics/metro/icons/navbar/forward"
+		}
+
+		NextButtonSm:hover
+		{
+			image="graphics/metro/icons/navbar/forward_h"
+		}
+		
+		NextButtonSm:active
+		{
+			image="graphics/metro/icons/navbar/forward_p"
+		}
+		
+		NextButtonSm:disabled
+		{
+			image="graphics/metro/icons/navbar/forward_d"
+		}
+
+		PrevButtonSm
+		{
+			inset="-6 0 0 0"
+			render_bg{}
+			bgcolor=none
+			image="graphics/metro/icons/navbar/back"
+		}
+
+		PrevButtonSm:hover
+		{
+			image="graphics/metro/icons/navbar/back_h"
+		}
+		
+		PrevButtonSm:active
+		{
+			image="graphics/metro/icons/navbar/back_p"
+		}
+		
+		PrevButtonSm:disabled
+		{
+			image="graphics/metro/icons/navbar/back_d"
+		}
+		
+		CloseButtonSm
+    {
+			textcolor=none
+			bgcolor=none
+			render_bg 
+			{
+				0="image( x0+3, y0+5, x1, y1, graphics/win32_win_close_inactive )"
+			}
+    }
+		
+		CloseButtonSm:framefocus
+    {
+			render_bg 
+			{
+				0="image( x0+3, y0+5, x1, y1, graphics/win32_win_close )"
+			}
+    }
+
+		CloseButtonSm:hover
+    {
+			render_bg 
+			{
+        0="fill( x0, y0+1, x1-1, y1, white12 )"
+				1="image( x0+3, y0+5, x1, y1, graphics/win32_win_close )"
+			}
+    }
+    
+		CloseButtonSm:active
+    {
+			render_bg 
+			{
+        0="fill( x0, y0+1, x1-1, y1, white24 )"
+				1="image( x0+3, y0+5, x1, y1, graphics/win32_win_close )"
+			}
+    }
+	}
+		
+	layout
+	{
+		place { control="SearchThisPage" height=0 width=0 } //Search//Icon
+
+		place { control="Previous,Next" align=left x=8 y=7 height=26 width=26 spacing=4 } //Buttons
+		place { control="FindEntry" x=72 width=max height=max end-right=FindCount margin-right=35 } //TextBox
+		
+		place { control="FindCount" align=right height=40 margin-right=8 end-right=Close } //Count
+		place { control="Close" align=right width=40 height=40 }
+	}
+}

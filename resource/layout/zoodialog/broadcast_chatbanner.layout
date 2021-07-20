@@ -1,0 +1,35 @@
+"resource/layout/broadcast_chatbanner.layout"
+{
+	controls
+	{
+		ChatLine0 { controlname=RichText style=ChatTextLine }		 
+		ChatLine1 { controlname=RichText style=ChatTextLine }		
+		ChatLine2 { controlname=RichText style=ChatTextLine }		
+		ChatLine3 { controlname=RichText style=ChatTextLine }		
+		ChatLine4 { controlname=RichText style=ChatTextLine }		
+		ChatLine5 { controlname=RichText style=ChatTextLine }		
+	}
+	
+	colors
+	{
+		ChatTextLineBG = "0 0 0 80"
+	}
+	
+	styles
+	{
+		ChatTextLine
+		{
+			render
+			{
+				// nothing
+			}
+			
+			render_bg
+			{
+				0="fill( x0, y0, x1, y1, ChatTextLineBG )"
+			}	
+		}
+	}
+	
+	// layout is done in code
+}

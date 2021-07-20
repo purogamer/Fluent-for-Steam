@@ -1,0 +1,46 @@
+"resource/layout/settingssubstreaming_advanced_host.layout"
+{
+	controls
+	{
+		"DescriptionLabel" { ControlName="Label" fieldName="DescriptionLabel" wrap=1 labelText="#Steam_Settings_Streaming_AdvancedHostOptions_Description" }
+
+		"ChangeDesktopResolution" { ControlName="CheckButton" fieldName="ChangeDesktopResolution" labelText="#Steam_Settings_Streaming_ChangeDesktopResolution" }
+		"DynamicallyAdjustResolution" { ControlName="CheckButton" fieldName="DynamicallyAdjustResolution" labelText="#Steam_Settings_Streaming_DynamicallyAdjustResolution" }
+		"EnableCaptureNVFBC" { ControlName="CheckButton" fieldName="EnableCaptureNVFBC" labelText="#Steam_Settings_Streaming_EnableCaptureNVFBC" }
+
+		"EnableHardwareEncoding" { ControlName="CheckButton" fieldName="EnableHardwareEncoding" labelText="#Steam_Settings_Streaming_EnableHardwareEncoding" }
+		"EnableHardwareEncodingNVIDIA" { ControlName="CheckButton" fieldName="EnableHardwareEncodingNVIDIA" labelText="#Steam_Settings_Streaming_EnableHardwareEncodingNVIDIA" }
+		"EnableHardwareEncodingAMD" { ControlName="CheckButton" fieldName="EnableHardwareEncodingAMD" labelText="#Steam_Settings_Streaming_EnableHardwareEncodingAMD" }
+		"EnableHardwareEncodingIntel" { ControlName="CheckButton" fieldName="EnableHardwareEncodingIntel" labelText="#Steam_Settings_Streaming_EnableHardwareEncodingIntel" }
+
+		"SoftwareEncodingThreadsLabel" { ControlName="Label" fieldName="SoftwareEncodingThreadsLabel" wrap=1 labelText="#Steam_Settings_Streaming_SoftwareEncodingThreads_Description" }
+		"SoftwareEncodingThreads" { ControlName="ComboBox" fieldName="SoftwareEncodingThreads" style="ResolutionLimit" editable="0" }
+
+		"EnableTrafficPriorityLabel" { ControlName="Label" fieldName="EnableTrafficPriorityLabel" wrap=1 labelText="#Steam_Settings_Streaming_EnableTrafficPriority_Description" }
+		"EnableTrafficPriority" { ControlName="CheckButton" fieldName="EnableTrafficPriority" labelText="#Steam_Settings_Streaming_EnableTrafficPriority" }
+
+		"SupportInformationLabel" { ControlName="URLLabel" fieldName="SupportInformationLabel" labelText="#Steam_Settings_Streaming_StreamingSupport" URLText="https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617" }
+
+		OKButton { ControlName="Button" fieldName="OKButton" command="Close" labelText="#PropertyDialog_OK" }
+	}
+
+	styles
+	{
+	}
+
+	layout
+	{
+		place { control="DescriptionLabel,HostPlayAudioAlways,ChangeDesktopResolution,DynamicallyAdjustResolution,EnableCaptureNVFBC,EnableHardwareEncoding" y=44 dir=down width=max margin-left=16 margin-right=16 spacing=-1 }
+		place { start=EnableHardwareEncoding control="EnableHardwareEncodingNVIDIA,EnableHardwareEncodingAMD,EnableHardwareEncodingIntel" x=16 dir=down width=max margin-right=16 spacing=-3 }
+
+		region { name=down align=bottom height=175 }
+		place { region=down control="SoftwareEncodingThreadsLabel,SoftwareEncodingThreads" dir=down width=max margin-left=16 margin-right=16 spacing=2 }
+
+		place { start=SoftwareEncodingThreads control="EnableTrafficPriorityLabel,EnableTrafficPriority" y=4 dir=down width=max margin-right=16 spacing=-2 }
+
+		region { name=bottom align=bottom height=44 margin=8 }
+		region { name=support align=bottom height=88 margin=16 }
+		place { control="SupportInformationLabel" region=support }
+		place { control="OKButton" region=bottom align=right spacing=8 width=84 height=28 }
+	}
+}

@@ -1,0 +1,88 @@
+"resource/layout/settingssubstreaming.layout"
+{
+	controls
+	{
+		"DescriptionLabel"
+		{
+			ControlName="Label"
+			fieldName="DescriptionLabel"
+			wrap=1
+			labelText="#Steam_Settings_Streaming_Description"
+		}
+		"RemoteClientList"
+		{
+			ControlName="ListPanel"
+			style="RemoteClientList"
+			tall=140
+		}
+		"PerfInstructionsLabel"
+		{
+			ControlName="Label"
+			fieldName="PerfInstructionsLabel"
+			wrap=1
+			labelText="#Steam_Settings_Streaming_Perf_Instructions" hello=78
+		}
+		"SupportInformationLabel"
+		{
+			ControlName="URLLabel"
+			fieldName="SupportInformationLabel"
+			labelText="#Steam_Settings_Streaming_StreamingSupport"
+			URLText="https://support.valvesoftware.com/kb_article.php?ref=3629-RIAV-1617"
+		}
+		
+		"BandwidthLabel" { ControlName="Label" associate="BandwidthLimit" labelText="#Steam_Settings_Streaming_Bandwidth" }
+		"BandwidthLimit" { ControlName="ComboBox" fieldName="BandwidthLimit" style="BandwidthLimit" }
+
+		"FramerateLabel" { ControlName="Label" associate="FramerateLimit" labelText="#Steam_Settings_Streaming_Framerate" }
+		"FramerateLimit" { ControlName="ComboBox" fieldName="FramerateLimit" style="FramerateLimit" }
+
+		"ResolutionLabel" { ControlName="Label" associate="ResolutionLimit" labelText="#Steam_Settings_Streaming_Resolution" }
+		"ResolutionLimit" { ControlName="ComboBox" fieldName="ResolutionLimit" style="ResolutionLimit" }
+
+		"HwAccelDisable" { ControlName="CheckButton" fieldName="HwAccelDisable" labelText="#Steam_Settings_Streaming_DisableHardwareDecoding" }
+	}
+	
+	styles
+	{
+		CSettingsSubStreaming
+		{
+			render_bg
+			{
+				0="image(x0,y0+8,x1,y1, graphics/metro/labels/settings/inhomestreaming)"
+			}
+		}
+
+		ListPanel
+		{
+			bgcolor=Header_Dark
+			padding-left=8
+		}
+		ListPanelColumnHeader
+		{
+			padding-left=3
+			inset-left=0
+		}
+		ListPanelSectionHeader
+		{
+			padding-left=8
+		}
+	}
+	
+	layout
+	{		
+		place { control="RemoteClientList" height=160 }
+		place { control="DescriptionLabel,RemoteClientList,EnableStreaming" dir=down align=top width=max y=33 spacing=8 }
+
+		place { control="HostDivider,HostLabel" start=EnableStreaming dir=down width=max spacing=8 }
+		place { control="AdvancedHostOptions" y=8 dir=down start=HostLabel height=28 }
+		place { control="UnsupportedPlatform" y=8 dir=down start=HostLabel height=28 }
+
+		place { control="ClientDivider,ClientLabel" y=8 start=AdvancedHostOptions dir=down width=max spacing=8 }
+
+		place { control="QualityFast" y=8 start="ClientLabel" dir=down }
+		place { control="QualityBalanced" x=8 start="QualityFast" }
+		place { control="QualityBeautiful" x=8 start="QualityBalanced" }
+
+		place { control="AdvancedClientOptions,SupportInformationLabel" y=8 spacing=8 height=28 start="QualityFast" dir=down }
+	}
+}

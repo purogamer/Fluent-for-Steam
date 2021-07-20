@@ -1,0 +1,61 @@
+"resource/layout/overlay_screenshotspanel.layout"
+{
+	controls
+	{
+		ScreenshotsDetailPanel 
+		{ 
+			controlname="COverlay_Screenshots_Panel" 
+			style=detailsbox
+		}
+		TitleText { controlname="label" labeltext="#Overlay_Screenshots_Panel_Title" style=detailsboxtitle }
+		InstructionText { controlname="label" labeltext="#Overlay_Screenshots_Press_Hotkey"  style=Focus }
+
+		DarkRegion { controlname="ImagePanel" style=DarkRegion visible=0 }
+
+		SS0 { controlname="ImagePanel" style=PreviewImage }
+		SS1 { controlname="ImagePanel" style=PreviewImage }
+		SS2 { controlname="ImagePanel" style=PreviewImage }
+
+		ViewScreenshots { controlname="Button" labeltext="#Overlay_View_Screenshots" command="viewscreenshots" }
+		SetShortcut { controlname="Button" labeltext="#Overlay_Set_Shortcut" command="setshortcut" }
+
+	}
+	
+	colors
+	{
+
+	}	
+	
+	styles
+	{
+		Button
+		{
+			bgcolor=none
+			image=graphics/metro/overlay/icons/screenshots
+			inset-left=-6
+		}
+		
+		Button:hover
+		{
+			image=graphics/metro/overlay/icons/screenshots_h		
+		}
+	
+		Button:active
+		{
+			image=graphics/metro/overlay/icons/screenshots_p		
+		}
+	}
+	
+	layout
+	{			
+		//Left
+		place { controls=ViewScreenshots x=16 y=16 width=36 height=36 }
+
+		//Right
+		place { control="TitleText" x=68 y=11 }
+		place { control="InstructionText" x=68 y=37 }
+		
+		//Hidden
+		place { control=DarkRegion,SS0,SS1,SS2,SetShortcut height=0 }
+	}
+}

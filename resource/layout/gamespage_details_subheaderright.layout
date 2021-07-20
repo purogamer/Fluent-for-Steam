@@ -1,0 +1,58 @@
+"resource/layout/gamespage_details_subheaderright.layout"
+{
+	controls
+	{
+		subheaderlabels { controlname="CDetailsSubHeaderLabelsRightPanel" }
+
+		gamehubbutton { controlname="Button" labeltext="#steam_gamehub" style="DetailsButton" }
+	}
+
+	colors
+	{
+		GameDetailsSubHeader.HorizontalSpacing=10
+		GameDetailsSubHeader.VerticalMargin=0
+		gamehubbgtop="67 90 122 255"
+		gamehubbgbottom="54 74 99 255"
+		gamehubborder="74 100 133 255"
+	}
+
+	styles
+	{
+		CDetailsGameSubHeaderRightPanel
+		{
+			bgcolor=none
+		}
+
+		DetailsButton
+		{   
+			inset="0 0 0 0"
+			font-family=basefont
+			font-size=15
+			font-weight=400
+			textcolor="white"
+			bgcolor=none
+
+			render_bg
+			{}	
+		}
+	}
+
+	layout
+	{
+		// Y offset here should match the vertical padding value above in the colors section
+		region { name="header" y=0 x=0 width=max height=max }
+
+		place { 
+			control=subheaderlabels
+			region=header
+			dir=right
+			align=left
+		}
+		
+		place {
+			control=gamehubbutton
+			height=0
+			width=0
+		}
+	}
+}

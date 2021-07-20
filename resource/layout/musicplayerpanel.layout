@@ -1,0 +1,108 @@
+"resource/layout/musicplayerpanel.layout"
+{
+	controls
+	{	
+		CurrentAlbumImage { controlname=ImagePanel style="CurrentAlbumImageStyle" scaling=fit}
+
+		CurrentStatusLabel { controlname=Label style="StatusStyleDim" labeltext="NOW PLAYING" }
+		CurrentTrackLabel	{	controlname=Label	style="StatusStyle"	labeltext=""	}
+		CurrentArtistLabel { controlname=Label style="statusStyle" labeltext="" }
+		
+		RepeatButton { controlname=ToggleButton labeltext="" tooltiptext="#music_tooltip_repeat" command="ToggleRepeat" style="RepeatButtonStyle" }
+		ShuffleButton { controlname=Button labeltext="" tooltiptext="#music_tooltip_shuffle" command="ToggleShuffle" style="ShuffleButtonStyle" }
+		PreviousButton { controlname=Button labeltext="" tooltiptext="#music_tooltip_previous" command="PreviousTrack" style="PreviousButtonStyle" }
+		NextButton { controlname=Button labeltext="" tooltiptext="#music_tooltip_next" command="NextTrack" style="NextButtonStyle" }
+		PlayPauseButton { controlname=Button labeltext="" tooltiptext="#music_tooltip_playpause" command="TogglePlayPause" style="PlayButtonStyle" }
+		VolumeButton { controlname=Button labeltext="" tooltiptext="#music_tooltip_volume" command="Volume" style="VolumeButtonStyle" }
+		BrowseButton { controlname=Button labeltext="" tooltiptext="#music_tooltip_browse" command="BrowseMusic" style="BrowseButtonStyle" }
+		
+		TrackList { controlname=ListPanel style="MusicListPanelInterior" }
+		NoTracksLabel { controlname=Label style="NoTracksLabelStyle" labeltext="" zpos="-1" }
+		InfoLabel { controlname=Label style="InfoLabelStyle" labeltext="1 OF 10"  zpos="-1" textalignment=center }
+	}
+
+	colors
+	{
+	}
+
+	styles
+	{
+		CMusicPlayerPanel	
+		{
+			bgcolor=ClientBG
+			
+			minimum-width = 460
+			minimum-height = 92
+			
+			render_bg
+			{
+				0="fill(x0,y0,x1,y0+95,Header_Dark)"
+			}
+		}
+		
+
+    
+
+		CurrentAlbumImageStyle	{}
+		RepeatButtonStyle	{	bgcolor=none render_bg={} image=graphics/music_repeat_default	inset="0" padding="0" }
+		RepeatButtonStyle:hover	{	bgcolor=none render_bg={} image=graphics/music_repeat_hover	inset="0" padding="0" }
+		RepeatButtonStyle:selected	{	bgcolor=none render_bg={} image=graphics/music_repeat_enabled }
+		RepeatButtonStyle:selected:hover	{	bgcolor=none render_bg={} image=graphics/music_repeat_enabled_hover }
+		RepeatOnceButtonStyle	{	bgcolor=none render_bg={} image=graphics/music_repeat_default	inset="0" padding="0" }
+		RepeatOnceButtonStyle:hover	{	bgcolor=none render_bg={} image=graphics/music_repeat_hover	inset="0" padding="0" }
+		RepeatOnceButtonStyle:selected	{	bgcolor=none render_bg={} image=graphics/music_repeat1_enabled }
+		RepeatOnceButtonStyle:selected:hover	{	bgcolor=none render_bg={} image=graphics/music_repeat1_enabled_hover }
+		ShuffleButtonStyle	{	bgcolor=none render_bg={} image=graphics/music_shuffle_default	}
+		ShuffleButtonStyle:hover	{	bgcolor=none render_bg={} image=graphics/music_shuffle_hover	}
+		ShuffleButtonStyle:selected	{	bgcolor=none render_bg={} image=graphics/music_shuffle_enabled }
+		ShuffleButtonStyle:selected:hover	{	bgcolor=none render_bg={} image=graphics/music_shuffle_enabled_hover }
+		PreviousButtonStyle	{	bgcolor=none render_bg={} image=graphics/music_trackback_default	}
+		PreviousButtonStyle:hover	{	bgcolor=none render_bg={} image=graphics/music_trackback_hover }
+		NextButtonStyle	{	bgcolor=none render_bg={} image=graphics/music_trackfwd_default	}
+		NextButtonStyle:hover {	bgcolor=none render_bg={} image=graphics/music_trackfwd_hover	}
+		PlayButtonStyle	{	bgcolor=none render_bg={} image=graphics/music_play_default }
+		PlayButtonStyle:hover {	bgcolor=none render_bg={} image=graphics/music_play_hover }
+		PauseButtonStyle {	bgcolor=none render_bg={} image=graphics/music_pause_default }
+		PauseButtonStyle:hover {	bgcolor=none render_bg={} image=graphics/music_pause_hover }
+		VolumeButtonStyle {	bgcolor=none render_bg={} image=graphics/music_volume_default	}
+		VolumeButtonStyle:hover {	bgcolor=none render_bg={} image=graphics/music_volume_hover }
+		VolumeButtonActiveStyle {	bgcolor=none render_bg={} image=graphics/music_volume_default	}
+		VolumeButtonActiveStyle:hover {	bgcolor=none render_bg={} image=graphics/music_volume_hover }				
+		MuteVolumeButtonStyle {	bgcolor=none render_bg={} image=graphics/music_volume_mute_default	}
+		MuteVolumeButtonStyle:hover {	bgcolor=none render_bg={} image=graphics/music_volume_mute_hover }
+		MuteVolumeButtonActiveStyle {	bgcolor=none render_bg={} image=graphics/music_volume_mute_default	}
+		MuteVolumeButtonActiveStyle:hover {	bgcolor=none render_bg={} image=graphics/music_volume_mute_hover }
+		
+		BrowseButtonStyle {	bgcolor=none render_bg={} image=graphics/music_browse_default	}
+		BrowseButtonStyle:hover {	bgcolor=none render_bg={} image=graphics/music_browse_hover }
+		
+		StatusStyle	{ render_bg={} font-family=basefont textcolor="White75" font-size=16	}
+		StatusStyleDim	{ render_bg={} font-family=basefont textcolor="White45" font-size=14	}
+		InfoLabelStyle	{ render_bg={} font-family=basefont font-size=14 textcolor="White45" }
+		TrackListStyle {}
+		NoTracksLabelStyle	{	bgcolor=none render_bg={} image=graphics/music_background }
+		
+	}
+	
+	
+	layout
+	{
+		region { name=transport y=20 width=271 height=50 align=right}
+		region { name=currenttrack x=10 y=20 width=max height=50 margin-right=271 }
+		
+		place {	control="CurrentAlbumImage"	region=currenttrack x=0 y=4 width=56 height=56	}
+		place { control="CurrentTrackLabel,CurrentArtistLabel" region=currenttrack dir=down x=64 y=6 width=max spacing=4 }
+		
+		place { control="RepeatButton,ShuffleButton,PreviousButton" region=transport x=0 y=16 spacing=8 margin=0 height=18 }
+		place { control="PlayPauseButton" region=transport x=100 y=0 width=56 height=50 }
+		place { control="NextButton,VolumeButton,BrowseButton" region=transport x=164 y=16 spacing=8 margin=0 height=18 }
+
+		place { control="TrackList" x=0 y=94 width=max height=max margin-right=0 margin-bottom=28 }
+		place { control="NoTracksLabel" y=146 align="top-center" }
+		place { control="InfoLabel" align=bottom x=10 y=94 width=max margin-right=10 margin-bottom=8 }
+		
+		//Hidden
+		place { control=CurrentStatusLabel width=0 height=0 }
+	}
+	
+}

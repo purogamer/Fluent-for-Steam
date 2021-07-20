@@ -1,0 +1,92 @@
+"resource/layout/accountbutton.layout"
+{
+	styles
+	{
+		AccountPersonaStyleOffline
+		{
+			bgcolor=bgOfflineNick
+			textcolor=offlineNick
+			font-style=uppercase
+			padding-right=8
+			padding-left=12
+			render_bg
+			{
+				0="fill(x0-33, y0+3, x0+1, y1-2, bgOfflineNearAvatar)"
+			}
+		}
+
+		AccountPersonaStyleOnline
+		{
+			bgcolor=bgOnlineNick
+			textcolor=onlineNick
+			font-style=uppercase
+			padding-right=8
+			padding-left=12
+			render_bg
+			{
+				0="fill(x0-33, y0+3, x0+1, y1-2, bgOnlineNearAvatar)"
+			}
+		}
+
+		AccountPersonaStyleInGame
+		{
+			bgcolor=bgIngameNick
+			textcolor=ingameNick
+			font-style=uppercase
+			padding-right=8
+			padding-left=12
+			render_bg
+			{
+				0="fill(x0-33, y0+3, x0+1, y1-2, bgIngameNearAvatar)"
+			}
+		}
+
+		AccountDropDownStyleOffline
+		{
+			bgcolor=none
+		}
+
+		AccountDropDownStyleOnline
+		{
+			bgcolor=none
+		}
+
+		AccountDropDownStyleInGame
+		{
+			bgcolor=none
+		}
+
+		AccountBalanceStyle
+		{
+			textcolor=textCash
+			bgcolor=bgTextCash
+			padding-right=14
+			padding-left=8
+		}
+
+		AccountMenuButtonStyle
+		{
+			bgcolor=none
+		}
+		AccountMenuButtonStyle:hover
+		{
+			bgcolor=white05
+
+		}
+		AccountMenuButtonStyle:active
+		{
+			bgcolor=white10
+		}
+	}
+
+	layout
+	{
+		place { control="account_menu_button" align=left height=39 width=max } // span over everything
+		place { control="account_persona" align=right height=39 }
+		place { control="account_avatar" align=right end-right="account_persona" margin-top=4 height=32 width=32 }
+		place { control="account_balance" align=right end-right="account_avatar" height=39 }
+
+		//hidden
+		place { control="account_drop_down" margin-left=-999 }
+	}
+}

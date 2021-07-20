@@ -1,0 +1,99 @@
+"settings.styles"
+{
+	include "custom.styles"
+	include "colors.styles"
+
+	colors
+	{
+			DragDrop.DragFrame        "255 255 255 192"
+			DragDrop.DropFrame        "150 255 150 255"
+
+			Frame.ClientInsetX        10
+			Frame.ClientInsetY        35
+			Frame.FocusTransitionEffectTime   "0"
+			Frame.TransitionEffectTime      "0"
+			Frame.OnDragAlphaDelayTime      "0.15"
+			Frame.OnDragAlphaMultiplier     "1.0"
+			Frame.AutoSnapRange         "6"
+			Frame.UsesAlphaBlending       1
+			FrameSystemButton.Icon        ""
+			FrameSystemButton.DisabledIcon    ""
+
+			Notifications.PanelPosition     "BottomRight"
+			Notifications.PanelPosition     "TopRight" [$OSX]
+			Notifications.SlideDirection    "Vertical"    // Can be "Vertical", "Horizontal", "None" and controls slide effect
+			Notifications.FadeInTime      "0.45"
+			Notifications.FadeOutTime     "0.45"
+			Notifications.DisplayTime     "5.0"
+			Notifications.StackSize       "3"
+
+			ListPanel.TextColor       White
+			ListPanel.BgColor       none  
+			ListPanel.SelectedTextColor     White
+			ListPanel.SelectedBgColor     Focus
+			ListPanel.SelectedOutOfFocusgColor   Focus
+			ListPanel.DisabledTextColor     White45
+			ListPanel.DisabledSelectedTextColor   ClientBG
+			ListPanel.EmptyListInfoTextColor    Label
+			ListPanel.PerPixelScrolling     1
+			ListPanel.PostSectionLeading	0
+
+			Tooltip.Delay=75
+			Tooltip.Anchor=Cursor
+		
+			WizardPanel.HeaderBGColor     Black25
+
+			Menu.TextInset          "9"
+
+			PropertySheet.TransitionEffectTime    "0"
+			PropertySheet.TabGap        -2
+			PropertySheet.FlashTabColor	"Focus"
+
+			RichText.InsetX         8
+			RichText.InsetY         6
+
+			
+			SectionedListPanel.CollapserWidth   16
+			
+			HTML.SearchInsetY 16
+			HTML.SearchInsetX 16
+			HTML.SearchWide 400
+			HTML.SearchTall 40
+			HTML.SearchAnimationTime 0.25
+			html.secureurl "126 166 75 255"
+			html.insecureurl "173 69 72 255"
+			
+			HTML.IMEInsetY 16
+			HTML.IMEInsetX 16
+			HTML.IMEWide 400
+			HTML.IMETall 40
+			HTML.IMEAnimationTime 0.25
+			
+			MessageBox.ButtonHeight		24
+			
+			TextEntry.IMEBGColor        "TextEntry"
+			TextEntry.IMEFGColor        "Black"
+			
+			// Friends List colors
+			Friends.InGameColor       "Friends_InGame"
+			Friends.OnlineColor       "Friends_Online"
+			Friends.OfflineColor      "Friends_Offline"
+			Friends.GoldenColor       "Friends_Golden"
+			Friends.PanelDefault      "White75"
+			Friends.PanelOver       "White"
+			Friends.PanelSelected     "ClientBG"
+			Friends.SectionHeader     "White75"
+			Friends.NoAvatarOver      "White"
+			Friends.IgnoredColor      "Red"
+		
+			ChatDialog.URLColor       "White"
+			ChatOwnTextColor        "White75"
+			ChatGradientTop         "39 39 39 255"
+			ChatGradientBottom        "102 104 99 255"
+			
+			AchievementPopup.TitleColor   "White"
+			AchievementPopup.DescriptionColor "180 180 180 255"
+			
+			GiftOnlyInfo.ImagePanelColor  "GrayBG" 
+	}
+}

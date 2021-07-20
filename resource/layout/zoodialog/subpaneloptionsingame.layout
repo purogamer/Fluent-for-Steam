@@ -1,0 +1,78 @@
+"resource/layout/subpaneloptionsingame.layout"
+{
+	controls
+	{
+		TitleLabel { controlname=label labeltext="#Steam_SettingsInGameTitle" style=highlight }
+		EnableOverlayCheck {	ControlName=CheckButton labelText="#Overlay_SettingsEnable" }
+		EnableSCTenfootOverlayCheck [!$OSX&&!$LINUX] {	ControlName=CheckButton labelText="#Overlay_SettingsSCTenfootEnable" }
+		EnableVRDesktopGameTheaterCheck [!$OSX&&!$LINUX] {	ControlName=CheckButton labelText="#Overlay_SettingsEnableVRDesktopGameTheaterCheck" }
+		HotKeySelector {	ControlName=HotKeyEntry	}
+		ScreenshotHotKeySelector { ControlName=HotKeyEntry }
+		DescriptionLabel	{ ControlName=Label labeltext="#Overlay_SettingsDescription" wrap=1  }
+		HotKeySelectorLabel {	ControlName=Label labelText="#Overlay_SettingsHotKeyLabel" }
+		ScreenshotLabel {	ControlName=Label labelText="#Overlay_SettingsScreenshotHotKeyLabel"	}
+		ScreenshotActionLabel 	{	ControlName=Label	labelText="#Overlay_SettingsScreenshotActionLabel" }
+		ScreenshotNotifyCheck { ControlName=CheckButton labelText="#Friends_DisplayNotification" style=checkbox }
+		ScreenshotPlaySoundCheck { ControlName=CheckButton labelText="#Friends_PlayASound" }
+		ScreenshotSaveUncompressedCheck { ControlName=CheckButton labelText="#Overlay_SaveUncompressed" }
+
+		SetScreenshotFolderButton { ControlName=Button labelText="#Steam_SettingsInGameScreenshotFolder" 	command=SetScreenshotFolder }
+
+		ShowIngameFPSLabel { ControlName=Label labelText="#Steam_Settings_Ingame_ShowFPS_Title" }
+		ShowIngameFPSCornerCombo { ControlName="ComboBox" fieldName="ShowIngameFPSCombo" editable="0" }
+		ShowIngameFPSContrastCheck { ControlName=CheckButton labelText="#Steam_Settings_Ingame_ShowFPS_HightContrast" style=checkbox }
+
+		Divider1 { ControlName=Divider	}
+		PingRateLabel {	controlname=label	labeltext=#Steam_ServerBrowserPingRateLabel wrap=1 style=highlight		}
+		PingRateInfo {	controlname=label	labeltext=#Steam_ServerBrowserPingRateInfo wrap=1		}
+		PingRateCombo
+		{
+			controlname=combobox
+      			editable="0"
+		}
+	}
+
+	colors
+	{
+	}
+
+	styles
+	{
+		highlight
+		{
+			font-size=28
+			font-family=semilight
+			font-weight=300
+			textcolor=white
+		}
+
+		checkbox
+		{
+			padding-top=0
+			padding-bottom=0
+		}
+	}
+
+	layout
+	{
+		place { control=DescriptionLabel width=0 height=0 }
+
+		//Title + Description + Check
+		place { controls=TitleLabel,EnableOverlayCheck,EnableSCTenfootOverlayCheck,EnableVRDesktopGameTheaterCheck,ShowIngameFPSLabel,ShowIngameFPSCombo,ShowIngameFPSContrastCheck,OverlayHomePageLabel,OverlayHomePage,Divider1 dir=down spacing=4 width=max }
+
+		//Left - Shortcut
+		place { start=Divider1 controls=HotKeySelectorLabel,HotKeySelector dir=down margin-top=4 width=200 height=24 }
+
+		//Left - Screenshot
+		place { start=HotKeySelector control=ScreenshotLabel,ScreenshotHotKeySelector dir=down margin-top=8 width=200 height=24 }
+
+		//Right
+		place { start=ScreenshotHotKeySelector control=ScreenshotActionLabel,ScreenshotNotifyCheck,ScreenshotPlaySoundCheck,ScreenshotSaveUncompressedCheck dir=down y=8 width=max height=24 }
+		place { start=ScreenshotSaveUncompressedCheck control=SetScreenshotFolderButton y=8 dir=down width=160 height=24 }
+
+		//Ping
+		place { controls="PingRateLabel" x=0 y=448 margin-top=16 width=max dir=down }
+		place { controls="PingRateCombo" start=PingRateLabel margin-top=10 width=160 dir=down height=28 }
+		place { controls="PingRateInfo" start=PingRateCombo margin-top=10 width=max dir=down }
+	}
+}

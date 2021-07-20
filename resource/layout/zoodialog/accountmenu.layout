@@ -1,0 +1,38 @@
+"resource/layout/accountmenu.layout"
+{	
+	styles
+	{
+		AccountMenuStyle
+		{
+			minimum-width=200
+			minimum-height=120
+			bgcolor=black
+
+			render_bg 
+			{
+				0="fill(x0+1,y0+1,x1-1,y1-1, ClientBG)"
+			}
+		}
+		account_menu_button
+		{
+			bgcolor=transparent
+			padding-left=8
+		}
+	
+		account_menu_button:hover
+		{
+			bgcolor = white05
+		}
+		
+		account_menu_label
+		{
+			textcolor="Friends.OnlineColor"
+			padding-right=8
+		}
+	}
+	
+	layout
+	{
+		place { control="view_profile_button, view_account_button, change_user_button, view_preferences_button, view_wallet_button" dir=down height=24 width=max margin=1 }
+	}
+}

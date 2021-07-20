@@ -1,0 +1,702 @@
+linux.styles
+{
+	colors
+	{
+		basefont="Liberation Sans"
+		semibold="Liberation Sans"
+		semilight="Liberation Sans"
+		light="Liberation Sans"
+	}
+	styles
+	{
+		//overlay_friendsdetails.layout
+		"COverlay_Details_Friends Button"
+		{
+			font-size=16
+		}
+		//controls.styles
+		Button
+		{
+			font-size=14 
+		}
+		RadioButton
+		{
+			font-size=14 
+		}
+		CheckButton
+		{
+			font-size=14 
+		}
+		ComboBox
+		{
+			font-size=14 
+		}
+
+		PageTab
+		{
+			font-size=12 
+		}
+		TextEntry
+		{
+			font-size=14 
+		}
+		EmoticonMenuItemStyle
+		{
+			font-size=22 
+		}
+///////////////////////////////////////////		
+
+		//FriendsDialog.res
+		"CFriendsDialog PageTab"
+		{
+			font-size=14
+		}
+		//steam.styles
+		//Header Text like those from the Settings
+		//overlay_achievementsdetails.layout overrides
+		highlight
+		{
+			font-size=22
+		}
+		
+		///////////////////////////////////////////
+		//======Groups Title dropmenu arrow======//
+		CFriendsListSectionAffordance
+		{
+			font-size=14 
+		}
+		
+		///////////////////////////////////////////////
+		//======FriendsPanel Friend/Groups Title======//
+		CFriendsListSectionHeader
+		{
+			font-size=12 
+		}
+
+
+		"CDialogSettings FrameTitle"
+		{
+			font-size=22 
+		}
+		"CGamePropertiesDialog FrameTitle"
+		{
+			font-size=14 
+		}
+		"CGameLaunchParametersDialog FrameTitle"
+		{
+			font-size=20 
+		}
+
+		"CContentManagmentDialog FrameTitle"
+		{
+			font-size=20 
+		}
+		"CSetNicknameDialog FrameTitle"
+		{
+			font-size=20 
+		}
+		"CFriendAliasesDialog FrameTitle"
+		{
+			font-size=20 
+		}
+		"CEditFriendsGroupsDialog FrameTitle"
+		{
+			font-size=20 
+		}
+		"CChooseBetaDialog FrameTitle"
+		{
+			font-size=20 
+		}
+		"CEditTagsDialog FrameTitle"
+		{
+			font-size=20 
+		}
+		"COverlayBroadcastChatDialog FrameTitle"
+		{
+			font-size=14 
+		}
+		"CAddShortcutDialog FrameTitle"
+		{
+			font-size=20 
+		}
+		//overlay_achievement_item.layout override 
+		Label
+		{
+			font-size=14 
+		}
+		
+		/////////////////////////////////////////////
+		//==List elements similar to the interior==//
+		ListPanel
+		{
+			font-size=14 
+		}
+		/////////////////////////////////////////////////////////////////////////////////////////
+		//==Interior of List elements (fonts doesn't change on all of them.Look at ListPanel)==//
+		ListPanelInterior
+		{
+			font-size=14 
+		}
+		
+		
+		/////////////////////////////////////////
+		//======List View Mode Games Name======//
+		"GameColumn_BigText"
+		{
+			font-size=14 
+		}
+
+		///////////////////////////////////////////////
+		//======List View Mode List Header Text======//
+		ListPanelColumnheader
+		{
+			font-size=12 
+		}
+		
+		//////////////////////////////////////////////////
+		//===Library Categories(Recent,Software...etc)==//
+		ListPanelSectionHeader
+		{
+			font-size=16 
+		}
+		
+		/////////////////////////////////////////////////////////
+		//======Dropmenu buttons(inbox,filter button.....)=====//
+		MenuItem
+		{
+			font-size=14 
+		}
+		
+		///////////////////////////////////////////////////////
+		//===Main Buttons Hover Menus (top client buttons)===//
+		SuperNavMenuItem
+		{
+			font-size=14 
+		}
+
+		Notification
+		{
+			font-size=14 
+		}
+		Panel
+		{
+			font-size=14 
+		}
+
+		RichText
+		{
+			font-size=14 
+		}
+		////////////////////////
+		//======URL Links=====//
+		"RichText url"
+		{
+			font-size=14 
+		}
+		"CFriendPanel RichText URL"
+		{
+			font-size=12 
+		}
+		
+		"RichText bold"
+		{
+			font-size=14 
+		}
+		"RichText emphasis"
+		{
+			font-size=14
+		}
+		////////////////////////////////
+		//======Friendspanel List=====//
+		SectionedListPanel
+		{
+			font-size=14 
+		}
+		
+		/////////////////////////////////
+		//======Mouse-hover panels=====//
+		tooltip_headline
+		{
+			font-size=15 
+		}
+		
+		/////////////////////////////////////////////////////
+		//======Select Directory Dialog's folders text=====//
+		TreeNodeText
+		{
+			font-size=12 
+		}
+		
+		URLLabel
+		{
+			font-size=14 
+		}
+		URLLabelSimple
+		{
+			font-size=12 
+		}
+		
+		WrapPanel
+		{
+			font-size=12 
+		}
+		
+		////////////////////////////////////////////////////////
+		//======Steam Developer Console debug texts(-dev)=====//
+		console_text_error
+		{
+			font-size=14 
+		}
+		console_text
+		{
+			font-size=14 
+		}
+		
+		//////////////////////////////////
+		//======Other Person's Text=====//
+		friends_chat_text
+		{
+			font-size=14
+		}
+		////////////////////////
+		//======Your Text=====//
+		friends_chat_text_self
+		{
+			font-size=14 
+		}
+		////////////////////////////////
+		//======Chat History Text=====//
+		friends_chat_history
+		{
+			font-size=14 
+		}
+		//////////////////////////////////////
+		//======Voice Call/Trade/Invite=====//
+		friends_chat_event
+		{
+			font-size=14 
+		}
+
+		///////////////////////////////////////////////
+		//====== Status Changes/Connection/Game=====//
+		friends_chat_bright_event
+		{
+			font-size=14 
+		}
+
+		////////////////////////////////////
+		//======Links in chat=====//
+		friends_chat_url
+		{
+			font-size=14 
+		}
+		////////////////////////////////////////////////
+		//======Everybody's Name while in-game=====//
+		friends_chat_name_ingame
+		{
+			font-size=14 
+		}
+		friends_chat_self
+		{
+			font-size=14 
+		}
+		////////////////////////////////////////////
+		//======Everybody's Name while online=====//
+		friends_chat_name
+		{
+			font-size=14 
+		}
+
+		friends_chat_accountid
+		{
+			font-size=14 
+		}
+
+		//////////////////////////////////////////////
+		//=="Never tell your password to...." Text==//
+		friends_chat_securitylink
+		{
+			font-size=14 
+		}
+///////////////////////////////////////////////////////////////
+
+		//phonereminderbar.layout   //
+		//////////////////////////////
+		//======Phone reminder======//
+		soft
+		{
+			font-size=14 
+		}
+		
+		bright
+		{
+			font-size=16 
+		}
+////////////////////////////////////////
+
+		//friendnotificationoptionsdialog.res
+		"CFriendNotificationOptionsDialog Label"
+		{
+			font-size=13
+		}
+
+		//backupstartpage.res
+		//Backup/Restore Start Page
+		"CBackupStartPage Label"
+	    {
+			font-size=28
+	    }
+		//friendaliasesdialog.res
+		
+		//SettingsSubFriends.res
+		"CSettingsSubFriends Label"
+		{
+			font-size=16 
+		}
+		//overlay_broadcastchat.layout
+		"COverlayBroadcastChatDialog label"
+		{
+			font-size=12 
+		}
+
+		"CSettingsSubFriends URLLabel"
+		{
+			font-size=22 
+		}
+////////////////////////////////////////
+
+		//friendpanel.layout
+		CFriendPanel
+		{
+			font-size=14
+		}
+		namestyle
+		{
+			font-size=14 
+		}
+		nameInstanceStyle
+		{
+			font-size=14 
+		}
+		statusStyle
+		{
+			font-size=14 
+		}
+		friends_offline
+		{
+			padding-top=0
+			padding-bottom=1
+		}
+		friends_online
+		{
+			padding-top=0
+			padding-bottom=1
+		}
+		friends_ignored
+		{
+			padding-top=0
+			padding-bottom=1
+		}
+		controlPanelLinkStyle
+		{
+			font-size=14
+		}
+		controlPanelLinkStyle:hover
+		{
+			font-size=14
+		}
+		inviteLinkStyle
+		{
+			font-size=14
+		}
+//////////////////////////////////////////
+
+		//gamespage_details_news_item.layout
+		title_label
+		{
+			font-size=16 
+		}
+		
+		//settingssubmusic.layout
+		HeaderText
+		{
+			font-size=22 
+		}
+		DescriptionLabel
+		{
+			font-size=16 
+		}
+////////////////////////////////////////		
+		
+		//downloadsummarypanel.layout
+		throttleLabel
+		{
+			font-size=14
+		}
+		throttleValue
+		{
+			font-size=13 
+		}
+		bigtextNonUpper
+		{
+			font-size=14
+		}
+		bigtextlabel
+		{
+			font-size=14
+		}
+		bigtextHeader
+		{
+			font-size=22 
+		}
+		bigTextNumbers
+		{
+			font-size=22 
+		}
+////////////////////////////////////////		
+		
+		//uinavigatorpanel.layout
+		LibraryShow
+		{
+			font-size=12 
+		}
+		NavLabel
+		{
+			font-size=12 
+		}
+		NavLabel2
+		{
+			font-size=16 
+		}
+		CUINavButton
+		{
+			font-size=14 
+		}
+		CUINavButton2
+		{
+			font-size=12 
+		}
+////////////////////////////////////////
+		
+		//musiclibrarypanel.layout
+		"CMusicPage_Details_Content NavLabel2"
+		{
+			font-size=14 
+		}
+
+		//gamespage_details_gametitleheader.layout
+		headertextlarge
+		{
+			font-size=32 
+		}
+
+		//steamrootdialog.layout
+		AccountBalanceStyle
+		{
+			font-size=14
+		}
+		inbox_button
+		{
+			font-size=14
+		}
+		inbox_button_active
+		{
+			font-size=14
+		}
+//////////////////////////////////////////
+		//steamrootdialog_gamespage_details.layout
+		rightcolumnheadertext
+		{
+			font-size=16 
+		}
+		rightcolumnheadertext-red
+		{
+			font-size=16 
+		}
+		rightcolumnheadertext-green
+		{
+			font-size=16 
+		}
+		rightcolumnheadertext-blue
+		{
+			font-size=16 
+		}
+		rightcolumnlink
+		{
+			font-size=14 
+		}
+		rightcolumntag
+		{
+			font-size=14 
+		}
+////////////////////////////////////////		
+		
+		//gamespage_details_achevements_most_recent.layout
+		mostrecent_name
+		{
+			font-size=16 
+		}
+		mostrecent_label
+		{
+			font-size=16 
+		}
+		mostrecent_unlockedsofar
+		{
+			font-size=14 
+		}
+////////////////////////////////////////		
+		
+		//gamespage_details_dlc.layout
+		"CGamesPage_Details_DLC bodycontent"
+		{
+			font-size=14 
+		}
+
+		//gamespage_details_turnnotifications_item.layout
+		titlestyle
+		{ 
+			font-size=16 
+		}
+		messagestyle
+		{ 
+			font-size=12 
+		}
+////////////////////////////////////////
+
+		//gamespage_grid_loadfailed.layout
+		GamesGridPlaceholder
+		{
+			font-size=18 
+		}
+
+		//htmlfindbar.layout
+		FindEntry
+		{
+			font-size=14 
+		}
+
+		//appdownloadpanel.layout
+		label2
+		{
+			font-size		"12" 
+		}
+		//Game Title
+		ModuleHeading
+		{
+			font-size		"14"
+		}
+		//Bottom Status
+		ModuleHeading2
+		{
+			font-size		"14"
+		}
+//////////////////////////////////////////
+
+		//overlaytaskbar.layout
+		taskbar
+		{
+			font-size=20
+		}
+		taskbar:hover
+		{
+			font-size=20
+		}
+////////////////////////////////////////
+		//overlaydesktop_lores.layout overrides
+		//overlaydesktop.layout
+		sidemenu
+		{
+			font-size=22 
+		}
+		sidemenu:hover
+		{
+			font-size=22 
+		}
+		// The Clock
+		topbar
+		{
+			font-size=36 
+		}
+		// AM, PM
+		clocksuffix
+		{
+			font-size=20
+		}
+		// Session, Weeks,Total
+		timeStrings
+		{
+			font-size=16 
+		}
+////////////////////////////////////////
+
+		//overlay_guide_item.layout
+		name
+		{
+			font-size=16 
+		}
+
+		//settingssubstreaming_pin.layout
+		Description
+		{
+			font-size=16
+		}
+
+		//settingsdialog.layout
+		SettingsList
+		{
+			font-size=16
+		}
+
+		//screenshotmanager.layout
+		NoSelectionTitle
+		{
+			font-size=30
+		}
+		NoSelectionInstructions
+		{
+			font-size=14
+		}
+		gameselector
+		{
+			font-size=16
+		}
+//////////////////////////////////
+
+		//parentallockdialog.layout
+		//parentalunlockdialog.layout
+		Hey
+		{
+			font-size=22
+		}
+
+		//ChatRoomDlgFriend.res
+		"CChatRoomDlg label"
+		{
+			font-size=12
+		}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////				ASPECT OVERRIDES				////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+		//friendpanel.layout
+		namestyle
+		{
+			font-family=basefont
+			padding-bottom=2
+		}
+		nameInstanceStyle
+		{
+			font-family=basefont
+		}
+		statusStyle
+		{
+			padding-bottom=2
+		}
+////////////////////////////////////////////////////////
+		//steam.styles
+		ListPanelSectionHeader
+		{
+			font-family=semibold
+		}
+	}
+}

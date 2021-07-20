@@ -1,0 +1,76 @@
+"resource/layout/subpaneloptionscloud.layout"
+{
+	controls
+	{
+		FamilySharingTitle { controlname=label	labeltext=#Steam_Settings_Family_Sharing_Title style=highlight}
+
+		FamilySharingTextState { controlname=label labeltext=#Steam_Settings_Family_Sharing_StateNotAuthorized wrap=1 }
+
+		AuthorizeDeviceButton { controlname=button	labelText=#Steam_Settings_Family_Sharing_AuthorizeDevice command=AuthorizeDevice }
+		DeauthorizeDeviceButton { controlname=button	labelText=#Steam_Settings_Family_Sharing_DeauthorizeDevice command=DeauthorizeDevice }
+
+		BorrowersLabel { controlname=label labeltext=#Steam_Settings_Family_Sharing_Borrowers wrap=1 }
+		BorrowersList { controlname=listpanel }
+
+		ManageSharingButton { controlname=button	labelText=#Steam_Settings_Family_Sharing_ManageSharing command=ManageSharing }
+
+		FamilyOptionsTitle { controlname=label	labeltext=#Steam_Settings_Family_Options_Title style=highlight }
+		FamilyOptionsText { controlname=label	labeltext=#Steam_Settings_Family_Options_Text	wrap=1 }
+
+		ManageOptionsButton { controlname=button	labelText=#Steam_Parental_Manage command=ManageParental }
+
+		ShowNotificationsCheck { ControlName=checkbutton labeltext=#Steam_Settings_Family_Show_Notifications }
+
+		Divider1 { ControlName=Divider	}
+	}
+
+	colors
+	{
+	}
+
+	styles
+	{
+		ListPanel
+		{
+			bgcolor=Header_Dark
+		}
+
+		"ListPanelColumnHeader ListPanelCheckBox"
+		{
+		padding-top=2
+		padding-left=6
+		}
+		ListPanelCheckBox
+		{
+		padding-top=1
+		padding-left=5
+		}
+		padded
+		{
+			padding-top=6
+		}
+	}
+
+	layout
+	{
+		//Family Options
+		place { controls="FamilyOptionsTitle" dir=down }
+		place { controls="FamilyOptionsText" start=FamilyOptionsTitle y=8 width=max dir=down }
+		place { controls="ManageOptionsLabel" start=FamilyOptionsText y=8 dir=down width=192 height=28 }
+		place { controls="Divider1" start=ManageOptionsLabel dir=down y=8 width=max height=1 }
+
+
+		//Family Sharing
+		place { controls="FamilySharingTitle,FamilySharingInfoText" start=Divider1 y=8 spacing=8 dir=down width=max }
+		place { controls="AuthorizedDeviceCheck" start=FamilySharingInfoText y=8 spacing=8 dir=down width=max height=28 }
+		place { controls="ManageSharingLabel" start=AuthorizedDeviceCheck y=8 spacing=8 dir=down width=192 height=28 }
+
+		//Borrowers List
+		place { controls="ShowNotificationsCheck" start=ManageSharingLabel y=8 spacing=8 dir=down width=max }
+		place { controls="BorrowersLabel" start=ShowNotificationsCheck y=8 spacing=8 dir=down width=max }
+		place { controls="BorrowersList" start=BorrowersLabel y=8 spacing=8 dir=down width=max height=max margin-bottom=16 }
+
+		//Hidden
+		//place { control="Divider1" width=0 height=0
+	}
+}

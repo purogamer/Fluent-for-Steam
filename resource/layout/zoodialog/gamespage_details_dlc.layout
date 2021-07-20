@@ -1,0 +1,75 @@
+"resource/layout/gamespage_details_dlc.layout"
+{
+	controls
+	{
+		dlcdetails { controlname="CGamesPage_Details_DLC" style="dlcdetails" }
+		headerlabel { controlname="Label" style="gamedetails-headerlabel" labeltext="#Steam_DLC_Details" }
+		latestimage { controlname="ImagePanel" style="mostrecentimage" scaling="fit" }
+		overlayimage { controlname"ImagePanel" style="overlayimage" scaling="fit" zpos=2 image="resource/dlc_overlay" }
+		latesttimelabel { controlname="Label" style="mostrecenttime" labeltext="#Steam_DLC_LatestItemAdded" }
+		dlclist { controlname="ListPanel" style="dlclist" }
+		moredlc { controlname="Button" labeltext="#Steam_FindDLCInStore" command="FindDLCInStore" }
+	}
+
+	colors
+	{
+
+		RichText.InsetX "0"
+		RichText.InsetY "3" 
+		GameDetailsDLC.ExtraVerticalSpacing "180"
+	}
+
+	styles
+	{
+		dlcdetails 
+		{ 
+			//bgcolor=BackgroundStart
+			render_bg
+			{
+				0="image(x0+16,y0+16,x1,y1,graphics/metro/icons/dlc)"
+			}
+		}
+
+		bodycontent
+		{
+			textcolor="White"
+			selectedtextcolor="White"	
+			font-size=15
+			render_bg {}
+		}
+
+		"DLC_Uninstalled"
+		{
+			textcolor="White45"
+			selectedtextcolor="White"
+		}
+
+		"DLC_Installed"
+		{
+			textcolor="White"
+			selectedtextcolor="White"
+		}
+
+		"mostrecenttime"
+		{
+			padding-top=3
+			minimum-width=256
+		}
+	}
+
+	layout
+	{
+		region { name=body margin=0 x=68 y=0 width=max height=max margin-bottom=52 }
+		
+		place { control=headerlabel width=0 height=0 }
+		place { control=moredlc x=68 height=28 align=bottom margin-bottom=16 }
+		
+		place { region=body y=141 width=257 control=latesttimelabel }
+		place { region=body width=max control=dlclist }
+		place { region=body y=16 control=dlclist dir=right height=max }
+		
+		//Hidden
+		place { control=latestimage,latesttimelabel,overlayimage width=0 height=0 }
+	}
+
+}

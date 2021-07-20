@@ -1,0 +1,57 @@
+"resource/layout/overlay_newsdetails.layout"
+{
+	controls
+	{
+		NewsDetailPanel 
+		{ 
+			controlname="COverlay_Details_News" 
+			style=detailsbox
+		}
+		TitleText { controlname="label" labeltext="#Overlay_Taskbar_News" style=detailsboxtitle }
+		
+		ViewNewsButton
+		{
+			controlname=button
+			labeltext="#Overlay_Friends_ViewNews"
+		}
+		
+	}
+	
+	colors
+	{
+
+	}	
+	
+	styles
+	{
+		Button
+		{
+			bgcolor=none
+			image=graphics/metro/overlay/icons/guides
+			inset-left=-6
+		}
+		
+		Button:hover
+		{
+			image=graphics/metro/overlay/icons/guides_h		
+		}
+	
+		Button:active
+		{
+			image=graphics/metro/overlay/icons/guides_p		
+		}
+	}
+	
+	layout
+	{
+		//Left
+		place { controls=ViewNewsButton y=16 width=40 height=40 }
+
+		//Right
+		place { control="TitleText" x=56 y=7 }
+		//place { control="NumNewsText" x=56 y=40 }
+		
+		//Content
+		place { control=*newsitem x=56 y=72 width=max height=40 dir=down spacing=8 }
+	}
+}

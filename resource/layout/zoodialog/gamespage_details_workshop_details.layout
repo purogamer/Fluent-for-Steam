@@ -1,0 +1,47 @@
+"resource/layout/gamespage_details_workshop_details.layout"
+{
+	controls
+	{
+		workshopdetails { controlname="CWorkshopDetailsPanel" }
+		workshop_banner { controlname="ImagePanel" image=resource/workshop_banner zpos=-1 style="workshop_banner" }
+		workshop_description { controlname="RichText" style="workshop_description" text="#steam_community_files_info" }
+	}
+	
+	colors
+	{
+		WorkshopDetailsPanel.ExtraVerticalSpacing "100"
+		WorkshopDetailsPanel.ExtraHorizontalSpacing "0"
+		RichText.InsetX "2"
+		RichText.InsetY "2" 		
+	}
+	
+	styles
+	{
+		workshop_description
+		{
+		}
+		button
+		{
+			bgcolor=none
+			image=graphics/metro/overlay/icons/achievements
+			inset-left=-6
+		}
+
+		button:hover
+		{
+			image=graphics/metro/overlay/icons/achievements_h		
+		}
+
+		button:active
+		{
+			image=graphics/metro/overlay/icons/achievements_p		
+		}
+	}
+
+	layout
+	{
+		place { control=viewall x=16 y=16 width=36 height=36 align=left margin-right=16 }
+
+		place { control=workshop_banner,workshop_description width=0 height=0 }
+	}
+}

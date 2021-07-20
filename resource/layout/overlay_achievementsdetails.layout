@@ -1,0 +1,74 @@
+"resource/layout/overlay_achievementsdetails.layout"
+{
+	controls
+	{
+		AchievementsDetailPanel 
+		{ 
+			controlname="COverlay_Details_Acheivements" 
+			style=detailsbox
+		}
+		TitleText { controlname="label" labeltext="#Overlay_Achievement_Title" style=detailsboxtitle }
+		
+		ViewAchievementsButton
+		{
+			controlname=button
+			labeltext="#Overlay_Friends_ViewAchievements"
+		}
+		
+		progressbackground { controlname="ImagePanel" style="progressbackground" }
+		progressbarimage { controlname="ImagePanel" style="progressbarimage" }
+		
+		
+		ProgressTextEarned { controlname=label style=Focus labeltext="#Overlay_Achievement_Progress" }
+
+	}
+	
+	colors
+	{
+
+	}	
+	
+	styles
+	{
+		detailsbox
+		{
+			render_bg
+			{
+				0="fill(x0+16,y0+67,x1-68,y0+68,White10)"
+			}
+		}
+
+		Button
+		{
+			bgcolor=none
+			image=graphics/metro/overlay/icons/achievements
+			inset-left=-6
+		}
+		
+		Button:hover
+		{
+			image=graphics/metro/overlay/icons/achievements_h		
+		}
+	
+		Button:active
+		{
+			image=graphics/metro/overlay/icons/achievements_p		
+		}
+	}
+	
+	layout
+	{		
+		//Left
+		place { controls=ViewAchievementsButton align=right margin-right=16 y=16 width=36 height=36 }
+
+		//Right
+		place { control="TitleText" align=right margin-right=68 y=11 }
+		place { control="ProgressTextEarned" align=right margin-right=68 y=37 }
+		
+		//Content
+		place { control=*achievement y=68 width=max height=68 dir=down margin-right=68 }
+		
+		//Hidden
+		place { control=progressbarimage,progressbackground width=0 height=0 }
+	}
+}

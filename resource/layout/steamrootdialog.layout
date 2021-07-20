@@ -1,0 +1,334 @@
+"resource/layout/steamrootdialog.layout"
+{
+	styles
+	{
+		RootMenu
+		{
+			bgcolor="none"
+		}
+
+		FrameTitle
+		{
+			textcolor="none"
+			bgcolor="none"
+			render_bg{}
+		}
+
+		ClientTitle
+		{
+			textcolor="none"
+			bgcolor="none"
+		}
+
+		view_friends
+		{
+			padding-left=6
+			bgcolor="none"
+			image="graphics/metro/icons/navbar/friends"
+			padding-right=2
+		}
+		view_friends:hover
+		{
+			bgcolor=white05
+		}
+		view_friends:active
+		{
+			bgcolor=white10
+		}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//======This is the VAC Ban Button wich appears only if you are VAC Banned(made it an icon rather than text)====//
+		support_alert
+		{
+			textcolor=white75
+			bgcolor="none"
+			render_bg
+			{
+				0="image(x0+6,y0+8,x1,y1,graphics/warning)"
+			}
+			padding-right=3
+			padding-left=15
+		}
+		support_alert:hover
+		{
+			render_bg
+			{
+				0="image(x0+6,y0+8,x1,y1,graphics/warning)"
+				1="fill(x0,y0,x1,y1,white05)"
+			}
+		}
+		support_alert:active
+		{
+			render_bg
+			{
+				0="image(x0+6,y0+8,x1,y1,graphics/warning)"
+				1="fill(x0,y0,x1,y1,white10)"
+			}
+		}
+
+		support_alert_ack
+		{
+			textcolor=white75
+			bgcolor="none"
+			render_bg
+			{
+				0="image(x0+6,y0+8,x1,y1,graphics/warning)"
+			}
+			padding-right=3
+			padding-left=15
+		}
+		support_alert_ack:hover
+		{
+			render_bg
+			{
+				0="image(x0+6,y0+8,x1,y1,graphics/warning)"
+				1="fill(x0,y0,x1,y1,white05)"
+			}
+		}
+		support_alert_ack:active
+		{
+			render_bg
+			{
+				0="image(x0+6,y0+8,x1,y1,graphics/warning)"
+				1="fill(x0,y0,x1,y1,white10)"
+			}
+		}
+
+		inboxmenuitem
+		{
+			textcolor=white45
+			padding-left=7
+		}
+		inboxmenuitem:hover
+		{
+			textcolor=white
+		}
+		inboxmenuitem_active
+		{
+			textcolor=white
+		}
+
+		announcement_button
+		{
+			inset-top=-6
+			bgcolor=none
+			image="graphics/updatenone_notification"
+			padding-right=4
+		}
+		announcement_button:hover
+		{
+			bgcolor=White05
+		}
+		announcement_button:active
+		{
+			bgcolor=White10
+		}
+		announcement_button_active
+		{
+			inset-top=-6
+			bgcolor=Focus
+			image="graphics/updatenew_notification"
+			padding-right=4
+		}
+
+		inbox_button
+		{
+			inset="8 0 8 0"
+			textcolor=white
+			font-family=basefont
+			font-style="none"
+			render_bg
+			{
+				0="image(x0+8,y0+12,x1,y1,graphics/metro/icons/navbar/notifications)"
+			}
+			render {}
+			padding-left=0
+			padding-right=0
+			padding-top=0
+		}
+		inbox_button:hover
+		{
+			textcolor=white
+			bgcolor=white05
+			render_bg
+			{
+				0="image(x0+8,y0+12,x1,y1,graphics/metro/icons/navbar/notifications)"
+			}
+			render {}
+		}
+		inbox_button:selected
+		{
+			textcolor=white
+			bgcolor=white10
+			render_bg
+			{
+				0="image(x0+8,y0+12,x1,y1,graphics/metro/icons/navbar/notifications)"
+			}
+			render {}
+		}
+		inbox_button:disabled
+		{
+			textcolor=white
+			bgcolor="none"
+			render_bg
+			{
+				0="image(x0+8,y0+12,x1,y1,graphics/metro/icons/navbar/notifications)"
+				1="fill(x0,y1,x1,y1+1,white45)"
+			}
+			render {}
+		}
+
+		inbox_button_active
+		{
+			inset="8 0 -1 0"
+			textcolor=white
+			bgcolor="none"
+			render_bg
+			{
+				0="image(x0+8,y0+12,x1,y1,graphics/metro/icons/navbar/notifications_active)"
+				1="fill(x0,y1,x1,y1+1,focus)"
+			}
+			render {}
+			padding-left=13
+			padding-right=0
+			padding-top=-5	//numbers are centered
+		}
+		inbox_button_active:hover
+		{
+			textcolor=white
+			bgcolor=white05
+			render_bg
+			{
+				0="image(x0+8,y0+12,x1,y1,graphics/metro/icons/navbar/notifications_active)"
+				1="fill(x0,y1,x1,y1+1,focus)"
+			}
+			render {}
+		}
+		inbox_button_active:selected
+		{
+			textcolor=white
+			bgcolor=white10
+			render_bg
+			{
+				0="image(x0+8,y0+12,x1,y1,graphics/metro/icons/navbar/notifications_active)"
+				1="fill(x0,y1,x1,y1+1,focus)"
+			}
+			render {}
+		}
+		inbox_button_active:disabled
+		{
+			textcolor=white
+			bgcolor="none"
+			render_bg
+			{
+				0="image(x0+8,y0+12,x1,y1,graphics/metro/icons/navbar/notifications_active)"
+				1="fill(x0,y1,x1,y1+1,white45)"
+			}
+			render {}
+		}
+
+		parental_lock_button
+		{
+			bgcolor="none"
+			render_bg
+			{
+				0="fill(x0,y1,x1,y1+1,Red)"
+			}
+			image="graphics/metro/icons/navbar/parent_unlocked"
+			padding-right=4
+		}
+		parental_lock_button:hover
+		{
+			bgcolor=white05
+		}
+		parental_lock_button:selected
+		{
+			bgcolor="none"
+			render_bg
+			{
+				0="fill(x0,y1,x1,y1+1,green)"
+			}
+			image="graphics/metro/icons/navbar/parent_locked"
+		}
+		parental_lock_button:selected:hover
+		{
+			bgcolor=white05
+		}
+
+		VRButton
+		{
+			image="graphics/icon_vr"
+			bgcolor=none
+			padding-right=4
+		}
+		VRButton:hover
+		{
+			image="graphics/icon_vr_over"
+			bgcolor=White05
+		}
+		VRButton:active
+		{
+			bgcolor=White10
+		}
+		VRButton:disabled
+		{
+			image="graphics/icon_vr_disabled"
+			bgcolor=White10
+		}
+		VRButtonExit
+		{
+			padding-left=8
+			padding-right=8
+		}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//======Hidden Elements(width=0/height=0 still causes spikes and i doubt it will conflict with the linux font-size=0 problems=============//
+		FullscreenButton
+		{
+			inset-left=-999
+			textcolor="none"
+			bgcolor="none"
+		}
+		FullscreenButton:hover
+		{
+			textcolor="none"
+			bgcolor="none"
+		}
+		FullscreenButton:active
+		{
+			textcolor="none"
+			bgcolor="none"
+		}
+		FullscreenButton:disabled
+		{
+			textcolor="none"
+			bgcolor="none"
+		}
+		AddGameButton
+		{
+			inset-left=-999
+			textcolor="none"
+			bgcolor="none"
+		}
+	}
+
+	layout
+	{
+		region { name=top align=top width=max height=48 margin-top=0 }
+
+		//Caption Buttons
+		place [!$OSX] { control="frame_minimize,frame_maximize,frame_close" y=1 align=right width=40 height=38 }
+
+		//Content
+		place { control="UINavigatorPanel" width=max height=max x=1 margin-right=1 }
+
+		//Controls
+		place { control="XPVistaAlert,SupportAlert,AccountButton,InboxButton,view_friends,startvr,exitvr,ParentalLockButton" region=top align=right end-right=UIStatusPanel spacing=1 margin-right=1 height=39 }
+		place { control="UIStatusPanel" region=top align=right end-right=frame_minimize margin-right=1 width=27 height=40 }
+		place [$OSX] { control="UIStatusPanel" region=top align=right margin-right=1 width=27 height=40 }
+		place { control="MenuBar" region=top height=38 width=67 x=1 y=1 }
+
+		// Hidden
+		place { control="AnnouncementButton,fullscreen,add_game,universe_label,New" margin-left=-999 dir=down }
+	}
+}

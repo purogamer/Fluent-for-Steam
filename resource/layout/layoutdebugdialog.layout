@@ -1,0 +1,54 @@
+"resource/layout/layoutdebugdialog.layout"
+{
+	controls
+	{
+		wiki_link { controlname="URLLabel" labeltext="VGUI editor wiki page"  urltext="https://intranet.valvesoftware.com/wiki/index.php/VGUI_Editing" }
+	}
+	
+	styles
+	{
+		LayoutDebugDialog	
+		{
+			minimum-width=500
+			minimum-height=300
+			bgcolor=ClientBG
+			render_bg
+			{
+				0="fill( x0, y0, x1, y0+36, FrameBorder )"
+				1="fill( x0, y0, x1, y0+35, Header_Dark )"
+				2="fill( x0, y1-52, x1, y1, FrameBorder )"
+				3="fill( x0, y1-51, x1, y1, Header_Dark )"
+			  4="fill( x0+8, y1-26, x1-8, y1-25, FrameBorder )"
+			}
+		}
+		ListPanel
+		{
+			bgcolor=Header_Dark
+		}
+		RichText
+		{
+			bgcolor=Header_Dark
+		}
+		ComboBox
+		{
+			font-size=14
+			bgcolor=ClientBG
+			render_bg {}
+		}
+	}
+	
+	layout
+	{
+		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
+
+		place { control="tabs" width="max" height="max" margin-top=8 margin-bottom=52 }
+
+		region { name=bottom align=bottom height=52 margin-right=8 }
+		place { control="selectionlabel" region=bottom height=26 x=8 }
+		place { control="containerlabel,fileurl" region=bottom height=26 x=8 y=26 spacing=10 }
+		
+		//Hidden
+		place { control="wiki_link" height=0 }
+	}
+
+}

@@ -1,0 +1,83 @@
+"resource/layout/overlaydesktop_lores.layout"
+{
+	controls
+	{
+		BaseDesktopPanel
+		{ 
+			controlname="EditablePanel"
+		}
+		
+		GameHubButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_GameHub" style=sidemenu }
+		GameGroupsButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_GameGroups" style=sidemenu }	
+		ChatRoomButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_ChatRoom" style=sidemenu }	
+		DLCButton {	controlname="URLLabel" labeltext="#Overlay_Taskbar_DLC" style=sidemenu }			
+		GuideButton {	controlname="URLLabel" labeltext="#Overlay_Taskbar_Guide" style=sidemenu }			
+		GuidesButton {	controlname="URLLabel" labeltext="#Overlay_Taskbar_SteamGuides" style=sidemenu }
+		LegacyCDKeyButton {	controlname="URLLabel" labeltext="#Overlay_Taskbar_legacycdkey" style=sidemenu }			
+		WebSiteButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_WebSite" style=sidemenu }	
+		ForumsButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_Forums" style=sidemenu }	
+		RecommendButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_Recommend" style=sidemenu }	
+		WorkshopButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_Workshop" style=sidemenu }	
+		
+		FriendsButton {	controlname="URLLabel" labeltext="#Overlay_Taskbar_Friends" style=sidemenu }
+		PlayersButton {	controlname="URLLabel" labeltext="#Overlay_Taskbar_Players" style=sidemenu }
+		AchievementsButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_Achievements" style=sidemenu }				
+		ScreenshotsButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_Screenshots" style=sidemenu }
+	}
+	
+	colors
+	{
+	}
+	
+	styles
+	{
+		sidemenu
+		{
+			font-size=14
+			textcolor=White75
+		}
+		
+		sidemenu:hover
+		{
+			font-size=14
+			textcolor=White
+		}
+		topbar
+		{
+			font-family=light
+			font-size=32
+			textcolor=White
+			font-style=regular
+		}
+
+		clocksuffix
+		{
+			font-family=light
+			font-size=32
+			textcolor=White
+			font-style=regular
+			font-style=uppercase
+		}
+		
+		timeStrings
+		{
+			font-family=basefont
+			font-size=12
+			textcolor=White
+			font-style=regular
+		}
+	}
+	
+	layout
+	{
+		//Time Panel
+		place { control="clock,clocksuffix" align=top-center y=20 }
+		place { control="SessionText" align=top-center start=clock dir=down }
+
+		place { controls="GameHubButton,GameGroupsButton,ChatRoomButton,DLCButton,GuideButton,GuidesButton,LegacyCDKeyButton,WebSiteButton,ForumsButton,RecommendButton,WorkshopButton,FriendsButton,PlayersButton,AchievementsButton,ScreenshotsButton" y=128 align=right dir=down spacing=10 margin-right=10 }
+		
+		//Hidden
+		place { control="TwoWeeksText,ForeverText" width=0 height=0 }
+
+	}	
+}

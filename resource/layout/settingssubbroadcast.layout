@@ -1,0 +1,75 @@
+"resource/layout/settingssubbroadcast.layout"
+{
+	controls
+	{
+		"BroadcastDisabledLabel" { ControlName="Label" fieldName="BroadcastDisabledLabel" labelText="#Steam_Settings_Broadcast_Disabled_System" wrap="1" group="ShowWhenDisabled" }
+		"BroadcastDisabledSupportURL" { ControlName="URLLabel" fieldName="BroadcastDisabledSupportURL" group="ShowWhenDisabled" }
+
+		"BroadcastStatusHeader" { ControlName="Label" fieldName="BroadcastStatusHeader" labelText="#Steam_Settings_Broadcast_StatusHeader" group="HideWhenUnavailable" }
+		"BroadcastStatus" { ControlName="URLLabel" labeltext="#Steam_Settings_Broadcast_StatusNotBroadcast" style="rightcolumnlink" fieldName="BroadcastStatus" group="HideWhenUnavailable" }
+
+		"BroadcastHelpHeader" { ControlName="Label" fieldName="BroadcastHelpHeader" labelText="#Steam_Settings_Broadcast_HelpHeader" group="HideWhenUnavailable" }
+		"BroadcastHelpURL" { ControlName="URLLabel" fieldName="BroadcastHelpURL" labelText="#Steam_Settings_Broadcast_HelpURL_Desc" URLText="#Steam_Settings_Broadcast_HelpURL_URL" group="HideWhenUnavailable" }
+
+		"Divider1" { ControlName="Divider" group="HideWhenUnavailable" }
+
+		"PermissionsHeader" { ControlName="Label" fieldName="PermissionsHeader" labelText="#Steam_Settings_Broadcast_PermissionsHeader" group="HideWhenUnavailable" }
+		"Permissions" { ControlName="ComboBox" fieldName="Permissions" editable="0" group="HideWhenUnavailable" }			
+
+		"DimensionsHeader" { ControlName="Label" fieldName="DimensionsHeader" labelText="#Steam_Settings_Broadcast_DimensionsHeader" group="HideWhenDisabled" }
+		"Dimensions" { ControlName="ComboBox" fieldName="Dimensions" group="HideWhenDisabled" editable="0" }
+
+		"BitrateLimitHeader" { ControlName="Label" fieldName="BitrateLimitHeader" labelText="#Steam_Settings_Broadcast_BitrateHeader" group="HideWhenDisabled" }
+		"BitrateLimit" { ControlName="ComboBox" fieldName="BitrateLimit" group="HideWhenDisabled" editable="0" }
+
+		"EncoderHeader" { ControlName="Label" fieldName="EncoderHeader" labelText="#Steam_Settings_Broadcast_EncoderHeader" group="HideWhenDisabled" }
+		"EncoderSetting" { ControlName="ComboBox" fieldName="EncoderSetting" group="HideWhenDisabled" editable="0" }
+
+		"ShowChatHeader" { ControlName="Label" fieldName="ShowChatHeader" labelText="#Steam_Settings_Broadcast_ShowChat" group="HideWhenDisabled" }
+		"ShowChatCombo" { ControlName="ComboBox" fieldName="ShowChatCombo" group="HideWhenDisabled" editable="0" }
+
+		"IncludeDesktop" { ControlName="CheckButton" fieldName="IncludeDesktop" group="HideWhenDisabled" }
+		"RecordSystemAudio" { ControlName="CheckButton" fieldName="RecordSystemAudio" group="HideWhenDisabled" }
+		"RecordMic" { ControlName="CheckButton" fieldName="RecordMic" group="HideWhenDisabled" }
+		"ConfigMic" { ControlName="URLLabel" fieldName="ConfigMic" labelText="#Steam_Settings_Broadcast_ConfigMic" URLText="steam://settings/voice" group="HideWhenDisabled" }
+		"ShowDebugInfo" { ControlName="CheckButton" fieldName="ShowDebugInfo" group="HideWhenDisabled" }
+		"ShowReminder" { ControlName="CheckButton" fieldName="ShowReminder" group="HideWhenDisabled" }
+
+		"RequiresRestartLabel" { ControlName="Label" fieldName="RequiresRestartLabel" labelText="#Steam_Settings_Broadcast_RequiresRestart" visible="0" }
+	}
+
+	layout
+	{
+		region { name=box margin-left=16 margin-right=16 }
+
+		place { region=box control="BroadcastDisabledLabel" y=6 width=max }
+		place { region=box control="BroadcastStatusHeader" y=6 dir=down spacing=6 }
+		place { start="BroadcastDisabledLabel" control="BroadcastDisabledSupportURL" x=4 }
+
+		place { region=box start="BroadcastStatusHeader" control="BroadcastStatus" dir=right margin-left=4 }
+		place { region=box start="BroadcastStatusHeader" margin-top=4 control="BroadcastHelpHeader" dir=down }
+
+		place { region=box start="BroadcastHelpHeader" control="BroadcastHelpURL" margin-left=4 }
+		place { region=box start="BroadcastStatusHeader" control="Divider1" dir=down margin-top=24 width=max}
+
+		place { region=box start="Divider1" control="PermissionsHeader" dir=down margin-top=20 width=max }
+		place { region=box start="PermissionsHeader" control="Permissions" dir=down margin-top=4 width=350 }
+
+		place { region=box start="Permissions" control="DimensionsHeader" dir=down margin-top=10 width=max }
+		place { region=box start="DimensionsHeader" control="Dimensions" dir=down margin-top=4 width=250 }
+
+		place { region=box start="Dimensions" control="BitrateLimitHeader" dir=down margin-top=10 width=max }
+		place { region=box start="BitrateLimitHeader" control="BitrateLimit" dir=down margin-top=4 width=250 }
+
+		place { region=box start="BitrateLimit" control="EncoderHeader" dir=down margin-top=10 width=max }
+		place { region=box start="EncoderHeader" control="EncoderSetting" dir=down margin-top=4 width=250 }
+
+		place { region=box start="EncoderSetting" control="ShowChatHeader" dir=down margin-top=10 width=max }
+		place { region=box start="ShowChatHeader" control="ShowChatCombo" dir=down margin-top=4 width=250 }
+
+		place { region=box start="ShowChatCombo" control="IncludeDesktop,RecordSystemAudio,RecordMic,ShowDebugInfo,ShowReminder" dir=down margin-top=10 }	
+		place { region=box start="RecordMic" control="ConfigMic" dir=right height=28 }
+
+		place { region=box control="RequiresRestartLabel" width=max margin-top=500 }
+	}
+}

@@ -1,0 +1,101 @@
+"resource/layout/settingssubmusic.layout"
+{
+	controls
+	{
+			LibraryHeader { controlname="Label" labelText="#Music_Settings_Library_Header" style="HeaderText" }			
+			LibraryList { controlname=ListPanel tabposition=1 style="LibraryListStyle" }
+			
+			AddLibraryButton {
+				controlname="Button" 
+				labeltext="#Music_Settings_Library_Add" 
+				style="ActionButtonStyle"
+				command="AddEntryToLibraryAction"
+			}
+			RemoveLibraryButton {
+				controlname="Button" 
+				labeltext="#Music_Settings_Library_Remove" 
+				style="ActionButtonStyle"
+				command="RemoveSelectedEntryFromLibraryAction"
+			}			
+			
+			LibraryDivider { ControlName="divider" }
+			
+			DatabaseHeader { controlname="Label" labelText="#Music_Settings_Database_Header" style="HeaderText" }
+			DatabaseCrawlAtStartup { ControlName="CheckButton" labelText="#Music_Settings_Database_CrawlAtStartup" }
+			DatabaseInfoLabel  { controlname="Label" labelText="#Music_Settings_Database_XAlbumsWithYTracks" style="DescriptionLabel" }
+			ResetDatabaseButton {
+				controlname="Button" 
+				labeltext="#Music_Settings_Database_ResetDatabase" 
+				style="ActionButtonStyle"
+				command="ResetDatabaseAction"
+			}
+			DatabaseDivider { ControlName="divider" }
+			
+			VolumeHeader { ControlName="Label" labelText="#Music_Settings_Volume_Header" style="HeaderText" }		
+			VolumeSlider { ControlName="Slider" style="VolumeSliderStyle" }
+			VolumeDivider { ControlName="divider" }
+			
+			PauseMusicHeader { ControlName="Label" labelText="#Music_Settings_PauseMusic_Header" style="HeaderText" }
+			PauseMusicWhenStartingApplicationCheckbox { ControlName="CheckButton" labelText="#Music_Settings_PauseMusicWhenStartingApplication" }
+			PauseMusicWhenVoiceChatCheckbox { ControlName="CheckButton" labelText="#Music_Settings_PauseMusicWhenVoiceChat" }
+
+			NotificationHeader { ControlName="Label" labelText="#Music_Settings_Notification_Header" style="HeaderText" }
+			NotificationPlaylistNowPlayingCheckbox { ControlName="CheckButton" labelText="#Music_Settings_NotificationPlaylistNowPlaying" }
+			
+			LoggingHeader { ControlName="Label" labelText="#Music_Settings_Logging_Header" style="HeaderText" }
+			LoggingCrawlingCheckbox { ControlName="CheckButton" labelText="#Music_Settings_LoggingCrawling" }
+	}
+	
+	styles
+	{
+		LibraryListStyle
+		{
+			bgcolor=Header_Dark
+			padding-left=8
+		}
+		
+		HeaderText
+		{
+			font-size=28
+			font-family=semilight
+			font-weight=300
+			textcolor=white
+		}
+		
+		VolumeSliderStyle	{ bgcolor=none font-family=basefont font-size=16 }
+	}
+	
+	layout
+	{		
+		//Music Library
+		place { control=LibraryHeader }
+		place { control=LibraryList start=LibraryHeader y=8 height=80 dir=down width=max }
+		place { control=AddLibraryButton start=LibraryList dir=down y=8 height=28 width=84 }
+		place { control=RemoveLibraryButton start=LibraryList dir=down x=92 y=8 height=28 width=84 }
+		
+		//Database
+		place { control=DatabaseHeader start=AddLibraryButton dir=down y=8 width=max }
+		place { control=DatabaseInfoLabel,DatabaseCrawlAtStartup,DatabaseCrawlSteamInstallFolders start=DatabaseHeader dir=down y=0 height=24 width=max }
+		place { control=StartCrawlingButton,ResetDatabaseButton start=DatabaseCrawlSteamInstallFolders dir=down y=8 spacing=8 height=28 }
+		
+		//Volume
+		place { control=VolumeHeader start=ResetDatabaseButton dir=down y=8 }
+		place { control=VolumeSlider start=VolumeHeader height=24 width=180 y=8 dir=down }
+		
+		//Pause Music
+		place { control=PauseMusicHeader start=VolumeSlider dir=down }
+		place { control=PauseMusicWhenStartingApplicationCheckbox,PauseMusicWhenVoiceChatCheckbox start=PauseMusicHeader dir=down y=8 height=24 }
+		
+		//Logging
+		place { control=LoggingHeader start=PauseMusicWhenVoiceChatCheckbox dir=down }
+		place { control=LoggingCrawlingCheckbox start=LoggingHeader dir=down }
+		
+		//Notification
+		place { control=NotificationHeader start=LoggingCrawlingCheckbox dir=down }
+		place { control=NotificationPlaylistNowPlayingCheckbox start=NotificationHeader dir=down }
+		
+		//Hidden
+		place { control="DatabaseDivider,LibraryDivider,VolumeDivider" width=0 height=0 }
+		
+	}
+}

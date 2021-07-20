@@ -1,0 +1,151 @@
+"resource/layout/musicpage_details_playlist.layout"
+{
+	controls
+	{
+		PlaylistTitleLabel { controlname="Label" style="PlaylistTitleStyle" }
+		TracksInfoLabel { controlname="Label" style="TracksInfoLabelStyle" }
+		CoverImage { controlname="ImagePanel" style="CoverStyle" scaling=fit}
+
+		PlayPlaylistButton {
+			controlname="Button"
+			labeltext="#Music_Playlist_Details_Play"
+			style="ActionButtonStyle"
+			command="PlaylistPlayAction"
+		}
+
+		AddPlaylistToQueueButton
+		{
+			controlname="Button"
+			labelText="#Music_Playlist_Details_AddToQueue"
+			style="AdditionalActionButtonStyle"
+			command="PlaylistAddToQueueAction"
+		}
+
+		AddRandomTracksToPlaylistButton
+		{
+			controlname="Button"
+			labelText="#Music_Playlist_Details_AddRandomTrack"
+			style="AdditionalActionButtonStyle"
+			command="PlaylistAddRandomTracksAction"
+		}
+
+	}
+
+	styles
+	{
+		CMusicPage_Details_Playlist
+		{
+			bgcolor=none
+
+		}
+
+		PlaylistTitleStyle
+		{
+			font-size=36
+			textcolor=White
+			font-family=light
+			font-weight=400
+		}
+
+		TracksInfoLabelStyle
+		{
+		}
+
+		TrackStyle
+		{
+			padding-left=10
+			padding-bottom=10
+			padding-top=10
+			font-size=16
+			textcolor=White75
+			font-family=basefont
+			font-weight=400
+			bgcolor=none
+			render_bg
+			{
+				0="fill(x0,y0-1,x1,y0,White08)"
+			}
+		}
+
+		TrackStyle:hover
+		{
+			bgcolor=white03
+		}
+
+		TrackStyle:active
+		{
+			textcolor=white
+			bgcolor=focus
+		}
+
+		ActionButtonStyle
+		{
+			minimum-width=40
+			textcolor=none
+			bgcolor=none
+			render_bg
+			{
+			1="image( x0, y0, x1, y1, graphics/play )"
+			}
+		}
+
+		ActionButtonStyle:hover
+		{
+      render_bg
+      {
+       	1="image( x0, y0, x1, y1, graphics/play_h )"
+      }
+		}
+
+		ActionButtonStyle:active
+		{
+      render_bg
+      {
+       	1="image( x0, y0, x1, y1, graphics/play_p )"
+      }
+		}
+
+		ActionButtonStyle:disabled
+		{
+      render_bg
+      {
+       	1="image( x0, y0, x1, y1, graphics/play_d )"
+      }
+		}
+
+		CoverStyle
+		{
+			bgcolor=Black45
+		}
+
+		AdditionalActionButtonStyle
+		{
+		}
+
+		AdditionalActionButtonStyle:hover
+		{
+		}
+}
+	layout
+	{
+		region { name=songs width=max height=max overflow=allow-vertical margin-right=16 }
+
+		//Album Art
+		//place { region=songs dir=down y=8 control=CoverImage width=200 height=200 }
+
+		//Album and Artist
+		place { region=songs control=PlaylistTitleLabel x=0 y=8 height=40 dir=down margin-left=56 }
+		place { region=songs start=PlaylistTitleLabel control=TracksInfoLabel height=26 dir=down }
+
+		//Play Button
+		place { region=songs dir=down x=0 control=PlayPlaylistButton width=40 height=40 y=8 margin-top=16 }
+
+		//Other Buttons
+		place {	region=songs dir=down start=TracksInfoLabel x=0 y=8 margin-left=0 height=28 width=160 spacing=1 control=AddPlaylistToQueueButton,AddRandomTracksToPlaylistButton }
+
+		//Song List
+		//place { region=songs control=*MusicPageDetailsPlaylistTrack dir=down start=CoverImage width=max y=16 height=40 spacing=-3 }
+		place { region=songs control=*MusicPageDetailsPlaylistTrack dir=down y=160 width=max height=40 spacing=-3 }
+
+	}
+}

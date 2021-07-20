@@ -1,0 +1,604 @@
+"UI.styles"
+{
+	styles
+	{
+		CChatRoomDlg
+		{
+			render
+			{
+				1="fill( x0, y0+54, x1, y0+55, frameBorder )"
+				2="fill( x0, y1-61, x1, y1-60, Header_Dark )"
+			}
+		}
+		CPlayersDialog
+		{
+			render_bg
+			{
+				//Bottom
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+		"CPlayersDialog URLLabel"
+		{
+			render_bg
+			{
+				1="fill( x0-227, y0, x0, y0+1, ClientBG )"
+			}
+		}
+		CEditTagsDialog
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				//Bottom
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+		CEditFriendsGroupsDialog
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				//Bottom
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+		CChooseBetaDialog
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				//Bottom
+				1="fill( x0, y1-44, x1, y1, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+		CLimitedUserDialog
+		{
+			render_bg
+			{
+				//Bottom
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+		CFavoriteGames
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+		CHistoryGames
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+		CLanGames
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+		CFriendsGames
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+
+		CGamesPage_Mini
+		{
+			bgcolor=ClientBG
+			render
+			{
+				//Frame Border
+				1="fill( x0+1, y1-1, x1, y1, frameBorder )"		// Bottom
+				2="fill( x0, y0+1, x0+1, y1, frameBorder )"		// Left
+				3="fill( x1-1, y0+1, x1, y1-1, frameBorder )"	// Right
+			}
+		}
+		CDialogSettings
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				1="fill( x0, y0, x1, y0+1, frameBorder )"		// Top
+				2="fill( x0+1, y1-1, x1, y1, frameBorder )"		// Bottom
+				3="fill( x0, y0+1, x0+1, y1, frameBorder )"		// Left
+				4="fill( x1-1, y0+1, x1, y1-1, frameBorder )"	// Right
+				5="fill( x0, y0, x0+170, y1, Header_Dark )"
+				6="fill(x0+178,y1-44,x1-8,y1-43,White12)"		// Bottom-Right
+			}
+			minimum-width="710"
+			minimum-height="600"
+		}
+		CMusicPlayerPanel
+		{
+			render_bg
+			{
+				//Top
+				1="fill(x0,y0,x1,y0+110,Header_Dark)"
+				2="fill(x0,y0+110,x1,y0+111,frameBorder)"
+				//Bottom
+				3="fill(x0,y1-15,x1,y1,Header_Dark)"
+			}
+			minimum-width = 460
+			minimum-height = 127
+		}
+
+		COverlaySettingsDialog
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				1="fill( x0, y0+53, x1, y0+54, frameBorder )"
+				2="fill( x0, y0, x1, y0+53, Header_Dark )"
+				3="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				4="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+			minimum-width=560
+			minimum-height=650
+		}
+		"COverlaySettingsDialog PropertySheet"
+		{
+			minimum-height=576
+		}
+		COverlayFriendsDialog
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				1="fill( x0, y0+53, x1, y0+54, frameBorder )"
+				2="fill( x0, y0, x1, y0+53, Header_Dark )"
+				3="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				4="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+		COverlayViewFriendsDialog
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				1="fill( x0, y0+53, x1, y0+54, frameBorder )"
+				2="fill( x0, y0, x1, y0+53, Header_Dark )"
+				3="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				4="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+
+		CSettingsSubStreamingAdvancedHost
+		{
+			render_bg
+			{
+				//Bottom
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+			minimum-height=435
+		}
+		CSettingsSubStreamingAdvancedClient
+		{
+			render_bg
+			{
+				//Bottom
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+		CInstallAppWizard
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				1="fill( x0, y1-48, x1, y1-47, frameBorder )"
+				2="fill( x0, y1-47, x1, y1, Header_Dark )"
+			}
+      minimum-width=496
+		}
+
+		CRegisterCDKeyWizard
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				1="fill( x0, y1-48, x1, y1-47, frameBorder )"
+				2="fill( x0, y1-47, x1, y1, Header_Dark )"
+			}
+		}
+
+		CGamePropertiesDialog
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				1="fill( x0, y0+53, x1, y0+54, frameBorder )"
+				2="fill( x0, y0, x1, y0+53, Header_Dark )"
+				3="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				4="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+			minimum-width=700
+		}
+
+		ZooDialog
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				1="fill( x0, y0+59, x1, y0+60, frameBorder )"
+				2="fill( x0, y0, x1, y0+59, Header_Dark )"
+			}
+			render{}
+		}
+
+		CLaunchOptionsDialog
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				5="fill( x0, y1-42, x1, y1-41, frameBorder )"
+				6="fill( x0, y1-41, x1, y1, Header_Dark )"
+			}
+		}
+
+///////////////////////////////////
+//======Backup Wizard Dialog=====//
+		CBackupWizard
+		{
+			render_bg
+			{
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+
+///////////////////////////////////////////
+//======Steam Already Running Dialog=====//
+		SimpleDialog
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+
+		CPreloadAppDialog
+		{
+			render_bg
+			{
+				//Top
+				1="fill( x0, y0+89, x1, y0+90, frameBorder )"
+				2="fill( x0, y0, x1, y0+89, Header_Dark )"
+				//Bottom
+				3="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				4="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+
+/////////////////////////////////
+//======Screenshot Manager=====//
+		CScreenshotManager
+		{
+			bgcolor="ClientBG"
+			render_bg
+			{
+				1="fill( x0, y1-40, x1, y1-39, frameBorder )"
+				2="fill( x0, y1-39, x1, y1, Header_Dark )"
+			}
+		}
+		CScreenshotDeleteDialog
+		{
+			render_bg
+			{
+				1="fill( x0, y1-36, x1, y1-35, frameBorder )"
+				2="fill( x0, y1-35, x1, y1, Header_Dark )"
+			}
+			minimum-width=325
+			minimum-height=200
+		}
+		CScreenshotUploadDialog
+		{
+			render_bg
+			{
+				1="fill( x0, y1-36, x1, y1-35, frameBorder )"
+				2="fill( x0, y1-35, x1, y1, Header_Dark )"
+			}
+			minimum-width=325
+			minimum-height=240
+		}
+
+/////////////////////////////////////
+//======Change Password Wizard=====//
+		CChangePasswordWizard
+		{
+			render_bg
+			{
+				//Bottom
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+///////////////////////////////////////////
+//======Change/Validate Email Wizard=====//
+		CChangeContactEmailWizard
+		{
+			render_bg
+			{
+				//Bottom
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+		CValidateContactEmailWizard
+		{
+			render_bg
+			{
+				//Bottom
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+
+//////////////////////////////////////
+//======Add Non-Steam Game Page=====//
+		CAddShortcutDialog
+		{
+			render_bg
+			{
+				//Bottom
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+
+///////////////////////////////
+//======View CD-Key Page=====//
+		CCDKeyDisplayDialog
+		{
+			render_bg
+			{
+				//Bottom
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+
+////////////////////////////////////////////////
+//======Manage Steam Install Folders Page=====//
+		CContentManagmentDialog
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				//Bottom
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+
+//////////////////////////////////////
+//======Set Launch Options Page=====//
+		CGameLaunchParametersDialog
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				//Bottom
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+
+///////////////////////////////////////
+//======Set Taskbar Options Page=====//
+		CSetJumpListOptions
+		{
+			render_bg
+			{
+				//Bottom
+				1="fill( x0, y1-44, x1, y1, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+
+////////////////////////////////////////
+//======Email Already Used Dialog=====//
+		CEmailAddressAlreadyUsedDialog
+		{
+			render_bg
+			{
+				//Bottom
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+
+//////////////////////////////////////////////
+//======Offline Connection/Mode Dialogs=====//
+		CUseOfflineModeDialog
+		{
+			render_bg
+			{
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+
+/////////////////////////////////////////
+//======Friends Game Invite Dialog=====//
+		CFriendGameInviteDialog
+		{
+			bgcolor="ClientBG"
+			render_bg
+			{
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+
+		CInternetGames
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				//Bottom
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+
+		FileOpenDialog
+		{
+			render_bg
+			{
+				//Bottom
+				1="fill( x0, y1-68, x1, y1-67, frameBorder )"
+				2="fill( x0, y1-67, x1, y1, Header_Dark )"
+			}
+		}
+
+		InputDialog
+		{
+			render_bg
+			{
+				//Bottom
+				1="fill( x0, y1-36, x1, y1-35, frameBorder )"
+				2="fill( x0, y1-35, x1, y1, Header_Dark )"
+			}
+		}
+
+////////////////////////////////////
+//======Not sure what is this=====//
+		CInstallExplanationDialog
+		{
+			render_bg
+			{
+				//Top
+				1="fill( x0, y0+89, x1, y0+90, frameBorder )"
+				2="fill( x0, y0, x1, y0+89, Header_Dark )"
+				//Bottom
+				3="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				4="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+
+///////////////////////////////
+//======Some EULA Dialog=====//
+		CShowEULADialog
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				//Bottom
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+
+//////////////////////////////////
+//======Startup News Dialog=====//
+		CProductMarketingDialog
+		{
+			render_bg
+			{
+				//Bottom
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+		}
+
+		HTMLPopup
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				1="fill( x0, y0+78, x1, y0+79, frameBorder )"
+			}
+		}
+
+		COverlayWebBrowser
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				1="fill( x0, y1-26, x1, y1-25, frameBorder )"
+				2="fill( x0, y1-25, x1, y1, Header_Dark )"
+			}
+		}
+
+///////////////////////////////////
+//======Streaming PIN Dialog=====//
+		CSettingsSubStreamingPin
+		{
+			minimum-width = 400
+			minimum-height = 250
+		}
+
+///////////////////////////////////
+//======Parental Lock Dialog=====//
+		CDialogParentalLock
+		{
+			minimum-width = 400
+			minimum-height = 160
+		}
+/////////////////////////////////////
+//======Parental Unlock Dialog=====//
+		CDialogParentalUnlock
+		{
+			minimum-width = 400
+			minimum-height = 220
+		}
+
+////////////////////////////////////////////////
+//======Grid View Set Custom Image Dialog=====//
+		CSetCustomImageDialog
+		{
+			render_bg
+			{
+				//Bottom
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+			minimum-width = 400
+			minimum-height = 250
+		}
+
+///////////////////////////////////////////////////////
+//======Mobile Authentificator Login Code Dialog=====//
+		TwoFactorCodeChallenge
+		{
+			render_bg
+			{
+				//Bottom
+				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
+				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+			}
+			minimum-width = 380
+			minimum-height = 420
+		}
+
+		CMusicLibraryPanel
+		{
+			bgcolor=ClientBG
+			minimum-width = 400
+			minimum-height = 400
+		}
+	}
+}

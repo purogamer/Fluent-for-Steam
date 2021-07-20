@@ -1,0 +1,306 @@
+"resource/layout/downloadsummarypanel.layout"
+{
+	controls
+	{
+		"downloadsummarypanel"
+		{
+			style=CDownloadSummaryPanel
+			tall="120"
+
+		}
+
+		"header"
+		{
+			"ControlName"		"Label"
+			"labelText"		"#steam_downloads_networkusage"
+			style=bigtext
+		}
+
+		"download_rate"
+		{
+			"ControlName"	    "Label"
+			"labelText"	    "#steam_downloads_downloadrate"
+			style=bigtextlabel
+	    }
+
+	    "download_rate_value"
+	    {
+			"ControlName"	    "Label"
+			"labelText"	    "%CurrentDLRate%"
+			style=bigtext
+	    }
+
+		"peak_download_rate"
+		{
+			"ControlName"	 "Label"
+			"labelText"		 "#steam_downloads_peakdownloadrate"
+			style="bigtextlabel"
+		}
+
+		"peak_download_rate_value"
+		{
+			"ControlName"	    "Label"
+			"labelText"	    "%PeakDLRate%"
+			style="bigtext"
+		}
+
+		"total_downloaded"
+		{
+			"ControlName"	    "Label"
+			"labelText"	    "#steam_downloads_totaldownloaded"
+			style="bigtextlabel"
+		}
+		"total_downloaded_value"
+		{
+			"ControlName"	    "Label"
+			"labelText"	    "%TotalDownloaded%"
+			style="bigtext"
+		}
+
+		"disk_status_image"
+		{
+			"ControlName"	    "ImagePanel"
+			"image"		"graphics/icon_disk_activity_idle.tga"
+		}
+		"disk_status_label"
+		{
+			"ControlName"	    "Label"
+			"labelText"	    "#steam_downloads_diskstatus_idle"
+			style="bigtextlabel"
+		}
+
+		"pauseresumeallbutton"
+		{
+			"ControlName"	    "Button"
+			style=PauseButton
+		}
+
+		"throttling_label"
+		{
+			"ControlName"	    "Label"
+			"labelText"	    "#steam_downloads_throttling"
+			style="throttleLabel"
+			group = "ShowWhenThrottled"
+	    }
+
+		"throttling_value"
+		{
+			"ControlName"	    "Label"
+			"labelText"	    "%throttle_value%"
+			style="throttleValue"
+			group = "ShowWhenThrottled"
+		}
+
+		"blackout_label"
+		{
+			"ControlName"	    "Label"
+			"labelText"	    "#steam_downloads_autoupdate_window_label"
+			style="throttleLabel"
+			group = "ShowWhenAutoUpdateWindow"
+	    }
+
+		"blackout_value"
+		{
+			"ControlName"	    "URLLabel"
+			"URLText"		"steam://settings/downloads"
+			"labelText"	    "#steam_downloads_autoupdate_window_value"
+			style="throttleValue"
+			group = "ShowWhenAutoUpdateWindow"
+		}
+
+		graphpanel {	controlname="GraphPanel"	 style="infoGraphic" group="HideOnCompletion"  zpos="-1" }
+	}
+
+
+	colors
+	{
+		//panelBackground="16 16 16 255"
+		panelBackground = "12 27 38 255"
+		panelBackgroundTransparent = "0 0 0 0"
+	}
+
+	styles
+	{
+		CDownloadSummaryPanel
+		{
+			render
+			{
+				0="image(x0+10,y0+10,x1,y1,graphics/metro/downloads/labels/current)"
+				3="image(x0+170,y0+10,x1,y1,graphics/metro/downloads/labels/disk)"
+			}
+			render_bg
+			{
+				//0="image(x0+10,y0+10,x1,y1,graphics/metro/downloads/labels/current)"
+				1="image(x0+10,y0+48,x1,y1,graphics/metro/downloads/labels/peak)"
+				2="image(x0+10,y0+86,x1,y1,graphics/metro/downloads/labels/total)"
+				//3="image(x0+170,y0+10,x1,y1,graphics/metro/downloads/labels/throttle)"
+				4="image(x0+170,y0+48,x1,y1,graphics/metro/downloads/labels/throttle)"
+				5="image(x0+170,y0+86,x1,y1,graphics/metro/downloads/labels/limit)"
+			}
+		}
+
+		Label
+		{
+			font-family=basefont
+			font-size=14
+			textcolor=white
+			font-style=uppercase
+		}
+
+		throttleValue
+		{
+			textcolor=white
+			font-style=none
+			padding-right=29
+			render_bg
+			{
+				0="image(x1-19,y0+10,x0,y1,graphics/metro/downloads/icons/cog_sm)"
+			}
+		}
+
+		throttleValue:hover
+		{
+			render_bg
+			{
+				0="image(x1-19,y0+10,x0,y1,graphics/metro/downloads/icons/cog_sm_h)"
+			}
+		}
+
+		container
+		{
+			bgcolor="none"
+		}
+
+		bigtext
+		{
+			font-family=basefont
+			font-size=12
+ 		 //font-style=uppercase
+			textcolor=white
+		}
+
+		bigtextlabel
+		{
+			font-family=basefont
+			font-style=uppercase
+			font-size=14
+			textcolor=white
+			bgcolor=black50
+			padding="24 0"
+		}
+
+		throttleLabel
+		{
+			font-family=basefont
+			font-style=uppercase
+			font-size=14
+			textcolor=white
+			bgcolor=black50
+			padding="24 0"
+	  }
+
+		bigtextHeader
+		{
+			font-family=semilight
+			font-size=24
+			textcolor=white
+		}
+
+		bigTextNumbers
+		{
+			font-family=semilight
+			font-size=24
+			textcolor=white
+		}
+
+		PauseButton
+		{
+			textcolor=none
+			bgcolor=none
+			render_bg
+			{
+				1="image(x0,y0,x1,y1,graphics/metro/icons/downloads/pause)"
+			}
+		}
+
+		PauseButton:hover
+		{
+			render_bg
+			{
+				1="image(x0,y0,x1,y1,graphics/metro/icons/downloads/pause_h)"
+			}
+		}
+
+		PauseButton:active
+		{
+			render_bg
+			{
+				1="image(x0,y0,x1,y1,graphics/metro/icons/downloads/pause_p)"
+			}
+		}
+
+		ResumeButton
+		{
+			minimum-width=30
+			textcolor=none
+			bgcolor=none
+			render_bg
+			{
+				1="image(x0,y0,x1,y1,graphics/metro/icons/downloads/download)"
+			}
+		}
+
+		ResumeButton:hover
+		{
+			render_bg
+			{
+				1="image(x0,y0,x1,y1,graphics/metro/icons/downloads/download_h)"
+			}
+		}
+
+		ResumeButton:active
+		{
+			render_bg
+			{
+				1="image(x0,y0,x1,y1,graphics/metro/icons/downloads/download_p)"
+			}
+		}
+
+		NetGraphPanel
+		{
+			alpha=127.5
+			textcolor=focus
+			render_bg {}
+		}
+
+		DiscGraphPanel
+		{
+			//alpha=25
+			textcolor=focus
+			render_bg {}
+		}
+	}
+
+	layout
+	{
+		//Universal Pause/Resume Button
+		place { control="pauseresumeallbutton" width=30 height=30 y=50 margin-right=10 align=right }
+
+		//Stats
+		place { control="download_rate_value" x=100 height=28 y=10 }
+		place { control="peak_download_rate_value" x=100 height=28 y=48 }
+		place { control="total_downloaded_value" x=100 height=28 y=86	}
+
+		place { control="disk_status_value" x=260 height=28 y=10	}
+		place { control="throttling_value" x=260 height=28 y=48	}
+		place { control="blackout_value" x=260 height=28 y=86	}
+
+		//Graphs
+		place { control="net_graphpanel" width=83 x=10 height=32 y=10 }
+		place { control="disc_graphpanel" width=84 x=170 height=28 y=10 }
+
+		//Hidden
+		place { control="header,net_legend_label,disk_legend_label,net_legend_panel,disk_legend_panel,disk_status_image,disk_panel_label" width=0 height=0 }
+		place { control="blackout_label,throttling_label,disk_status_label,download_rate,peak_download_rate,total_downloaded" width=0 height=0 }
+	}
+}

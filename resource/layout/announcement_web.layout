@@ -1,0 +1,53 @@
+"resource/layout/announcement_web.layout"
+{
+	controls
+	{
+		announcementwebpanel { controlname="CAnnouncementWebPanel" style="announcementwebpanel" }
+		announcementweb { controlname="HTML" style="announcementweb" zpos=10011 }
+		announcementnotch { controlname="Panel" style="announcementnotch" }
+		announcementbg { controlname="Panel" style="announcementbg" zpos=-100 }
+	}
+
+	colors
+	{
+		WebBorderColor = "64 64 64 255"
+	}
+	
+	styles
+	{
+		announcementwebpanel
+		{
+			inset="0 0 0 0"
+		}
+
+		announcementweb
+		{
+			inset="0 0 0 0"
+		}
+
+		announcementnotch
+		{
+			wide=36
+			tall=18
+
+			render
+			{
+				1="image( x0, y0 , x1, y1, graphics/announcement_arrow )"
+			}
+		}
+
+		announcementbg
+		{
+			bgcolor=ClientBG
+		}
+	}
+	
+	layout
+	{
+		region { name="bottom" x=0 y=18 width=max height=max }
+
+		place { control=announcementnotch x=0 y=0 width=36 height=18 }
+		place { control=announcementbg region="bottom" width=max height=max }
+		place { control=announcementweb region="bottom" margin=10 width=max height=max }
+	}
+}

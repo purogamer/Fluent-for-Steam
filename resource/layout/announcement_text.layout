@@ -1,0 +1,27 @@
+"resource/layout/announcement_text.layout"
+{
+	controls
+	{
+		announcementtextpanel { controlname="CAnnouncementTextPanel" style="announcementtextpanel" }
+		announcementtext { controlname="Label" style="announcementtext" }
+	}
+	
+	styles
+	{
+		announcementtextpanel
+		{
+			bgcolor=Focus
+		}
+
+		announcementtext
+		{
+			font-size=16
+			textcolor=White
+		}
+	}
+	
+	layout
+	{
+		place { control=announcementtext width=max margin=4 }
+	}
+}

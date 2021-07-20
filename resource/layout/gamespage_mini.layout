@@ -1,0 +1,124 @@
+"resource/layout/gamespage_mini.layout"
+{
+	controls
+	{
+		GamesList { controlname=Panel style="DetailsBorderPanel" tabposition=1 }
+		CGamesPage_Mini	{ title="#Steam_Root_Title" }
+		library_filters	   { ControlName=MenuButton labelText="#steam_library_filter_allgames" style="NavLabel2" showDownArrow=1 group=filters }
+		library_search	   { ControlName=TextEntry maxchars=12 hintText="#steam_library_search" style="LibrarySearch" group=library tabposition=2 }
+		label_search_icon	{ ControlName=Label style="LibrarySearchIcon" group=filters }
+
+
+		"subnavgroup_library"
+		{
+			"ControlName"		"imagepanel"
+			style="grouper"
+			group="library"
+			zpos="-4"
+		}
+
+	}
+
+	colors
+	{
+		TextEntry="39 39 39 255"
+	}
+
+	styles
+	{
+		CMiniGameFilterMenuButton
+		{
+			font-family=basefont
+			textcolor=none
+			bgcolor=TextEntry
+			render_bg
+			{
+				0="image(x0+14,y0+14,x1,y1,graphics/down_arrow)"
+			}
+			render{}
+			image=none
+			inset-left=999
+		}
+
+		CMiniGameFilterMenuButton:hover
+		{
+			render_bg
+			{
+				0="image(x0+14,y0+14,x1,y1,graphics/down_arrow_h)"
+			}
+		}
+
+		CMiniGameFilterMenuButton:selected
+		{
+			render_bg
+			{
+				0="image(x0+14,y0+14,x1,y1,graphics/down_arrow_p)"
+			}
+		}
+	    TextEntry
+	    {
+	      font-family=basefont
+	      font-size=16
+	      bgcolor="TextEntry"
+				textcolor=White
+				shadowtextcolor=white
+	      selectedtextcolor=White
+	      selectedbgcolor="Focus"
+	      inset-left=6
+	    }
+
+		TextEntry:empty
+		{
+			textcolor=none
+		}
+
+		RichText
+		{
+			minimum-height=200
+		}
+
+		CGamesPage_Mini
+		{
+			bgcolor=ClientBG
+			render_bg
+			{
+				0="fill( x0, y0, x1, y0+40, FrameBorder )"
+				1="fill( x0, y0, x1, y0+39, Header_Dark )"
+			}
+			render
+			{
+				//Frame Border
+        0="fill( x0 + 0, y0 + 0, x1 + 0, y0 + 1, FrameBorder )"	// Top
+        1="fill( x0 + 1, y1 - 1, x1 + 0, y1 + 0, FrameBorder )"	// Bottom
+        2="fill( x0 + 0, y0 + 1, x0 + 1, y1 + 0, FrameBorder )"	// Left
+        3="fill( x1 - 1, y0 + 1, x1 + 0, y1 - 1, FrameBorder )"	// Right
+
+				0="fill( x0, y0+80, x1, y0+81, Header_Dark )"
+			}
+		}
+	}
+
+ 	layout
+ 	{
+		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
+ 		place { control="frame_captiongrip" width=max height=40 }
+		place { control="rightGrip" align=right width=3 height=max }
+
+		//Header
+		region { name=top align=top y=40 height=40 x=0 margin-right=0 }
+		place { control="MenuBar" height=38 width=38 x=1 y=1 }
+
+		//Search
+		place { control="label_search_icon" region=top height=38 width=38 }
+		place { control="library_search" region=top height=38 width=max margin-left=38 margin-right=38 }
+		place { control="library_filters" region=top align=right height=38 width=38 }
+
+		//Content
+		place { control="subnavgroup_library" align=top-center y=80 height=26 width=max margin-right=9 margin-left=9 }
+		place { control="gameslist" align=left margin-left=1 margin-right=1 margin-top=80 margin-bottom=0 width=max height=max }
+
+		//Footer
+		region { name=brgrip align=bottom width=max height=6 }
+		place { control="frame_brGrip" region=brgrip width=6 height=6 align=right }
+ 	}
+}

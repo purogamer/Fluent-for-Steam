@@ -1,0 +1,36 @@
+"resource/layout/settingssubstreaming_advanced_client.layout"
+{
+  controls
+  {
+    "DescriptionLabel" { ControlName="Label" fieldName="DescriptionLabel" wrap=1 labelText="#Steam_Settings_Streaming_AdvancedClientOptions_Description" }
+
+    "BandwidthLabel" { ControlName="Label" associate="BandwidthLimit" labelText="#Steam_Settings_Streaming_Bandwidth" }
+    "BandwidthLimit" { ControlName="ComboBox" fieldName="BandwidthLimit" style="BandwidthLimit" }
+    
+    "ResolutionLabel" { ControlName="Label" associate="ResolutionLimit" labelText="#Steam_Settings_Streaming_Resolution" }
+    "ResolutionLimit" { ControlName="ComboBox" fieldName="ResolutionLimit" style="ResolutionLimit" }
+    
+    "AudioChannelsLabel" { ControlName="Label" associate="AudioChannelSelect" labelText="#Steam_Settings_Streaming_AudioChannelSelect" }
+    "AudioChannelSelect" { ControlName="ComboBox" fieldName="AudioChannelSelect" editable="0" }
+    
+    "EnableHardwareDecoding" { ControlName="CheckButton" fieldName="EnableHardwareDecoding" labelText="#Steam_Settings_Streaming_EnableHardwareDecoding" }
+    "EnableDebugOverlay" { ControlName="CheckButton" fieldName="EnableDebugOverlay" labelText="#Steam_Settings_Streaming_EnableDebugOverlay" }
+    
+    "SupportInformationLabel" { ControlName="URLLabel" fieldName="SupportInformationLabel" labelText="#Steam_Settings_Streaming_StreamingSupport" URLText="https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617" }
+    
+    OKButton { ControlName="Button" fieldName="OKButton" command="Close" labelText="#PropertyDialog_OK" }
+  }
+  styles
+  {
+  }
+  layout
+  {
+    place { control="DescriptionLabel,DescriptionLabelLocal,BandwidthLabel" y=44 dir=down width=max margin-left=16 margin-right=16 spacing=8 }
+    place { control="BandwidthLimit,ResolutionLabel,ResolutionLimit,AudioChannelsLabel,AudioChannelSelect,PerformanceOverlayLabel,PerformanceOverlay,ControllerOverlayHotkeyLabel,ControllerOverlayHotkey,EnableHardwareDecoding,EnableTouchController" start="BandwidthLabel" y=8 dir=down width=max height=28 margin-right=16 spacing=-2 }
+    
+    region { name=bottom align=bottom height=44 margin=8 }
+    region { name=support align=bottom height=80 margin=8 }
+    place { control="SupportInformationLabel" x=8 region=support }
+    place { control="OKButton" region=bottom align=right spacing=8 width=84 height=28 }
+	}
+}

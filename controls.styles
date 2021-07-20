@@ -1,0 +1,360 @@
+"controls.styles"
+{
+	styles
+	{
+		Button
+		{
+			bgcolor=white12
+			font-family=basefont
+			textcolor="White"
+		}
+		Button:hover
+		{
+			bgcolor=white24
+		}
+		Button:active
+		{
+			bgcolor=focus
+		}
+		Button:disabled
+		{
+			textcolor=White45
+		}
+		ToggleButton:selected
+		{
+			bgcolor=focus
+		}
+
+		//Check
+		 
+		//Text Boxes
+		TextEntry
+		{
+			font-family=basefont
+			bgcolor="TextEntry"
+			textcolor=White
+			shadowtextcolor=white
+			selectedtextcolor=White
+			selectedbgcolor="Focus"
+			inset-left=2
+		}
+
+		TextEntry:empty
+		{
+			textcolor="none"
+		}
+
+		//Chat Emoticon Button
+		CEmoticonButton
+		{
+			bgcolor=TextEntry
+			render_bg{}
+			image="graphics/metro/icons/chat/emoticons"
+			padding-left=5
+		}
+		CEmoticonButton:hover
+		{
+			bgcolor="TextEntry"
+			render_bg
+			{
+				0="fill(x0,y0,x1,y1,white05)"
+			}
+		}
+		CEmoticonButton:selected
+		{
+			bgcolor=Focus
+			render_bg{}
+		}
+
+		EmoticonMenuItemStyle
+		{
+			inset-left=-6
+			textcolor=White45
+			bgcolor=none
+			render_bg{}
+		}
+		EmoticonMenuItemStyle:hover
+		{
+			textcolor=white
+		}
+
+		RadioButton
+		{
+			textcolor="White50"
+			font-family=basefont
+			font-weight=400
+			bgcolor="none"
+			render_bg {}
+			image="graphics/radio_d"
+		}
+		RadioButton:hover
+		{
+			render_bg {}
+			image="graphics/radio_h"
+		}
+		RadioButton:selected
+		{
+			render_bg {}
+			image="graphics/radio_s"
+		}
+		RadioButtonList
+		{
+			inset="-2 0 0 0"
+			bgcolor="ClientBG"
+			render_bg
+			{
+				// lines around
+				1="fill( x0, y0, x1, y0+1, White10 )"  // top
+				2="fill( x0, y1-1, x1, y1, White10 )"  // bottom
+				3="fill( x0-1, y0, x0, y1, White10 )"  // left
+				4="fill( x1, y0, x1+1, y1, White10 )"  // right
+			}
+		}
+		
+		CheckButton
+		{
+			textcolor="White50"
+			font-family=basefont
+			font-weight=400
+			image=graphics/check_d
+		}
+		CheckButton:hover
+		{
+			image=graphics/check_h
+		}
+		CheckButton:selected
+		{
+			image=graphics/check_s
+		}
+		CheckButton:selected:hover
+		{
+			image=graphics/check_sh
+		}
+		CheckButton:disabled
+		{
+			textcolor="White24"
+			bgcolor="none"
+			image=graphics/check_d
+		}
+		CheckButton:selected:disabled
+		{
+			textcolor="White24"
+			bgcolor="none"
+			image=graphics/check_s
+		}
+
+		CheckButtonList
+		{
+			inset="0 1 1 1"
+			textcolor="White"
+			bgcolor="none"
+			render_bg
+			{
+				// lines around
+				1="fill( x0, y0, x1, y0+1, White10 )"  // top
+				2="fill( x0, y1-1, x1, y1, White10 )"  // bottom
+				3="fill( x0, y0+1, x0+1, y1-1, White10 )"  // left
+				4="fill( x1-1, y0+1, x1, y1-1, White10 )"  // right
+			}
+		}
+		CheckButtonList:scrollbar
+		{
+			inset="1 1 1 1"
+			textcolor="White"
+			bgcolor="none"
+			render_bg {}
+			render {}
+		}
+		"CheckbuttonList CheckButton"
+		{
+			textcolor=White
+		}
+
+		ComboBox
+		{
+			inset="3 -1"
+			textcolor="White"
+			selectedtextcolor="White"
+			font-family=basefont
+			bgcolor="none"
+			render_bg
+			{
+				1="fill(x0,y0,x1,y0+1,white12)"  // top
+				2="fill(x0,y1-1,x1,y1,white12)"  // bottom
+				3="fill(x0,y0+1,x0+1,y1-1,white12)"  // left
+				4="fill(x1-1,y0+1,x1,y1-1,white12)"  // right
+			}
+		}
+		ComboBox:hover
+		{
+			render_bg
+			{
+				1="fill(x0,y0,x1,y0+1,white24)"  // top
+				2="fill(x0,y1-1,x1,y1,white24)"  // bottom
+				3="fill(x0,y0+1,x0+1,y1-1,white24)"  // left
+				4="fill(x1-1,y0+1,x1,y1-1,white24)"  // right
+			}
+		}
+		ComboBox:disabled
+		{
+			textcolor="White50"
+			render_bg
+			{
+				1="fill(x0,y0,x1,y0+1,white12)"  // top
+				2="fill(x0,y1-1,x1,y1,white12)"  // bottom
+				3="fill(x0,y0+1,x0+1,y1-1,white12)"  // left
+				4="fill(x1-1,y0+1,x1,y1-1,white12)"  // right
+			}
+		}
+		ComboBox:focus
+		{
+			selectedbgcolor="Focus"
+		}
+
+		ComboBoxButton
+		{
+			bgcolor="none"
+			image="graphics/icon_down_default"
+			padding-left=2
+		}
+		ComboBoxButton:hover
+		{
+			image="graphics/icon_down_hover"
+		}
+
+		PageTab
+		{
+			textcolor="White50"
+			font-family=semibold
+			bgcolor="none"
+			render_bg {}
+		}
+		PageTab:hover
+		{
+			textcolor="White75"
+			bgcolor="none"
+			render_bg
+			{
+				1="fill(x0+1,y0,x1-1,y1-1,white05)"
+			}
+		}
+		PageTab:selected
+		{
+			textcolor="White"
+			bgcolor="none"
+			render_bg
+			{
+				1="fill(x0+1,y0,x1-1,y1-1,white05)"
+				2="fill(x0+1, y1-1, x1-1, y1, focus)"
+			}
+			render{}
+		}
+
+		"PageDragFrame PageTab"
+		{
+			font-style=""
+			font-size=14
+		}
+
+		ScrollBarButton.up
+		{
+			inset-left=0
+			bgcolor="none"
+			render_bg{}
+			image=graphics/up_arrow
+			padding-left=-1
+			padding-bottom=2
+		}
+		ScrollBarButton.up:hover
+		{
+			render_bg{}
+			image=graphics/up_arrow_h
+		}
+
+		ScrollBarButton.down
+		{
+			inset-left=0
+			bgcolor="none"
+			render_bg{}
+			image=graphics/down_arrow
+			padding-left=-1
+			padding-top=3
+		}
+		ScrollBarButton.down:hover
+		{
+			render_bg{}
+			image=graphics/down_arrow_h
+		}
+
+		ScrollBarButton.left
+		{
+			bgcolor="none"
+			render_bg{}
+			image=graphics/left_arrow
+		}
+		ScrollBarButton.left:hover
+		{
+			render_bg{}
+			image=graphics/left_arrow_h
+		}
+
+		ScrollBarButton.right
+		{
+			bgcolor="none"
+			render_bg{}
+			image=graphics/right_arrow
+		}
+		ScrollBarButton.right:hover
+		{
+			render_bg{}
+			image=graphics/right_arrow_h
+		}
+
+		ScrollBarHandle  //vertical scrollbar thumb
+		{
+			bgcolor=scroll
+		}
+		"ScrollBarHandle:hover"
+		{
+			bgcolor=scroll_a
+			render_bg
+			{
+				0="fill( x0, y0, x1, y1, white05 )"
+			}
+		}
+		"ScrollBarHandle:selected"
+		{
+			bgcolor=scroll_a
+		}
+
+		"SliderHoriz"  //horizontal scrollbar thumb
+		{
+			bgcolor=scroll
+		}
+		"SliderHoriz:hover"
+		{
+			bgcolor=scroll_a
+			render_bg
+			{
+				0="fill( x0, y0, x1, y1, white05 )"
+			}
+		}
+		"SliderHoriz:selected"
+		{
+			bgcolor=scroll_a
+		}
+
+		ScrollBarSlider // gutter
+		{
+			bgcolor="none"
+			render_bg{}
+			render{}
+		}
+		ScrollBarSliderHoriz // gutter
+		{
+			bgcolor="none"
+			render_bg{}
+			render{}
+		}
+	}
+}

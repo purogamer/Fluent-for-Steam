@@ -1,0 +1,43 @@
+"resource/layout/overlay_news_item.layout"
+{
+	controls
+	{
+		newsitem_title { controlname="URLLabel" style="title_label" }
+		newsitem_dateandauthor { controlname="Label" style="date_and_author" }
+	}
+	colors
+	{
+	}
+	styles
+	{
+		title_label
+		{
+			font-size="17"
+			textcolor="White"
+			//font-weight=700
+			font-style="normal"
+			font-family=basefont
+			
+		}
+			
+		title_label:hover
+		{
+			font-style="underline"
+			textcolor="White"
+		}	
+
+		date_and_author
+		{
+			font-size=14
+			textcolor="White"
+		}
+	}
+
+	layout
+	{
+		region { name=body width=max }
+		//place { region=body control=newsitem_title width=max }
+		//place { region=body y=18 control=newsitem_dateandauthor width=max  }
+		place { region=body controls=newsitem_title,newsitem_dateandauthor dir=down spacing=2 width=max }
+	}
+}

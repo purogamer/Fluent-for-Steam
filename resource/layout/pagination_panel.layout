@@ -1,0 +1,87 @@
+"resource/layout/pagination_panel.layout"
+{
+	controls
+	{
+		pagination { controlname="CPaginationPanel" style="pagination" }
+		pagedescription { controlname="Label" labeltext="#steam_paginationtext" style="pagedescriptionstyle" }
+		FirstLink { controlname="Button" labeltext="1" style="PageButton" }
+		PreviousLink { controlname="Button" labeltext="<" style="JumpButton" }
+		page1 { controlname="Button" visible=0 style="PageButton" }
+		page2 { controlname="Button" visible=0 style="PageButton" }
+		page3 { controlname="Button" visible=0 style="PageButton" }
+		page4 { controlname="Button" visible=0 style="PageButton" }
+		page5 { controlname="Button" visible=0 style="PageButton" }
+		page6 { controlname="Button" visible=0 style="PageButton" }
+		page7 { controlname="Button" visible=0 style="PageButton" }
+		page8 { controlname="Button" visible=0 style="PageButton" }
+		page9 { controlname="Button" visible=0 style="PageButton" }
+		page10 { controlname="Button" visible=0 style="PageButton" }
+		page11 { controlname="Button" visible=0 style="PageButton" }
+		page12 { controlname="Button" visible=0 style="PageButton" }
+		page13 { controlname="Button" visible=0 style="PageButton" }
+		page14 { controlname="Button" visible=0 style="PageButton" }
+		page15 { controlname="Button" visible=0 style="PageButton" }
+		page16 { controlname="Button" visible=0 style="PageButton" }
+		page17 { controlname="Button" visible=0 style="PageButton" }
+		page18 { controlname="Button" visible=0 style="PageButton" }
+		page19 { controlname="Button" visible=0 style="PageButton" }
+		page20 { controlname="Button" visible=0 style="PageButton" }
+		NextLink { controlname="Button" labeltext=">" style="JumpButton" }
+		LastLink { controlname="Button" labeltext="Last" style="PageButton" }
+		LeftSpacer { controlname="Label" labeltext="..." style="spacerstyle" }
+		RightSpacer { controlname="Label" labeltext="..." style="spacerstyle" }
+	}
+
+	colors
+	{
+		PaginationPanel.ExtraVerticalSpacing "25"
+	}
+
+	styles
+	{
+		//Hidden
+		CPaginationPanel
+		{
+			bgcolor="none"
+		}
+		paginationLinkDisabledStyle
+		{
+			textcolor=White
+			bgcolor="none"
+		}
+
+//////////////////////////////////////////////////
+//======This controls the "Showing..." text(it appears only if you use Parental Control)=====//
+		pagedescriptionstyle
+		{
+		 	textcolor=White
+			bgcolor="none"
+		}
+		PageButton
+		{
+			textcolor=White
+			bgcolor="none"
+			render_bg {}
+		}
+		JumpButton
+		{
+			textcolor=White
+			bgcolor="none"
+		}
+		paginationLinkStyle
+		{
+			textcolor=White
+			bgcolor="none"
+		}
+		spacerstyle
+		{
+			textcolor=White
+			bgcolor="none"
+		}
+	}
+
+	layout
+	{
+		place { control=pagination,pagedescription,PreviousLink,FirstLink,LeftSpacer,page1,page2,page3,page4,page5,page6,page7,page8,page9,page10,page11,page12,page13,page14,page15,page16,page17,page18,page19,page20,RightSpacer,LastLink,NextLink width=1 }
+	}
+}

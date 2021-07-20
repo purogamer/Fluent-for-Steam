@@ -1,0 +1,93 @@
+"resource/layout/phonereminderbar.layout"
+{
+	controls
+	{
+		"phonereminderbarlabel"
+		{
+			"ControlName"		"Label"
+			"labelText"		"#steam_phoneaddress_query"
+			style=bright
+		}
+		"phonereminderbar_info"
+		{
+			"ControlName"		"Label"
+			"labelText"		"#steam_phoneaddress_query_info"
+			style=soft
+			wrap=1
+		}
+		"phonereminderbar_yesbutton"
+		{
+			"ControlName"		"Button"
+			"labelText"		"#steam_phoneaddress_query_yes"
+			command="AddPhone"
+			style="ButtonStyle"
+		}
+		"phonereminderbar_nobutton"
+		{
+			"ControlName"		"Button"
+			"labelText"		"#steam_phoneaddress_query_no"
+			command="Close"
+			style="ButtonStyle"
+		}
+	}
+	
+	styles
+	{
+		CPhoneReminderBar
+		{
+			
+			render {}
+			render_bg {
+			}
+		}
+		
+		soft
+		{
+			font-size=15
+			textcolor="209 242 133 255"
+			minimum-width=500
+		}
+
+		bright
+		{
+			
+			font-size=18
+			textcolor="255 255 255 255"
+		}
+
+		ButtonStyle
+		{
+			font-size=16
+			padding=2
+			bgcolor=button_green_bg
+			render_bg {}
+			render {
+				1="fill( x0, y0, x1, y0 + 1, button_green_border )"  // top
+				2="fill( x0, y1 - 1, x1, y1, button_green_border )"  // bottom
+				3="fill( x0 + 1, y0, x0 + 1, y1, button_green_border )"  // left
+				4="fill( x1 - 1, y0, x1, y1, button_green_border )"  // right
+			}
+		}
+
+		ButtonStyle:hover
+		{
+			textcolor=white
+		}
+	}
+	
+	colors
+	{
+		phonereminder_bar_green1 "92 126 16 255"
+		phonereminder_bar_green2 "73 100 13 255"
+		outline_gray "77 75 72 255"
+		outline_dark "23 22 20 255"
+		button_text_green "209 242 133 255"
+		button_green_bg "64 90 08 255"
+		button_green_border "91 120 18 255"
+	}
+	
+	layout
+	{
+		place { control="phonereminderbarlabel,phonereminderbar_yesbutton,phonereminderbar_nobutton,phonereminderbar_info" width=0 height=0 }
+	}
+}

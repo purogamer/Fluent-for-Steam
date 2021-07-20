@@ -1,0 +1,101 @@
+"resource/layout/gamespage_grid_loadfailed.layout"
+{
+	controls
+	{
+		"background"
+		{
+			ControlName						"ImagePanel"
+			style							"GGPlaceholderBG"
+			scaling							"fit"
+			zpos							"1"
+			// image resource of this control will be set programmatically
+		}
+
+		"noappimage_border"
+		{
+			ControlName						"ImagePanel"
+			style							"GamesGridIconBorder"
+			zpos							"2"
+		}	
+		
+		"noappimage"
+		{
+			ControlName						"ImagePanel"
+			style							"GamesGridIcon"
+			zpos							"3"
+		}
+				
+		"appname"
+		{
+			ControlName						"Label"
+			style							"GamesGridPlaceholder"
+			textalignment					"center"
+			zpos							"4"
+			// labeltext of this control will be set programmatically
+		}
+		
+	}
+
+	styles
+	{
+		GamesGridPlaceholder
+		{
+			font-size=20
+			font-family=basefont
+			textcolor=White
+		}
+
+		GamesGridIconBorder
+		{
+			bgcolor="none"
+			inset="0 0 0 0"
+		     render
+		     {}
+		}
+					
+		GGPlaceholderBG
+		{
+			bgcolor=White10
+			render
+			{
+				0="fill(x0,y0+1,x0+1,y1-1,White10)"
+				1="fill(x1-1,y0+1,x1,y1-1,White10)"
+				2="fill(x0,y0,x1,y0+1,White10)"
+				3="fill(x0,y1-1,x1,y1,White10)"
+			}
+		}
+
+		"GameItem_installed GamesGridPlaceholder"
+		{
+			textcolor="White"
+		}
+	}
+
+	layout
+	{
+		region
+		{
+			name=icon_region width=max height=max
+		}
+		
+		place
+		{
+			control = "background"		width=max height=max
+		}
+		place
+		{
+			control = "appname"  		margin=12 width=max align=left margin-top=12
+		}
+		place
+		{
+			control = "noappimage_border"	region="icon_region"	x=0 y=0 width=0 height=0 margin-top=48 align=top-center 
+		}
+		place
+		{
+			control = "noappimage"	region="icon_region" x=10 y=0 width=32 height=32 margin-bottom=10 align=bottom
+		}
+
+	}
+}
+
+

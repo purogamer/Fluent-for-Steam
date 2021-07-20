@@ -1,0 +1,31 @@
+"resource/layout/subpaneloptionsdownloads.layout"
+{
+	styles
+	{
+		highlight
+		{
+			font-size=28
+			font-family=semilight
+			font-weight=300
+			textcolor=white
+		}
+		Combobox
+		{
+			minimum-height=24
+		}
+	}
+
+	layout
+	{
+		place { control="LibrariesLabel,ManageInstalledappsLabel,ManageInstalledApps,Divider1,RegionLabel,RegionInfoLabel,DownloadRegionCombo,Divider2,RestrictionsLabel,ThrottleRatesLabel,ThrottleRates,AutoUpdateTimeRestrictCheckbox" width=360 dir=down spacing=8 }
+		place { control="AutoUpdateTimeRestrictStartLabel,AutoUpdateTimeRestrictStart" start=AutoUpdateTimeRestrictCheckbox width=176 height=24 dir=down margin-top=8 }
+		place { control="AutoUpdateTimeRestrictEndLabel,AutoUpdateTimeRestrictEnd" start=AutoUpdateTimeRestrictCheckbox x=184 width=176 height=24 dir=down margin-top=8 }
+		place { control="AllowDownloadsDuringGameplayCheckbox" start=AutoUpdateTimeRestrictStart width=max dir=down margin-top=8 }
+		place { control="ThrottleDownloadsWhileStreamingCheckbox" start=AllowDownloadsDuringGameplayCheckbox width=max dir=down margin-top=8 }
+		place { control="DownloadRatesInBitsCheckbox" start=ThrottleDownloadsWhileStreamingCheckbox width=max dir=down margin-top=8 }
+		place { control="FlushDownloadConfig" start=DownloadRatesInBitsCheckbox width=360 dir=down margin-top=8 }
+
+		//Hidden
+		place { control="FlushDownloadConfigLabel,Divider3" width=0 height=0 }
+	}
+}

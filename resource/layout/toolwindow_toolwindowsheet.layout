@@ -1,0 +1,16 @@
+"resource/layout/toolwindow_toolwindowsheet.layout"
+{
+	controls
+	{
+		// the container
+		tab	{ controlname="PageTab" }
+		TabMenuButton	{ controlname="MenuButton" }
+	}
+	layout
+	{
+		region { name=crop height=max margin-right=86 }
+		region { name=full height=max width=max }
+		place { region=crop control=*tab height=23 }
+		place { region=full control=TabMenuButton height=23 }
+	}
+}

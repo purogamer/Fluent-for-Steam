@@ -1,0 +1,164 @@
+"menubar" [$WINDOWS]
+{
+	Steam
+	{
+		text=""
+		text = [$OSX]	"#SteamRootAccount"
+		SkinVersion			{	text="Metro For Steam - 4.4"		shellcmd="" }
+		Website			{	text="Official Website"		shellcmd="steam://openurl/http://metroforsteam.com/" }
+		Group			{	text="Steam Community Group"		shellcmd="steam://openurl/http://steamcommunity.com/groups/metroforsteam" }
+		Divider {}
+		NewForYou						{	text="#SteamUI_GameProperties_UpdateNews"		shellcmd="steam://open/newforyou" }
+		CheckForUpdates	{	text="#steam_menu_checkforupdates"		command="CheckForUpdates" }
+		Divider {}
+		GoOnline		{	text="#SteamUI_OfflineMode_GoOnline"		command="goonline" }
+		GoOffline		{	text="#SteamUI_OfflineMode_GoOffline"		command="gooffline" }
+		Divider {}
+		MiniMode		{	text="#steam_menu_minimode"		shellcmd="steam://open/minigameslist" }
+		LargeMode		{	text="#steam_menu_largemode"			shellcmd="steam://open/largegameslist" }
+		StartVR							{	text="#steam_menu_startvr"				shellcmd="steam://run/250820" }
+		BigPicture		{	text="Big Picture"			shellcmd="steam://open/bigpicture" }
+		Divider {}
+		MusicDetails					{	text="#steam_menu_view_music_details"			shellcmd="steam://nav/music/details" }
+		MusicPlayer						{	text="#steam_menu_view_musicplayer"		shellcmd="steam://open/musicplayer" }
+		Divider {}
+		Friends							{	text="#steam_menu_friends"				shellcmd="steam://open/friends" }
+		ViewPlayerList					{	text="#steam_menu_view_players"			shellcmd="steam://friends/players" }
+		Servers							{	text="#steam_menu_servers"				shellcmd="steam://open/servers" }
+		Screenshots						{	text="#steam_screenshots"				command="Screenshots" }
+		Downloads						{	text="#steam_menu_downloads"			shellcmd="steam://nav/downloads" }
+		Inventory						{	text="#steam_inventory"					shellcmd="steam://open/inventory" }
+		Divider {}
+		ActivateRetail		{ text="#Steam_RegisterProductCode"				command="ActivateRetail" }
+		RedeemWalletVoucher				{	text="#Steam_RedeemWalletVoucher"		shellcmd="steam://url/RedeemWalletVoucher" }
+		ManageGuestPasses	{ text="#Steam_ManageGuestPasses"				command="ManageGuestPasses" }
+		AddShortcut			{ text="#Steam_menu_AddShortcut"				shellcmd="steam://AddNonSteamGame" }
+		BackupGames						{	text="#steam_menu_backupgames"			command="backupgames" }
+		Divider {}
+		Support							{	text="#steam_menu_support"				command="Support" }
+		Divider {}
+		Settings		{	text="#steam_menu_settings"		command="Settings" }
+		Restart 		{	text="#Steam_MustRestart_Button"				command="RestartSteam" }
+		Exit			{	text="#Steam_ExitSteam"					command="Exit" }
+	}
+}
+
+"menubar" [!$WINDOWS]
+{
+	Steam
+	{
+		text = [!$OSX]	"#steam_menu_file"
+		text = [$OSX]	"#SteamRootAccount"
+
+		GoOnline						{	text="#SteamUI_OfflineMode_GoOnline"	command="goonline" }
+		GoOffline						{	text="#SteamUI_OfflineMode_GoOffline"	command="gooffline" }
+
+		Divider							{}
+
+	    // check for updates appears in the system-managed "steam" menu on the mac
+		CheckForUpdates		[!$OSX]		{	text="#steam_menu_checkforupdates"		command="CheckForUpdates" }
+
+		CheckForVideoDriverUpdates	[$WINDOWS||$LINUX]	{	text="#steam_menu_checkforvideodriverupdates"	command="CheckForVideoDriverUpdates" }
+		Divider				[$WINDOWS||$LINUX]	{}
+
+		BackupGames						{	text="#steam_menu_backupgames"			command="backupgames" }
+		Divider				[!$OSX]		{}
+		Settings			[!$OSX]		{	text="#steam_menu_settings"				command="Settings" }
+		Divider				[!$OSX]		{}
+		Exit				[!$OSX]		{	text="#Steam_ExitSteam"					command="Exit" }
+	}
+
+	View
+	{
+		text="#steam_menu_view"
+
+		GamesDetails					{	text="#steam_menu_games_details"		shellcmd="steam://nav/games/details" }
+		GamesList						{	text="#steam_menu_games_list"			shellcmd="steam://nav/games/list" }
+		GamesGrid						{	text="#steam_menu_games_grid"			shellcmd="steam://nav/games/grid" }
+		Divider							{}
+		MiniMode			[!$OSX]		{	text="#steam_menu_minimode"				shellcmd="steam://open/minigameslist" }
+		LargeMode			[!$OSX]		{	text="#steam_menu_largemode"			shellcmd="steam://open/largegameslist" }
+		BigPictureMode					{ text="#steam_menu_bigpicturemode" 		shellcmd="steam://open/bigpicture" }
+		Divider							{}
+		StartVR							{	text="#steam_menu_startvr"				shellcmd="steam://run/250820" }
+		Divider							{}
+		ExitVR							{	text="#steam_menu_exitvr"				command="exitvr" }
+		Divider							{}
+		MusicDetails					{	text="#steam_menu_view_music_details"			shellcmd="steam://nav/music/details" }
+		MusicPlayer						{	text="#steam_menu_view_musicplayer"		shellcmd="steam://open/musicplayer" }
+		Divider							{}
+		Friends							{	text="#steam_menu_friends"				shellcmd="steam://open/friends" }
+		ViewPlayerList					{	text="#steam_menu_view_players"			shellcmd="steam://friends/players" }
+		Servers							{	text="#steam_menu_servers"				shellcmd="steam://open/servers" }
+		Screenshots						{	text="#steam_screenshots"				command="Screenshots" }
+		Inventory						{	text="#steam_inventory"					shellcmd="steam://open/inventory" }
+		NewForYou						{	text="#SteamUI_GameProperties_UpdateNews"		shellcmd="steam://open/newforyou" }
+		Divider				[!$OSX]		{}
+		Settings			[!$OSX]		{	text="#steam_menu_settings"				command="Settings" }
+	}
+
+	Friends
+	{
+		text="#steam_menu_friends_view"
+
+		ViewFriends						{	text="#steam_menu_view_friends"			shellcmd="steam://open/friends" }
+		Divider							{}
+		AddFriend						{	text="#steam_menu_add_friend"			shellcmd="steam://friends/add" }
+		Divider							{}
+		Online							{	text="#friends_online"					shellcmd="steam://friends/status/online"		checkable=1		autocheck=0 }
+		Away							{	text="#friends_away"					shellcmd="steam://friends/status/away"			checkable=1		autocheck=0 }
+		Play							{	text="#friends_lookingtoplay"			shellcmd="steam://friends/status/play"			checkable=1		autocheck=0 }
+		Trade							{	text="#friends_lookingtotrade"			shellcmd="steam://friends/status/trade"			checkable=1		autocheck=0 }
+		Busy							{	text="#friends_busy"					shellcmd="steam://friends/status/busy"			checkable=1		autocheck=0 }
+		Offline							{	text="#friends_offline"					shellcmd="steam://friends/status/offline"		checkable=1		autocheck=0 }
+		Invisible						{	text="#friends_invisible"				shellcmd="steam://friends/status/invisible"		checkable=1		autocheck=0 }
+		Divider							{}
+		SortByName						{	text="#steam_menu_friends_sortbyname"	shellcmd="steam://friends/settings/sortbyname"	checkable=1 }
+		ShowAvatars						{	text="#steam_menu_friends_showavatars"	shellcmd="steam://friends/settings/showavatars"	checkable=1 }
+		OnlineUsersOnly					{	text="#steam_menu_friends_hideoffline"	shellcmd="steam://friends/settings/hideoffline"	checkable=1 }
+		ShowTagged						{	text="#steam_menu_friends_showtagged"	shellcmd="steam://friends/settings/showtagged"	checkable=1 }
+		Divider							{}
+		SetProfileName					{	text="#steam_menu_set_profile"			shellcmd="steam://settings/friends" }
+		ChangeAvatar					{	text="#steam_menu_set_avatar"			shellcmd="steam://url/SteamIDEditPage" }
+	}
+
+	Games
+	{
+		text="#steam_menu_games"
+
+		Games							{	text="#steam_menu_view_games"			shellcmd="steam://nav/games" }
+		Divider							{}
+		ActivateRetail					{	text="#Steam_RegisterProductCode"		command="ActivateRetail" }
+		RedeemWalletVoucher				{	text="#Steam_RedeemWalletVoucher"		shellcmd="steam://url/RedeemWalletVoucher" }
+		ManageGuestPasses				{	text="#Steam_ManageGuestPasses"			command="ManageGuestPasses" }
+		AddShortcut						{	text="#Steam_menu_AddShortcut"			shellcmd="steam://AddNonSteamGame" }
+	}
+
+	Window [$OSX]
+	{
+		text="#steam_menu_window"
+
+		Divider							{}
+		MiniMode						{	text="#steam_menu_minimode"				shellcmd="steam://open/minigameslist" }
+		LargeMode						{	text="#steam_menu_largemode"			shellcmd="steam://open/largegameslist" }
+	}
+
+	Help
+	{
+		text="#steam_menu_help"
+
+		Support							{	text="#steam_menu_support"				command="Support" }
+		Divider							{}
+		Privacy							{	text="#steam_menu_PrivacyPolicy"		shellcmd="steam://url/PrivacyPolicy" }
+		Legal							{	text="#steam_menu_LegalInformation"		shellcmd="steam://url/LegalInformation" }
+		SSA								{	text="#steam_menu_SteamSubscriberAgreement"	shellcmd="steam://url/SSA" }
+		Divider							{}
+		SystemInfo						{	text="#steam_menu_systeminfo"			command="SystemInfo" }
+		About							{	text="#steam_about"						command="About" }
+		Divider							{}
+		SkinVersion			{	text="Metro For Steam - 4.4"		shellcmd="" }
+		SkinVersion			{	text="Edited by BELEZETA"		shellcmd="" }
+		Website			{	text="Official Website"		shellcmd="steam://openurl/http://metroforsteam.com/" }
+		Group			{	text="Steam Community Group"		shellcmd="steam://openurl/http://steamcommunity.com/groups/metroforsteam" }
+	}
+}

@@ -1,0 +1,35 @@
+"resource/layout/requestdeviceauthorization.layout"
+{
+	controls
+	{
+	  DialogTitle { controlname=label labeltext=#Steam_DeviceAuth_ChooseDialog_Title style=BigLable }
+		DialogText { controlname=label labeltext=#Steam_DeviceAuth_ChooseDialog_Text wrap=1 }
+		AuthorizationButton { controlname=button labeltext=#Steam_DeviceAuth_ChooseDialog_Request command=RequestAuthorization }
+		PurchaseGameButton { controlname=button labeltext=#Steam_DeviceAuth_ChooseDialog_Purchase command=PurchaseGame }
+		CancelButton { controlname=button labeltext=#Steam_DeviceAuth_ChooseDialog_Cancel command=Close }
+	}
+	
+	styles
+	{
+		BigLable
+		{
+			textcolor=White
+			font-size=24
+			font-family=semilight
+		}	
+	}
+		
+	layout
+	{
+		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
+		place { control="frame_captiongrip" width=max height=max }
+
+		place { control="DialogTitle" y=40 x=16 height=24 width=max }
+		place { control="DialogText" start=DialogTitle y=8 dir=down width=max margin-right=16 }
+		
+		region { name=bottom align=bottom margin=8 height=44 }
+		place { control="AuthorizationButton,PurchaseGameButton" region=bottom spacing=8 height=28 }
+		place { control="CancelButton" region=bottom align=right width=84 height=28 }
+
+	}
+}

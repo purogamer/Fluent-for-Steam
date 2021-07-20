@@ -1,0 +1,39 @@
+"resource/layout/gamespage_details_rental.layout"
+{
+	controls
+	{
+		rentaldetails { controlname="CGamesPage_Details_Rental" style="nonsteamdetails" }
+		headerlabel { controlname="Label" style="gamedetails-headerlabel" labeltext="#Steam_Rental_Title" }
+		bodybasic { controlname="RichText" style="bodycontent" }
+	}
+
+	colors
+	{
+		RichText.InsetX "0"
+		RichText.InsetY "3" 
+		GameDetailsWelcome.ExtraVerticalSpacing "52"
+		GameDetailsWelcome.WelcomeTextSpacing "0"
+	}
+
+	styles
+	{
+		nonsteamdetails 
+		{ 
+			bgcolor=black45
+		}
+		bodycontent
+		{
+			textcolor="White"
+			selectedtextcolor="White"	
+			font-size=15
+			render_bg {}
+		}
+	}
+
+	layout
+	{
+		region { name=body margin=10 width=max height=max }
+		place { region=body control=headerlabel width=max }
+		place { region=body y=26 control=bodybasic dir=down width=max spacing=2 }
+	}
+}

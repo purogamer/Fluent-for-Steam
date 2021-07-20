@@ -1,0 +1,311 @@
+"resource/layout/steamrootdialog.layout"
+{
+	styles
+	{
+		BigPictureBG
+		{
+		}
+
+		friends_list
+		{
+			font-family=basefont
+			textcolor=White75
+			font-size=18
+			padding-right=8
+			padding-left=30
+			render_bg
+			{
+				//0="image( x0+8, y0+12, x1, y1, graphics/metro/icons/navbar/friends )"
+			}
+		}
+
+		friends_list:hover
+		{
+			render_bg
+			{
+				1="fill(x0, y0, x1, y1, white10)"
+				//0="image( x0+8, y0+12, x1, y1, graphics/metro/icons/navbar/friends )"
+			}
+		}
+
+		friends_list:selected
+		{
+			render_bg
+			{
+				1="fill(x0, y0, x1, y1, focus)"
+				//0="image( x0+8, y0+12, x1, y1, graphics/metro/icons/navbar/friends )"
+			}
+		}
+
+		view_friends
+		{
+			textcolor="none"
+			inset-left=-100
+			bgcolor="none"
+			render_bg
+			{
+				0="image(x0+8,y0+13,x1,y1,graphics/metro/icons/navbar/friends)"
+			}
+		}
+
+		view_friends:hover
+		{
+			bgcolor=white05
+		}
+
+		view_friends:active
+		{
+			bgcolor=white10
+		}
+
+		online_friends
+		{
+			textcolor="none"
+			bgcolor="none"
+			font-family=basefont
+			font-style=regular
+		}
+
+		support_alert
+		{
+			bgcolor=none
+			font-family=light
+			font-weight=300
+			font-size=24
+			textcolor=white
+			inset-left=-13
+			render_bg
+			{
+			0="fill(x0,y1-2,x1,y1,support_hover_red2)"
+			}
+		}
+
+		support_alert:hover
+		{
+			render_bg
+			{
+			1="fill(x0,y0,x1,y1,white05)"
+			0="fill(x0,y1-2,x1,y1,support_hover_red2)"
+			}
+		}
+
+		support_alert:active
+		{
+			render_bg
+			{
+			1="fill(x0,y0,x1,y1,white10)"
+			0="fill(x0,y1-2,x1,y1,support_hover_red2)"
+			}
+		}
+
+		inboxmenuitem
+		{
+			padding-left=7
+			textcolor=white45
+		}
+
+		inboxmenuitem:hover
+		{
+			textcolor=white
+		}
+
+		inboxmenuitem_active
+		{
+			textcolor=white
+		}
+
+		AccountBalanceStyle
+		{
+			font-family=basefont
+			font-size=16
+			font-style=none
+			textcolor=white75
+			padding-left=8
+			padding-right=8
+		}
+
+		AccountBalanceStyle:hover
+		{
+			textcolor=white
+			bgcolor=white05
+		}
+
+		inbox_button
+		{
+			font-family=basefont
+			font-size=16
+			//font-weight=400
+			font-style=none
+			textcolor=white
+			padding-left=20
+			padding-right=-7
+			padding-top=-1
+			inset="0 0 0 0"
+			render {}
+			render_bg
+			{
+				0="image(x0+8,y0+14,x1,y1,graphics/metro/icons/navbar/notifications)"
+			}
+		}
+
+		inbox_button:hover
+		{
+			bgcolor=white05
+		}
+
+		inbox_button:selected
+		{
+			bgcolor=white10
+    }
+
+		inbox_button_active
+		{
+			padding-right=0
+			textcolor=white
+			render_bg
+			{
+				1="fill(x0,y1,x1,y1+1,focus)"
+				0="image(x0+8,y0+14,x1,y1,graphics/metro/icons/navbar/notifications)"
+			}
+		}
+
+		inbox_button_active:hover
+		{
+			bgcolor=white05
+		}
+
+		inbox_button_active:selected
+		{
+			bgcolor=white10
+		}
+
+		parental_lock_button
+		{
+			minimum-width=29
+			bgcolor=none
+			padding-right=4
+			render_bg
+			{
+				0="image(x0+9,y0+13,x1,y1,graphics/metro/icons/navbar/parent_unlocked)"
+				1="fill(x0,y1,x1,y1+1,red)"
+			}
+		}
+
+		parental_lock_button:hover
+		{
+			bgcolor=white05
+		}
+
+		parental_lock_button:active
+		{
+			bgcolor=white10
+		}
+
+		parental_lock_button:selected
+		{
+			render_bg
+			{
+				0="image(x0+9,y0+13,x1,y1,graphics/metro/icons/navbar/parent_locked"
+				1="fill(x0,y1,x1,y1+1,green)"
+			}
+		}
+
+		announcement_button
+		{
+			minimum-width = 29
+			bgcolor=transparent
+			render_bg
+			{
+				// background fill
+				1="image( x0+7, y0+12, x1, y1 + 1, graphics/updatenone_notification )"
+			}
+		}
+
+
+		announcement_button:hover
+		{
+			bgcolor=white05
+			render_bg
+			{
+				// background fill
+				1="image( x0+7, y0+12, x1, y1 + 1, graphics/updatenone_notification )"
+			}
+		}
+
+		announcement_button:active
+		{
+			bgcolor=white10
+			render_bg
+			{
+				// background fill
+				1="image( x0+7, y0+12, x1, y1 + 1, graphics/updatenone_notification )"
+			}
+		}
+
+		announcement_button_active
+		{
+			bgcolor=white10
+			render_bg
+			{
+				// background fill
+				1="image( x0+7, y0+12, x1, y1 + 1, graphics/updatenew_notification )"
+			}
+		}
+	}
+
+	colors
+	{
+		support_flag_red "169 72 71 255"
+		green "130 186 0 255"
+
+		support_hover_red1 "193 94 93 255"
+		support_hover_red2 "156 64 63 255"
+
+		inbox_active_text "112 186 36 255"
+		inbox_inactive_text "191 191 191 255"
+
+		inbox_active "92 126 16 255"
+		inbox_active_hover1 "129 176 25 255"
+		inbox_active_hover2 "104 142 19 255"
+
+		inbox_inactive "38 38 37 255"
+		inbox_inactive_hover1 "92 89 86 255"
+		inbox_inactive_hover2 "77 75 72 255"
+
+	}
+
+	layout
+	{
+		region { name=top align=top width=max height=48 margin-top=0 }
+		region { name=bottom height=6 align=bottom }
+
+		//Caption Buttons
+		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
+
+		//Frame Grips
+		place { control="frame_captiongrip" width=max height=40 }
+		place { control="rightGrip" align=right width=3 height=max }
+		place { control="frame_brGrip" region=bottom height=6 width=6 align=right }
+
+		//Content
+		place { control="UINavigatorPanel" width=max height=max x=1 margin-right=1 }
+
+		//Controls
+		place { control="AccountButton,AnnouncementButton,InboxButton,ParentalLockButton" align=right spacing=1 margin-right=180 height=39 }
+		place { control="view_friends" align=right end-right=UIStatusPanel margin-right=1 height=39 width=29 }
+		place { control="UIStatusPanel" align=right end-right=frame_minimize margin-right=1 width=27 height=40 }
+		place { control="MenuBar" height=38 width=38 x=1 y=1 }
+
+		//Controls - OS X
+		place [$OSX] { control="InboxButton" region=top align=right end-right=FriendPanel margin-right=1 height=39 }
+		place [$OSX] { control="UIStatusPanel" region=top align=right end-right=frame_minimize margin-right=1 width=23 height=39 }
+		place [$OSX] { control="MenuBar" region=top height=0 width=26 align=right end-right=frame_minimize margin-right=1 }
+
+
+		//Support Banner
+		place { control="SupportAlert" align=top-center height=39 width=305 }
+
+		// Hidden
+		place { control="startvr,exitvr,fullscreen,account_URL,add_game,BigPictureBG,account_balance_seperator,universe_label,online_friends,New,ImageLogo" width=0 height=0 }
+	}
+}

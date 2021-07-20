@@ -1,0 +1,18 @@
+"resource/layout/gamespage_details_compat_subheader.layout"
+{
+	controls
+	{
+		compatdescription {
+			controlname="RichText"
+			style="RichTextSimple"
+			labeltext="#Steam_Settings_Compat_Launch"
+			zpos="2"
+		}
+	}
+	layout
+	{
+		region { name=body margin=8 width=max height=max }
+
+		place { control=compatdescription x=52 y=12 region=body width=max }
+	}
+}

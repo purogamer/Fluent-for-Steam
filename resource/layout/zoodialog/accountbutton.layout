@@ -1,0 +1,118 @@
+"resource/layout/accountbutton.layout"
+{
+	styles
+	{
+		AccountPersonaStyleOffline
+		{
+			padding-right=8
+			padding-left=12
+			textcolor=Friends.OfflineColor
+		}
+
+		AccountPersonaStyleOnline
+		{
+			padding-right=8
+			padding-left=12
+			textcolor=Friends.OnlineColor
+			render_bg
+		  	{
+				0="gradient_horizontal( x0, y0 - 1, x0 + 2, y1 + 1, Friends.OnlineColor, DialogBG )"
+			}
+		}
+
+		AccountPersonaStyleInGame
+		{
+			padding-right=8
+			padding-left=12
+			textcolor=Friends.InGameColor
+			render_bg
+		  	{
+				0="gradient_horizontal( x0, y0 - 1, x0 + 2, y1 + 1, Friends.InGameColor, DialogBG )"
+			}
+		}
+		
+		AccountDropDownStyleOffline
+		{
+			render_bg
+		  	{
+				1="image( x0, y0+10, x1, y1, graphics/dropdown_offline )"
+			}
+			
+		}
+		
+		AccountDropDownStyleOnline
+		{
+
+			bgcolor=transparent
+			render_bg
+		  	{
+				1="image( x0, y0 + 10, x1, y1, graphics/dropdown_online )"
+			}
+		}
+		
+		AccountDropDownStyleInGame
+		{
+			render_bg
+		  	{
+				1="image( x0, y0+10, x1, y1, graphics/dropdown_ingame )"
+			}
+		}
+
+		AccountButtonStyle
+		{
+			bgcolor = transparent
+			render_bg
+		  	{
+				// background fill
+				0="fill( x0, y0, x1, y1, dark_blue )"
+			}
+		}
+
+		AccountButtonStyle:hover
+		{
+			render_bg
+		  	{
+				// background fill
+				0="fill( x0, y0, x1, y1, darkblue )"
+			}
+		}
+
+		AccountBalanceStyle
+		{
+			textcolor=white45
+			bgcolor="none"
+			font-family=basefont
+			font-size=14
+			font-weight=400
+			font-style=regular
+			padding-top=1
+			padding-right=8
+		}
+		
+		AccountMenuButtonStyle
+		{
+			bgcolor=transparent
+		}
+
+		AccountMenuButtonStyle:hover
+		{
+			bgcolor=white05
+		}
+
+		AccountMenuButtonStyle:active
+		{
+			bgcolor=white10
+		}
+	}
+
+	layout
+	{
+		place { control="account_menu_button" height=39 width=max }
+
+		place { control="account_avatar" align=right height=39 width=39 end-right=account_persona }
+		place { control="account_persona" align=right x=39 height=39 end-right=account_balance }
+		place { control="account_balance" align=right x=39 height=39 }
+
+		place { control="account_drop_down" margin-left=-9999 }
+	}
+}

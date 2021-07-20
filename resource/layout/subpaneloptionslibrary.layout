@@ -1,0 +1,51 @@
+"resource/layout/subpaneloptionsingame.layout"
+{
+  controls
+  {
+    TitleLabel { controlname=label labeltext="#Steam_Settings_Library" style=highlight }
+
+    LibraryDisplaySizeLabel { ControlName=Label labelText="#Steam_Settings_Library_Size_Title" }
+    LibraryDisplaySizeAutomatic { ControlName="RadioButton" fieldName="LibraryDisplaySizeAutomatic" labelText="#Steam_Settings_Library_Size_Automatic" }
+    LibraryDisplaySizeAutomaticLabel { ControlName=Label labelText="#Steam_Settings_Library_Size_Automatic_Label" }
+    LibraryDisplaySizeSmall { ControlName="RadioButton" fieldName="LibraryDisplaySizeSmall" labelText="#Steam_Settings_Library_Size_Small" }
+    LibraryDisplaySizeMedium { ControlName="RadioButton" fieldName="LibraryDisplaySizeMedium" labelText="#Steam_Settings_Library_Size_Medium" }
+    LibraryDisplaySizeLarge { ControlName="RadioButton" fieldName="LibraryDisplaySizeLarge" labelText="#Steam_Settings_Library_Size_Large" }
+
+    LibraryLowBandwidthCheckbox { controlname=checkbutton labeltext="#Steam_Settings_Library_LowBandwidth_Title" }
+    LibraryLowBandwidthLabel { ControlName=Label labelText="#Steam_Settings_Library_LowBandwidth_Desc" wrap=1 }
+
+    LibraryLowPerfCheckbox { controlname=checkbutton labeltext="#Steam_Settings_Library_LowPerf_Title" }
+    LibraryLowPerfLabel { ControlName=Label labelText="#Steam_Settings_Library_LowPerf_Desc" wrap=1 }
+  }
+  colors
+  {
+  }	
+  styles
+  {
+    highlight
+    {
+      textcolor=White
+    }
+  }
+  layout
+  {
+    region { name=box margin-left=16 margin-right=16 }
+    place { controls=TitleLabel,LibraryDisplaySizeLabel region=box spacing=6 dir=down } 
+    
+    place { start=LibraryDisplaySizeLabel control="LibraryDisplaySizeAutomatic" dir=down }
+    place { start=LibraryDisplaySizeAutomatic control="LibraryDisplaySizeAutomaticLabel" x=6 y=5 }
+    place { start=LibraryDisplaySizeAutomatic control="LibraryDisplaySizeSmall" dir=down }
+    place { start=LibraryDisplaySizeSmall control="LibraryDisplaySizeMedium" dir=down }
+    place { start=LibraryDisplaySizeMedium control="LibraryDisplaySizeLarge" dir=down }
+    
+    place { start=LibraryDisplaySizeLarge control=LibraryLowBandwidthLabel y=16 width=max dir=down }
+    place { start=LibraryLowBandwidthLabel control=LibraryLowBandwidthCheckbox dir=down }
+    
+    place { start=LibraryLowBandwidthCheckbox control=LibraryLowPerfLabel y=16 width=max dir=down }
+    place { start=LibraryLowPerfLabel control=LibraryLowPerfCheckbox dir=down }
+    
+    place { start=LibraryLowPerfCheckbox control=LibraryDisableCommunityContentLabel y=16 width=max dir=down }
+    place { start=LibraryDisableCommunityContentLabel control=LibraryDisableCommunityContentCheckbox dir=down }
+	place { start=LibraryDisableCommunityContentCheckbox control=LibraryDisplayIconInGameListCheckbox dir=down }
+  }
+}
