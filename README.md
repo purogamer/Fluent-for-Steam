@@ -10,7 +10,7 @@ I would be grateful if you could leave me a donation in this link https://www.pa
 
 1. Download Metro for Steam 4.4 from official website https://metroforsteam.com/ and Download Inter Font from Google Fonts and install it https://fonts.google.com/specimen/Inter
 
-2. Unzip and drag it in the \Steam\Skins\ folder found in the Steam folder, if it does not exist create it.
+2. Unzip Metro for Steam 4.4 and drag it in the \Steam\Skins\ folder found in the Steam folder, if it does not exist create it.
 
 3. Download the latest release of Unofficial Windows 11 Patch for Metro for Steam 4.4
 
