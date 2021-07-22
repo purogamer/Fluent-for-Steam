@@ -43,3 +43,16 @@ On the official website of the skin by [DomDrapper](https://metroforsteam.com/),
 ![shupame ovo](https://user-images.githubusercontent.com/87723899/126405954-4d291bab-1ea7-4054-8802-d66ad9db2880.png)
 #### Remastered download section with changes and a more rounded look.
 ![reddit 2](https://user-images.githubusercontent.com/87723899/126405955-90bcf2d5-9e66-4067-9e96-f634a809ef75.png)
+
+
+# License
+All contents of this repository are licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International license, also known as CC BY-NC-SA 4.0. Please consult the license page for additional details about your usage rights.
+
+Above license does not cover specific code, graphic and other content created and licensed exclusively to Metro for Steam author, Dominic Minischetti.
+
+For specific information about which portions of the repository are covered under which license, please contact us.
+
+# This patch uses files from the Unofficial Patch for Metro for Steam https://github.com/redsigma/UPMetroSkin/. This patch is made by redsigma766 and [Metro Skin](https://steamcommunity.com/groups/metroskin) steam group. 
+
+# [METRO SKIN - GROUP](https://steamcommunity.com/groups/metroskin/discussions/0/141136086931804907). 
+
