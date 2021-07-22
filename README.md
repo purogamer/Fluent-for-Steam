@@ -51,8 +51,3 @@ All contents of this repository are licensed under Creative Commons Attribution-
 Above license does not cover specific code, graphic and other content created and licensed exclusively to Metro for Steam author, Dominic Minischetti.
 
 For specific information about which portions of the repository are covered under which license, please contact us.
-
-# This patch uses files from the Unofficial Patch for Metro for Steam https://github.com/redsigma/UPMetroSkin/. This patch is made by redsigma766 and [Metro Skin](https://steamcommunity.com/groups/metroskin) steam group. 
-
-# [METRO SKIN - GROUP](https://steamcommunity.com/groups/metroskin/discussions/0/141136086931804907). 
-
