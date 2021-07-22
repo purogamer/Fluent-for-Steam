@@ -1,5 +1,7 @@
 # MetroForSteamUnoRW11
 
+######  The official site of the skin is https://metroforsteam.com/ This is only a patch! The base skin is made by DomDrapper, I only modified icons and some parameters!
+
 ## A simple patch for metro for steam to make it look like windows 11
 
 ## Important
