@@ -9,6 +9,9 @@ I would be grateful if you could leave me a donation in this link https://www.pa
 
 # Important!
 ## The skin does not add rounded edges, that only happens in Windows 11! and neither the style of my steam website, it only modifies icons and position parameters of some elements
+## The elements that were modified are the only graphic elements.
+## I use parts of the patch and i mix this with the original version. [Unofficial Patch for MetroForSteam [Version 9.1]](https://steamcommunity.com/groups/metroskin/discussions/0/141136086931804907). This is made by redsigma766 and [Metro Skin](https://steamcommunity.com/groups/metroskin) steam group. If you [click here](https://github.com/redsigma/UPMetroSkin/) you can go to its github
+## If you want the dark and round web aspect of my profile you can download and install through this [link](https://steamcommunity.com/groups/metroskin/discussions/0/1761356057412667612/). This is made by Shiina♪.
 
 
 ## Installation Step x step guide
