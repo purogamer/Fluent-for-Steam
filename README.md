@@ -33,7 +33,7 @@ I would be grateful if you could leave me a donation in this link https://www.pa
 
 ## How do I change the skin accent color and the font?
 On the official website of the skin by [DomDrapper](https://metroforsteam.com/), there is a tool to choose from. Then you must download the file and drop it in the skin folder.
-[![image](https://user-images.githubusercontent.com/87723899/126599790-4cd07902-7613-48d7-befa-2290ef8ed23d.png)
+[![image](https://i.gyazo.com/9981ec8b5c24d73add1a47b297991719.png)
 ](https://metroforsteam.com/personalize)
 
 ## Images 
