@@ -19,7 +19,7 @@ I would be grateful if you could leave me a donation in this link https://www.pa
 
 3. Download the latest release of Unofficial Windows 11 Patch for Metro for Steam 4.4
 
-4. Unzip and replace the files in the folder Steam\skins\metro-for-steam-4.4\
+4. Unzip my patch and replace the files in the folder Steam\skins\metro-for-steam-4.4\
 
 5. After these countries you must start steam, go to settings, select interface and in this panel you have to choose metro-for-steam-4.4. 
 
