@@ -27,7 +27,7 @@ I would be grateful if you could leave me a donation in this link https://www.pa
 
 ### If you want the dark and round web aspect of my profile you can download and install through this link https://steamcommunity.com/groups/metroskin/discussions/0/1761356057412667612/ 
 
-## How do I change the skin and the font?
+## How do I change the skin color and the font?
 On the official website of the skin by [DomDrapper](https://metroforsteam.com/), there is a tool to choose from. Then you must download the file and drop it in the skin folder.
 [![image](https://user-images.githubusercontent.com/87723899/126599790-4cd07902-7613-48d7-befa-2290ef8ed23d.png)
 ](https://metroforsteam.com/personalize)
