@@ -11,7 +11,7 @@ I would be grateful if you could leave me a donation in this link https://www.pa
 #### The skin does not add rounded edges, that only happens in Windows 11! and neither the style of my steam website, it only modifies icons and position parameters of some elements. The elements that were modified are the only visual elements.
 #### I use parts of the patch and i mix this with the original version. [Unofficial Patch for MetroForSteam [Version 9.1]](https://steamcommunity.com/groups/metroskin/discussions/0/141136086931804907). This is made by redsigma766 and [Metro Skin](https://steamcommunity.com/groups/metroskin) steam group. If you [click here](https://github.com/redsigma/UPMetroSkin/) you can go to its github.
 #### If you want the dark and round web aspect of my profile you can download and install through this [link](https://steamcommunity.com/groups/metroskin/discussions/0/1761356057412667612/). This is made by Shiina♪. 
-![image](https://i.gyazo.com/9981ec8b5c24d73add1a47b297991719.png)
+[![image](https://i.gyazo.com/8430c49d1e06662c1c114ecca701de6a.png)](https://steamcommunity.com/groups/metroskin/discussions/0/1761356057412667612/)
 
 
 
@@ -33,7 +33,7 @@ I would be grateful if you could leave me a donation in this link https://www.pa
 
 ## How do I change the skin accent color and the font?
 On the official website of the skin by [DomDrapper](https://metroforsteam.com/), there is a tool to choose from. Then you must download the file and drop it in the skin folder.
-[![image](https://i.gyazo.com/054efbd24626ef08b37bec4e5cec71fb.png)
+[![image](https://i.gyazo.com/ee317c0d977858d2f73d302262d56e35.png)
 ](https://metroforsteam.com/personalize)
 
 ## Images 
