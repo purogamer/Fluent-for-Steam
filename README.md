@@ -7,6 +7,11 @@
 ## Donation
 I would be grateful if you could leave me a donation in this link https://www.paypal.com/donate?hosted_button_id=5TP6CVT7XMV4J. Since in my country we are in a pandemic and the situation is very difficult, since I am unemployed and I am living off my mother and the only way I can help her is a scholarship of 15 dollars a month. Thank you.
 
+
+## Future Update Spoiler!
+![image](https://user-images.githubusercontent.com/87723899/128289074-d2008b16-a608-4308-9882-0f88bec246db.png)
+
+
 # Important!
 #### The skin does not add rounded edges, that only happens in Windows 11! and neither the style of my steam website, it only modifies icons and position parameters of some elements. The elements that were modified are the only visual elements.
 #### I use parts of the patch and i mix this with the original version. [Unofficial Patch for MetroForSteam [Version 9.1]](https://steamcommunity.com/groups/metroskin/discussions/0/141136086931804907). This is made by redsigma766 and [Metro Skin](https://steamcommunity.com/groups/metroskin) steam group. If you [click here](https://github.com/redsigma/UPMetroSkin/) you can go to its github.
