@@ -45,6 +45,9 @@ On the official website of the skin by [DomDrapper](https://metroforsteam.com/),
 #### Remastered download section with changes and a more rounded look.
 ![reddit 2](https://user-images.githubusercontent.com/87723899/126405955-90bcf2d5-9e66-4067-9e96-f634a809ef75.png)
 
+# Credits
+Redsigma
+Shiina
 
 # License
 All contents of this repository are licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International license, also known as CC BY-NC-SA 4.0. Please consult the license page for additional details about your usage rights.
