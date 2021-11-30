@@ -4,10 +4,8 @@
 
 ##### This is only a patch! The base skin is made by [DomDrapper](https://metroforsteam.com/), I only modified icons and some parameters!
 
-# a sneak peek of future update! multiple arrangements and some surprises.
-![image](https://user-images.githubusercontent.com/87723899/128289074-d2008b16-a608-4308-9882-0f88bec246db.png)
 
-# COMING UPDATE!!!!
+# a sneak peek of future update! multiple arrangements and some surprises.
 ![image](https://user-images.githubusercontent.com/87723899/143992541-350366f5-5fee-4273-a347-fe529f1621db.png)
 
 
