@@ -7,6 +7,11 @@
 # a sneak peek of future update! multiple arrangements and some surprises.
 ![image](https://user-images.githubusercontent.com/87723899/128289074-d2008b16-a608-4308-9882-0f88bec246db.png)
 
+# COMING UPDATE!!!!
+![image](https://user-images.githubusercontent.com/87723899/143992541-350366f5-5fee-4273-a347-fe529f1621db.png)
+
+
+
 
 # Important!
 #### The skin does not add rounded edges, that only happens in Windows 11! and neither the style of my steam website, it only modifies icons and position parameters of some elements. The elements that were modified are the only visual elements.
