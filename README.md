@@ -6,7 +6,7 @@
 
 
 # a sneak peek of future update! multiple arrangements and some surprises.
-![image](https://user-images.githubusercontent.com/87723899/143992541-350366f5-5fee-4273-a347-fe529f1621db.png)
+![image](https://user-images.githubusercontent.com/87723899/143993271-be67f7d5-d279-47ee-ae9a-222235a496a6.png)
 
 
 
