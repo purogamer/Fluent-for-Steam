@@ -1,12 +1,12 @@
 # MetroForSteamUnoRW11
 
-## A simple patch for metro for steam to make it look like windows 11
+## Fluent Steam
 
 ##### This is only a patch! The base skin is made by [DomDrapper](https://metroforsteam.com/), I only modified icons and some parameters!
 
 
 # a sneak peek of future update! multiple arrangements and some surprises.
-![image](https://user-images.githubusercontent.com/87723899/143993271-be67f7d5-d279-47ee-ae9a-222235a496a6.png)
+![image](https://user-images.githubusercontent.com/87723899/144157891-2de15196-1e59-4d90-b571-409e3147ac7d.png)
 
 
 
