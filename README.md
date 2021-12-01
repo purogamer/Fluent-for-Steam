@@ -1,6 +1,6 @@
 # MetroForSteamUnoRW11
 
-## Fluent Steam
+## Fluent Design for Steam (Windows 11 style)
 
 ##### This is only a patch! The base skin is made by [DomDrapper](https://metroforsteam.com/), I only modified icons and some parameters!
 
