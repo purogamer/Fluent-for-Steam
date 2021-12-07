@@ -6,8 +6,12 @@
 
 ##We are now a multi-person development team so updates will come soon.
 
-# a sneak peek of future update! multiple arrangements and some surprises.
+# a sneak peek of future update! multiple arrangements and some surprises (compact version).
 ![image](https://user-images.githubusercontent.com/87723899/144157891-2de15196-1e59-4d90-b571-409e3147ac7d.png)
+
+# full version
+![image](https://user-images.githubusercontent.com/87723899/145120060-d38c94de-d769-42fa-9048-d0cde440de65.png)
+
 
 
 
