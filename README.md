@@ -23,7 +23,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/purogamer/Fluent-for-Steam">
     <img src="https://user-images.githubusercontent.com/87723899/145293092-8a74be71-d1bb-4508-b5ab-c83c2c72b4ae.png" alt="Logo" width="500" height="500">
   </a>
 
