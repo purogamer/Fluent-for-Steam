@@ -126,7 +126,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 1. Have installed Segoe UI Variable.
 2. Have windows 10 or 11 since it was only tested on these operating systems.
 
-## Installation
+## Installation 
 
 1. Download the skin [here](https://github.com/purogamer/Fluent-for-Steam/releases).
 2. Unzip the 7z and install the fonts found in the SegoueUI-VF folder ( not necessary if you have windows 11)
@@ -146,9 +146,8 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <!-- USAGE EXAMPLES -->
 # Screenshots 📷
 
-##### Steam with Fluent For Steam
+##### Steam with Fluent For Steam and Microsoft Store comparision
 ![image](https://user-images.githubusercontent.com/87723899/145313137-8fd615a1-37b7-40a2-991e-e6733cb14a63.png)
-##### Microsoft Store
 ![image](https://user-images.githubusercontent.com/87723899/145313156-ebe161a0-72d5-4e89-b284-184c3bdf4178.png)
 ##### Profile with Webkit by AikoMidori
 ![image](https://user-images.githubusercontent.com/87723899/145314405-e8bf073a-4468-4b4f-9a8d-e7bd8c10e926.png)
