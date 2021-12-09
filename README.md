@@ -212,12 +212,12 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
 * [Webkit by AikiMidori](https://choosealicense.com)
-* [Help Download Bar Mixter213](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [RedSigma UPMetroSkin](https://flexbox.malven.co/)
-* [Metro Skin Comunity](https://grid.malven.co/)
-* [Metro for Steam 4.4](https://shields.io)
-* [zakk_ponsen Help with Icons](https://pages.github.com)
-* [Icon8 - FluencyIcons](https://fontawesome.com)
+* [Help Download Bar by Mixter213](https://github.com/Mixter213/Steam-Skins)
+* [RedSigma UPMetroSkin](https://github.com/redsigma/UPMetroSkin)
+* [Metro Skin Comunity](https://steamcommunity.com/groups/metroskin)
+* [Metro for Steam 4.4](https://github.com/minischetti/metro-for-steam)
+* [zakk_ponsen Help with Icons](https://www.reddit.com/user/zakk_ponsen)
+* [Icon8 - FluencyIcons](https://icons8.com/icons/fluency-systems-regular)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
