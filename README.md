@@ -119,13 +119,14 @@ This section should list any major frameworks/libraries used to bootstrap your p
     
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+
+# How to Install ⚗
+
 ### Prerequisites ✅
 1. Have installed Segoe UI Variable.
 2. Have windows 10 or 11 since it was only tested on these operating systems.
 
-# Installation ⚗
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+## Installation
 
 1. Download the skin [here](https://github.com/purogamer/Fluent-for-Steam/releases).
 2. Unzip the 7z and install the fonts found in the SegoueUI-VF folder ( not necessary if you have windows 11)
@@ -135,6 +136,7 @@ _Below is an example of how you can instruct your audience on installing and set
 4. Then go to Steam settings (found at the top left of steam
 ) >> Interface and select skin >> and select Fluentforsteam
 6. For last restart Steam and enjoy
+
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
