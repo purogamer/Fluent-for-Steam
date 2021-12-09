@@ -94,8 +94,6 @@ This is a simple skin which turns the old steam design into a completely renewed
 
 ## Built With 🛠️
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
 * [VsCode - VGUI plugin](https://code.visualstudio.com/Download)
 * [Adobe Photoshop CC](https://www.adobe.com/)
 * [Adobe Ilustrator CC](https://www.adobe.com/)
