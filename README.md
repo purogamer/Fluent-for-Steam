@@ -18,15 +18,15 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-<a href="https://www.buymeacoffee.com/francisas" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/arial-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 <!-- PROJECT LOGO -->
+
 
 
 <br />
 <div align="center">
   <a href="https://github.com/purogamer/Fluent-for-Steam">
-    <img src="https://user-images.githubusercontent.com/87723899/145293092-8a74be71-d1bb-4508-b5ab-c83c2c72b4ae.png" alt="Logo">
+    <img src="https://user-images.githubusercontent.com/87723899/145442348-2b255cff-862a-4985-824c-1dc447bfcf21.png" alt="Logo">
   </a>
 
   <h3 align="center">Fluent For Steam</h3>
@@ -34,7 +34,7 @@
  <p align="center">
    At the moment it only works on windows
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">Donate 🍩☕</a>
+    <a href="https://github.com/othneildrew/Best-README-Template">Support Us 💸🍩☕</a>
     ·
     <a href="https://github.com/purogamer/Fluent-for-Steam/issues">Report Bug☠️</a>
     ·
@@ -47,31 +47,6 @@
 
 
 <!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents/Indice</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#screenshots">Screenshots</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
 
 <!-- Sobre este projecto -->
 ## About The Project 📢
@@ -100,7 +75,20 @@ This is a simple skin which turns the old steam design into a completely renewed
 * [Paint.NET](https://www.getpaint.net/)
 * [Steam -Dev](https://store.steampowered.com/?l=spanish/)
 
+
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+# Support the project! 💰💸💲
+
+If you liked the work, think that every corner of this skin is made with dedication, and it is completely free! But time is not free and if you want this project to continue more and more active you can contribute by donating in the following networks
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+# Important! ⚠️
+The rounded edges are only work on Windows 11. This skin was created only but in the roadmap it is planned to work for linux and ios as well.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 
 <!-- Hoja de ruta -->
@@ -113,6 +101,8 @@ This is a simple skin which turns the old steam design into a completely renewed
 - [ ] 🚫Rework the webkit by Shinna
 - [ ] 🚫Redesign the settings panel - WIP
 - [ ] 🚫Add Linux and MacOS support
+- [ ] 🚫Light Mode
+- [ ] 🚫High DPI mode
 
     
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -121,13 +111,14 @@ This is a simple skin which turns the old steam design into a completely renewed
 # How to Install ⚗
 
 ### Prerequisites ✅
-1. Have installed Segoe UI Variable.
+1. Have installed [Segoe UI Variable](https://docs.microsoft.com/en-us/windows/apps/design/downloads/#fonts) (It is not necessary if you have windows 11
+).
 2. Have windows 10 or 11 since it was only tested on these operating systems.
 
 ## Installation 
 
 1. Download the skin [here](https://github.com/purogamer/Fluent-for-Steam/releases).
-2. Unzip the 7z and install the fonts found in the SegoueUI-VF folder ( not necessary if you have windows 11)
+2. Unzip the 7z and install the fonts found in the SegoueUI-VF folder (not necessary if you have windows 11)
    
 3. Once the font is installed you must drag the skins folder into the main folder of your steam so that it should look like this steam / skins
    
@@ -209,7 +200,6 @@ Reddit! @elpurogamer
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments ⛑️
  
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
 * [Webkit by AikoMidori](https://github.com/AikoMidori/steam-dark-mode)
 * [Help Download Bar by Mixter213](https://github.com/Mixter213/Steam-Skins)
@@ -222,7 +212,7 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
+<p align="right"><a href="https://github.com/othneildrew/Best-README-Template"</a>README.md Template</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
