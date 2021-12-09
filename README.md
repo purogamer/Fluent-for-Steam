@@ -114,21 +114,19 @@ The rounded edges are only work on Windows 11. This skin was created only but in
 
 # How to Install ⚗
 
-### Prerequisites ✅
+### Prerequisites ✅⚠️
 1. Have installed [Segoe UI Variable](https://docs.microsoft.com/en-us/windows/apps/design/downloads/#fonts) (It is not necessary if you have windows 11
 ).
 2. Have windows since it was only tested on these operating systems.
 
-## Installation 
+## Installation 📄
 
-1. Download the skin [here](https://github.com/purogamer/Fluent-for-Steam/releases).
-2. Unzip the 7z and install the fonts found in the SegoueUI-VF folder (not necessary if you have windows 11)
-   
-3. Once the font is installed you must drag the skins folder into the main folder of your steam so that it should look like this steam / skins
-   
-4. Then go to Steam settings (found at the top left of steam
-) >> Interface and select skin >> and select Fluentforsteam
-6. For last restart Steam and enjoy
+1. Download the latest version of the skin, by clicking [here](https://github.com/purogamer/Fluent-for-Steam/releases)
+2. Go to the Steam.exe directory and create a folder called skins. So it should look like this: Steam / Skins
+3. Drop fluentforsteam into the Skins folder
+4. Go to Steam and open the options and go to the interface section
+5. Select my skin "fluentforsteam" and restart STEAM
+6. For last ENJOY! 😁
 
 
 
