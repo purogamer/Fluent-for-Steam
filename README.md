@@ -155,7 +155,7 @@ The rounded edges are only work on Windows 11. This skin was created only but in
 
 
 
-See the [open issues](https://github.com/purogamer/fluentforsteam) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/purogamer/Fluent-for-Steam) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
