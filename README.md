@@ -29,7 +29,7 @@
     <img src="https://user-images.githubusercontent.com/87723899/145442348-2b255cff-862a-4985-824c-1dc447bfcf21.png" alt="Logo">
   </a>
 
-  <h3 align="center">Fluent For Steam 0.1b</h3>
+  <h3 align="center">Fluent For Steam BETA0.1b</h3>
 
  <p align="center">
    At the moment it only works on windows
