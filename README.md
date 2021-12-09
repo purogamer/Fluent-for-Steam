@@ -21,6 +21,8 @@
 <a href="https://www.buymeacoffee.com/francisas" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/arial-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 <!-- PROJECT LOGO -->
+
+
 <br />
 <div align="center">
   <a href="https://github.com/purogamer/Fluent-for-Steam">
@@ -29,16 +31,14 @@
 
   <h3 align="center">Fluent For Steam</h3>
 
-  <p align="center">
-    A simple steam skin, which aims to adapt its old design to a totally renewed one based on current Microsoft design standards released together with Windows 11. This skin is currently in development and is in a very early stage, so please be patient.
+ <p align="center">
+   At the moment it only works on windows
     <br />
-    
+    <a href="https://github.com/othneildrew/Best-README-Template">Donate</a>
     ·
-    <a href="https://github.com/purogamer/Fluent-for-Steam/issues">Report Bug</a>
+    <a href="https://github.com/purogamer/Fluent-for-Steam/issues">Report Bug☠️</a>
     ·
-    <a href="https://github.com/purogamer/Fluent-for-Steam/issues">Request Feature</a>
-    .
-    
+    <a href="https://github.com/purogamer/Fluent-for-Steam/issues">Request Feature📝</a>
   </p>
 </div>
 
@@ -48,7 +48,7 @@
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Table of Contents</summary>
+  <summary>Table of Contents/Indice</summary>
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
@@ -63,7 +63,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#Screenshots">Usage</a></li>
+    <li><a href="#screenshots">Screenshots</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -73,10 +73,8 @@
 </details>
 
 
-## Only work in Windows!
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
+<!-- Sobre este projecto -->
+## About The Project 📢
 
 ![Fluent Steam](https://user-images.githubusercontent.com/87723899/145287138-7dec612a-eca2-435b-8cf4-c8f99c060050.png)
 
@@ -94,7 +92,7 @@ This is a simple skin which turns the old steam design into a completely renewed
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Built With
+## Built With 🛠️
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
@@ -107,32 +105,25 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-<!-- ROADMAP -->
-## Roadmap
+<!-- Hoja de ruta -->
+## Roadmap🪛🧱
 
-- [ ] Add options in the color palette
-- [ ] Rework overlay within games
-- [ ] Improve code
-- [ ] Add more customization options
-- [ ] Rework the webkit by Shinna
-- [ ] Redesign the settings panel
-- [ ] Add Linux and MacOS support
+- [ ] 🚫Add options in the color palette - WIP
+- [ ] 🚫Rework overlay within games 
+- [ ] 🚫Improve code - WIP
+- [ ] 🚫Add more customization options
+- [ ] 🚫Rework the webkit by Shinna
+- [ ] 🚫Redesign the settings panel - WIP
+- [ ] 🚫Add Linux and MacOS support
 
     
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
-
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
+### Prerequisites ✅
 1. Have installed Segoe UI Variable.
 2. Have windows 10 or 11 since it was only tested on these operating systems.
 
-# Installation
+# Installation ⚗
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
@@ -151,13 +142,12 @@ _Below is an example of how you can instruct your audience on installing and set
 
 
 <!-- USAGE EXAMPLES -->
-## Screenshots
+## Screenshots 📷
 
-### 
-
-
-###
-
+##### Steam with Fluent For Steam
+![image](https://user-images.githubusercontent.com/87723899/145313137-8fd615a1-37b7-40a2-991e-e6733cb14a63.png)
+##### Microsoft Store
+![image](https://user-images.githubusercontent.com/87723899/145313156-ebe161a0-72d5-4e89-b284-184c3bdf4178.png)
 ###
 
 ###
@@ -176,7 +166,7 @@ See the [open issues](https://github.com/purogamer/fluentforsteam) for a full li
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+## Contributing 
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -194,7 +184,7 @@ Don't forget to give the project a star! Thanks again!
 
 
 <!-- LICENSE -->
-## License
+## License 📖🆓
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
@@ -203,7 +193,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 <!-- CONTACT -->
-## Contact
+## Contact 📱📧📞
 
 Francis As - meteorosa@hotmail.com
 
@@ -216,8 +206,8 @@ Reddit! @elpurogamer
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
+## Acknowledgments ⛑️
+ 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
 * [Webkit by AikiMidori](https://choosealicense.com)
