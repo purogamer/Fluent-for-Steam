@@ -1,11 +1,1 @@
-"resource/layout/supportmessagedialog.layout"
-{
-	controls
-	{
-	}
-	
-	layout
-	{
-		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
-	}
-}
+// HTML is buggy this file should be removed

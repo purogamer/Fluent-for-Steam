@@ -33,36 +33,32 @@
 		everythinglabel
 		{
 			textcolor="White"
-			font-size=16
-		}	
+		}
 		
 		button
 		{
-			bgcolor=none
-			image=graphics/metro/overlay/icons/achievements
 			inset-left=-6
+			bgcolor=none
+			image=graphics/fluent/overlay/icons/achievements
 		}
 
 		button:hover
 		{
-			image=graphics/metro/overlay/icons/achievements_h		
+			image=graphics/fluent/overlay/icons/achievements_h		
 		}
 
 		button:active
 		{
-			image=graphics/metro/overlay/icons/achievements_p		
+			image=graphics/fluent/overlay/icons/achievements_p		
 		}
 	}
 
 	layout
 	{
 		region { name=body margin=0 x=68 width=max height=max }
-
 		place { control=headerlabel width=0 height=0 }
 		place { control=viewall x=16 y=16 width=36 height=36 align=left margin-right=16 }
-		
 		place { region=body start=headerlabel margin-right=16 control=mostrecent_area dir=down width=max }
 		place { region=body start=mostrecent_area control=everythinglabel,locked_area margin-right=16 dir=down y=16 width=max }
-
 	}
 }

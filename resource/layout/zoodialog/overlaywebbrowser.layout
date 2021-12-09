@@ -23,18 +23,18 @@
 		HomeButton
 		{
 			inset-left=1
-			image=graphics/metro/urlbar/home
+			image=graphics/fluent/urlbar/home
 			bgcolor=TextEntry
 		}
 		
 		HomeButton:hover
 		{
-			image=graphics/metro/urlbar/home_h
+			image=graphics/fluent/urlbar/home_h
 		}
 		
 		HomeButton:active
 		{
-			image=graphics/metro/urlbar/home_p
+			image=graphics/fluent/urlbar/home_p
 			bgcolor=Focus
 		}
 

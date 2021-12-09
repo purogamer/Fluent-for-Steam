@@ -38,122 +38,96 @@
 		{
 			"ControlName"		"CEmoticonButton"
 		}
-	}	
-	
+	}
+
 	styles
 	{
-		COverlayBroadcastChatDialog
-		{			
-			render_bg
-			{
-				0="fill( x0, y0, x1, y0+40, FrameBorder )"
-				1="fill( x0, y0, x1, y0+39, Header_Dark )"
-			}
-		}
-		
 		label
 		{
-		font-size=14
-		textcolor=White45
-		font-style=uppercase
-		}
-		
-		TextEntry
-		{
-			font-size=16  
-		}
-		
-		CChatActionsButton
-		{
-			//image="graphics/metro/icons/chat/cog"
-			render
-			{
-			0="image(x0,y0,x1,y1,graphics/metro/icons/chat/cog)"
-			}
-		}
-		
-		CChatActionsButton:hover
-		{
-			render
-			{
-			0="image(x0,y0,x1,y1,graphics/metro/icons/chat/cog_h)"
-			}
+			textcolor=White45
+			font-style=uppercase
 		}
 
-		CChatActionsButton:selected
-		{
-			render
-			{
-			0="image(x0,y0,x1,y1,graphics/metro/icons/chat/cog_p)"
-			}
-		}
-		
 		controlbutton
-    {
-			textcolor=none
-			bgcolor=none
+		{
+			bgcolor="none"
 			render_bg
-			{
-				0="image(x0,y0,x1,y1,graphics/tab_close_def)"
-			}
-			render
 			{
 				1="fill(x0,y0-4,x1+4,y0+50,white10)"
 			}
-    }
-
+			image="graphics/tab_close_def"
+			padding-left=-4
+		}
 		controlbutton:hover
-    {
-			bgcolor=White12
-			render_bg
-			{
-				0="image(x0,y0,x1,y1,graphics/tab_close_def)"
-			}
-    }
-		
+		{
+			bgcolor="none"
+			image="graphics/tab_close_hov"
+		}
 		controlbutton:active
 		{
-			bgcolor=White24
+			bgcolor="none"
+			image="graphics/tab_close_hov"
+		}
+
+		CEmoticonButton
+		{
+			bgcolor=TextEntry
+			render_bg{}
+			image="graphics/fluent/icons/chat/emoticons"
+			padding-left=5
+		}
+		CEmoticonButton:hover
+		{
+			bgcolor="TextEntry"
 			render_bg
 			{
-				0="image(x0,y0,x1,y1,graphics/tab_close_hov)"
+				0="fill(x0,y0,x1,y1,white05)"
 			}
 		}
-		
-		Button
+		CEmoticonButton:selected
 		{
-		//bgcolor=focus
+			bgcolor=Focus
+			render_bg{}
 		}
-		
+
+		EmoticonMenuItemStyle
+		{
+			inset-left=-5
+			inset-top=-5
+			textcolor=White45
+			bgcolor="none"
+			render_bg{}
+		}
+		EmoticonMenuItemStyle:hover
+		{
+			textcolor=white
+		}
+
 		"RichText url"
 		{
-			font-style=uppercase
 			font-family=semibold
+			font-style=uppercase
+		}
+
+		//Hidden
+		button
+		{
+			textcolor="none"
+			bgcolor="none"
 		}
 	}
-	
+
 	layout
 	{
-		//Caption Buttons
-		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
+		place { control="ChatHistory" y=41 width=max height=max align=right dir=down margin-bottom=60 margin-right=1 }
 
-		// Voice Chat Close Button
-		place { control="VoiceChat" y=57 align=right margin=4 width=16 height=16 dir=right }
+		region { name=bottom1 align=bottom height=71 width=max margin=8 }
+		region { name=bottom align=bottom height=40 }
 
-		place { control="ChatActionsButton" height=34 width=34 margin=12 margin-top=11 align=right dir=right }
-		
-		place { control="TitlePanel" x=5 y=3 height=56 width=max margin-right=16 end-right=ChatActionsButton }
-		place { control="GameInviteBar,TradeInviteBar,ChatInfoBar,VoiceBar,BIBar,BABar" height=54 }
-		
-		place { control="VoiceBar" y=57 width=max height=54 dir=down end-right=VoiceChat }
-		place { control="TradeInviteBar,GameInviteBar,ChatInfoBar,BIBar,BABar,ChatHistory" start=VoiceBar y=40 width=max height=max align=right dir=down margin-bottom=81 margin-right=1 }
-		
-		region { name=bottom1 align=bottom height=89 width=max margin=8 }
-		region { name=bottom align=bottom height=56 margin=8 }
-
-		place { control="TextEntry" region=bottom height=max width=max spacing=8 end-right=EmoticonButton }
-		place { control="EmoticonButton" region=bottom height=max align=right spacing=8 }
+		place { control="TextEntry" region=bottom height=max width=max end-right=EmoticonButton }
+		place { control="EmoticonButton" region=bottom height=max width=40 align=right margin-right=1 }
 		place { control="StatusLabel" region=bottom1 height=25 }
-		
-		place { control="SendButton" height=0 width=0 }	}
+
+		place { control="SendButton" width=1 align=right }
+	}
 }

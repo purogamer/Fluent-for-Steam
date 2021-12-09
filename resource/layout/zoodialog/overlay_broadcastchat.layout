@@ -65,10 +65,10 @@
 		
 		CChatActionsButton
 		{
-			//image="graphics/metro/icons/chat/cog"
+			//image="graphics/fluent/icons/chat/cog"
 			render
 			{
-			0="image(x0,y0,x1,y1,graphics/metro/icons/chat/cog)"
+			0="image(x0,y0,x1,y1,graphics/fluent/icons/chat/cog)"
 			}
 		}
 		
@@ -76,7 +76,7 @@
 		{
 			render
 			{
-			0="image(x0,y0,x1,y1,graphics/metro/icons/chat/cog_h)"
+			0="image(x0,y0,x1,y1,graphics/fluent/icons/chat/cog_h)"
 			}
 		}
 
@@ -84,7 +84,7 @@
 		{
 			render
 			{
-			0="image(x0,y0,x1,y1,graphics/metro/icons/chat/cog_p)"
+			0="image(x0,y0,x1,y1,graphics/fluent/icons/chat/cog_p)"
 			}
 		}
 		

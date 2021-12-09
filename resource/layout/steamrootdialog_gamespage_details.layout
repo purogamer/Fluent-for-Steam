@@ -1,252 +1,150 @@
 "resource/layout/steamrootdialog_gamespage_details.layout"
 {
-	controls
-	{
-		GamesList
-		{
-			tabposition=1 
-		}
-		
-		DetailsBorder { controlname=Panel style="DetailsBorderPanel" zpos="-1" }
-
-		// Header image, plus overlays 
-		headerimagea { controlname="ImagePanel" style="headerimage" zpos="-4" visible=1 scaling="none" horizontal-align=left vertical-align=top }
-		headerimageb { controlname="ImagePanel" style="headerimage" zpos="-4" visible=1 scaling="none" horizontal-align=left vertical-align=top }
-
-		// Header text labels
-		gametitleheader { controlname="CDetailsGameTitleHeaderPanel" zpos="2" }
-		gamesubheader { controlname="CDetailsGameSubHeaderPanel" zpos="2" }
-		
-		linkslabel { controlname="Label" labeltext="#Steam_Links" style="rightcolumnheadertext" } 
-		sendguestpasslink { controlname="URLLabel" labeltext="#steam_send_guestpass" style="rightcolumnlink" tabposition=7 command="SendGuestPass" }
-		achievementslink { controlname="URLLabel" labeltext="#Steam_Achievements" style="rightcolumnlink" }
-		forumlink { controlname="URLLabel" labeltext="#Steam_Forums" style="rightcolumnlink" }
-		ogglink { controlname="URLLabel" labeltext="#Steam_OGG" style="rightcolumnlink" }
-		manuallink { controlname="URLLabel" labeltext="#Steam_Game_Manual" style="rightcolumnlink" }
-		newslink { controlname="URLLabel" labeltext="#Steam_News" style="rightcolumnlink" }
-		storelink { controlname="URLLabel" labeltext="#Steam_Game_SteamStorePage" style="rightcolumnlink" }
-		gamehublink { controlname="URLLabel" labeltext="#Steam_Game_GameHub" style="rightcolumnlink" }
-		dlclink { controlname="URLLabel" labeltext="#Steam_DLC" style="rightcolumnlink" }
-		cdkeylink { controlname="URLLabel" labeltext="#Steam_CDKeyLink" style="rightcolumnlink" }
-		guidelink { controlname="URLLabel" labeltext="#Steam_Guide" style="rightcolumnlink" }
-		guideslink { controlname="URLLabel" labeltext="#Steam_Guides" style="rightcolumnlink" }
-		supportlink { controlname="URLLabel" labeltext="#Steam_Support" style="rightcolumnlink" }
-		recommendlink { controlname="URLLabel" labeltext="#Steam_Game_RecommendGame" style="rightcolumnlink" }
-
-
-		// Right column tags
-		tagslabel { controlname="Label" labeltext="#Steam_Tags" style="rightcolumnheadertext" }
-		edittagslink { controlname="URLLabel" labeltext="#steam_details_edittags" style="rightcolumnlink" }
-
-		// Body contents
-		welcomedetails { controlname="CGamesPage_Details_Welcome" zpos="1" }
-		friendsdetails { controlname="CGamesPage_Details_Friends" zpos="1" }
-		clouddetails { controlname="CGamesPage_Details_Cloud" zpos="1" }
-		communityfilesdetails { controlname="CGamesPage_Details_CommunityFiles" zpos="1" }
-		achievementsdetails { controlname="CGamesPage_Details_Achievements" zpos="1" }
-		newsdetails { controlname="CGamesPage_Details_News" zpos="1" }
-		nonsteamdetails { controlname="CGamesPage_Details_NonSteam" zpos="1" }
-		screenshotsdetails { controlname="CGamesPage_Details_Screenshots" zpos="1" }
-
-		// Empty list contents
-		emptylisttext { controlname="RichText" style="emptylisttext" }
-
-	}
-
 	styles
 	{
 		emptylisttext
 		{
 			textcolor="White"
-			font-size="24"
-			font-family=semilight
-			font-weight=300
-			render_bg {}
-		}
-
-		CGamesPage_Details
-		{
-			bgcolor="none"
-			inset="0 0 0 0"
-			render{}
-			render_bg{}
 		}
 
 		// Some overrides for our listpanel
 		"GamesPage_Details ListPanel"
 		{
 			bgcolor="none"
-			render_bg {}
-			render {}
-		}
-
-		"GamesPage_Details ListPanel"
-		{
 			inset-top=0
 			padding-left=8
 			padding-right=0
 		}
-		
+
 		"GamesPage_Details ListPanelInterior"
 		{
-			bgcolor="none"
 			inset="0 0 0 0"
-			render {}
-			render_bg {} 
-			minimum-width=262
+			bgcolor="none"
 		}
-		
 		"GamesPage_Details ListPanelInterior:scrollbar"
-		{     
-			bgcolor=none			
-			render_bg {}
-			minimum-width=246
+		{
+			bgcolor="none"
 		}
 
 		"GamesPage_Details ListPanelDragger"
 		{
 			bgcolor="none"
-			render {}
-			render_bg {}
 		}
 
 		"GamesPage_Details ListPanelColumnHeader"
 		{
-			bgcolor="none"
-			font-size=14
 			inset="0 0 0 0"
-			render {}
-			render_bg 
-			{}
+			font-size=14
+			bgcolor="none"
+		}
 
+		"CGamesListPanel ListPanelColumnSelectButton"
+		{
+			bgcolor=bgGameList
 		}
 
 		rightcolumnheadertext
 		{
+			textcolor=titleColumn
+			bgcolor=bgTitleColumn
 			font-family=semibold
-			font-style=uppercase
+			font-style="uppercase"
 			font-weight=400
-			font-size="18"
-			textcolor="White"
+			padding-left=8
 		}
-		
 		rightcolumnheadertext-red
 		{
+			textcolor=titleColumn
+			bgcolor=bgTitleColumn
 			font-family=semibold
-			font-style=uppercase
+			font-style="uppercase"
 			font-weight=400
-			font-size="18"
-			textcolor="White"
+			padding-left=8
 		}
-
 		rightcolumnheadertext-green
 		{
+			textcolor=titleColumn
+			bgcolor=bgTitleColumn
 			font-family=semibold
-			font-style=uppercase
+			font-style="uppercase"
 			font-weight=400
-			font-size="18"
-			textcolor="White"
+			padding-left=8
 		}
-
 		rightcolumnheadertext-blue
 		{
+			textcolor=titleColumn
+			bgcolor=bgTitleColumn
 			font-family=semibold
-			font-style=uppercase
+			font-style="uppercase"
 			font-weight=400
-			font-size="18"
-			textcolor="White"
+			padding-left=8
 		}
-		
+
 		rightcolumnlink
 		{
-			//Large//font-size=20
-			font-size=16
+			textcolor=textColumn
 			font-style=regular
-			textcolor=White50
 			padding-left=8
-			render
-			{
-				//Top
-				0="fill(x0,y0,x1,y0+1,White05)"
-			}
+			bgcolor=bgTextColumn
 		}
-		
 		rightcolumnlink:hover
 		{
-			textcolor=White75
-			render
-			{
-				//Top
-				0="fill(x0,y0,x1,y0+1,White05)"
-				1="fill(x0,y0+4,x1,y1-3,White05)"
-			}
+			textcolor=textColumn_a
+			bgcolor=bgTextColumn_a
+		}
+		rightcolumnlink:disabled
+		{
+			textcolor=white24
+			bgcolor="none"
 		}
 
 		rightcolumntag
 		{
 			inset="0 0 0 0"
-			font-size=16
-			font-style=uppercase
-			textcolor="White45"
-			padding-left=0
-			padding-top=0
+			textcolor=tagColumn
+			bgcolor=bgTagColumn
 			font-family=semibold
+			font-style=regular
+			padding-left=8
+			padding-top=0
 			padding-bottom=0
+			bgcolor="none"
 		}
-		
+
 		DetailsBorderPanel
 		{
-			
-			bgcolor=none
-			render {}
+			bgcolor="none"
 		}
-		
-		CGamesPage_Details
-		{
-			render_bg
-			{
-				0="fill( x0, y0-1, x1, y0, Black25 )"
-				2="fill( x0, y0-39, x0+262, y1, White05 )"
-			}
-			render{}
-		}
-		
-		headerimage{}
-
 	}
 
 	layout
 	{
-		region	{ name="details" y=0 x=262 width=max height=max overflow=scroll-vertical margin-left=0 margin-right=-1 }
+		region	{ name="details" y=0 x=262 width=max height=max overflow=scroll-vertical margin-left=0 margin-right=0 }
+		region	{ name="headertext" region=details y=0 width=max height=max margin-right=170 }
 
 		//List
-		place 	{ control=GamesList width=262 height=max margin=0 margin-top=-1 margin-bottom=-1 }
+		place 	{ control=GamesList width=262 height=max margin-bottom=1 }
 
-		//Empty List Text 
-		place	{ control=emptylisttext x=262 margin-left=8 y=0 width=max height=max }
-		
+		//Empty List Text
+		place	{ control=emptylisttext y=1 width=max height=max margin-left=8 }
+
 		//Header
-		place 	{ control=gametitleheader region=details x=24 width=max align=left-center height=144 dir=down }
+		place 	{ control=gametitleheader region=headertext width=max height=144 dir=down margin-left=10 }
 
 		//Panels
 		region  { name="detailsbody" region=details y=144 width=max margin-right=170 overflow=allow-vertical }
-		place 	{ region=detailsbody control=gamesubheader,turnnotifications,friendsdetails,achievementsdetails,screenshotsdetails,communityfilesdetails,dlcdetails,clouddetails,newsdetails dir=down width=max margin=10 spacing=10 }
+		place 	{ region=headertext control=gamesubheader start=gametitleheader width=max height=68 dir=down }
+		place 	{ region=detailsbody control=compatsubheader,turnnotifications,welcomedetails,nonsteamdetails,rentaldetails,friendsdetails,achievementsdetails,screenshotsdetails,communityfilesdetails,dlcdetails,clouddetails,newsdetails start=gamesubheader dir=down width=max margin-bottom=8 margin-top=10 spacing=10 }
 
 		//Sidebar
-		region	{ name="rightcolumn" region=details y=154 height=max width=max margin-right=8 overflow=allow-vertical }
-		place { control=linkslabel,sendguestpasslink,gamehublink,gamesubheaderright,achievementslink,forumlink,ogglink,manuallink,newslink,storelink,dlclink,cdkeylink,guidelink,guideslink,supportlink,recommendlink,tagslabel,*taglink,edittagslink region=rightcolumn dir=down height=36 width=160 margin-top=0 align=right spacing=0 }
+		region	{ name="rightcolumn" region=details y=144 align=right height=max width=162 margin-right=8 overflow=allow-vertical }
+		place { control=linkslabel,sendguestpasslink,gamehublink,achievementslink,forumlink,ogglink,manuallink,editconfiglink,newslink,storelink,dlclink,cdkeylink,guidelink,guideslink,supportlink,recommendlink,tagslabel,edittagslink,*taglink region=rightcolumn dir=down height=32 width=max }
 
 		//Background Images
 		place 	{ control=headerimagea align=left margin-left=262 height=550 width=1024 }
 		place 	{ control=headerimageb align=left margin-left=262 height=550 width=1024 }
-		//Height=550
 
 		//?
 		place 	{ control=DetailsBorder y=1 x=1 width=max height=max }
-		
-		//Hidden
-		region { name=hidden width=1 overflow=none }
-		place { controls=welcomedetails,nonsteamdetails region=hidden }
-
 	}
 }

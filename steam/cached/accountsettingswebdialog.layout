@@ -1,0 +1,14 @@
+"steam/cached/accountsettingswebdialog.layout"
+{
+	controls
+	{
+		AccountSettingsWebDialog { title="#steam_accountsettings_title" wide=864 tall=764 }
+	}
+	styles
+	{
+	}
+	layout
+	{
+		place { controls="HTML" width=max height=max margin=1 margin-top=41 }
+	}
+}

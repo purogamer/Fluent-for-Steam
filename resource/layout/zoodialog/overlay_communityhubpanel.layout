@@ -23,18 +23,18 @@
 		Button
 		{
 			bgcolor=none
-			image=graphics/metro/overlay/icons/hub
+			image=graphics/fluent/overlay/icons/hub
 			inset-left=-6
 		}
 		
 		Button:hover
 		{
-			image=graphics/metro/overlay/icons/hub_h		
+			image=graphics/fluent/overlay/icons/hub_h		
 		}
 	
 		Button:active
 		{
-			image=graphics/metro/overlay/icons/hub_p		
+			image=graphics/fluent/overlay/icons/hub_p		
 		}
 	}
 	

@@ -42,7 +42,7 @@
 			bgcolor=none
 			render_bg
 			{
-				1="image( x0, y0, x1, y1, graphics/metro/icons/install )"
+				1="image( x0, y0, x1, y1, graphics/fluent/icons/install )"
 			}
 		}
 
@@ -50,7 +50,7 @@
 		{
 			render_bg
 			{
-				1="image( x0, y0, x1, y1, graphics/metro/icons/install_h )"
+				1="image( x0, y0, x1, y1, graphics/fluent/icons/install_h )"
 			}
 		}
 
@@ -58,7 +58,7 @@
 		{
 			render_bg
 			{
-				1="image( x0, y0, x1, y1, graphics/metro/icons/install_p )"
+				1="image( x0, y0, x1, y1, graphics/fluent/icons/install_p )"
 			}
 		}
 
@@ -69,7 +69,7 @@
 			bgcolor=none
 			render_bg
 			{
-			1="image( x0, y0, x1, y1, graphics/metro/icons/play )"
+			1="image( x0, y0, x1, y1, graphics/fluent/icons/play )"
 			}
 		}
 
@@ -77,7 +77,7 @@
 		{
       render_bg
       {
-       	1="image( x0, y0, x1, y1, graphics/metro/icons/play_h )"
+       	1="image( x0, y0, x1, y1, graphics/fluent/icons/play_h )"
       }
 		}
 
@@ -85,7 +85,7 @@
 		{
       render_bg
       {
-       	1="image( x0, y0, x1, y1, graphics/metro/icons/play_p )"
+       	1="image( x0, y0, x1, y1, graphics/fluent/icons/play_p )"
       }
 		}
 
@@ -96,7 +96,7 @@
 			bgcolor=none
 			render_bg
 			{
-			1="image( x0, y0, x1, y1, graphics/metro/icons/buy )"
+			1="image( x0, y0, x1, y1, graphics/fluent/icons/buy )"
 			}
 		}
 
@@ -104,7 +104,7 @@
 		{
       render_bg
       {
-       	1="image( x0, y0, x1, y1, graphics/metro/icons/buy_h )"
+       	1="image( x0, y0, x1, y1, graphics/fluent/icons/buy_h )"
       }
 		}
 
@@ -112,7 +112,7 @@
 		{
       render_bg
       {
-       	1="image( x0, y0, x1, y1, graphics/metro/icons/buy_p )"
+       	1="image( x0, y0, x1, y1, graphics/fluent/icons/buy_p )"
       }
 		}
 
@@ -120,7 +120,7 @@
 		{
       render_bg
       {
-       	1="image( x0, y0, x1, y1, graphics/metro/icons/buy_d )"
+       	1="image( x0, y0, x1, y1, graphics/fluent/icons/buy_d )"
       }
 		}
 

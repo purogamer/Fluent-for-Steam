@@ -6,19 +6,12 @@
 		TextEntry { controlname=TextEntry tabposition=1 maxchars=32 unicode=1 }
 		AddTagButton { controlname=Button style="button" tabposition=2 default=1 }
 	}
-	
 	layout
 	{
-		region { name="main" x=8 y=0 width=max height=max margin-bottom=0 }
-		
-		place { control="TagChecks" y=50 margin-top=16 x=8 margin-right=8 spacing=8 width=max height=200 }
-
-		place { control="TextEntry" end-right=AddTagButton x=8 margin-right=8 y=266 margin-top=8 width=max height=28 }
-		place { control="AddTagButton" align=right x=8 margin-right=8 y=266 margin-top=8 width=96 height=28 }
-		
-		place { control="HideButton" start=TextEntry dir=down y=8 height=28 width=max margin-right=8 }
-		
-		//Hidden
-		place { control="Description" height=0 }
+		place { control="TagChecks" x=8 y=50 width=max height=150 margin-top=8 margin-right=8 }
+		place { start="TagChecks"  control="TextEntry" y=6 width=max height=28 end-right=AddTagButton dir=down margin-right=8 }
+		place { start="TextEntry" control="AddTagButton" width=96 height=28 align=right margin-right=8 }
+		place { start=TextEntry control="HideButton" y=8 height=28 width=max dir=down margin-right=8 }
+		place { start="HideButton" control="Description" width=max dir=down margin-right=8 }
 	}
 }

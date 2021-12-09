@@ -125,17 +125,17 @@
 		{
 			render
 			{
-				0="image(x0+10,y0+10,x1,y1,graphics/metro/downloads/labels/current)"
-				3="image(x0+170,y0+10,x1,y1,graphics/metro/downloads/labels/disk)"
+				0="image(x0+10,y0+10,x1,y1,graphics/fluent/downloads/labels/current)"
+				3="image(x0+170,y0+10,x1,y1,graphics/fluent/downloads/labels/disk)"
 			}
 			render_bg
 			{
-				//0="image(x0+10,y0+10,x1,y1,graphics/metro/downloads/labels/current)"
-				1="image(x0+10,y0+48,x1,y1,graphics/metro/downloads/labels/peak)"
-				2="image(x0+10,y0+86,x1,y1,graphics/metro/downloads/labels/total)"
-				//3="image(x0+170,y0+10,x1,y1,graphics/metro/downloads/labels/throttle)"
-				4="image(x0+170,y0+48,x1,y1,graphics/metro/downloads/labels/throttle)"
-				5="image(x0+170,y0+86,x1,y1,graphics/metro/downloads/labels/limit)"
+				//0="image(x0+10,y0+10,x1,y1,graphics/fluent/downloads/labels/current)"
+				1="image(x0+10,y0+48,x1,y1,graphics/fluent/downloads/labels/peak)"
+				2="image(x0+10,y0+86,x1,y1,graphics/fluent/downloads/labels/total)"
+				//3="image(x0+170,y0+10,x1,y1,graphics/fluent/downloads/labels/throttle)"
+				4="image(x0+170,y0+48,x1,y1,graphics/fluent/downloads/labels/throttle)"
+				5="image(x0+170,y0+86,x1,y1,graphics/fluent/downloads/labels/limit)"
 			}
 		}
 
@@ -154,7 +154,7 @@
 			padding-right=29
 			render_bg
 			{
-				0="image(x1-19,y0+10,x0,y1,graphics/metro/downloads/icons/cog_sm)"
+				0="image(x1-19,y0+10,x0,y1,graphics/fluent/downloads/icons/cog_sm)"
 			}
 		}
 
@@ -162,7 +162,7 @@
 		{
 			render_bg
 			{
-				0="image(x1-19,y0+10,x0,y1,graphics/metro/downloads/icons/cog_sm_h)"
+				0="image(x1-19,y0+10,x0,y1,graphics/fluent/downloads/icons/cog_sm_h)"
 			}
 		}
 
@@ -219,7 +219,7 @@
 			bgcolor=none
 			render_bg
 			{
-				1="image(x0,y0,x1,y1,graphics/metro/icons/downloads/pause)"
+				1="image(x0,y0,x1,y1,graphics/fluent/icons/downloads/pause)"
 			}
 		}
 
@@ -227,7 +227,7 @@
 		{
 			render_bg
 			{
-				1="image(x0,y0,x1,y1,graphics/metro/icons/downloads/pause_h)"
+				1="image(x0,y0,x1,y1,graphics/fluent/icons/downloads/pause_h)"
 			}
 		}
 
@@ -235,7 +235,7 @@
 		{
 			render_bg
 			{
-				1="image(x0,y0,x1,y1,graphics/metro/icons/downloads/pause_p)"
+				1="image(x0,y0,x1,y1,graphics/fluent/icons/downloads/pause_p)"
 			}
 		}
 
@@ -246,7 +246,7 @@
 			bgcolor=none
 			render_bg
 			{
-				1="image(x0,y0,x1,y1,graphics/metro/icons/downloads/download)"
+				1="image(x0,y0,x1,y1,graphics/fluent/icons/downloads/download)"
 			}
 		}
 
@@ -254,7 +254,7 @@
 		{
 			render_bg
 			{
-				1="image(x0,y0,x1,y1,graphics/metro/icons/downloads/download_h)"
+				1="image(x0,y0,x1,y1,graphics/fluent/icons/downloads/download_h)"
 			}
 		}
 
@@ -262,7 +262,7 @@
 		{
 			render_bg
 			{
-				1="image(x0,y0,x1,y1,graphics/metro/icons/downloads/download_p)"
+				1="image(x0,y0,x1,y1,graphics/fluent/icons/downloads/download_p)"
 			}
 		}
 

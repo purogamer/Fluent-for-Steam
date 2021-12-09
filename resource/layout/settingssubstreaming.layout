@@ -1,88 +1,84 @@
 "resource/layout/settingssubstreaming.layout"
 {
-	controls
+  controls
+  {
+    "DescriptionLabel" { ControlName="Label" fieldName="DescriptionLabel" wrap=1 labelText="#Steam_Settings_Streaming_Description" }
+    "RemoteClientList" { ControlName="ListPanel" style="RemoteClientList" tall=140 }
+    "PerfInstructionsLabel" { ControlName="Label" fieldName="PerfInstructionsLabel" wrap=1 labelText="#Steam_Settings_Streaming_Perf_Instructions" hello=78 }
+    "SupportInformationLabel" { ControlName="URLLabel" fieldName="SupportInformationLabel" labelText="#Steam_Settings_Streaming_StreamingSupport" URLText="https://support.valvesoftware.com/kb_article.php?ref=3629-RIAV-1617" }
+    
+    "BandwidthLabel" { ControlName="Label" associate="BandwidthLimit" labelText="#Steam_Settings_Streaming_Bandwidth" }
+    "BandwidthLimit" { ControlName="ComboBox" fieldName="BandwidthLimit" style="BandwidthLimit" }
+    
+    "FramerateLabel" { ControlName="Label" associate="FramerateLimit" labelText="#Steam_Settings_Streaming_Framerate" }
+    "FramerateLimit" { ControlName="ComboBox" fieldName="FramerateLimit" style="FramerateLimit" }
+    
+    "ResolutionLabel" { ControlName="Label" associate="ResolutionLimit" labelText="#Steam_Settings_Streaming_Resolution" }
+    "ResolutionLimit" { ControlName="ComboBox" fieldName="ResolutionLimit" style="ResolutionLimit" }
+    
+    "HwAccelDisable" { ControlName="CheckButton" fieldName="HwAccelDisable" labelText="#Steam_Settings_Streaming_DisableHardwareDecoding" }
+  }
+  styles
+  {
+	description 
 	{
-		"DescriptionLabel"
-		{
-			ControlName="Label"
-			fieldName="DescriptionLabel"
-			wrap=1
-			labelText="#Steam_Settings_Streaming_Description"
-		}
-		"RemoteClientList"
-		{
-			ControlName="ListPanel"
-			style="RemoteClientList"
-			tall=140
-		}
-		"PerfInstructionsLabel"
-		{
-			ControlName="Label"
-			fieldName="PerfInstructionsLabel"
-			wrap=1
-			labelText="#Steam_Settings_Streaming_Perf_Instructions" hello=78
-		}
-		"SupportInformationLabel"
-		{
-			ControlName="URLLabel"
-			fieldName="SupportInformationLabel"
-			labelText="#Steam_Settings_Streaming_StreamingSupport"
-			URLText="https://support.valvesoftware.com/kb_article.php?ref=3629-RIAV-1617"
-		}
-		
-		"BandwidthLabel" { ControlName="Label" associate="BandwidthLimit" labelText="#Steam_Settings_Streaming_Bandwidth" }
-		"BandwidthLimit" { ControlName="ComboBox" fieldName="BandwidthLimit" style="BandwidthLimit" }
-
-		"FramerateLabel" { ControlName="Label" associate="FramerateLimit" labelText="#Steam_Settings_Streaming_Framerate" }
-		"FramerateLimit" { ControlName="ComboBox" fieldName="FramerateLimit" style="FramerateLimit" }
-
-		"ResolutionLabel" { ControlName="Label" associate="ResolutionLimit" labelText="#Steam_Settings_Streaming_Resolution" }
-		"ResolutionLimit" { ControlName="ComboBox" fieldName="ResolutionLimit" style="ResolutionLimit" }
-
-		"HwAccelDisable" { ControlName="CheckButton" fieldName="HwAccelDisable" labelText="#Steam_Settings_Streaming_DisableHardwareDecoding" }
-	}
+		textcolor=ACCENT
 	
-	styles
-	{
-		CSettingsSubStreaming
-		{
-			render_bg
-			{
-				0="image(x0,y0+8,x1,y1, graphics/metro/labels/settings/inhomestreaming)"
+	}
+    CSettingsSubStreaming
+    {
+      //render_bg
+      //{
+       // 0="image(x0+1,y0+8,x1,y1, graphics/fluent/labels/settings/inhomestreaming)"
+      //}
+    }
+    ListPanel
+    {
+      bgcolor=Header_Dark
+	  padding-left=8
+	  	render{
+				2="fill(x0,y1-1,x1,y1,outline)"  // bottom
+				3="fill(x0,y0+1,x0+1,y1-1,outline)"  // left
+				4="fill(x1-1,y0+1,x1,y1-1,outline)"  // right
 			}
-		}
+    }
+    ListPanelColumnHeader
+    {
+		bgcolor = LISTPANELHEADER
+		textcolor = ACCENT
+		padding-left=6
+	  inset-left=0
+	  render_bg{}
+    }
+    ListPanelSectionHeader
+    {
+      padding-left=8
+    }
+  }
+  layout
+  {
+    region { name=box margin-left=0 margin-right=0 }
+    region { name=center width=max align=center }
+    
+    place { region=box control="DescriptionLabel" dir=down align=top width=0 height=0 }
+    place { region=box control="EnableStreaming" start=DescriptionLabel y=6 width=max height=24 dir=down }
+    place { region=box control="RemoteClientList" start=EnableStreaming y=6 width=max height=140 dir=down }
+    place { start=RemoteClientList control=Pair y=6 width=155 dir=down }  // dunno why valve added z here, it does nothing :\
+    place { start=Pair control="Unpair,SetPIN" x=6 width=155 spacing=6 }
+    
+    place { region=box control="P2PScopeLabel" start=Pair y=8 dir=down width=max }
+    place { region=box control="P2PScope" start=P2PScopeLabel y=6 dir=down width=150 height=24 }
+    place { region=box control="HostDivider" height=0 width=0 }
+    place { control="HostLabel" width=0 height=0}
+    place { region=box control="AdvancedHostOptions" y=6 dir=down start=P2PScope height=28 }
+    place { region=box control="AdvancedClientOptions" y=6 height=28 start=AdvancedHostOptions dir=down }
+    place { region=box control="UnsupportedPlatform" y=6 dir=down start=HostLabel height=28 }
+    
+    place { region=box control="ClientDivider,ClientLabel,ClientLabelRemote,ClientLabelLocal" y=4 start=AdvancedClientOptions dir=down width=max spacing=6 }
+    place { region=box control="QualityFast" y=24 start="ClientDivider" dir=down }
+    place { region=box control="QualityBalanced" x=8 start="QualityFast" }
+    place { region=box control="QualityBeautiful" x=8 start="QualityBalanced" }
 
-		ListPanel
-		{
-			bgcolor=Header_Dark
-			padding-left=8
-		}
-		ListPanelColumnHeader
-		{
-			padding-left=3
-			inset-left=0
-		}
-		ListPanelSectionHeader
-		{
-			padding-left=8
-		}
-	}
-	
-	layout
-	{		
-		place { control="RemoteClientList" height=160 }
-		place { control="DescriptionLabel,RemoteClientList,EnableStreaming" dir=down align=top width=max y=33 spacing=8 }
-
-		place { control="HostDivider,HostLabel" start=EnableStreaming dir=down width=max spacing=8 }
-		place { control="AdvancedHostOptions" y=8 dir=down start=HostLabel height=28 }
-		place { control="UnsupportedPlatform" y=8 dir=down start=HostLabel height=28 }
-
-		place { control="ClientDivider,ClientLabel" y=8 start=AdvancedHostOptions dir=down width=max spacing=8 }
-
-		place { control="QualityFast" y=8 start="ClientLabel" dir=down }
-		place { control="QualityBalanced" x=8 start="QualityFast" }
-		place { control="QualityBeautiful" x=8 start="QualityBalanced" }
-
-		place { control="AdvancedClientOptions,SupportInformationLabel" y=8 spacing=8 height=28 start="QualityFast" dir=down }
-	}
+    place { region=box control="SupportInformationLabel" y=4 start=QualityBeautiful align=right }
+  }
 }

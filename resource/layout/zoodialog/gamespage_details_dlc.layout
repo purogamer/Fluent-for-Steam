@@ -26,7 +26,7 @@
 			//bgcolor=BackgroundStart
 			render_bg
 			{
-				0="image(x0+16,y0+16,x1,y1,graphics/metro/icons/dlc)"
+				0="image(x0+16,y0+16,x1,y1,graphics/fluent/icons/dlc)"
 			}
 		}
 

@@ -27,18 +27,18 @@
 		viewallbutton
 		{
 			bgcolor=none
-			image=graphics/metro/overlay/icons/friends
+			image=graphics/fluent/overlay/icons/friends
 			inset-left=-6
 		}
 		
 		viewallbutton:hover
 		{
-			image=graphics/metro/overlay/icons/friends_h		
+			image=graphics/fluent/overlay/icons/friends_h		
 		}
 	
 		viewallbutton:active
 		{
-			image=graphics/metro/overlay/icons/friends_p		
+			image=graphics/fluent/overlay/icons/friends_p		
 		}
 
 	}

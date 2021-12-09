@@ -2,12 +2,17 @@
 {
 	styles
 	{
+				
 		AccountPersonaStyleOffline
 		{
 			bgcolor=bgOfflineNick
 			textcolor=offlineNick
-			font-style=uppercase
-			padding-right=8
+			font-family=semibold
+		    font-style="uppercase"
+		    font-weight=600
+			padding-top=2
+			margin-left=18
+			padding-right=18
 			padding-left=12
 			render_bg
 			{
@@ -19,12 +24,17 @@
 		{
 			bgcolor=bgOnlineNick
 			textcolor=onlineNick
-			font-style=uppercase
-			padding-right=8
+			font-family=semibold
+		    font-style="uppercase"
+		    font-weight=600
+			padding-top=2
+			padding-right=18
+			margin-left=18
 			padding-left=12
 			render_bg
 			{
-				0="fill(x0-33, y0+3, x0+1, y1-2, bgOnlineNearAvatar)"
+				1="image(x0, y0+0, x1+10, y0+6, graphics/fluent/icons/navbar/label_buttons/name)"
+				0="fill( x0, y0 - 1, x0 + 2, y1 + 1, bgOnlineNearAvatar, DialogBG )"
 			}
 		}
 
@@ -32,12 +42,17 @@
 		{
 			bgcolor=bgIngameNick
 			textcolor=ingameNick
-			font-style=uppercase
-			padding-right=8
+			font-family=semibold
+		    font-style="uppercase"
+		    font-weight=600
+			padding-top=2
+			padding-right=18
+			margin-left=18
 			padding-left=12
 			render_bg
 			{
-				0="fill(x0-33, y0+3, x0+1, y1-2, bgIngameNearAvatar)"
+				1="image(x0, y0+0, x1+10, y0+6, graphics/fluent/icons/navbar/label_buttons/name)"
+				0="fill( x0, y0 - 1, x0 + 2, y1 + 1, bgIngameNearAvatar, DialogBG )"
 			}
 		}
 
@@ -60,33 +75,57 @@
 		{
 			textcolor=textCash
 			bgcolor=bgTextCash
-			padding-right=14
-			padding-left=8
+			font-family=semibold
+		    font-style="uppercase"
+		    font-weight=600
+			font-size=16
+			padding-top=1
+			padding-right=16
+			padding-left=12
+			padding-bottom=1
+			render_bg
+		    {
+			    1="image(x0, y0+0, x1+10, y0+6, graphics/fluent/icons/navbar/label_buttons/cashoverlay)"
+		    }
 		}
 
 		AccountMenuButtonStyle
 		{
 			bgcolor=none
+			render_bg
+			{
+			    1="image(x0, y0+0, x1+10, y0+6, graphics/fluent/icons/navbar/label_buttons/si)"
+		    }
 		}
 		AccountMenuButtonStyle:hover
 		{
-			bgcolor=white05
-
+			bgcolor=none
+			render_bg
+			{
+			    1="image(x0, y0+0, x1+10, y0+6, graphics/fluent/icons/navbar/label_buttons/si2)"
+		    }
+				
 		}
 		AccountMenuButtonStyle:active
 		{
-			bgcolor=white10
+			bgcolor=none
+			render_bg
+			{
+			    1="image(x0, y0+0, x1+10, y0+6, graphics/fluent/icons/navbar/label_buttons/si3)"
+		    }
 		}
 	}
 
 	layout
 	{
-		place { control="account_menu_button" align=left height=39 width=max } // span over everything
-		place { control="account_persona" align=right height=39 }
-		place { control="account_avatar" align=right end-right="account_persona" margin-top=4 height=32 width=32 }
-		place { control="account_balance" align=right end-right="account_avatar" height=39 }
+		place { control="account_menu_button" align=left margin-left=3 height=39 width=max } // span over everything
+		place { control="account_persona" align=right margin-bottom=1 height=39 width=99}          
+		place { control="account_avatar" padding-right=5 margin-top=8 align=right height=25 width=25 end-right=account_persona }
+		place { control="account_balance" end-right="account_avatar" }
+		
 
 		//hidden
 		place { control="account_drop_down" margin-left=-999 }
 	}
 }
+

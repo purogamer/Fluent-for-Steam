@@ -13,7 +13,6 @@
 
 	colors
 	{
-
 		RichText.InsetX "0"
 		RichText.InsetY "3" 
 		GameDetailsDLC.ExtraVerticalSpacing "180"
@@ -21,55 +20,86 @@
 
 	styles
 	{
-		dlcdetails 
-		{ 
-			//bgcolor=BackgroundStart
-			render_bg
-			{
-				0="image(x0+16,y0+16,x1,y1,graphics/metro/icons/dlc)"
-			}
+		Button
+		{
+			inset-left=-6
+			bgcolor="none"
+			image=graphics/fluent/icons/dlc
+		}
+		Button:hover
+		{
+			bgcolor="none"
+			image="graphics/fluent/icons/dlc_h"
+		}
+		Button:active
+		{
+			bgcolor="none"
+			image="graphics/fluent/icons/dlc_p"
 		}
 
+		ListPanelColumnHeader
+		{ 
+			padding-left=4
+			image=""
+		}
 		bodycontent
 		{
-			textcolor="White"
-			selectedtextcolor="White"	
-			font-size=15
+			textcolor=textDLCPanel
+			selectedtextcolor=textDLCPanel
 			render_bg {}
 		}
 
 		"DLC_Uninstalled"
 		{
-			textcolor="White45"
-			selectedtextcolor="White"
+			textcolor=uninstalledDLCPanel
+			selectedtextcolor=highlightDLCPanel
 		}
-
 		"DLC_Installed"
 		{
-			textcolor="White"
-			selectedtextcolor="White"
+			textcolor=installedDLCPanel
+			selectedtextcolor=installedDLCPanel
 		}
-
 		"mostrecenttime"
 		{
 			padding-top=3
 			minimum-width=256
 		}
+
+		//Hidden
+		gamedetails-headerlabel
+		{
+			textcolor="none"
+			bgcolor="none"
+		}
+		gamedetails-headerlabel-red
+		{
+			textcolor="none"
+			bgcolor="none"
+		}
+		gamedetails-headerlabel-green
+		{
+			textcolor="none"
+			bgcolor="none"
+		}
+		gamedetails-headerlabel-blue
+		{
+			textcolor="none"
+			bgcolor="none"
+		}
 	}
 
 	layout
 	{
-		region { name=body margin=0 x=68 y=0 width=max height=max margin-bottom=52 }
-		
-		place { control=headerlabel width=0 height=0 }
-		place { control=moredlc x=68 height=28 align=bottom margin-bottom=16 }
-		
-		place { region=body y=141 width=257 control=latesttimelabel }
-		place { region=body width=max control=dlclist }
-		place { region=body y=16 control=dlclist dir=right height=max }
-		
-		//Hidden
-		place { control=latestimage,latesttimelabel,overlayimage width=0 height=0 }
-	}
+		region { name=body x=68 width=max height=max }
+		place { control=moredlc x=16 y=16 width=36 height=36 align=left margin-right=16 }
 
+		place { region=body y=14 control=latestimage width=196 height=96 }
+		place { region=body y=14 control=overlayimage width=196 height=96 }
+		place { region=body control=dlclist width=max height=max }
+		place { start=latestimage y=2 control=dlclist margin-bottom=16 margin-right=16 }
+		place { region=body control=latesttimelabel align=bottom margin-bottom=16 }
+
+		//Hidden
+		place { control=headerlabel width=10 height=10 }
+	}
 }

@@ -3,22 +3,110 @@
 	styles
 	{
 		//Default Style
+		///////////////////////BOTON DE MINIMIZAR////////////////////////////////////////////
 		FrameMinimizeButton [$WIN32||$WINDOWS||$LINUX]
 		{
-			inset="9 19 0 0"
-			render_bg{}
-			image="graphics/metro/icons/caption/minimize"
+			
+			image="caption/minimizarnormal"
 		}
+		FrameMinimizeButton:hover [$WIN32||$WINDOWS||$LINUX]
+		{
+			bgcolor=none
+			render_bg
+			{
+				0="image(x0+0,y0+0,x1,y1,caption/hover)"
+			}
+		}
+		FrameMinimizeButton:active [$WIN32||$WINDOWS||$LINUX]
+		{
+			bgcolor=none
+			render_bg
+			{
+				0="image(x0+0,y0+0,x1,y1,caption/press)"
+			}
+		}
+		////////////////////////////BOTON MAXIMIZAR///////////////////////////////////////	
+		FrameMaximizeButton [$WIN32||$WINDOWS||$LINUX]
+		{
+			image="caption/maximizarnormal"
+		}
+		FrameMaximizeButton:hover [$WIN32||$WINDOWS||$LINUX]
+		{
+			bgcolor=none
+			render_bg
+			{
+				0="image(x0+0,y0+0,x1,y1,caption/hover)"
+			}
+		}
+		FrameMaximizeButton:active [$WIN32||$WINDOWS||$LINUX]
+		{
+			bgcolor="none"
+			render_bg
+			{
+				0="image(x0+0,y0+0,x1,y1,caption/press)"
+			}
+		}
+        /////////////////////////////////////boton restaurar////////////////////////////////////////
+        FrameRestoreButton [$WIN32||$WINDOWS||$LINUX]
+		{
+			image="caption/restaurarventananormal"
+		}
+		FrameRestoreButton [$OSX]
+		{
+			render_bg{}
+			image="graphics/osx_win_dis"
+			image="graphics/osx_win_dis_new_dark" [$OSX1010]
+		}
+		FrameRestoreButton:hover [$WIN32||$WINDOWS||$LINUX]
+		{
+			bgcolor=none
+			render_bg
+			{
+				0="image(x0+0,y0+0,x1,y1,caption/hover)"
+			}
+		}
+		FrameRestoreButton:active [$WIN32||$WINDOWS||$LINUX]
+		{
+			bgcolor=none
+			render_bg
+			{
+				0="image(x0+0,y0+0,x1,y1,caption/press)"
+			}
+		}
+		///////////////////////////////////boton close/////////////////////////////////////////////////////////////
+        FrameCloseButton [$WIN32||$WINDOWS||$LINUX]
+		{
+			image="caption/cerrarnormal"
+		}
+		FrameCloseButton:hover [$WIN32||$WINDOWS||$LINUX]
+		{
+			bgcolor="none"
+			render_bg
+			{
+				0="image(x0+0,y0+0,x1,y1,caption/hover_close)"
+			}
+		}
+		FrameCloseButton:active [$WIN32||$WINDOWS||$LINUX]
+		{
+			bgcolor="none"
+			render_bg
+			{
+				0="image(x0+0,y0+0,x1,y1,caption/press_close)"
+			}
+		}
+		FrameCloseButton:disabled [$WIN32||$WINDOWS||$LINUX]
+		{
+			render_bg{}
+			image="caption/cerrarnormal"
+		}
+         //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		FrameMinimizeButton [$OSX]
 		{
 			render_bg{}
 			image="graphics/osx_win_dis"
 			image="graphics/osx_win_dis_new_dark" [$OSX1010]
 		}
-		FrameMinimizeButton:hover [$WIN32||$WINDOWS||$LINUX]
-		{
-			bgcolor=White05
-		}
+		
 		FrameMinimizeButton:hover [$OSX]
 		{
 			image="graphics/osx_min_hov"
@@ -38,33 +126,22 @@
 			image="graphics/osx_min_hov"
 			image="graphics/osx_min_hov_new" [$OSX1010]
 		}
-		FrameMinimizeButton:active [$WIN32||$WINDOWS||$LINUX]
-		{
-			bgcolor=White10
-		}
 		FrameMinimizeButton:active [$OSX]
 		{
 			image="graphics/osx_min_down"
 			image="graphics/osx_min_down_new" [$OSX1010]
 		}
 
-		FrameMaximizeButton [$WIN32||$WINDOWS||$LINUX]
-		{
-			inset="9 14 0 0"
-			render_bg{}
-			image="graphics/metro/icons/caption/maximize"
-		}
+		
 		FrameMaximizeButton [$OSX]
 		{
 			render_bg{}
 			image="graphics/osx_win_dis"
 			image="graphics/osx_win_dis_new_dark" [$OSX1010]
 		}
-		FrameMaximizeButton:hover [$WIN32||$WINDOWS||$LINUX]
-		{
-			bgcolor=White05
-		}
-		FrameMaximizeButton:hover [$OSX]
+		
+
+			FrameMaximizeButton:hover [$OSX]
 		{
 			image="graphics/osx_max_hov"
 			image="graphics/osx_max_hov_new" [$OSX1010]
@@ -83,32 +160,14 @@
 			image="graphics/osx_max_hov"
 			image="graphics/osx_max_hov_new" [$OSX1010]
 		}
-		FrameMaximizeButton:active [$WIN32||$WINDOWS||$LINUX]
-		{
-			bgcolor=White10
-		}
+		
 		FrameMaximizeButton:active [$OSX]
 		{
 			image="graphics/osx_max_down"
 			image="graphics/osx_max_down_new" [$OSX1010]
 		}
 
-		FrameRestoreButton [$WIN32||$WINDOWS||$LINUX]
-		{
-			inset="9 14 0 0"
-			render_bg{}
-			image="graphics/metro/icons/caption/restore"
-		}
-		FrameRestoreButton [$OSX]
-		{
-			render_bg{}
-			image="graphics/osx_win_dis"
-			image="graphics/osx_win_dis_new_dark" [$OSX1010]
-		}
-		FrameRestoreButton:hover [$WIN32||$WINDOWS||$LINUX]
-		{
-			bgcolor=White05
-		}
+		
 		FrameRestoreButton:hover [$OSX]
 		{
 			image="graphics/osx_max_hov"
@@ -128,32 +187,21 @@
 			image="graphics/osx_max_hov"
 			image="graphics/osx_max_hov_new" [$OSX1010]
 		}
-		FrameRestoreButton:active [$WIN32||$WINDOWS||$LINUX]
-		{
-			bgcolor=White10
-		}
+		
 		FrameRestoreButton:active [$OSX]
 		{
 			image="graphics/osx_max_down"
 			image="graphics/osx_max_down_new" [$OSX1010]
 		}
-
-		FrameCloseButton [$WIN32||$WINDOWS||$LINUX]
-		{
-			inset="9 14 0 0"
-			render_bg{}
-			image="graphics/metro/icons/caption/close"
-		}
+		
 		FrameCloseButton [$OSX]
 		{
 			render_bg{}
 			image="graphics/osx_win_dis"
 			image="graphics/osx_win_dis_new_dark" [$OSX1010]
 		}
-		FrameCloseButton:hover [$WIN32||$WINDOWS||$LINUX]
-		{
-			bgcolor=White05
-		}
+		
+		
 		FrameCloseButton:hover [$OSX]
 		{
 			image="graphics/osx_close_hov"
@@ -170,24 +218,16 @@
 		{
 			render_bg {}
 			bgcolor="none"
-			image="graphics/osx_close_hov"
+			image="x0+6,y0+8,x1,y1graphics/osx_close_hov"
 			image="graphics/osx_close_hov_new" [$OSX1010]
 		}
-		FrameCloseButton:active [$WIN32||$WINDOWS||$LINUX]
-		{
-			bgcolor=White10
-		}
+		
 		FrameCloseButton:active [$OSX]
 		{
 			image="graphics/osx_close_down"
 			image="graphics/osx_close_down_new" [$OSX1010]
 		}
-		FrameCloseButton:disabled [$WIN32||$WINDOWS||$LINUX]
-		{
-			inset="9 14 0 0"
-			render_bg{}
-			image="graphics/metro/icons/caption/close_d"
-		}
+		
 		FrameCloseButton:disabled [$OSX]
 		{
 			render_bg{}
@@ -200,37 +240,37 @@
 		{
 			inset="4 7 0 0"
 			render_bg{}
-			image="graphics/metro/icons/caption/sm/chat_min_sm"
+			image="graphics/fluent/icons/caption/sm/chat_min_sm"
 		}
 		"ToolWindow FrameMinimizeButton:hover"
 		{
-			bgcolor=White05
+			bgcolor="none"
 		}
 		"ToolWindow FrameMinimizeButton:active"
 		{
-			bgcolor=White10
+			bgcolor="none"
 		}
 
 		"ToolWindow FrameMaximizeButton"
 		{
 			inset="4 10 0 0"
 			render_bg{}
-			image="graphics/metro/icons/caption/sm/chat_max_sm"
+			image="graphics/fluent/icons/caption/sm/chat_max_sm"
 		}
 		"ToolWindow FrameMaximizeButton:hover"
 		{
-			bgcolor=White05
+			bgcolor="none"
 		}
 		"ToolWindow FrameMaximizeButton:active"
 		{
-			bgcolor=White10
+			bgcolor="none"
 		}
 
 		"ToolWindow FrameRestoreButton"
 		{
 			inset="4 10 0 0"
 			render_bg{}
-			image="graphics/metro/icons/caption/sm/chat_res_sm"
+			image="graphics/fluent/icons/caption/sm/chat_res_sm"
 		}
 		"ToolWindow FrameRestoreButton:hover"
 		{
@@ -245,15 +285,17 @@
 		{
 			inset="4 10 0 0"
 			render_bg{}
-			image="graphics/metro/icons/caption/sm/chat_close_sm"
+			image="graphics/fluent/icons/caption/sm/chat_close_sm"
 		}
 		"ToolWindow FrameCloseButton:hover"
 		{
-			bgcolor=White05
+			bgcolor="none"
+			image="graphics/fluent/icons/caption/sm/chat_close_sm_h"
 		}
 		"ToolWindow FrameCloseButton:active"
 		{
-			bgcolor=White10
+			bgcolor="none"
+			image="graphics/fluent/icons/caption/sm/chat_close_sm_p"
 		}
 	}
 }

@@ -2,56 +2,37 @@
 {
 	controls
 	{
-		NewsDetailPanel 
-		{ 
-			controlname="COverlay_Details_News" 
-			style=detailsbox
-		}
+		NewsDetailPanel { controlname="COverlay_Details_News" style=detailsbox }
 		TitleText { controlname="label" labeltext="#Overlay_Taskbar_News" style=detailsboxtitle }
-		
-		ViewNewsButton
-		{
-			controlname=button
-			labeltext="#Overlay_Friends_ViewNews"
-		}
-		
+		ViewNewsButton { controlname=button labeltext="#Overlay_Friends_ViewNews" }
 	}
-	
+
 	colors
 	{
+	}
 
-	}	
-	
 	styles
 	{
-		Button
+		headline
 		{
-			bgcolor=none
-			image=graphics/metro/overlay/icons/guides
-			inset-left=-6
+			textcolor="White"
 		}
-		
-		Button:hover
+		button
 		{
-			image=graphics/metro/overlay/icons/guides_h		
-		}
-	
-		Button:active
-		{
-			image=graphics/metro/overlay/icons/guides_p		
+			inset=2
+			font-family=basefont
+			font-weight=400
 		}
 	}
-	
+
 	layout
 	{
-		//Left
-		place { controls=ViewNewsButton y=16 width=40 height=40 }
-
-		//Right
-		place { control="TitleText" x=56 y=7 }
-		//place { control="NumNewsText" x=56 y=40 }
+		region { name=title margin=16 width=max height=100 }
+		region { name=news margin-top=28 margin-bottom=50 width=max height=max }
+		region { name=bottom y=165 margin-top=10 margin-bottom=10 margin-left=10 margin-right=10 width=max height=124 }
 		
-		//Content
-		place { control=*newsitem x=56 y=72 width=max height=40 dir=down spacing=8 }
+		place { control="TitleText" region=title }
+		place { region=news controls=*newsitem y=16 width=max height=40 margin-left=16 margin-right=16 dir=down spacing=12 }
+		place { controls=ViewNewsButton region=bottom align=bottom margin-bottom=4 }
 	}
 }

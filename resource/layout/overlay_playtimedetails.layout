@@ -14,36 +14,21 @@
 		TwoWeeksText { controlname=label style=TimeStrings }
 		ForeverText { controlname=label style=TimeStrings }
 	}
-	
 	colors
 	{
-
-	}	
-	
+	}
 	styles
 	{
 		Intro
 		{
 			textcolor=White
 		}
-		timeStrings
-		{
-			font-size="17"
-			White75
-			font-style="Uppercase"
-			font-family=basefont
-			font-weight=700
-		}
 	}
-	
 	layout
 	{
 		region { name=box margin-top=10 margin-bottom=10 margin-left=10 margin-right=10 width=max height=max }
-		
-		place { control="TitleText" region=box }	
-		
+		place { control="TitleText" region=box }
 		place { control=IntroText region=box y=40 }
-		
 		place { controls=SessionText,TwoWeeksText,ForeverText region=box y=70 dir=down spacing=5 }
 	}
 }

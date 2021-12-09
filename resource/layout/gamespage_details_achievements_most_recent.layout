@@ -1,19 +1,5 @@
 "resource/layout/gamespage_details_achievements_most_recent.layout"
 {
-	controls
-	{
-		mostrecent_area { controlname="CAchievementsMostRecentPanel" style="mostrecent" }
-
-		mostrecent_label { controlname="Label" style="mostrecent_label" labeltext="#steam_achievement_mostrecent" } 
-		mostrecent_background { controlname="Label" style=achievementimagebg zpos="0" labeltext="" mouseinputenabled=0 }
-		mostrecent_image { controlname="ImagePanel" zpos=-1 style="mostrecent_image" }
-		mostrecent_name { controlname="Label" style="mostrecent_name" labeltext="" }
-		mostrecent_unlockedsofar { controlname="Label" style="mostrecent_unlockedsofar" labeltext="#steam_achievement_unlockedsofar" }
-
-		progressbackground { controlname="ImagePanel" style="progressbackground" }
-		progressbarimage { controlname="ImagePanel" style="progressbarimage" }
-
-	}
 	colors
 	{
 		// ProgressBarMarings must be the combined left+right margin of the actual bar from it's container
@@ -21,6 +7,7 @@
 		
 		Tooltip.Anchor=Parent
 	}
+
 	styles
 	{
 		mostrecent
@@ -36,51 +23,43 @@
 		{
 			bgcolor=none
 			inset="0 0 0 0"
-      image="graphics/achievementbg_recent"    
-     		
+			image="graphics/achievementbg_recent"
 		}
-		
 		mostrecent_name
 		{
-			font-size=18
-			textcolor=White
+			textcolor=titleAchievementPanel
+			bgcolor=bgTitleAchievementPanel
+			padding-left=2
+			padding-bottom=2
 		}
 
 		mostrecent_label
 		{
-			textcolor=White35
-			bgcolor="none"
+			textcolor=recentAchievementPanel
 			font-family=basefont
-			font-size=18
 			font-weight=400
 			font-style=regular
+			bgcolor=bgRecentAchievementPanel
+			padding-left=2
+			padding-bottom=2
 		}
 
 		mostrecent_unlockedsofar
 		{
-			textcolor="White75"
+			textcolor=progressAchievementPanel
 			bgcolor="none"
 			font-family=semibold
-			font-size=16 
 			font-style=uppercase
 		}
 
 		progressbackground
 		{
-			bgcolor=Black25
-			render_bg
-			{
-        //0="fill( x0, y0, x1, y1, Black25 )"  // top
-			}
+			bgcolor=black25
 		}
 
 		progressbarimage
 		{
-			bgcolor="Focus"
-			render 
-			{
-				//5="fill( x0, y0, x1, y1, Focus )"  // top
-			}
+			bgcolor=bgProgressAchievementPanel
 		}
 	}
 

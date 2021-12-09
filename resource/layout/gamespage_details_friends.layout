@@ -3,7 +3,7 @@
 	controls
 	{
 		friendsdetails { controlname="CGamesPage_Details_Friends" style="friendsdetails" }
-		
+
 		headerlabel { controlname="Label" style="gamedetails-headerlabel" labeltext="#Steam_Friends" }
 		listplayingnow	{ controlname="CGamesPage_Details_Friends_List" }
 		listplayever	{ controlname="CGamesPage_Details_Friends_List" }
@@ -13,43 +13,57 @@
 
 	colors
 	{
-		GameDetailsFriends.ExtraVerticalSpacing=16	
+		GameDetailsFriends.ExtraVerticalSpacing=16
 	} 
 
 	styles
 	{
-		infolabel
-		{
-			font-size=16
-			textcolor="White45"
-		}     
-		
 		viewallbutton
 		{
-			bgcolor=none
-			image=graphics/metro/overlay/icons/friends
 			inset-left=-6
+			bgcolor="none"
+			image=graphics/fluent/overlay/icons/friends
 		}
-		
 		viewallbutton:hover
 		{
-			image=graphics/metro/overlay/icons/friends_h		
+			bgcolor="none"
+			image=graphics/fluent/overlay/icons/friends_h
 		}
-	
 		viewallbutton:active
 		{
-			image=graphics/metro/overlay/icons/friends_p		
+			bgcolor="none"
+			image=graphics/fluent/overlay/icons/friends_p
 		}
 
+		//Hidden
+		gamedetails-headerlabel
+		{
+			textcolor="none"
+			bgcolor="none"
+		}
+		gamedetails-headerlabel-red
+		{
+			textcolor="none"
+			bgcolor="none"
+		}
+		gamedetails-headerlabel-green
+		{
+			textcolor="none"
+			bgcolor="none"
+		}
+		gamedetails-headerlabel-blue
+		{
+			textcolor="none"
+			bgcolor="none"
+		}
 	}
 
 	layout
 	{
 		region { name=body margin=0 margin-left=68 width=max height=max }
-		place { control=headerlabel width=max height=0 }
 		place { control=viewall x=16 y=16 width=36 height=36 align=left margin-right=16 }
-		
-		place { region=body x=0 y=0 margin-right=16 width=max control=listplayingnow,listplayever height=80 dir=down }
-		//place {	region=body control=viewall align=bottom height=28 }
+		place { region=body x=0 y=0 margin-right=16 width=max control=listplayingnow,listplayever height=83 dir=down }
+		//Hidden
+		place { control=headerlabel width=1 align=right }
 	}
 }

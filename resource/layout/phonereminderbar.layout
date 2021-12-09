@@ -35,43 +35,50 @@
 	{
 		CPhoneReminderBar
 		{
-			
-			render {}
-			render_bg {
-			}
+			bgcolor=green50
+			//render {}
+			//render_bg {
+				//0="image_scale( x0+3, y0, x1-3, y1+1, graphics/emailreminder_center )"
+				//1="image( x0+3, y0, x0+3, y1, graphics/emailreminder_left )"
+				//2="image( x1, y0, x1, y1, graphics/emailreminder_right )"
+
+				//3="fill( x1-2, y1+1, x1-1, y1+2, outline_gray )"
+				//4="fill( x0, y1+1, x0+1, y1+2, outline_gray )"	
+				//5="fill( x0+1, y1+1, x0+2, y1+2, outline_dark )"
+			//}
 		}
 		
 		soft
 		{
-			font-size=15
 			textcolor="209 242 133 255"
+			font-family=basefont
 			minimum-width=500
 		}
 
 		bright
 		{
-			
-			font-size=18
 			textcolor="255 255 255 255"
+			font-family=basefont
 		}
 
 		ButtonStyle
 		{
 			font-size=16
-			padding=2
-			bgcolor=button_green_bg
-			render_bg {}
-			render {
-				1="fill( x0, y0, x1, y0 + 1, button_green_border )"  // top
-				2="fill( x0, y1 - 1, x1, y1, button_green_border )"  // bottom
-				3="fill( x0 + 1, y0, x0 + 1, y1, button_green_border )"  // left
-				4="fill( x1 - 1, y0, x1, y1, button_green_border )"  // right
-			}
+			font-style=regular
+			textcolor=white
+			//render_bg {}
+			//render {
+			//	1="fill( x0, y0, x1, y0 + 1, button_green_border )"  // top
+			//	2="fill( x0, y1 - 1, x1, y1, button_green_border )"  // bottom
+			//	3="fill( x0 + 1, y0, x0 + 1, y1, button_green_border )"  // left
+			//	4="fill( x1 - 1, y0, x1, y1, button_green_border )"  // right
+			//}
+			padding-left=6
+			padding-right=6
 		}
-
 		ButtonStyle:hover
 		{
-			textcolor=white
+			bgcolor=white10
 		}
 	}
 	
@@ -88,6 +95,7 @@
 	
 	layout
 	{
-		place { control="phonereminderbarlabel,phonereminderbar_yesbutton,phonereminderbar_nobutton,phonereminderbar_info" width=0 height=0 }
+		place { control="phonereminderbarlabel" x=20 y=16 spacing=8 }
+		place { control="phonereminderbar_yesbutton,phonereminderbar_nobutton,phonereminderbar_info" x=20 y=42 spacing=18 margin-bottom=6 margin-right=20 }
 	}
 }

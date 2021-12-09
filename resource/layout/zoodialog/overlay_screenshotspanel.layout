@@ -31,18 +31,18 @@
 		Button
 		{
 			bgcolor=none
-			image=graphics/metro/overlay/icons/screenshots
+			image=graphics/fluent/overlay/icons/screenshots
 			inset-left=-6
 		}
 		
 		Button:hover
 		{
-			image=graphics/metro/overlay/icons/screenshots_h		
+			image=graphics/fluent/overlay/icons/screenshots_h		
 		}
 	
 		Button:active
 		{
-			image=graphics/metro/overlay/icons/screenshots_p		
+			image=graphics/fluent/overlay/icons/screenshots_p		
 		}
 	}
 	

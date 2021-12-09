@@ -12,32 +12,27 @@
 	{
 		title_label
 		{
-			font-size="17"
-			textcolor="White"
-			//font-weight=700
-			font-style="normal"
+			textcolor=overlay_titleNewsPanel
+			bgcolor=overlay_bgTitleNewsPanel
 			font-family=basefont
-			
+			font-style="normal"
 		}
-			
 		title_label:hover
 		{
+			textcolor=overlay_titleNewsPanel_a
 			font-style="underline"
-			textcolor="White"
-		}	
+		}
 
 		date_and_author
 		{
+			textcolor=overlay_authorNewsPanel
 			font-size=14
-			textcolor="White"
 		}
 	}
 
 	layout
 	{
 		region { name=body width=max }
-		//place { region=body control=newsitem_title width=max }
-		//place { region=body y=18 control=newsitem_dateandauthor width=max  }
-		place { region=body controls=newsitem_title,newsitem_dateandauthor dir=down spacing=2 width=max }
+		place { region=body controls=newsitem_title,newsitem_dateandauthor dir=down spacing=2 }
 	}
 }

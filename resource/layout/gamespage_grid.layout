@@ -24,31 +24,24 @@
 		// value defining the extra vertical distance to leave below
 		// the picture for drop shadow room, in px. This value should
 		// match the margin values in the layout statements in the gamespage_grid_*.layout files.
-		GridView.DropShadowLeading "0"
+		GridView.DropShadowLeading "10"  //KEEP THIS THE SAME AS THE DEFAULT STEAM OR ZOOM WON'T BE SAVED
 	}
 
 	styles
 	{
-		"RichText"
-		{
-		font-size=36
-		}
 		WrapPanel
 		{
-			inset-right=0
+			inset="1 0 0 2"
 			bgcolor="none"
-			render {}
 			render_bg {}
-		}	
+			render {}
+		}
 
 		emptylisttext
 		{
 			textcolor="White"
-			font-size="15"
 			render_bg {}
 		}
-		
-
 		// GameItem_whatever suffix is computed on the fly. (not case sensitive.) possible values:
 		// shortcut
 		// mod
@@ -58,28 +51,11 @@
 		// updating
 		// uninstalled
 		// notinstalled (yes there are two)
-		GameItem_installed
-		{
-			alpha		255
-		}
-		GameItem_unInstalled
-		{
-			//alpha		127.5
-		}
-		GameItem_Updating
-		{
-			alpha		255
-		}
 	}
 
 	layout
 	{
-		place
-		{
-			control = grid					 x=0 y=1 width=max height=max 
-		}
-
-		place	{ control=emptylisttext x=0 y=0 margin=10 margin-top=9 width=max height=max }
+		place {	control=grid x=1 y=1 width=max height=max }
+		place { control=emptylisttext x=0 y=0 margin-left=8 margin-top=1 width=max height=max }
 	}
 }
-

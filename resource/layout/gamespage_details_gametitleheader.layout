@@ -15,23 +15,22 @@
 	{
 		CDetailsGameTitleHeaderPanel
 		{
-			bgcolor=none
+			bgcolor="none"
 		}
-
 		headertextlarge
 		{
-			font-size=42
-			textcolor=White
+			textcolor=titleGame
 			font-family=light
 			font-weight=100
-			bgcolor=none
+			bgcolor=bgTitleGame
+			padding-bottom=3
+			padding-left=2
+			padding-right=4
 		}
 	}
 
 	layout
 	{
-		place { control=gametitlelabel align=left-center }
-
-		place { control="iconimage" width=0 height=0 }
+		place { control=iconimage,gametitlelabel align=left-center spacing=10 }
 	}
 }

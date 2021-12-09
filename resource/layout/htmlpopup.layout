@@ -7,7 +7,7 @@
 		URLBar		{ controlname="TextEntry" style="TextEntryURL" enabled=false }
 		EVCert	{ controlname="Label" style="LabelEVCert" visible=false }
 		StatusText { controlname="Label" }
-		
+
 		URLStatusImage	{ controlname="ImagePanel" style="URLStatusImage"  }
 		StopButton	{ controlname="Button"  command="WebStop" labeltext="" style="StopButton" }
 		ReloadButton	{ controlname="Button" command="WebReload" labeltext="" style="ReloadButton" }
@@ -15,47 +15,24 @@
 		BackButton	{ controlname="Button" command="WebBack" style="BackButtonSm" }
 		PageLoadThrobber { controlname="ImagePanel" image="graphics/rampDown_4" }
 	}
-	
 	styles
 	{
-		ReloadButton
+		TextEntryURL
 		{
-		inset-left=2
-		}
-
-		StopButton
-		{
-		inset-left=2
-		}
-
-		HTMLPopup
-		{
-			bgcolor=ClientBG
-			render_bg
-			{
-				0="fill( x0, y0, x1, y1, ClientBG )"
-				2="fill( x0, y0, x1, y0+69, FrameBorder )"
-				3="fill( x0, y0, x1, y0+68, Header_Dark )"
-				5="fill( x0, y1-26, x1, y1, FrameBorder )"
-				6="fill( x0, y1-25, x1, y1, Header_Dark )"
-			}
+			bgcolor=none
 		}
 	}
 	layout
 	{
-		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
-
 		//Controls
-		region { name="header" y=27 margin=8 }
-		place { region=header control="BackButton,ForwardButton" height=26 width=27 spacing=6 }
-		place { region=header control="EVCert,URLBar" start=ForwardButton x=8 height=26 width=max spacing=0 margin-right=26 }
-		place { region=header control="ReloadButton,StopButton" start=URLBar width=26 height=26 }
-		place { region=header control="PageLoadThrobber" align=right margin-top=3 margin-right=30 width=20 height=20 }	
+		place { control="BackButton,ForwardButton" y=40 x=1 align=left width=40 height=38 }
+		place { control="EVCert,URLBar" start=ForwardButton align=left width=max height=38 margin-right=77 }
+		place { control="PageLoadThrobber,ReloadButton,StopButton" start=URLBar align=right height=39 width=38 }
 
 		//Page
-		place { control="HTMLPopupChild" width=max height=max margin-top=69 margin-right=1 }
-		
+		place { control="HTMLPopupChild" width=max height=max y=78 margin-left=1 margin-right=1 margin-bottom=1 }
+
 		//Hidden
-		place { control="URLStatusImage,StatusText" width=0 height=0 }
+		place { control="StatusText,URLStatusImage" dir=down margin-left=-999 }
 	}
 }

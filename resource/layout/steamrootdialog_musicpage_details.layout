@@ -1,30 +1,8 @@
 "resource/layout/steamrootdialog_musicpage_details.layout"
 {
-	controls
-	{
-		CMusicPage_Details_Content { controlname="CMusicPage_Details_Content" }
-	}
-
-	styles
-	{
-		CMusicPage_Details
-		{
-		render_bg
-			{
-				1="fill( x0+7, y0-1, x0+255, y0, Black25 )"
-				2="fill( x0+270, y0-1, x1-7, y0, Black25 )"
-				0="fill( x0, y0-39, x0+262, y1, White08 )"
-			}
-		}
-		
-
-
-	}
-
 	layout
 	{
-		region	{ name="content" y=0 x=0 width=max height=max }
-		place	{ control=CMusicPage_Details_Content region=content x=0 y=0 width=max height=max }		
+		region { name="content" y=0 x=0 width=max height=max }
+		place { control=CMusicPage_Details_Content region=content x=0 y=0 width=max height=max }
 	}
-
 }

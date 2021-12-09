@@ -25,18 +25,18 @@
 		button
 		{
 			bgcolor=none
-			image=graphics/metro/details/workshop
+			image=graphics/fluent/details/workshop
 			inset-left=-6
 		}
 
 		button:hover
 		{
-			image=graphics/metro/details/workshop_h
+			image=graphics/fluent/details/workshop_h
 		}
 
 		button:active
 		{
-			image=graphics/metro/details/workshop_p
+			image=graphics/fluent/details/workshop_p
 		}
 	}
 

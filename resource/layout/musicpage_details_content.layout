@@ -1,36 +1,114 @@
 "resource/layout/musicpage_detail_content.layout"
 {
-	controls
-	{
-		AlbumList { tabposition=1 }
-		ArtistList { tabposition=1 }
-		PlaylistList { tabposition=1 }
-		DetailsBorder { controlname=EditablePanel style="DetailsBorderPanel" zpos="-1" }
-		EmptyDatabaseText { controlname="RichText" text="#Music_NoLibrary" style="EmptyDatabaseText" }
-		CrawlingText { controlname="RichText" style="CrawlingText" }
-	}
-
 	styles
 	{
+		DetailsBorderPanel
+		{
+			bgcolor="none"
+		}
+
+		AlbumOrArtistListStyle
+		{
+			bgcolor=bgMusicList
+		}
+
+//////////////////////////////////////////////
+//======"We've come up empty...." text======//
+		EmptyDatabaseText
+		{
+			textcolor=white75
+			font-size=24
+		}
+///////////////////////////////////////
+//======"... in settings." text======//
+		"CMusicPage_Details_Content RichText URL"
+		{
+			textcolor=white75
+			font-size=24
+		}
+
+//////////////////////////////////////////////////
+//======"Your Library is scanned...." text======//
+		CrawlingText
+		{
+			textcolor=white75
+			font-size=24
+		}
+
+		CMusicPage_Details_Content
+		{
+			bgcolor="none"
+		}
+
+		// Some overrides for our listpanel
+		"MusicPage_Details_Content ListPanel"
+		{
+			bgcolor="white03"
+		}
+
+		"MusicPage_Details_Content ListPanelInterior"
+		{
+			inset="0 0 0 0"
+			bgcolor="none"
+		}
+		"MusicPage_Details_Content ListPanelInterior:scrollbar"
+		{
+			bgcolor="none"
+		}
+
+		"MusicPage_Details_Content ListPanelDragger"
+		{
+			bgcolor="none"
+		}
+
+		"MusicPage_Details_Content ListPanelColumnHeader"
+		{
+			inset="0 0 0 0"
+			font-size=14
+			bgcolor="none"
+		}
+
+		"AlbumOrArtistListStyle ListPanelColumnSelectButton"   
+		{
+			bgcolor="none"
+			image="graphics/fluent/icons/plus"
+		}
+
+		DetailsBorderPanel
+		{
+			bgcolor="none"
+		}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//======Hidden Elements(width=0/height=0 still causes spikes and i doubt it will conflict with the linux font-size=0 problems=============//
+		HeaderImage
+		{
+			inset-left=99
+		}
 	}
 
 	layout
 	{
-		region	{ name="details" y=1 x=275 width=max height=max overflow=scroll-vertical margin-left=1 margin-top=1 margin-bottom=1 margin-right=-1 dir=down }
-		
-		//Empty List Text 
-		place	{ control=EmptyDatabaseText x=254 margin-left=8 width=max height=max }
-		place	{ control=CrawlingText x=254 margin-left=8 width=max height=max }
-		
-		place	{ control=DetailsBorder y=1 x=1 width=max height=max }
+		region	{ name="details" x=262 width=max height=max overflow=scroll-vertical margin-left=32 margin-top=1 margin-bottom=1 margin-right=-1 dir=down }
+		region	{ name="list" x=1 width=262 height=max margin-bottom=0 }
 
+		//Empty List Text 
+		place	{ control=EmptyDatabaseText y=1 width=max height=max margin-left=8 }
+		place	{ control=CrawlingText x=254 margin-left=8 width=max height=max }
+
+		//Header
 		place { control=AlbumList region=list width=262 height=max margin=0 }
 		place { control=ArtistList region=list width=262 height=max margin=0 }
 		place { control=PlaylistList region=list width=262 height=max margin=0 }
+
+		//Content
 		place { control=*MusicPageDetailsAlbum region=details width=max dir=down spacing=10 }
 		place { control=*MusicPageDetailsPlaylist region=details width=max dir=down spacing=10 }
-		
-		place 	{ control=BackgroundImageA,BackgroundImageB,BackgroundImageMask width=0 height=0 }
-	}
 
+		//?
+		place 	{ control=DetailsBorder y=1 x=1 width=max height=max }
+
+		//Hidden
+		place 	{ control=BackgroundImageA,BackgroundImageB,BackgroundImageMask align=right width=10 height=10 }
+	}
 }

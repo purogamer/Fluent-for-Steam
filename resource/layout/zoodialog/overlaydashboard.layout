@@ -78,13 +78,13 @@
 		//Back Button
 		OverlayURLLabel
 		{
-			image=graphics/metro/overlay/icons/close
+			image=graphics/fluent/overlay/icons/close
 			textcolor=none
 		}
 
 		OverlayURLLabel:hover
 		{
-			image=graphics/metro/overlay/icons/close_h
+			image=graphics/fluent/overlay/icons/close_h
 		}
 
 		TopFade

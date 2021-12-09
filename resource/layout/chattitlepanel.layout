@@ -2,33 +2,37 @@
 {
 	controls
 	{
-		 "AvatarImage" { ControlName="ImagePanel" }
-     "NameLabel" { ControlName="Label" }
-     "StatusLabel" { ControlName="Label" style="statuslabel" }
-     "LockImage" { ControlName="ImagePanel" }
-     "MenuButton" { ControlName= "CChatTitlePanelAffordance" style="menuButtonStyle"}
+		"AvatarImage" { ControlName="ImagePanel" }
+		"NameLabel" { ControlName="Label" }
+		"StatusLabel" { ControlName="Label" style="statuslabel" }
+		"LockImage" { ControlName="ImagePanel" }
+		"MenuButton" { ControlName= "CChatTitlePanelAffordance" style="menuButtonStyle"}
 	}
-
 	styles
 	{
 		statuslabel
 		{
-		font-size="14"
+			font-size="14"
+		}
+		menuButtonStyle
+		{
+			minimum-width=14
+			padding-top=3
+			padding-bottom=4
+			padding-right=5
+			padding-left=6
 		}
 	}
-
 	layout
 	{
-		place {	control="AvatarImage"	x=6 y=6 width=34 height=34 }
+		place {	control="AvatarImage" x=2 y=2 width=44 height=44 }
 
 		//1st Row
 		place { control="NameLabel" x=50 y=4 margin-right=8 }
-		place { control="LockImage" start=NameLabel x=8 y=3 }
+		place { control="MenuButton" start=NameLabel x=1 y=1 }
+		place {	start=MenuButton control="LockImage" x=4 y=3 }
 
 		//2nd Row
 		place { control="StatusLabel" x=50 y=24 }
-
-		//Hidden
-    place { control="MenuButton" width=0 height=0 }
 	}
 }

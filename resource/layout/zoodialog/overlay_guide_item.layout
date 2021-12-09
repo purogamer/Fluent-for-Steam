@@ -31,7 +31,7 @@
 		{
 			render
 			{
-			 0="image(x0,y0,x1,y1,graphics/metro/overlay/image_border)"
+			 0="image(x0,y0,x1,y1,graphics/fluent/overlay/image_border)"
 			}
 		}
 	}

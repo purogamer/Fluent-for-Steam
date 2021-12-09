@@ -2,64 +2,40 @@
 {
 	controls
 	{
-		GuidesDetailPanel 
-		{ 
-			controlname="COverlay_Details_Guides_Panel" 
-			style=detailsbox
-		}
+		GuidesDetailPanel { controlname="COverlay_Details_Guides_Panel" style=detailsbox }
 		TitleText { controlname="label" labeltext="#Overlay_Guides_Panel_Title" style=detailsboxtitle }
 		NumGuidesText { controlname="label" labeltext="#Overlay_Guides_Panel_NumGuides"  style=highlight }
-
 		ViewGuides { controlname="Button" labeltext="#Overlay_View_Guides" command="viewguides" }
 	}
-	
+
 	colors
 	{
+	}
 
-	}	
-	
 	styles
 	{
+		Button
+		{
+			inset=2
+			font-family=basefont
+			font-weight=400
+		}
 		PreviewImage
 		{
 		}
-		
-		detailsbox
+		highlight
 		{
-			render_bg
-			{
-				0="fill(x0+16,y0+67,x1-68,y0+68,White10)"
-			}
-		}
-		
-		Button
-		{
-			bgcolor=none
-			image=graphics/metro/overlay/icons/guides
-			inset-left=-6 
-		}
-		
-		Button:hover
-		{
-			image=graphics/metro/overlay/icons/guides_h		
-		}
-	
-		Button:active
-		{
-			image=graphics/metro/overlay/icons/guides_p		
+			textcolor=White75
 		}
 	}
-	
-	layout
-	{		
-		//Left
-		place { controls=ViewGuides x=16 y=16 width=36 height=36 align=right margin-right=16 }
 
-		//Right
-		place { control="TitleText" margin-right=68 y=11 align=right }
-		place { control="NumGuidesText" margin-right=68 y=37 align=right }
-		
-		//Content
-		place { control=*guideitem y=68 width=max height=68 dir=down margin-right=68 }
+	layout
+	{
+		region { name=title margin=16 width=max height=100 }
+		region { name=bottom y=165  margin-top=10 margin-bottom=10 margin-left=10 margin-right=10 width=max height=124 }
+		place { control="TitleText,NumGuidesText" region=title spacing=4 }
+		place { control=*guideitem y=40 width=max height=40 margin-left=16 margin-right=16 dir=down spacing=12 }
+
+		place { control="ViewGuides" region="bottom" align=bottom margin-bottom=4 }
 	}
 }

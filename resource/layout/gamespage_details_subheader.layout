@@ -4,6 +4,7 @@
 	{
 		subheaderlabels { controlname="CDetailsSubHeaderLabelsPanel" }
 		launchbutton { controlname="Button" labeltext="#Steam_LaunchGame" style="detailsLaunchButton" tabposition=1 command="RunGameAction" }
+		clientlist { controlname="ClientListButton" labeltext="" style="ClientListButton" tabposition=2 zpos=100 }
 	}
 
 	colors
@@ -14,157 +15,105 @@
 
 	styles
 	{
+		CDetailsGameSubHeaderPanel
+		{
+			bgcolor=bgLaunchPanel
+			minimum-height=68
+		}
+
 		ClientListButton
 		{
-
-			bgcolor=none
-			render_bg
-			{
-				// background fill
-				0="gradient( x0+2, y0+1, x1, y1-1, launch1, launch2 )"
-			}
-			render
-			{
-				1="image(x0+13,y0+15,x1,y1,graphics/icon_down_default_dark)"
-			}
+			image="graphics/fluent/icons/stream"
+		}
+		ClientListButton:hover
+		{
+			image="graphics/fluent/icons/stream_h"
+		}
+		ClientListButton:selected
+		{
+			image="graphics/fluent/icons/stream_p"
 		}
 
 		StatusText
 		{
-			font-size=16
 			inset="0 4 0 0"
 		}
 
 		"DetailsInstallButton"
 		{
-			minimum-width=36
-			textcolor=none
-			bgcolor=none
-			render_bg
-			{
-				1="image( x0, y0, x1, y1, graphics/metro/icons/install )"
-			}
+			bgcolor="none"
+			render_bg{}
+			image="graphics/fluent/icons/install"
+			padding-left=-6
 		}
-
 		"DetailsInstallButton:hover"
 		{
-			render_bg
-			{
-				1="image( x0, y0, x1, y1, graphics/metro/icons/install_h )"
-			}
+			bgcolor="none"
+			render_bg{}
+			image="graphics/fluent/icons/install_h"
+			padding-left=-6
 		}
-
 		"DetailsInstallButton:active"
 		{
-			render_bg
-			{
-				1="image( x0, y0, x1, y1, graphics/metro/icons/install_p )"
-			}
+			bgcolor="none"
+			render_bg{}
+			image="graphics/fluent/icons/install_p"
+			padding-left=-6
 		}
 
 		DetailsLaunchButton
 		{
-			minimum-width=36
-			textcolor=none
-			bgcolor=none
-			render_bg
-			{
-			1="image( x0, y0, x1, y1, graphics/metro/icons/play )"
-			}
+			bgcolor="none"
+			render_bg{}
+			image="graphics/fluent/icons/play"
+			padding-left=-6
 		}
-
 		DetailsLaunchButton:hover
 		{
-      render_bg
-      {
-       	1="image( x0, y0, x1, y1, graphics/metro/icons/play_h )"
-      }
+			bgcolor="none"
+			render_bg{}
+			image="graphics/fluent/icons/play_h"
 		}
-
 		DetailsLaunchButton:active
 		{
-      render_bg
-      {
-       	1="image( x0, y0, x1, y1, graphics/metro/icons/play_p )"
-      }
+			bgcolor="none"
+			render_bg{}
+			image="graphics/fluent/icons/play_p"
 		}
 
 		DetailsBuyButton
 		{
-			minimum-width=36
-			textcolor=none
-			bgcolor=none
-			render_bg
-			{
-			1="image( x0, y0, x1, y1, graphics/metro/icons/buy )"
-			}
+			bgcolor="none"
+			render_bg{}
+			image="graphics/fluent/icons/buy"
+			padding-left=-6
 		}
-
 		DetailsBuyButton:hover
 		{
-      render_bg
-      {
-       	1="image( x0, y0, x1, y1, graphics/metro/icons/buy_h )"
-      }
+			bgcolor="none"
+			render_bg{}
+			image="graphics/fluent/icons/buy_h"
 		}
-
 		DetailsBuyButton:active
 		{
-      render_bg
-      {
-       	1="image( x0, y0, x1, y1, graphics/metro/icons/buy_p )"
-      }
+			bgcolor="none"
+			render_bg{}
+			image="graphics/fluent/icons/buy_p"
 		}
-
 		DetailsBuyButton:disabled
 		{
-      render_bg
-      {
-       	1="image( x0, y0, x1, y1, graphics/metro/icons/buy_d )"
-      }
-		}
-
-		CDetailsGameSubHeaderPanel
-		{
-			bgcolor=Black45
-			minimum-height=68
+			bgcolor="none"
+			render_bg{}
+			image="graphics/fluent/icons/buy_d"
 		}
 	}
 
 	layout
 	{
 		// Y offset here should match the vertical padding value above in the colors section
-		region { name="header" y=0 x=0 width=max height=max margin=0 }
-
-		place {
-			control=launchbutton
-			align=left
-			region=header
-			margin=16
-			dir=down
-			height=36
-			width=36
-		}
-
-		place {
-			control=clientlist
-			region=header
-			margin=16
-			dir=right
-			align=right
-			height=36
-			width=36
-		}
-
-		place {
-			control=subheaderlabels
-			align=left
-			x=68
-			margin=16
-			margin-top=14
-			margin-left=0
-			dir=down
-			height=max
-		}
+		region { name="header" y=0 x=0 width=max height=68 }
+		place { control=launchbutton align=left region=header x=16 y=16 height=36 width=36 dir=right }
+		place { start=launchbutton control=clientlist x=-1 }
+		place { control=subheaderlabels align=left-center region=header x=74 dir=right height=max margin-top=8 margin-bottom=8 spacing=10 }
 	}
 }

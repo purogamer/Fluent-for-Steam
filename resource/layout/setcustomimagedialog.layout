@@ -15,34 +15,19 @@
 		OK { controlname="Button" tabposition=3 command="DoSetCustomImage" labeltext="#SteamUI_SetCustomImage_SetImage" }
 		Cancel { controlname="Button" tabposition=4 command="Cancel" labeltext="#SteamUI_SetCustomImage_Cancel" }
 	}
-	
 	styles
 	{
-		SetCustomImageDialog
-		{
-			minimum-width = 300
-			minimum-height = 240
-		}
-
 	}
-	
 	layout
 	{
-		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
-		place { control="frame_captiongrip" width=max height=54 }
+		region { name=container x=16 margin-right=16 }
+		place { region=container control="ChooseAnImage" y=44 dir=down width=max }
+		place { control="ImagePrescription,ThisFile" start=ChooseAnImage dir=down width=max spacing=6 margin-right=16 }
+		place { control="Filename" start=ThisFile y=4 dir=down width=max height=28 margin-right=104 }
+		place { control="Browse" x=6 start=Filename width=84 height=28 margin-right=16 }
+		place { control="TryAgain" start=Filename dir=down width=max height=28 }
 
-		region { name=container margin-right=8 }
-		place { region=container control="ImagePrescription" x=8 y=40 dir=down width=max spacing=8 }
-		place { region=container control="ThisFile" start=ImagePrescription y=8  dir=down width=max height=28 }
-		place { region=container control="Filename" start=ThisFile dir=down width=max height=28 }
 		region { name=bottom align=bottom height=44 margin=8 }
-		place {	control="OK,Browse" region=bottom align=right spacing=8 height=28 width=84 }
-
-
-		
-		//Hidden
-		place { control="TryAgain,ChooseAnImage,Cancel" width=0 height=0 }
+		place {	control="OK,Cancel" region=bottom align=right spacing=8 height=28 width=84 }
 	}
-
 }
-

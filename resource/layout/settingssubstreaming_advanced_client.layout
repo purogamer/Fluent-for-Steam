@@ -1,36 +1,84 @@
 "resource/layout/settingssubstreaming_advanced_client.layout"
 {
-  controls
-  {
-    "DescriptionLabel" { ControlName="Label" fieldName="DescriptionLabel" wrap=1 labelText="#Steam_Settings_Streaming_AdvancedClientOptions_Description" }
+	controls
+	{
+		"DescriptionLabelLocal"
+		{
+			ControlName="Label"
+			fieldName="DescriptionLabelLocal"
+			wrap=1
+			labelText="#Steam_Settings_Streaming_AdvancedClientOptions_DescriptionLocal"
+		}
+		"DescriptionLabelRemote"
+		{
+			ControlName="Label"
+			fieldName="DescriptionLabelRemote"
+			wrap=1
+			labelText="#Steam_Settings_Streaming_AdvancedClientOptions_DescriptionRemote"
+		}
+		
+		"BandwidthLabel" { ControlName="Label" associate="BandwidthLimit" labelText="#Steam_Settings_Streaming_Bandwidth" }
+		"BandwidthLimit" { ControlName="ComboBox" fieldName="BandwidthLimit" style="BandwidthLimit" editable="0" }
 
-    "BandwidthLabel" { ControlName="Label" associate="BandwidthLimit" labelText="#Steam_Settings_Streaming_Bandwidth" }
-    "BandwidthLimit" { ControlName="ComboBox" fieldName="BandwidthLimit" style="BandwidthLimit" }
-    
-    "ResolutionLabel" { ControlName="Label" associate="ResolutionLimit" labelText="#Steam_Settings_Streaming_Resolution" }
-    "ResolutionLimit" { ControlName="ComboBox" fieldName="ResolutionLimit" style="ResolutionLimit" }
-    
-    "AudioChannelsLabel" { ControlName="Label" associate="AudioChannelSelect" labelText="#Steam_Settings_Streaming_AudioChannelSelect" }
-    "AudioChannelSelect" { ControlName="ComboBox" fieldName="AudioChannelSelect" editable="0" }
-    
-    "EnableHardwareDecoding" { ControlName="CheckButton" fieldName="EnableHardwareDecoding" labelText="#Steam_Settings_Streaming_EnableHardwareDecoding" }
-    "EnableDebugOverlay" { ControlName="CheckButton" fieldName="EnableDebugOverlay" labelText="#Steam_Settings_Streaming_EnableDebugOverlay" }
-    
-    "SupportInformationLabel" { ControlName="URLLabel" fieldName="SupportInformationLabel" labelText="#Steam_Settings_Streaming_StreamingSupport" URLText="https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617" }
-    
-    OKButton { ControlName="Button" fieldName="OKButton" command="Close" labelText="#PropertyDialog_OK" }
-  }
-  styles
-  {
-  }
-  layout
-  {
-    place { control="DescriptionLabel,DescriptionLabelLocal,BandwidthLabel" y=44 dir=down width=max margin-left=16 margin-right=16 spacing=8 }
-    place { control="BandwidthLimit,ResolutionLabel,ResolutionLimit,AudioChannelsLabel,AudioChannelSelect,PerformanceOverlayLabel,PerformanceOverlay,ControllerOverlayHotkeyLabel,ControllerOverlayHotkey,EnableHardwareDecoding,EnableTouchController" start="BandwidthLabel" y=8 dir=down width=max height=28 margin-right=16 spacing=-2 }
-    
-    region { name=bottom align=bottom height=44 margin=8 }
-    region { name=support align=bottom height=80 margin=8 }
-    place { control="SupportInformationLabel" x=8 region=support }
-    place { control="OKButton" region=bottom align=right spacing=8 width=84 height=28 }
+		"ResolutionLabel" { ControlName="Label" associate="ResolutionLimit" labelText="#Steam_Settings_Streaming_Resolution" }
+		"ResolutionLimit" { ControlName="ComboBox" fieldName="ResolutionLimit" style="ResolutionLimit" editable="0" }
+
+		"AudioChannelsLabel" { ControlName="Label" associate="AudioChannelSelect" labelText="#Steam_Settings_Streaming_AudioChannelSelect" }
+		"AudioChannelSelect" { ControlName="ComboBox" fieldName="AudioChannelSelect" editable="0" }
+
+		"ControllerOverlayHotkeyLabel" { ControlName="Label" associate="ControllerOverlayHotkeyLimit" labelText="#Steam_Settings_Streaming_ControllerOverlayHotkey" }
+		"ControllerOverlayHotkey" { ControlName="ComboBox" fieldName="ControllerOverlayHotkey" style="ControllerOverlayHotkey" editable="0" }
+
+		"PerformanceOverlayLabel" { ControlName="Label" associate="PerformanceOverlay" labelText="#Steam_Settings_Streaming_PerformanceOverlay" }
+		"PerformanceOverlay" { ControlName="ComboBox" fieldName="PerformanceOverlay" editable="0" }
+
+		"EnableHardwareDecoding" { ControlName="CheckButton" fieldName="EnableHardwareDecoding" labelText="#Steam_Settings_Streaming_EnableHardwareDecoding" }
+
+		"EnableTouchController" { ControlName="CheckButton" fieldName="EnableTouchController" labelText="#Steam_Settings_Streaming_EnableTouchController" }
+		
+		"SupportInformationLabel"
+		{
+			ControlName="URLLabel"
+			fieldName="SupportInformationLabel"
+			labelText="#Steam_Settings_Streaming_StreamingSupport"
+			URLText="#Steam_Settings_Streaming_StreamingSupportLink"
+		}
+		
+		OKButton { ControlName="Button" fieldName="OKButton" command="Close" labelText="#PropertyDialog_OK" }
+	}
+	
+	style
+	{
+	}
+	
+	layout
+	{
+		region { name="buttons" width=max height=36 align="bottom" }
+
+		place { control="DescriptionLabelLocal"
+				margin-left=20 margin-right=20 margin-top=40 width=max
+				margin-bottom=2 }
+
+		place { control="DescriptionLabelRemote"
+				margin-left=20 margin-right=20 margin-top=40 width=max
+				margin-bottom=2 }
+
+		place
+		{
+			control="PerformanceOverlayLabel,PerformanceOverlay,BandwidthLabel,BandwidthLimit,ResolutionLabel,ResolutionLimit,AudioChannelsLabel,AudioChannelSelect,ControllerOverlayHotkeyLabel,ControllerOverlayHotkey,EnableHardwareDecoding,EnableTouchController"
+			dir=down
+			width=max
+			margin-left=20
+			margin-right=20
+			margin-top=90
+			spacing=10
+		}
+		place { control="SupportInformationLabel" region="buttons"
+						margin-left=20 margin-top=0 height=25
+						margin-bottom=2 spacing=10 }
+		place { control="OKButton" region="buttons"
+		        width=92 height=25 align=right
+						margin-right=10 margin-top=0
+						margin-bottom=2 spacing=10 }
 	}
 }

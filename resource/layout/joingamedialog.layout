@@ -12,48 +12,40 @@
 		ReadyToPlayTimeLabel { controlname=label labeltext=#SteamUI_JoinDialog_TimeLeftMinutes }
 		ThrobberThrobberThrobber { controlname=throbberimagepanel }
 		SkipUpdateLabel { controlname=label textalignment=east labeltext=#SteamUI_JoinDialog_SkipUpdateInfo visible=false }
-		
+
 		// only shown if the user hasn't seen the SSA change yet
 		Divider { controlname=divider visible=false }
 		SSAUpdateLabel { controlname=label labeltext=#SteamUI_SSAUpdatedInfo wrap=1 visible=false }
 		SSAUpdateURL { controlname=urllabel labeltext=#Steam_SSAUpdated_Link urltext=http://www.steampowered.com/index.php?area=subscriber_agreement visible=false }
-	}
-	
+	}	
 	colors
 	{
-	}	
-	
+	}
 	styles
 	{
 		highlight
 		{
 			textcolor=Focus
-		}	
+		}
 	}
-	
 	layout
 	{
-		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
+		region { name=box margin-top=40 margin-bottom=20 margin-left=20 margin-right=20 width=max height=max }
+		region { name=ssa margin-top=235 margin-left=20 margin-right=20 width=max height=max }
 
-		region { name=box margin-top=20 margin-bottom=20 margin-left=20 margin-right=20 width=max height=max }
-		region { name=ssa margin-top=215 margin-left=20 margin-right=20 width=max height=max }
-			
-		place { controls="InfoLabel" region=box margin-top=15 dir=down align=left width=320  }
-		place { controls="ThrobberThrobberThrobber" region=box start=InfoLabel dir=down align=left margin-top=15 }
-		place { controls="ReadyToPlayInfoLabel" region=box start=InfoLabel margin-top=10 width=max dir=down }
-		place { controls="ReadyToPlayTimeLabel" region=box start=InfoLabel margin-top=10 margin-left=200 dir=down }
-		place { controls="Progress" region=box start=ReadyToPlayInfoLabel margin-top=10 width=max dir=down }
-		place { controls="OverrideThrottleCheckBox" region=box start=Progress margin-top=10 width=max height=15 dir=down }
-		place { controls="AutoLaunchCheckBox" region=box start=OverrideThrottleCheckBox margin-top=10 height=15 width=max dir=down }
+		place { controls="InfoLabel" region=box margin-top=10 align=left width=320 }
+		place { controls="ThrobberThrobberThrobber" start=InfoLabel }
+		place { controls="ReadyToPlayInfoLabel" region=box y=2 start=InfoLabel dir=down }
+		place { controls="ReadyToPlayTimeLabel" x=6 start=ReadyToPlayInfoLabel margin-right=20 }
+
+		place { controls=Progress start=ReadyToPlayInfoLabel y=4 width=max dir=down margin-right=20 }
+		place { controls="OverrideThrottleCheckBox,AutoLaunchCheckBox" start=Progress y=4 width=max dir=down spacing=2 }
+
 		place { controls="SkipUpdateLabel" region=box start=AutoLaunchCheckBox dir=down width=max margin-right=145 margin-top=46 }
-		
 		place { controls="Divider,SSAUpdateLabel,SSAUpdateURL" region=ssa margin-top=10 spacing=5 width=max dir=down }
-		
+
 		//Bottom
 		region { name=bottom align=bottom height=44 margin=8 }
 		place {	control="NewsButton,PlayButton" region=bottom align=right spacing=8 height=28 }
-		
-		//Hidden
-		place { control="ThrobberThrobberThrobber" height=0 width=0 }
 	}
 }

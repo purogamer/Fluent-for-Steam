@@ -8,7 +8,6 @@
 		library_search	   { ControlName=TextEntry maxchars=12 hintText="#steam_library_search" style="LibrarySearch" group=library tabposition=2 }
 		label_search_icon	{ ControlName=Label style="LibrarySearchIcon" group=filters }
 
-
 		"subnavgroup_library"
 		{
 			"ControlName"		"imagepanel"
@@ -16,102 +15,60 @@
 			group="library"
 			zpos="-4"
 		}
-
 	}
 
 	colors
 	{
-		TextEntry="39 39 39 255"
 	}
 
 	styles
 	{
-		CMiniGameFilterMenuButton
+		NavLabel2
 		{
-			font-family=basefont
-			textcolor=none
+			inset="0 0 0 0"
+			textcolor="none"
+			bgcolor="TextEntry"
+		}
+		NavLabel2:hover
+		{
+			textcolor="none"
+			bgcolor="TextEntry"
+		}
+		NavLabel2:selected
+		{
+			textcolor="none"
+			bgcolor="TextEntry"
+		}
+		"CGamesPage_Mini CMiniGameFilterMenuButton"
+		{
+			padding-right=7
+		}
+		LibrarySearchIcon
+		{
 			bgcolor=TextEntry
-			render_bg
-			{
-				0="image(x0+14,y0+14,x1,y1,graphics/down_arrow)"
-			}
-			render{}
-			image=none
-			inset-left=999
+			image="graphics/search_lg"
+			padding-left=12
 		}
-
-		CMiniGameFilterMenuButton:hover
-		{
-			render_bg
-			{
-				0="image(x0+14,y0+14,x1,y1,graphics/down_arrow_h)"
-			}
-		}
-
-		CMiniGameFilterMenuButton:selected
-		{
-			render_bg
-			{
-				0="image(x0+14,y0+14,x1,y1,graphics/down_arrow_p)"
-			}
-		}
-	    TextEntry
-	    {
-	      font-family=basefont
-	      font-size=16
-	      bgcolor="TextEntry"
-				textcolor=White
-				shadowtextcolor=white
-	      selectedtextcolor=White
-	      selectedbgcolor="Focus"
-	      inset-left=6
-	    }
-
-		TextEntry:empty
-		{
-			textcolor=none
-		}
-
+		//Hidden
 		RichText
 		{
-			minimum-height=200
-		}
-
-		CGamesPage_Mini
-		{
-			bgcolor=ClientBG
-			render_bg
-			{
-				0="fill( x0, y0, x1, y0+40, FrameBorder )"
-				1="fill( x0, y0, x1, y0+39, Header_Dark )"
-			}
-			render
-			{
-				//Frame Border
-        0="fill( x0 + 0, y0 + 0, x1 + 0, y0 + 1, FrameBorder )"	// Top
-        1="fill( x0 + 1, y1 - 1, x1 + 0, y1 + 0, FrameBorder )"	// Bottom
-        2="fill( x0 + 0, y0 + 1, x0 + 1, y1 + 0, FrameBorder )"	// Left
-        3="fill( x1 - 1, y0 + 1, x1 + 0, y1 - 1, FrameBorder )"	// Right
-
-				0="fill( x0, y0+80, x1, y0+81, Header_Dark )"
-			}
+			textcolor="none"
+			selectedbgcolor="none"
 		}
 	}
 
  	layout
  	{
-		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
- 		place { control="frame_captiongrip" width=max height=40 }
 		place { control="rightGrip" align=right width=3 height=max }
 
 		//Header
 		region { name=top align=top y=40 height=40 x=0 margin-right=0 }
-		place { control="MenuBar" height=38 width=38 x=1 y=1 }
+		place { control="library_filters" region=top start=library_search height=40 width=38 }
+		place { control="MenuBar" height=38 width=67 x=1 y=1 }
 
 		//Search
-		place { control="label_search_icon" region=top height=38 width=38 }
-		place { control="library_search" region=top height=38 width=max margin-left=38 margin-right=38 }
-		place { control="library_filters" region=top align=right height=38 width=38 }
+		place { control="label_search_icon" region=top height=40 width=38 }
+		place { control="library_search" region=top start=label_search_icon height=40 width=max margin-right=38 }
 
 		//Content
 		place { control="subnavgroup_library" align=top-center y=80 height=26 width=max margin-right=9 margin-left=9 }

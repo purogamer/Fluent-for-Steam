@@ -11,29 +11,17 @@
 	}
 	styles
 	{
-		ImagePanel
-		{
-			render
-			{
-			 0="image(x0+16,y0+16,x1,y1,graphics/metro/overlay/image_border)"
-			}
-		}
-		Label
-		{
-			font-size=18
-			textcolor=White35
-		}
 		name
 		{
-		textcolor=White
+			textcolor=White
 		}
 	}
-
 	layout
 	{
-		region { name=image x=0 y=16 width=36 height=36 align=right }
-		place { region=image control=icon margin-left=-16 margin-top=-16 }
-		place { control="name" margin-right=48 y=11 align=right }
-		place { control="caption" margin-right=48 y=37 align=right }
+		region { name=body width=max }
+
+		place { region=body control=icon y=0 x=0 width=64 height=64 }
+		place { region=body control=caption y=0 x=69 width=max height=64 }
+		place { region=body control=name y=68 x=0 width=max }
 	}
 }

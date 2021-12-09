@@ -18,14 +18,26 @@
     {
       bgcolor=none
       textcolor=white
+      render_bg
+      {
+          1="image(x0, y0+0, x1+10, y0+6, graphics/fluent/icons/navbar/label_buttons/selected_p)"
+      }
     }
     account_menu_button:hover
     {
-      bgcolor=white05
+      bgcolor=none
+      render_bg
+      {
+          1="image(x0, y0+0, x1+10, y0+6, graphics/fluent/icons/navbar/label_buttons/selected)"
+      }
     }
     account_menu_button:active
     {
-      bgcolor=white10
+      bgcolor=none
+      render_bg
+      {
+          1="image(x0, y0+0, x1+10, y0+6, graphics/fluent/icons/navbar/label_buttons/selected_p)"
+      }
     }
     //Hidden
     account_menu_label

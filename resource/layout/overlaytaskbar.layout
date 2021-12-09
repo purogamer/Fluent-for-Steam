@@ -18,19 +18,22 @@
 			labeltext="#Overlay_Taskbar_WebBrowser"
 			style=taskbar
 		}
-
-		SteamLogo	
+		MusicPlayerButton
+		{
+			controlname="URLLabel"
+			labeltext="#Overlay_Taskbar_Music"
+			style=taskbar
+		}
+		SteamLogo
 		{ 
 			controlname="ImagePanel" zpos=1 image="resource/steam_logo_big"
 			scaleimage=1
 		}
-		
 		view_friends
 		{
 			ControlName=URLLabel
 			labelText="#Steam_ViewFriends"
 			command="OpenFriendsDialog"
-			
 			style="view_friends"
 			textAlignment=east
 		}
@@ -40,58 +43,60 @@
 			labelText="#Steam_OnlineFriends"
 			style="online_friends"
 			textAlignment=east
-		}	
+		}
 	}
-	
 	styles
 	{
 		taskbar
 		{
+			font-weight=400
 			font-family=basefont
-			font-size=24
-			textcolor=White45
-			font-style=regular
+			font-style=uppercase
+			textcolor=OverlaySideButtons
+			padding-left=16
+			padding-right=16
 		}
-		
 		taskbar:hover
 		{
-			font-family=basefont
-			font-size=24
-			textcolor=White
-			font-style=regular
+			bgcolor=OverlayHover05
 		}
-		
 		view_friends
 		{
-			textcolor="White"
-			bgcolor="none"
-			font-family=semibold
-			font-size=18
-			font-weight=400
+			textcolor=OverlaySideButtons_h
+			font-family=basefont
 			font-style=regular,uppercase
+			font-size=32
+			font-weight=400
+			bgcolor="none"
+			padding-left=70
+			padding-right=16
 		}
 		view_friends:Hover
 		{
-			 textcolor="White75"
+			textcolor=Focus
+			bgcolor=OverlayHover05
 		}
-
+		//Hidden
+		ImagePanel
+		{
+			inset-right=-999
+		}
 		online_friends
 		{
-			textcolor="White45"
+			textcolor="none"
 			bgcolor="none"
-			font-family=basefont
-			font-size=16
-			font-style=regular
-		}		
+		}
 	}
-	
 	layout
 	{
-		//Links
-		place { control="WebBrowserButton,MusicPlayerButton,SettingsButton,ScreenshotsButton" align=right spacing=30 height=115 margin-right=30 }	
+		region { name=bottom align=bottom width=max height=100 }
+		place { control="TaskbarPanel" region="bottom" width=max height=64 margin-bottom=37 }
+
+		place { control="FriendPanel" y=8 height=44 width=44 align=left margin-left=6 }
+		place { control="view_friends" height=80 }
+		place { start=view_friends controls="WebBrowserButton,MusicPlayerButton,SettingsButton,ScreenshotsButton" x=10 dir=right height=80 spacing=4 }
 
 		//Hidden
-		place { control="SteamLogo,FriendPanel,view_friends,online_friends" width=0 height=0 }
-
-	}	
+		place { control="online_friends,SteamLogo" align=right }
+	}
 }

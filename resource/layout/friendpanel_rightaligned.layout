@@ -1,47 +1,33 @@
 "resource/layout/friendpanel_compact.layout"
 {
-	
 	controls
 	{
-		MenuButton
-		{
-		style=menuButtonStyle
-		}
-		AvatarOverlayImage
-		{
-			zpos=2
-		}
+		MenuButton { style=menuButtonStyle }
+		AvatarOverlayImage { zpos=2 }
 	}
 	styles
 	{
 		menuButtonStyle
 		{
-		inset="-7 2 0 0"
-		padding=3
+			bgcolor="none"
+			textcolor="none"
 		}
 		CFriendPanel:hover 
 		{
-		render_bg {}
+			render {}
 		}
-
+		"CSteamRootDialog CAvatarOverlayImage"
+		{
+			inset-top=38
+		}
 	}
-	
+
 	// custom layout
 	layout
 	{
-		place {	control="AvatarOverlayImage" width=34 height=34 align=right }
-		place {	control="AvatarImage" width=34 height=34	align=right	}
-		place { control="MenuButton,NameLabel,FriendsNameInstanceLabel,ClanStatusImage" margin-right=60 y=6 align=right }
-		
-		place { control="StatusLabel"		margin-right=60 y=19 align=right }
-		place { control="GameLabel"			margin-right=60 y=31 align=right }
-		
-		place { control="ControlPanelLink" margin-right=60 y=31 align=right  }
+		place {	control="AvatarOverlayImage" width=46 height=46 align=right }
+		place {	control="AvatarImage" width=46 height=46 align=right }
+		//Hidden
+		place { control="MenuButton,NameLabel,FriendsNameInstanceLabel,ClanStatusImage,StatusLabel,GameLabel,ControlPanelLink" width=1 }
 	}
-
-
-
-	
-	
-
 }

@@ -10,25 +10,19 @@
 	styles
 	{
 		titlestyle
-		{ 
-			font-size=18
+		{
 		}
-
 		messagestyle
-		{ 
-			font-size=14
+		{
 		}
-
 		turnnotification_odd
 		{
 		}
-
 		turnnotification_even
 		{
 			bgcolor="10 36 56 175"
 		}
 	}
-
 	layout
 	{
 		region { name=column1 margin=0 x=0 y=0 width=max }

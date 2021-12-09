@@ -13,49 +13,49 @@
 		// for the image region.  The margin value should be computed by adding the margin of all containing
 		// regions for the images.  All these values also must be positive integers.
 		GameDetailsFriends.ImageAreaMargin "0"
-		GameDetailsFriends.ImageAreaSpacing "0"
-		GameDetailsFriends.ImageWidth "34"
-		GameDetailsFriends.ImageHeight "34"
-		
+		GameDetailsFriends.ImageAreaSpacing "3"
+		GameDetailsFriends.ImageWidth "38"
+		GameDetailsFriends.ImageHeight "38"
+
 		Tooltip.Anchor=Parent
 	}
 
 	styles
 	{
-    friendlabelmore
-    {
-			bgcolor=none
-			font-family=basefont
-			font-weight=300
-			font-size=16
-			textcolor="White75"
-			padding-bottom=1
-    }
-  
-		friendlabelmore:hover
-    {   
-			textcolor=white
-    }
-		
 		infolabel
 		{
-			font-size=16
-			textcolor="White"
-		}	
+			textcolor=titleFriendsPanel
+			bgcolor=bgTitleFriendsPanel
+		}
+		ImagePanel
+		{
+			inset-top=-1
+			minimum-height=38
+			minimum-width=38
+		}
+		//Hidden
+		friendlabelmore
+		{
+			inset-left=-999
+			textcolor="none"
+			bgcolor="none"
+			render_bg{}
+		}
 	}
 
 	layout
 	{
 		region { name=body width=max height=max }
 		region { name=images region=body width=max height=max }
-		
-		//Labels - Only one at a time		
+
+		//Labels - Only one at a time
 		place { region=body control=infolabelplural width=max height=40 }
 		place { region=body control=infolabelsingular width=max height=40 }
 
 		//Avatars
-		place { region=images control=*friendimage y=40 dir=right width=40 height=40 spacing=0 }
-		
-		place { control="friendlabelmore" width=0 height=0 }
+		place { region=images control=*friendimage y=38 dir=right width=46 height=46 spacing=0 }
+
+		//Hidden(using width/height makes it impossible to crop)
+		place { control=friendlabelmore align=right }
 	}
 }

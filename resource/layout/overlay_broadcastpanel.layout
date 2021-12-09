@@ -17,7 +17,7 @@
 		{
 			render_bg
 			{
-				0="image( x0+16, y0+16,x1,y1,graphics/metro/overlay/icons/broadcast )"
+				0="image( x0+16, y0+16,x1,y1,graphics/fluent/overlay/icons/broadcast )"
 			}
 		}
 		Button
@@ -31,7 +31,7 @@
 	layout
 	{
 		place { control="TitleText" x=68 y=11 }
-		place { control="InstructionText" x=68 y=37 }
+		place { control="InstructionText" x=68 y=35 }
 
 		place { control="ShowBroadcast,StopBroadcast,ShowChat,ShowSettings" x=68 align=bottom margin-bottom=8 spacing=8 height=28 margin-right=16 }
 	}

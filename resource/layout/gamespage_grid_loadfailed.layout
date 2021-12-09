@@ -40,62 +40,73 @@
 	{
 		GamesGridPlaceholder
 		{
-			font-size=20
-			font-family=basefont
 			textcolor=White
+			font-family=basefont
 		}
-
 		GamesGridIconBorder
 		{
 			bgcolor="none"
 			inset="0 0 0 0"
-		     render
-		     {}
+			render{}
 		}
-					
 		GGPlaceholderBG
 		{
-			bgcolor=White10
-			render
-			{
-				0="fill(x0,y0+1,x0+1,y1-1,White10)"
-				1="fill(x1-1,y0+1,x1,y1-1,White10)"
-				2="fill(x0,y0,x1,y0+1,White10)"
-				3="fill(x0,y1-1,x1,y1,White10)"
-			}
+			bgcolor=none
 		}
-
 		"GameItem_installed GamesGridPlaceholder"
 		{
 			textcolor="White"
 		}
-	}
 
+		"GameItem_Installed GGPlaceholderBG"
+		{
+			render
+			{
+				1="fill( x0, y0+6, x0+3, y1, gridInstalled )"
+			}
+		}
+		"GameItem_Running GGPlaceholderBG"
+		{
+			render
+			{
+				1="fill( x0, y0+6, x0+3, y1, gridRunning )"
+			}
+		}
+		"GameItem_unInstalled GGPlaceholderBG"
+		{
+			render
+			{
+				1="fill( x0, y0+6, x0+3, y1, gridUninstalled )"
+			}
+		}
+		"GameItem_Updating GGPlaceholderBG"
+		{
+			render
+			{
+				1="fill( x0, y0+6, x0+3, y1, gridUpdating )"
+			}
+		}
+		"GameItem_Shortcut GGPlaceholderBG"
+		{
+			render
+			{
+				1="fill( x0, y0+6, x0+3, y1, gridShortcut )"
+			}
+		}
+		"GameItem_Mod GGPlaceholderBG"
+		{
+			render
+			{
+				1="fill( x0, y0+6, x0+3, y1, gridMod )"
+			}
+		}
+	}
 	layout
 	{
-		region
-		{
-			name=icon_region width=max height=max
-		}
-		
-		place
-		{
-			control = "background"		width=max height=max
-		}
-		place
-		{
-			control = "appname"  		margin=12 width=max align=left margin-top=12
-		}
-		place
-		{
-			control = "noappimage_border"	region="icon_region"	x=0 y=0 width=0 height=0 margin-top=48 align=top-center 
-		}
-		place
-		{
-			control = "noappimage"	region="icon_region" x=10 y=0 width=32 height=32 margin-bottom=10 align=bottom
-		}
-
+		region { name=icon_region width=max height=max }
+		place { control ="background" width=max height=max }
+		place {	control ="appname" margin=12 width=max align=left-center }
+		//Hidden
+		place {	control=noappimage_border,noappimage margin-left=-999 dir=down }
 	}
 }
-
-

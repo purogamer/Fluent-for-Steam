@@ -22,18 +22,18 @@
 		Button
 		{
 			bgcolor=none
-			image=graphics/metro/details/news
+			image=graphics/fluent/details/news
 			inset-left=-6
 		}
 		
 		Button:hover
 		{
-			image=graphics/metro/details/news_h
+			image=graphics/fluent/details/news_h
 		}
 	
 		Button:active
 		{
-			image=graphics/metro/details/news_p
+			image=graphics/fluent/details/news_p
 		}
 	}
 

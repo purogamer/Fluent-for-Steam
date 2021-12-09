@@ -55,60 +55,53 @@
 	{
 		CEmailReminderBar
 		{
-			bgcolor="87 119 15 255"
-			render {}
-			render_bg
-			{
-				0="image( x0+12, y0+12, x1, y1, graphics/mail_h )"
-			}
+			bgcolor=green50
+		}
+
+		URLLabel
+		{
+			font-style=regular
+			padding-left=6
+			padding-right=6
+		}
+		URLLabel:hover
+		{
+			bgcolor=white10
 		}
 
 		soft
 		{
-			textcolor="white"
+			textcolor=white
 		}
-
 		bright
 		{
-			textcolor="white"
+			textcolor=white
 		}
 
 		CloseStyle
 		{
-		bgcolor=none
-    render_bg
-		{
-      0="image( x0, y0, x1, y1, graphics/win32_win_close )"
-    }
-
+			inset-left="9 3 0 0"
+			bgcolor=none
+			image="graphics/fluent/icons/caption/close"
 		}
 
 		CloseStyle:hover
 		{
-      render_bg {
-        0="fill( x0, y0+1, x1-1, y1, white12 )"
-        1="image( x0, y0, x1, y1, graphics/win32_win_close )"
-      }
+			bgcolor=white12
 		}
 
 		CloseStyle:active
-    {
-			render_bg {
-				0="fill( x0, y0+1, x1-1, y1, white24 )"
-				1="image( x0, y0, x1, y1, graphics/win32_win_close )"
-			}
-    }
+		{
+			bgcolor=white24
+		}
 	}
 
 	layout
 	{
 		place { control="emailreminderbarlabel,emailreminderbaremail_email,emailreminderbar_yesbutton,emailreminderbar_nobutton,emailreminderbar_infolink" align=top-center margin-top=-1 height=40 spacing=8 }
-
-		place { control="emailreminderbar_close" align=right width=33 height=27 margin-top=-1 margin-right=-1 }
+		place { control="emailreminderbar_close" align=right width=40 height=40 margin-top=-1 margin-right=-1 }
 
 		//Hidden
-
-		place { control="emailreminderbar_info" width=0 height=0 }
+		place { control="emailreminderbar_info" width=1 margin-left=-999 }
 	}
-
 }

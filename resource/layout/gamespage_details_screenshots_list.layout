@@ -4,7 +4,7 @@
 	{
 		screenshotsarea { controlname="CScreenshotsPanel" style="screenshotsarea" }
 
-		screenshotslabelmore { controlname="Label" style="Button" labeltext="#Steam_MoreScreenshots" textAlignment="center" tooltiptext="#Steam_ViewAllScreenshots"}
+		screenshotslabelmore { controlname="Label" style="screenshotslabelmore" labeltext="#Steam_MoreScreenshots" textAlignment="center" tooltiptext="#Steam_ViewAllScreenshots"}
 	}
 
 	colors
@@ -28,19 +28,22 @@
 	{
 		infolabel
 		{
-			font-size=16
 			textcolor=White
 		}
 
-    screenshotslabelmore
-    {
-			textcolor=none
-    }
+		//Hidden
+		screenshotslabelmore
+		{
+			inset-left=-999
+			textcolor="none"
+			bgcolor="none"
+			render_bg{}
+		}
 	}
 
 	layout
 	{
-		region { name=body margin=0 width=max height=max }
-		place { control=screenshotslabelmore height=0 width=0 }
+		//Hidden
+		place { control=screenshotslabelmore align=right }
 	}
 }

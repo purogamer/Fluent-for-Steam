@@ -48,7 +48,7 @@
 		{
 			render_bg
 			{
-				0="image(x0,y0+8,x1,y1, graphics/metro/labels/settings/inhomestreaming)"
+				0="image(x0,y0+8,x1,y1, graphics/fluent/labels/settings/inhomestreaming)"
 			}
 		}
 

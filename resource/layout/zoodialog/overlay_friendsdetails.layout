@@ -41,7 +41,7 @@
 		detailsboxtitle
 		{
 			bgcolor=none
-			image=graphics/metro/overlay/icons/friends
+			image=graphics/fluent/overlay/icons/friends
 		}
 		Button
 		{
@@ -56,7 +56,7 @@
 			padding-left=16
 			render
 			{
-				0="image(x0,y0+5,x1,y1,graphics/metro/overlay/icons/globe)"
+				0="image(x0,y0+5,x1,y1,graphics/fluent/overlay/icons/globe)"
 			}
 		}
 		Button:hover

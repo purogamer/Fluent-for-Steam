@@ -2,16 +2,15 @@
 {
 	controls
 	{
+		Sheet { controlname="PropertySheet" }
 	}
 
 	layout
 	{
-		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
-		place { control="frame_captiongrip" width=max height=54 }
-
 		//Bottom
 		region { name=bottom align=bottom height=44 margin=8 }
 		place {	control="OKButton" region=bottom align=right spacing=8 height=28 width=84 }
 
+		place { control="Sheet" x=8 y=26 height=max width=max margin-bottom=41 margin-right=8 }
 	}
 }

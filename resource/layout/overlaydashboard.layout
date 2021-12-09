@@ -2,151 +2,85 @@
 {
 	controls
 	{
-		BaseDashboardPanel
-		{
-			controlname="EditablePanel"
-			style="overlaymain"
-		}
-		TaskbarPanel
-		{
-			controlname="EditablePanel"
-		}
-		TopFadePanel
-		{
-			controlname="EditablePanel"
-			style=topfade
-			zpos=-1
-			mouseinputenabled=0
-		}
-		BottomFadePanel
-		{
-			controlname="EditablePanel"
-			style=bottomfade
-			zpos=-1
-		}
-		Clock
-		{
-			controlname="Label"
-			labeltext="10:43"
-			style=topbar
-		}
-		ClockSuffix
-		{
-			controlname="Label"
-			labeltext="am"
-			style=clocksuffix
-		}
-		GameName
-		{
-			controlname="Label"
-			labeltext="%gamename%"
-			style=topbar
-			textalignment=east
-		}
-		PowerMeterDim
-		{
-			controlname=	"ImagePanel"
-			image=			"resource/battery_dim"
-		}
-		PowerMeterBright
-		{
-			controlname=	"ImagePanel"
-			image=			"resource/battery_bright"
-		}
+		BaseDashboardPanel { controlname="EditablePanel" style="overlaymain" }
+		TaskbarPanel { controlname="EditablePanel" }
+		TopFadePanel { controlname="EditablePanel" style=topfade zpos=-1 mouseinputenabled=0 }
+		BottomFadePanel { controlname="EditablePanel"	style=bottomfade zpos=-1 }
 
+		GameName { controlname="Label" labeltext="%gamename%" style=topbar textalignment=east }
+		PowerMeterDim { controlname="ImagePanel" image="resource/battery_dim" }
+		PowerMeterBright { controlname="ImagePanel" image="resource/battery_bright" }
 		CloseButton	{ controlname="URLLabel" labeltext="#Overlay_Taskbar_Close" style="OverlayURLLabel"}
-		HotkeyLabel { controlname="Label" labeltext="%hotkey%" style="hotkey" }
+		HotkeyLabel { controlname="Label" labeltext="%hotkey%" style="hotkey" }	
 		HotkeyExplain { controlname="Label" labeltext="#Overlay_Hotkey_Explain" margin-left=4 style="LabelOverlay"}
-
-		SessionText { controlname=label style=TimeStrings labeltext="#Overlay_Playtime_Session" }
-		TwoWeeksText { controlname=label style=TimeStrings }
-		ForeverText { controlname=label style=TimeStrings }
 	}
 
 	colors
 	{
-		backgroundOverlayTop="0 0 0 127.5"
+		backgroundOverlayTop="38 37 35 140"
+		Highlight2="80 154 191 255" 
 	}
 
 	styles
 	{
 		overlaymain
 		{
-			bgcolor = "0 0 0 127.5"
+			bgcolor = "OverlayBackground"
 		}
 
-		//Back Button
-		OverlayURLLabel
-		{
-			image=graphics/metro/overlay/icons/close
-			textcolor=none
-		}
-
-		OverlayURLLabel:hover
-		{
-			image=graphics/metro/overlay/icons/close_h
-		}
-
-		TopFade
-		{
-			textcolor=none
-			render
-			{
-			}
-		}
-
-		hotkey
-		{
-			font-size=20
-			textcolor=White45
-		}
-
+		//Game Name
 		topbar
 		{
+			textcolor=OverlayClock
 			font-family=light
-			font-size=64
-			textcolor=White
 			font-style=regular
 		}
-
-		clocksuffix
+		//Close Button
+		OverlayURLLabel
 		{
-			font-family=light
-			font-size=64
-			textcolor=White
-			font-style=regular
-			font-style=uppercase
+			textcolor="none"
+			bgcolor="none"
 		}
-
-		timeStrings
+		OverlayURLLabel:hover
 		{
-			font-family=basefont
-			font-size=24
-			textcolor=White
-			font-style=regular
+			bgcolor=OverlayHover05
 		}
-
-		bottomfade
+		//Hidden
+		LabelOverlay
 		{
+			textcolor="none"
+		}
+		hotkey
+		{
+			textcolor="none"
 		}
 	}
 
 	layout
 	{
-		//Close
-		place { control="CloseButton" x=30 y=45 width=26 height=26 }
+		region { name=overlay width=1010 align=top-center margin-top=10 margin-bottom=10 }
 
-		//Time Panel
-		place { control="clock,clocksuffix" align=top-center y=20 }
-		place { control="SessionText" align=top-center start=clock dir=down }
+		region { name="left" region=overlay width=400 height=max margin-top=10 align=left }
+		region { name="mid" region=overlay width=400 height=max margin-top=2 align=top-center }
+		region { name="right" region=overlay width=400 height=max margin-top=10 align=right }
 
-		//Links
-		place { control="TaskbarPanel" align=right width=500 height=115 }
+		region { name="detailpanels" region=overlay align=bottom width=max height=360 margin-bottom=100 }
+		region { name="topbar" region=overlay width="max" height=50 }
+		region { name="taskbar" region=overlay width="max" height=75 align=bottom }
+		region { name="above_taskbar" region=overlay align=bottom width=max height=110 margin-bottom=75 }
+		region { name="powermeter" region=above_taskbar align=right width=200 }
 
-		//Battery Indicator
-		place { control="PowerMeterDim" region=overlay align=left width=95 }
+		place { control="TopFadePanel" align=top width=max height=600 }
+		place { control="BottomFadePanel" align=bottom width=max height=130 }
+
+		place { controls="gamename" region=topbar align=right width=400 }
+
+		place { control="PowerMeterDim" region=powermeter align=right }
+		place { control="CloseButton" region=overlay width=270 height=160 }
+
+		place { control="TaskbarPanel" region=taskbar height=64 width=max }
 
 		//Hidden
-		place { control="BottomFadePanel,HotkeyExplain,gamename,HotkeyLabel,TopFadePanel,TwoWeeksText,ForeverText" width=0 height=0 }
+		place { control="HotkeyLabel,HotkeyExplain" }
 	}
 }

@@ -1,12 +1,12 @@
-"resource/layout/overlaydesktop_lores.layout"
+resource/layout/overlaydesktop_lores.layout 
 {
 	controls
 	{
 		BaseDesktopPanel
-		{ 
+		{
 			controlname="EditablePanel"
 		}
-		
+
 		GameHubButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_GameHub" style=sidemenu }
 		GameGroupsButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_GameGroups" style=sidemenu }	
 		ChatRoomButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_ChatRoom" style=sidemenu }	
@@ -18,66 +18,84 @@
 		ForumsButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_Forums" style=sidemenu }	
 		RecommendButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_Recommend" style=sidemenu }	
 		WorkshopButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_Workshop" style=sidemenu }	
-		
+
 		FriendsButton {	controlname="URLLabel" labeltext="#Overlay_Taskbar_Friends" style=sidemenu }
 		PlayersButton {	controlname="URLLabel" labeltext="#Overlay_Taskbar_Players" style=sidemenu }
 		AchievementsButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_Achievements" style=sidemenu }				
 		ScreenshotsButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_Screenshots" style=sidemenu }
 	}
-	
+
 	colors
 	{
 	}
-	
+
 	styles
 	{
 		sidemenu
 		{
-			font-size=14
-			textcolor=White75
+			textcolor=OverlaySideButtons_c
+			font-family=semibold
+			font-style=regular
+			font-size=18
+			font-size=16 [$OSX||$LINUX]
+			bgcolor=ClientBG
+			render_bg
+			{
+				0="fill( x0, y0, x1, y0+1, frameBorder )"		// Top
+				1="fill( x0, y1-1, x1, y1, frameBorder )"		// Bottom
+				2="fill( x0, y0+1, x0+1, y1-1, frameBorder )"	// Left
+				3="fill( x1-1, y0+1, x1, y1-1, frameBorder )"	// Right
+			}
+			padding=5
 		}
-		
 		sidemenu:hover
 		{
-			font-size=14
-			textcolor=White
+			textcolor=Focus
+			font-style=underline
+			font-size=18
+			font-size=16 [$OSX||$LINUX]
 		}
+		// The Clock
 		topbar
 		{
+			textcolor=OverlayClock
 			font-family=light
-			font-size=32
-			textcolor=White
 			font-style=regular
+			font-size=64
+			font-size=52 [$OSX||$LINUX]
 		}
-
+		// AM, PM
 		clocksuffix
 		{
+			textcolor=OverlayClock
 			font-family=light
-			font-size=32
-			textcolor=White
-			font-style=regular
 			font-style=uppercase
 		}
-		
+		// Session, Weeks, Total
 		timeStrings
 		{
+			textcolor=OverlayClock
 			font-family=basefont
-			font-size=12
-			textcolor=White
 			font-style=regular
 		}
 	}
-	
 	layout
 	{
-		//Time Panel
-		place { control="clock,clocksuffix" align=top-center y=20 }
-		place { control="SessionText" align=top-center start=clock dir=down }
+		region { name=overlay height=max width=max margin-left=16 margin-right=16 }
+		region { name=broadcast height=100 width=max margin-bottom=8 margin-right=8 align=bottom }
 
-		place { controls="GameHubButton,GameGroupsButton,ChatRoomButton,DLCButton,GuideButton,GuidesButton,LegacyCDKeyButton,WebSiteButton,ForumsButton,RecommendButton,WorkshopButton,FriendsButton,PlayersButton,AchievementsButton,ScreenshotsButton" y=128 align=right dir=down spacing=10 margin-right=10 }
-		
+		place { control=FriendsButton,WorkshopButton,ScreenshotsButton,PlayersButton,AchievementsButton,DLCButton,ForceQuitButton,EditControllerConfig  region=overlay x=6 y=144 height=30 spacing=8 align=left }
+		place { control=GameGroupsButton,ForumsButton,WebSiteButton region=overlay x=6 y=200 height=30 spacing=8 align=left dir=down }
+		place { control=GuideButton,GuidesButton,GameHubButton,LegacyCDKeyButton,RecommendButton,ChatRoomButton x=130 y=200 region=overlay height=30 spacing=8 align=left dir=down }
+
+		place { control="clock" align=left x=16 y=20 margin-left=16 }
+		place { control="clocksuffix" start=clock x=-10 y=6 }
+		place { control="SessionText" align=left x=-10 start=clock dir=down }
+
+		place { control=BroadcastDetailPanel region=broadcast height=106 } //align left it's a must because the chat spawns at the end-right of it
+
 		//Hidden
-		place { control="TwoWeeksText,ForeverText" width=0 height=0 }
-
-	}	
+		place { control="TwoWeeksText" margin-left=-999 }
+		place { control="ForeverText" margin-left=-999 }
+	}
 }

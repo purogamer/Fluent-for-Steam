@@ -14,14 +14,14 @@
 		// commands below for layout to work correctly.
 
 		// ImageAreaSpacing must be the spacing between achievement images
-		GameDetailsAchievements.ImageAreaSpacing "0"
+		GameDetailsAchievements.ImageAreaSpacing "2"
 
 		// ImageWidth must be the width of an achievement image in the display
 		GameDetailsAchievements.ImageWidth "36"
 
 		// Size of the border around locked achievement images
 		GameDetailsAchievements.LockedImageBorder "5"
- 
+
 		Tooltip.Anchor=Parent
 	}
 
@@ -31,41 +31,34 @@
 		{
 			minimum-height="40"
 		}
-
-		infolabel
-		{
-			image=graphics/achievement_locked
-			padding-left=12
-		}
-
-    achievementlabelmore
-    {
-			font-family=basefont
-			font-weight=300
-			font-size=16
-			textcolor="White75"
-			padding-bottom=1
-    }
-  
-		achievementlabelmore:hover
-    {   
-			textcolor=white
-    }
-
 		achievementimagebg
 		{
-			bgcolor=none
 			inset="0 0 0 0"
-      image=graphics/avatarBorderOffline
+			bgcolor="none"
+			image=graphics/achievementbg
 		}
-	
+
+		//Hidden
+		infolabel
+		{
+			textcolor="none"
+			bgcolor="none"
+		}
+		achievementlabelmore
+		{
+			inset-left=-999
+			textcolor="none"
+			bgcolor="none"
+			render_bg{}
+		}
 	}
 
 	layout
 	{
-		place { control=*achievementimage start=imageexplanation dir=right width=40 height=40 x=0 spacing=0 }
+		place { control=*achievementimage dir=right width=40 height=40 x=0 spacing=0 }
 
 		//Hidden
-		place { control=imageexplanation,achievementname,*achievementlabelmore height=0 width=0 }		
+		place { control=imageexplanation width=1 align=right }
+		place { control=achievementlabelmore align=right }
 	}
 }

@@ -155,7 +155,7 @@
 			inset-right=100
 			render_bg
 			{
-				0="image( x0+8, y0, x1, y1, graphics/metro/icons/screenshots )"
+				0="image( x0+8, y0, x1, y1, graphics/fluent/icons/screenshots )"
 			}
 		}
 		

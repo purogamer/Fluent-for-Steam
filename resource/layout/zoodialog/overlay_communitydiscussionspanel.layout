@@ -27,18 +27,18 @@
 		Button
 		{
 			bgcolor=none
-			image=graphics/metro/overlay/icons/discussions
+			image=graphics/fluent/overlay/icons/discussions
 			inset-left=-6
 		}
 		
 		Button:hover
 		{
-			image=graphics/metro/overlay/icons/discussions_h		
+			image=graphics/fluent/overlay/icons/discussions_h		
 		}
 	
 		Button:active
 		{
-			image=graphics/metro/overlay/icons/discussions_p		
+			image=graphics/fluent/overlay/icons/discussions_p		
 		}
 	}
 	

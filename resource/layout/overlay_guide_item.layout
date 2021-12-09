@@ -15,33 +15,30 @@
 	{
 		name
 		{
-			textcolor=White35
+			textcolor=White
 			font-style="none"
-			font-size=18
 		}
 		name:hover
 		{
-			textcolor=White
+			font-style="underline"
 		}
 		Background
 		{
-			bgcolor="none"
+			bgcolor=white03
 		}
 		IconBackground
 		{
-			render
-			{
-			 0="image(x0,y0,x1,y1,graphics/metro/overlay/image_border)"
-			}
+			bgcolor=Black
 		}
 	}
 
 	layout
-	{		
-		place { control="Background" width=max height=max }
-		place { control=IconBackground align=right y=16 width=36 height=36 }
-		place { control=icon align=right y=16 width=36 height=36 }
-		region { name=container margin-left=16 margin-right=48 }
-		place { control=name region=container align=right x=16 y=24 }
+	{
+		region { name=body width=max height=max }
+		
+		place { control="Background" region=body x=0 y=0 width=max height=max }
+		place { region=body control=IconBackground y=0 x=0 width=40 height=40 }
+		place { region=body control=icon y=0 x=0 width=40 height=40 }
+		place { region=body control=name y=0 x=48 height=max width=max }
 	}
 }

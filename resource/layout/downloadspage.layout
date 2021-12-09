@@ -2,12 +2,29 @@
 {
 	controls
 	{
+		"DownloadsPage"
+		{
+			"ControlName"		"CDownloadsPage"
+			Style=DownloadsPageStyle
+		}
+		"downloadsummarypanel"
+		{
+			"ControlName"	"DownloadSummaryPanel"
+		}
+		"panel_list"
+		{
+			"ControlName"	"SectionedListPanel"
+			Style=ListPanelStyle
+		}
 	}
-
 	styles
 	{
+		DownloadsPageStyle
+		{
+			bgcolor="none"
+			render{}
+		}
 	}
-
 	layout
 	{
 		place { control="downloadsummarypanel,panel_list" dir=down width=max height=max spacing=0 }

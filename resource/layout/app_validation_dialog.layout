@@ -3,31 +3,16 @@
 	controls
 	{
 		app_validation_dialog { wide=360 tall=216 }
-		
 		Label1	{	controlname=label labelText="#Steam_ValidatingSteamCaches" }
 		ProgressBar1 { controlname=ProgressBar variable=progress }
 		Button1	{ controlname=Button labelText="#vgui_Cancel" Command="Close"	selected=0	}
-		
 	}
-	
-	colors
-	{
-	}
-	
-	styles
-	{
-
-	}
-
 
 	layout
 	{
-		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
-
-		place { controls=Label1 x=20 y=80 width=320 height=24 }
-		place { controls=ProgressBar1 x=20 y=110 width=320 height=24 }
+		place { controls=Label1,ProgressBar1 x=20 y=80 width=320 height=24 dir=down spacing=4 }
 
 		region { name=bottom align=bottom height=44 margin=8 }
-		place { control="Button1" region=bottom align=right height=28 width=84 spacing=8 }
+		place { control="Button1" region=bottom align=right height=28 width=84 }
 	}
 }

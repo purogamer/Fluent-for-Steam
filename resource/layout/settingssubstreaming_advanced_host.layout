@@ -14,7 +14,7 @@
 		"EnableHardwareEncodingIntel" { ControlName="CheckButton" fieldName="EnableHardwareEncodingIntel" labelText="#Steam_Settings_Streaming_EnableHardwareEncodingIntel" }
 
 		"SoftwareEncodingThreadsLabel" { ControlName="Label" fieldName="SoftwareEncodingThreadsLabel" wrap=1 labelText="#Steam_Settings_Streaming_SoftwareEncodingThreads_Description" }
-		"SoftwareEncodingThreads" { ControlName="ComboBox" fieldName="SoftwareEncodingThreads" style="ResolutionLimit" editable="0" }
+		"SoftwareEncodingThreads" { ControlName="ComboBox" fieldName="SoftwareEncodingThreads" style="ResolutionLimit" editable="0" width=50}
 
 		"EnableTrafficPriorityLabel" { ControlName="Label" fieldName="EnableTrafficPriorityLabel" wrap=1 labelText="#Steam_Settings_Streaming_EnableTrafficPriority_Description" }
 		"EnableTrafficPriority" { ControlName="CheckButton" fieldName="EnableTrafficPriority" labelText="#Steam_Settings_Streaming_EnableTrafficPriority" }

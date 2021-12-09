@@ -9,15 +9,58 @@
 			"scaling"						fit
 		}
 	}
-
-	layout
+	styles
 	{
-		place
+		EditablePanel
 		{
-			control = image
-			width = max
-			height = max
+			inset-top=6
+			inset-left=9
+		}
+		"GameItem_Installed EditablePanel"
+		{
+			render
+			{
+				1="fill( x0, y0+6, x0+3, y1, gridInstalled )"
+			}
+		}
+		"GameItem_Running EditablePanel"
+		{
+			render
+			{
+				1="fill( x0, y0+6, x0+3, y1, gridRunning )"
+			}
+		}
+		"GameItem_unInstalled EditablePanel"
+		{
+			render
+			{
+				1="fill( x0, y0+6, x0+3, y1, gridUninstalled )"
+			}
+		}
+		"GameItem_Updating EditablePanel"
+		{
+			render
+			{
+				1="fill( x0, y0+6, x0+3, y1, gridUpdating )"
+			}
+		}
+		"GameItem_Shortcut EditablePanel"
+		{
+			render
+			{
+				1="fill( x0, y0+6, x0+3, y1, gridShortcut )"
+			}
+		}
+		"GameItem_Mod EditablePanel"
+		{
+			render
+			{
+				1="fill( x0, y0+6, x0+3, y1, gridMod )"
+			}
 		}
 	}
+	layout
+	{
+		place{ control=image width=max height=max align=right }
+	}
 }
-

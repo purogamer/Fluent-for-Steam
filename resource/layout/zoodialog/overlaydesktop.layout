@@ -33,13 +33,13 @@
 	{
 		sidemenu
 		{
-			image=graphics/metro/overlay/icons/workshop
+			image=graphics/fluent/overlay/icons/workshop
 			textcolor=none
 		}
 
 		sidemenu:hover
 		{
-			image=graphics/metro/overlay/icons/workshop_h
+			image=graphics/fluent/overlay/icons/workshop_h
 		}
 		topbar
 		{

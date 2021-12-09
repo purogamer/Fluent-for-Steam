@@ -23,7 +23,7 @@
         2="fill( x0 + 0, y0 + 1, x0 + 1, y1 + 0, FrameBorder )"	// Left
         3="fill( x1 - 1, y0 + 1, x1 + 0, y1 - 1, FrameBorder )"	// Right
 
-				4="image(x0+16,y0+48,x1,y1,graphics/metro/labels/settings/sidebar/settings)"
+				4="image(x0+16,y0+48,x1,y1,graphics/fluent/labels/settings/sidebar/settings)"
 				
         5="fill(x0+178,y1-44,x1-8,y1-43,White12)"	// Right
 			}

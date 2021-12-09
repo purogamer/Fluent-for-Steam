@@ -1,0 +1,7 @@
+"steam/cached/tradedialog.layout"
+{
+	layout
+	{
+		place { controls="HTML" width=max height=max margin-top=40 }
+	}
+}

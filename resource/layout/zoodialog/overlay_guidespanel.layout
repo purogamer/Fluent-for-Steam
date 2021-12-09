@@ -35,18 +35,18 @@
 		Button
 		{
 			bgcolor=none
-			image=graphics/metro/overlay/icons/guides
+			image=graphics/fluent/overlay/icons/guides
 			inset-left=-6 
 		}
 		
 		Button:hover
 		{
-			image=graphics/metro/overlay/icons/guides_h		
+			image=graphics/fluent/overlay/icons/guides_h		
 		}
 	
 		Button:active
 		{
-			image=graphics/metro/overlay/icons/guides_p		
+			image=graphics/fluent/overlay/icons/guides_p		
 		}
 	}
 	

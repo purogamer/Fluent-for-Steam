@@ -4,13 +4,23 @@
 	{
 		Button
 		{
-			bgcolor=white12
+			bgcolor=ClientBG
 			font-family=basefont
 			textcolor="White"
+			render_bg {
+				  
+				0="fill(x0,y1-1,x1,y1+2, focus)"  // bottom
+				
+			}
 		}
 		Button:hover
 		{
 			bgcolor=white24
+		    render_bg {
+				  
+				0="fill(x0,y1-1,x1,y1+2, focus)"  // bottom
+				
+			}
 		}
 		Button:active
 		{
@@ -179,20 +189,20 @@
 			bgcolor="none"
 			render_bg
 			{
-				1="fill(x0,y0,x1,y0+1,white12)"  // top
-				2="fill(x0,y1-1,x1,y1,white12)"  // bottom
-				3="fill(x0,y0+1,x0+1,y1-1,white12)"  // left
-				4="fill(x1-1,y0+1,x1,y1-1,white12)"  // right
+				1="fill(x0,y0,x1,y0+1,none)"  // top
+				2="fill(x0,y1-1,x1,y1+2,focus)"  // bottom
+				3="fill(x0,y0+1,x0+1,y1-1,none)"  // left
+				4="fill(x1-1,y0+1,x1,y1-1,none)"  // right
 			}
 		}
 		ComboBox:hover
 		{
 			render_bg
 			{
-				1="fill(x0,y0,x1,y0+1,white24)"  // top
-				2="fill(x0,y1-1,x1,y1,white24)"  // bottom
-				3="fill(x0,y0+1,x0+1,y1-1,white24)"  // left
-				4="fill(x1-1,y0+1,x1,y1-1,white24)"  // right
+				1="fill(x0,y0,x1,y0+1,none)"  // top
+				2="fill(x0,y1-1,x1,y1+2,focus)"  // bottom
+				3="fill(x0,y0+1,x0+1,y1-1,none)"  // left
+				4="fill(x1-1,y0+1,x1,y1-1,none)"  // right
 			}
 		}
 		ComboBox:disabled
@@ -200,10 +210,10 @@
 			textcolor="White50"
 			render_bg
 			{
-				1="fill(x0,y0,x1,y0+1,white12)"  // top
-				2="fill(x0,y1-1,x1,y1,white12)"  // bottom
-				3="fill(x0,y0+1,x0+1,y1-1,white12)"  // left
-				4="fill(x1-1,y0+1,x1,y1-1,white12)"  // right
+				1="fill(x0,y0,x1,y0+1,none)"  // top
+				2="fill(x0,y1-1,x1,y1+2,focus)"  // bottom
+				3="fill(x0,y0+1,x0+1,y1-1,none)"  // left
+				4="fill(x1-1,y0+1,x1,y1-1,none)"  // right
 			}
 		}
 		ComboBox:focus

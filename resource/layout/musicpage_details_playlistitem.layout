@@ -2,63 +2,51 @@
 {
 	controls
 	{	
-		PositionLabel	{	controlname=Label	style="PositionLabelStyle"	labeltext=""	textalignment="east" }
+		PositionLabel { controlname=Label style="PositionLabelStyle" labeltext="" textalignment="east" }
 		TrackLabel { controlname=Label style="TrackLabelStyle" labeltext="" }
 	}
 
 	styles
 	{
-		PositionLabelStyle	
+		PositionLabelStyle
 		{ 
+			textcolor=White75
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			bgcolor="none"
 			padding-left=0
-			padding-bottom=10
 			padding-top=10
-			font-size=16
-			textcolor=White75
-			font-family=basefont
-			font-weight=400 
-			bgcolor=none
-			render_bg
-			{
-				0="fill(x0,y0-1,x1,y0,White08)"
-			}			
+			padding-bottom=10
 		}
-		
-		TrackLabelStyle 
-		{ 
-			padding-left=10
-			padding-bottom=10
-			padding-top=10
-			font-size=16
+
+		TrackLabelStyle
+		{
 			textcolor=White75
 			font-family=basefont
-			font-weight=400 
-			bgcolor=none
+			font-size=16
+			font-weight=400
+			bgcolor="none"
 			render_bg
 			{
 				0="fill(x0,y1-1,x1,y1,White08)"
 			}
+			padding-left=10
+			padding-top=10
+			padding-bottom=10
 		}
-		
 		TrackLabelStyle:hover
-		{ 
-			bgcolor=white03
-		}
-		
-		TrackStyle:active
 		{
-			textcolor=white
-			bgcolor=focus
+			bgcolor=white05
+			textcolor=White
 		}
 	}
-	
-	
+
 	layout
 	{
 		region { name=panelregion width=max }
-		
-		place {	control="PositionLabel" width=24 region="panelregion"  }
-		place {	control="TrackLabel" x=32 region="panelregion" width=max }
+
+		place {	region="panelregion" control="PositionLabel" width=24 }
+		place {	region="panelregion" control="TrackLabel" x=32 width=max }
 	}
-	
 }

@@ -22,40 +22,35 @@
 	{
 		title_label
 		{
-			textcolor="White"
+			textcolor=titleNewsPanel
+			bgcolor=bgTitleNewsPanel
 			font-family=semibold
-			font-size=18
 		}
-
 		date_and_author
 		{
+			textcolor=textAuthorNewsPanel
+			bgcolor=bgAuthorNewsPanel
 		}
-
 		newsitem_body
 		{
-			textcolor=White75
+			textcolor=textNewsPanel
 		}
-		
 		"newsitem_body url"
 		{
-			textcolor=white75
+			textcolor=urlTextNewsPanel
 		}
-		
 		"newsitem_body url:hover"
 		{
-			textcolor="White"
+			textcolor=urlTextNewsPanel_a
 		}
-		
 		"newsitem_body bold"
 		{
 			font-family=semibold
-			textcolor=focus
+			textcolor=boldTextNewsPanel
 		}
-		
 		more_link
 		{
 		}
-		
 		more_link:hover
 		{
 		}

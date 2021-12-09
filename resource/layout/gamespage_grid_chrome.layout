@@ -43,76 +43,63 @@
 
 	styles
 	{
-		
 		ChromeBorderItem
 		{
-			bgcolor=Black75
+			bgcolor=none
+			render
+			{
+				0="fill( x0+9, y0, x1-6, y0+56, black75 )"
+     		 }
 		}
 
-		GridNavDivider
-		{
-			textcolor=none
-			bgcolor=none
-		}
-		
 		"GameItem_Uninstalled CUILaunchButton"
 		{
 			image=graphics/install
 		}
-		
 		"GameItem_Uninstalled CUILaunchButton:hover"
 		{
 			image=graphics/install_h
 		}
-		
 		"GameItem_Uninstalled CUILaunchButton:active"
 		{
 			image=graphics/install_p
 		}
-		
 		"GameItem_Uninstalled CUILaunchButton:disabled"
 		{
 			image=graphics/install_d
 		}
-		
+
 		CUILaunchButton
 		{
-			image=graphics/play     
+			image=graphics/play
 		}
-
 		CUILaunchButton:hover
-		{   
+		{
 			image=graphics/play_h
 		}
-		
 		CUILaunchButton:active
-		{ 
+		{
 			image=graphics/play_p
 		}
-		
 		CUILaunchButton:disabled
-		{   
+		{
 			image=graphics/play_d
 		}
-		
-			CUIDetailsButton
-		{     
+
+		CUIDetailsButton
+		{
 			image=graphics/details
 		}
-		
 		CUIDetailsButton:hover
-		{   
+		{
 			image=graphics/details_h
-
 		}
-		
 		CUIDetailsButton:active
-		{   
+		{
 			image=graphics/details_a
 		}
-		
 		CUIDetailsButton:disabled
-		{   
+		{
 			image=graphics/details_d
 		}
 
@@ -120,15 +107,21 @@
 		{
 			textcolor="White"
 		}
+
+		//Hidden
+		GridNavDivider
+		{
+			textcolor=none
+			bgcolor=none
+		}
 	}
 
-	
 	layout
 	{
-		place { control=chromeborder height=56 align=left-center width=max height=max }
+		region { name=center height=max width=96 align=top-center  }
 
-		place { control="launch,details" align=top-center spacing=16 margin-top=0 height=max width=40 }
-		
-		place { control=divider width=0 height=0 }
+		place { control=divider align=left-center }
+		place { start=divider y=-8 control=chromeborder width=max align=right }
+		place { region=center control="launch,details" height=40 width=40 align=left-center spacing=16 }
 	}
 }

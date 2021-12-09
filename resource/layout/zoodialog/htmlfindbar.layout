@@ -38,22 +38,22 @@
 			inset="-6 0 0 0"
 			render_bg{}
 			bgcolor=none
-			image="graphics/metro/icons/navbar/forward"
+			image="graphics/fluent/icons/navbar/forward"
 		}
 
 		NextButtonSm:hover
 		{
-			image="graphics/metro/icons/navbar/forward_h"
+			image="graphics/fluent/icons/navbar/forward_h"
 		}
 		
 		NextButtonSm:active
 		{
-			image="graphics/metro/icons/navbar/forward_p"
+			image="graphics/fluent/icons/navbar/forward_p"
 		}
 		
 		NextButtonSm:disabled
 		{
-			image="graphics/metro/icons/navbar/forward_d"
+			image="graphics/fluent/icons/navbar/forward_d"
 		}
 
 		PrevButtonSm
@@ -61,22 +61,22 @@
 			inset="-6 0 0 0"
 			render_bg{}
 			bgcolor=none
-			image="graphics/metro/icons/navbar/back"
+			image="graphics/fluent/icons/navbar/back"
 		}
 
 		PrevButtonSm:hover
 		{
-			image="graphics/metro/icons/navbar/back_h"
+			image="graphics/fluent/icons/navbar/back_h"
 		}
 		
 		PrevButtonSm:active
 		{
-			image="graphics/metro/icons/navbar/back_p"
+			image="graphics/fluent/icons/navbar/back_p"
 		}
 		
 		PrevButtonSm:disabled
 		{
-			image="graphics/metro/icons/navbar/back_d"
+			image="graphics/fluent/icons/navbar/back_d"
 		}
 		
 		CloseButtonSm

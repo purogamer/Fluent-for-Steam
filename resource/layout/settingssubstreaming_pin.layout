@@ -18,12 +18,12 @@
 		Password
 		{
 			font-size=40
-			bgcolor="Header_Dark"
+			bgcolor="232 232 232 255"
 			minimum-height=50
 		}
 		Description
 		{
-			textcolor="White45"
+			textcolor = ACCENT
 			font-family=semilight
 		}
 		//Hidden

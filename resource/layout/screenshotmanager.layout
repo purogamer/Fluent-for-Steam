@@ -4,18 +4,17 @@
 	{
 		ScreenshotManager { title="#steam_screenshotsupload_title" style="CScreenshotManager" }
 
-		DarkRegionDetails { controlname="ImagePanel" style=DarkRegionDetails zpos="-1" }
-		SSDetails { controlname="ImagePanel" style=SSDetails }
+		SSDetails { controlname="ImagePanel" style=SSDetails scaling=fit}
 		SSDate { controlname="Label" labelText="%selected_ss_date%" }
 		SSSize { controlname="Label" labelText="#Overlay_Screenshots_Size_Cloud" }
 		SSSizeOriginal { controlname="Label" labelText="#Overlay_Screenshots_Size_Original" }
 
-		grid { alignment="left" interiorspacing=0 wwheelpct=50 style="WrapPanel" }
+		grid { alignment="left" interiorspacing=5 wheelpct=50 style="WrapPanel" }
 		view_screenshots { controlname="Button" labeltext="#Overlay_View_All_Screenshots" command="viewscreenshots" }
 		view_local_library_button { controlname="Button" labeltext="#Overlay_View_Local" command="viewlocallibrary" visible=0 }
 		selectorlabel { controlname="Label" labeltext="#Overlay_Screenshots_Show" }
 
-		spoiler_checkbox { controlname="CheckButton" labeltext="#Overlay_Tag_As_Potential_Spoiler" visible=0  }		
+		spoiler_checkbox { controlname="CheckButton" labeltext="#Overlay_Tag_As_Potential_Spoiler" visible=0 }
 		publish_button { controlname="Button" labeltext="#Overlay_Publish" command="askpublishscreenshot" visible=0 }
 		publish_caption { controlname="CScreenshotCaptionEntry" unicode=1 }
 		delete_button { controlname="Button" labeltext="#Overlay_Delete" command="askdeletescreenshot" visible=1 }
@@ -47,195 +46,162 @@
 
 		null_placer { controlname="Panel" visible=1 } // Used to bottom-right align things.
 	}
-	
+	colors
+	{
+	}
 	styles
 	{
-		TextEntry
+		CScreenshotManager
 		{
-			font-size=16
 		}
-		Label
+		ThumbnailUnpublished
 		{
-		textcolor=white75
+			render{}
 		}
-
+		ThumbnailPublished
+		{
+			render{}
+		}
 		ThumbnailSelected
 		{
 			render
 			{
 				// lines around
-        1="fill( x0+2, y0, x1, y0 + 2, focus )"  // top
-        2="fill( x0+2, y1-5, x1, y1-3, focus )"  // bottom
-        3="fill( x0+2, y0, x0+4, y1-3, focus )"  // left
-        4="fill( x1-1, y0, x1+1, y1-3, focus )"  // right
-				
+				1="fill( x0 + 2, y0 + 1, x0 + 4, y1 + 0, Focus )"  //left
+				2="fill( x1 + 1, y0 + 1, x1 + 3, y1 + 0, Focus )"  //right
+				3="fill( x0 + 2, y0 + 1, x1 + 3, y0 + 3, Focus )"  //top
+				4="fill( x0 + 2, y1 - 1, x1 + 3, y1 + 1, Focus )"  //btm
 				//Triangle
-				5="corner(x1-27,y0+2,x1-1,y0+3,focus)"
-				6="image( x1-15, y0+2, x1, y0, graphics/check_sp )"
+				5="corner(x1-26,y0+3,x1+1,y0+4,Focus)"
+				6="image( x1-14, y0+3, x1, y0+4, graphics/check_sp )"
 			}
 		}
-		
 		ThumbnailUploaded
 		{
-		}
-		
-		CScreenshotImageClickPanel
-		{
-		inset-left=1
-		render{}
-		render_bg
-		{
-			0="fill( x0+1,y0+1,x1,y1-2, black25 )"  // top
-		}
-		}
-		
-		CScreenshotManager
-		{
-			bgcolor="ClientBG"
-			render_bg
-			{
-				5="fill( x0, y0, x1, y0+40, FrameBorder )"
-				5="fill( x0, y0, x1, y0+39, Header_Dark )"
-				4="fill( x0, y1-40, x1, y1, FrameBorder )"
-				5="fill( x0, y1-39, x1, y1, Header_Dark )"
-			}
-		}
-
-		DarkRegionDetails
-		{
-			bgcolor="none"
+			render{}
 		}
 
 		SSDetails
 		{
 			minimum-width=320
 			minimum-height=240
-			bgcolor="black25"
+			bgcolor=black25
 		}
-
 		publishcaption
 		{
-			inset-top=4
-			inset-left=4
-			padding-right=30
+			textcolor=white75
 			render_bg
 			{
-				0="fill(x0,y0,x1,y1+0,TextEntry)"
-				1="image(x1-21,y0+1,x1,y1,steam/cached/icon_cloud_synced)"
+				0="image(x1-21,y0+1,x1,y1,steam/cached/icon_cloud_synced)"
 			}
 		}
-
-
 		publishcaptionprompt
 		{
 			textcolor="111 111 111 255"
 		}
-
 		publishcharsleft
 		{
 		}
-
 		publishcharsleft_toomanychars
 		{
-			textcolor="255 0 0 255"
+			textcolor=Red
 		}
 
 		WrapPanel
-		{			
-			bgcolor="none"
-
-			render_bg {
-			}
+		{
+			inset="3 1 2 2"
+			render_bg {}
 		}
-		
 		gameselector
 		{
-			bgcolor=none
-			inset-left=-800
-			inset-right=100
-			render_bg
-			{
-				0="image( x0+8, y0, x1, y1, graphics/metro/icons/screenshots )"
-			}
+			font-family=basefont
 		}
-		
 		gameselector:hover
 		{
-			bgcolor=white10
+			render_bg
+			{
+				1="fill(x0,y0,x1,y0+1,white12)"  // top
+				2="fill(x0,y1-1,x1,y1,white12)"  // bottom
+				3="fill(x0,y0+1,x0+1,y1-1,white12)"  // left
+				4="fill(x1-1,y0+1,x1,y1-1,white12)"  // right
+			}
 		}
-
 		ComboBoxButton
 		{
-			image=none
+			bgcolor="none"
+			render_bg{}
+			image="graphics/down_arrow"
 		}
-
+		ComboBoxButton:hover
+		{
+			bgcolor="none"
+			render_bg{}
+			image="graphics/down_arrow_p"
+		}
 		ScreenshotLoadingThrobber
 		{
 			minimum-width=100
 			minimum-height=75
-			bgcolor=black
+			bgcolor=Black
 		}
-
 		LargeSelectionCount
 		{
-			font-size=60
 			font-family=light
+			font-size=60
 			font-weight=300
 		}
-
 		NoSelectionTitle
 		{
-			font-size=32
+			textcolor=white
 			font-family=light
 			font-weight=300
-			textcolor=white
 		}
-
 		NoSelectionInstructions
 		{
-			font-size=16
 			font-family=basefont
 		}
 	}
-	
-	
 	layout
 	{
-		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
+		region { name="selectorbar" x=1 y=1 width=max height=39 margin-left=16 margin-top=6 margin-bottom=6 margin-right=80 }
+		region { name="details" align=right margin-right=8 margin-top=44 margin-bottom=8 margin-left=358 height=max }
+		region { name="list" margin-left=16 margin-right=16 margin-top=44 margin-bottom=50 width=max }
 
-		region { name="selectorbar" margin-left=0 margin-right=340 margin-top=0 height=40 }
-		place { control="selectorlabel" region="selectorbar" y=2 height=0 }
-		place { control="game_selector" x=8 height=39 width=150 }
-
-		region { name="details" align=right margin-right=8 margin-top=47 margin-bottom=8 width=335 height=max }
-		region { name="list" margin-left=0 margin-right=316 margin-top=-8 margin-bottom=35 width=max y=48 }
-
-		place {	control="grid" region="list" x=8 y=8  margin-bottom=5 margin-right=21 width=max height=max }
+		place { control=game_selector region=selectorbar width=max margin-right=200 }
+		place [$OSX] { control=game_selector region=selectorbar align=right width=max margin-left=200 }
+		place {	control="grid" region="list" dir=down x=0 y=0 width=340 height=max }
 		place { control="no_screenshots" region="list" y=50 align="top-center" }
 
-		place { control="DarkRegionDetails" region="details" x=0 y=0 width=max height=max z="-1" }
-		place { control="SSDetails" region="details" y=0 width=333 height=220 align="top-center"  }
+		//Screenshot Preview
+		place { control="SSDetails" region="details" y=0 width=max height=max margin-bottom=128 align="top-center" }
 
-		place { control="publish_caption" region="details" x=0 y=0 align=bottom margin-bottom=56 height=40 width=max  }
-		place { control="publish_charsleft" region="details" x=5 y=24 align=bottom margin-bottom=35 height=20 margin-right=5 }
+		//Screenshot Date|Size
+		place { control="SSDate" start="SSDetails" dir=down align=left margin-left=8 margin-top=2 }
+		place { control="SSSize,SSSizeOriginal" start="SSDate" margin-right=15 align=right dir=left }
 
-		place { control="null_placer" region="details" width=1 align=bottom }
-		place { control="spoiler_checkbox,delete_button,details_button,publish_button" start="null_placer" region="details" align=right x=5 margin-right=1 spacing=8 }
+		//Text Description
+		place { control="publish_caption" region="details" start=SSDate dir=down margin-top=2 margin-bottom=50 height=max margin-right=8 width=max }
+		place { control="publish_charsleft" start=publish_caption dir=down align=right margin-right=16 }
 
-		place { control="details_caption" region="details" align=bottom margin-bottom=57 height=40 width=333 margin-right=0 }
-		place { control="SSDate" start="details_caption" dir=down margin-left=4 align=left }
-		place { control="SSSize,SSSizeOriginal" start="SSDate" margin-right=12 align=right dir=left }
+		//Text Description Published
+		place { control="details_caption" region="details" start=SSDate dir=down margin-top=2 margin-bottom=50 width=max margin-right=8 }
 
-		place { control="multiselect_button,view_local_library_button,view_screenshots" x=9 align="bottom" margin-bottom=8 spacing=8 }
+		//Bottom
+		place { control="null_placer" region="details" x=20 width=1 align=bottom margin-bottom=2 }
+		place { control="multiselect_button,view_local_library_button,view_screenshots" x=9 height=26 align="bottom" margin-bottom=8 margin-right=8 spacing=6 end-right=null_placer }
+		place { control="spoiler_checkbox,delete_button,details_button,publish_button" start="null_placer" height=26 align=right x=5 margin-right=9 spacing=6 }
 
+		//Multiple Selections Panel
 		place { control="multi_img" region="details" y=80 align="top-center" }
 		place { control="multi_img_count" region="details" y=92 align="top-center" }
 		place { control="multi_img_selected" region=details y=180  align="top-center" }
 		place { control="multi_img_upload_size,multi_img_upload_size_info" region=details y=205 align="top-center" spacing=5 }
 		place { control="multi_img_storage_remaining,multi_img_storage_remaining_info" region=details y=220 align="top-center" spacing=5 }
 		place { control="multi_img_delete,multi_img_upload" region=details y=260 align="top-center" spacing=8 }
-
 		place { control="file_not_loaded_label" region="details" y=140 align="top-center" }
-		place { control="instr_no_selection_title,instr_no_selection" region="details" y=0 width=max margin-left=15 margin-right=15 dir=down spacing=16 }
+		place { control="instr_no_selection_title,instr_no_selection" region="details" y=0 width=max margin-left=15 margin-right=15 dir=down spacing=6 }
+
+		//Hidden
+		place { control=selectorlabel width=1 align=right }
 	}
 }

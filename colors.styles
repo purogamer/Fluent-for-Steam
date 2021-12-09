@@ -60,8 +60,8 @@
 
 /////////////////////////////////////
 //======Base Background Color======//
-		ClientBG="26 26 26 255"
-		ClientBGTransparent="43 43 43 191.25"
+		ClientBG="25 25 25 255" Colorpa
+		ClientBGTransparent="43 43 43 255"
 
 
 /////////////////////////
@@ -105,13 +105,13 @@
 
 ////////////////////////////////////
 //======Steam Windows Border======//
-		frameBorder="15 15 15 255"
+		frameBorder="none"
 		frameBorder_a=frameBorder
 
 
 //////////////////////////////////
 //======Top Bar Background======//
-		Header_Dark="20 20 20 255"
+		Header_Dark="none"
 
 ///////////////////////////////
 //======Top Bar Buttons======//

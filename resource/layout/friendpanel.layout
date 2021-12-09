@@ -31,23 +31,30 @@
 		{
 			style="NameInstanceStyle"
 		}
-
 		MobileStatusImage
 		{
 			style="MobileStatusStyle"
 			tooltiptext="#Friends_MobileStatus_Tooltip"
 		}
-
 		BigPictureStatusImage
 		{
 			style="BigPictureStatusStyle"
 			tooltiptext="#Friends_BigPictureStatus_Tooltip"
 		}
-
 		WebStatusImage
 		{
 			style="WebStatusStyle"
 			tooltiptext="#Friends_WebStatus_Tooltip"
+		}
+		VRStatusImage
+		{
+			style="VRStatusStyle"
+			tooltiptext="#Friends_VRStatusStatus_Tooltip"
+		}
+		VRStatusImageInGame
+		{
+			style="VRStatusStyleInGame"
+			tooltiptext="#Friends_VRStatusStatus_Tooltip"
 		}
 
 		StatusLabel
@@ -93,91 +100,129 @@
 		{
 			image="graphics/icon_status_web"
 			padding-left=4
+			padding-top=3
+			padding-bottom=4
 		}
-
+		WebStatusStyleInGame
+		{
+			image="graphics/icon_status_web_ingame"
+			padding-left=4
+			padding-top=3
+			padding-bottom=4
+		}
 		BigPictureStatusStyle
 		{
 			image="graphics/icon_status_bigpic"
 			padding-left=4
+			padding-top=3
+			padding-bottom=4
 		}
-
+		BigPictureStatusStyleInGame
+		{
+			image="graphics/icon_status_bigpic_ingame"
+			padding-left=4
+			padding-top=3
+			padding-bottom=4
+		}
 		MobileStatusStyle
 		{
 			image="graphics/icon_status_mobile"
 			padding-left=4
+			padding-top=4
+			padding-bottom=4
 		}
-
-    "CFriendPanel"
-    {
-      inset="4 1 0 0"
-			inset-right=10
-      bgcolor=none
-      font-family=basefont
-      font-size=14
-      font-weight=400
-      textcolor="White45"
-    }
-
+		MobileStatusStyleInGame
+		{
+			image="graphics/icon_status_mobile_ingame"
+			padding-left=4
+			padding-top=3
+			padding-bottom=4
+		}
+		VRStatusStyle
+		{
+			image="graphics/icon_vr_online"
+			padding-left=4
+			padding-top=3
+			padding-bottom=4
+		}
+		VRStatusStyleInGame
+		{
+			image="graphics/icon_vr_happy"
+			padding-left=4
+			padding-top=3
+			padding-bottom=4
+		}
+		"CFriendPanel"
+		{
+			inset="4 1 0 0"
+			//inset-right=10
+			font-family=basefont
+			font-weight=400
+			textcolor="White45"
+		}
 		SelfPanel:hover
 		{
-			render_bg {}
+			render {}
 		}
-
 		namestyle
 		{
-			font-family=basefont
-			font-size=16
 		}
-
 		nameInstanceStyle
 		{
-			font-family=basefont
 			textcolor=White75
-			font-size=16
 		}
-
+		menuButtonStyle
+		{
+			minimum-width=14
+			padding-top=4
+			padding-bottom=4
+			padding-right=4
+			padding-left=4
+		}
 		statusStyle
 		{
 			font-family=basefont
-			font-size=16
-            alpha=191.25
 		}
-
 		controlPanelLinkStyle
 		{
 			font-family=basefont
-			font-size=16
 		}
 		controlPanelLinkStyle:hover
 		{
 			font-family=basefont
-			font-size=16
 		}
-
 		inviteLinkStyle
 		{
-			font-size=16
-			textcolor=White
+			textcolor=White75
             font-style=regular
-            alpha=191.25
 		}
-
 		inviteLinkStyle:hover
 		{
-			textcolor=White
+			font-style=underline
 		}
-
+		friends_offline
+		{
+			padding-bottom=8
+		}
+		friends_online
+		{
+			padding-bottom=8
+		}
+		friends_ignored
+		{
+			padding-bottom=8
+		}
 	}
-
-
 	layout
 	{
-		place {	control="AvatarOverlayImage" x=2 y=4 width=40 height=40 }
-		place {	control="AvatarImage"	x=6 y=8 width=32 height=32 }
-		place {	control="Clanstatusimage"	x=20 width=15 }
-		place { control="ClanStatusImage,NameLabel,FriendsNameInstanceLabel" x=50 y=4 margin-right=8 }
+		region{ name=fit_image width=46 height=45 }
+		place {	region=fit_image control="AvatarOverlayImage" x=1 y=2 width=46 height=46 }
+		place {	control="AvatarImage"	x=1 y=1 width=46 height=46 }
+		place {	control="Clanstatusimage" margin-left=-5 height=46 }
+		place { control="NameLabel,StatusLabel,GameLabel" x=50 y=4 spacing=-5 dir=down }
 
-		place { control="StatusLabel,BigPictureStatusImage,MobileStatusImage,WebStatusImage,BigPictureStatusImageInGame,MobileStatusImageInGame,WebStatusImageInGame,GameLabel" x=50 y=24 spacing=4 margin-right=8 }
+		place { start=NameLabel control="MenuButton,FriendsNameInstanceLabel" }
+		place { start=StatusLabel control="BigPictureStatusImageInGame,VRStatusImageInGame,MobileStatusImageInGame,WebStatusImageInGame,BigPictureStatusImage,VRStatusImage,MobileStatusImage,WebStatusImage" }
 
 		// these controls are shown for friendship requests
 		place { control="AcceptLink,IgnoreLink,BlockLink"	x=50 y=22 spacing=6 }
@@ -185,13 +230,9 @@
 		// this control is shown in the invite-to-game dialog in the overlay
 		place { control="InviteToGameButton" align=right y=4 padding-right=6 margin-right=20 }
 
-		place { control="ControlPanelLink" x=50 y=22 }
+		place { control="ControlPanelLink" x=50 align=bottom margin-bottom=6 }
 
 		place { control="SuggestedImage,SuggestedLabel" x=50 y=19 spacing=4 }
 		place { control="SuggestedInvite,SuggestedIgnore" x=50 y=31 spacing=8 }
-
-        //Hidden
-        place { control="MenuButton" width=0 height=0 }
 	}
-
 }

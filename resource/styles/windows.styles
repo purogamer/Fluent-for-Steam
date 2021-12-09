@@ -11,6 +11,7 @@ windows.styles
 		Button
 		{
 			font-size=16
+			
 		}
 		RadioButton
 		{
@@ -27,11 +28,28 @@ windows.styles
 
 		PageTab
 		{
-			font-size=13
+			render{
+	0="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, "none" )"
+				0="fill( x1 - 1, y0 + 1, x1 - 2, y0 + 2, "none" )"
+				0="fill( x0 + 1, y1 - 1, x0 + 2, y1 - 2, "none" )"
+				0="fill( x1 - 1, y1 - 1, x1 - 2, y1 - 2, "none" )"
+
+			}
+			
+			font-size=16
+			font-style="uppercase"
 		}
 		TextEntry
 		{
+				BGCOLOR = TEXTENTRY
 			font-size=16
+			CORNER_ROUNDING=30
+				render{
+				1="fill(x0,y0,x1,y0+2,TEXTENTRYBORDER)"  // top
+				2="fill(x0,y1-1,x1,y1+1,TEXTENTRYBORDER)"  // bottom
+				3="fill(x0,y0,x0+2,y1-1,TEXTENTRYBORDER)"  // left
+				4="fill(x1-1,y0,x1+1,y1+1,TEXTENTRYBORDER)"  // right
+			}
 		}
 		EmoticonMenuItemStyle
 		{
@@ -459,6 +477,10 @@ windows.styles
 		{
 			font-size=16
 		}
+		CUImageButtonStore
+		{
+			font-size=16
+		}
 		CUINavButton2
 		{
 			font-size=14
@@ -480,7 +502,7 @@ windows.styles
 		//steamrootdialog.layout
 		AccountBalanceStyle
 		{
-			font-size=16
+			font-size=14
 		}
 
 		inbox_button
@@ -489,7 +511,7 @@ windows.styles
 		}
 		inbox_button_active
 		{
-			font-size=16
+			font-size=0
 		}
 //////////////////////////////////////////
 
@@ -603,7 +625,7 @@ windows.styles
 		// The Clock
 		topbar
 		{
-			font-size=64
+			font-size=24
 		}
 		// AM, PM
 		clocksuffix

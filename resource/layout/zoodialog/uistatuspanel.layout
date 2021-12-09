@@ -16,7 +16,7 @@
 			render_bg 
 			{
 				0="fill (x0+6,y0+12,x1-6,y1-10, Header_Dark)"
-				1="image( x0+8, y0+13, x1, y1, graphics/metro/icons/navbar/downloads )"
+				1="image( x0+8, y0+13, x1, y1, graphics/fluent/icons/navbar/downloads )"
 			}
 		}
 		
@@ -25,7 +25,7 @@
 			render_bg 
 			{
 				0="fill (x0+6,y0+12,x1-6,y1-10, Header_Dark)"
-				1="image( x0+8, y0+13, x1, y1, graphics/metro/icons/navbar/downloads )"
+				1="image( x0+8, y0+13, x1, y1, graphics/fluent/icons/navbar/downloads )"
 				2="fill (x0,y0,x1,y1, White05)"
 			}
 		}
@@ -35,7 +35,7 @@
 			render_bg 
 			{
 				0="fill (x0+6,y0+12,x1-6,y1-10, Header_Dark)"
-				1="image( x0+8, y0+13, x1, y1, graphics/metro/icons/navbar/downloads )"
+				1="image( x0+8, y0+13, x1, y1, graphics/fluent/icons/navbar/downloads )"
 				2="fill (x0,y0,x1,y1, White10)"
 			}
 		}
@@ -46,7 +46,7 @@
 			render_bg 
 			{
 				0="fill (x0+6,y0+12,x1-6,y1-10, Header_Dark)"
-				1="image( x0+8, y0+13, x1, y1, graphics/metro/icons/navbar/downloads )"
+				1="image( x0+8, y0+13, x1, y1, graphics/fluent/icons/navbar/downloads )"
 			}
 		}
 		
@@ -55,7 +55,7 @@
 			render_bg 
 			{
 				0="fill (x0+6,y0+12,x1-6,y1-10, Header_Dark)"
-				1="image( x0+8, y0+13, x1, y1, graphics/metro/icons/navbar/downloads )"
+				1="image( x0+8, y0+13, x1, y1, graphics/fluent/icons/navbar/downloads )"
 				2="fill (x0,y0,x1,y1, White05)"
 			}
 		}
@@ -65,7 +65,7 @@
 			render_bg 
 			{
 				0="fill (x0+6,y0+12,x1-6,y1-10, Header_Dark)"
-				1="image( x0+8, y0+13, x1, y1, graphics/metro/icons/navbar/downloads )"
+				1="image( x0+8, y0+13, x1, y1, graphics/fluent/icons/navbar/downloads )"
 				2="fill (x0,y0,x1,y1, White10)"
 			}
 		}

@@ -43,9 +43,9 @@
 			render_bg
 			{
 				0="fill(x0,y0,x1,y0+1,ClientBG)"
-				1="image(x0+232,y0+10,x1,y1,graphics/metro/downloads/labels/progress)"
-				2="image(x0+232,y0+48,x1,y1,graphics/metro/downloads/labels/initiated)"
-				3="image(x0+232,y0+86,x1,y1,graphics/metro/downloads/labels/remaining)"
+				1="image(x0+232,y0+10,x1,y1,graphics/fluent/downloads/labels/progress)"
+				2="image(x0+232,y0+48,x1,y1,graphics/fluent/downloads/labels/initiated)"
+				3="image(x0+232,y0+86,x1,y1,graphics/fluent/downloads/labels/remaining)"
 			}
 		}
 
@@ -109,7 +109,7 @@
 			bgcolor=none
 			render
 			{
-				0="image( x0, y0, x1, y1, graphics/metro/downloads/icons/play_sm )"
+				0="image( x0, y0, x1, y1, graphics/fluent/downloads/icons/play_sm )"
 			}
 		}
 
@@ -117,7 +117,7 @@
 		{
 			render
 			{
-				0="image( x0, y0, x1, y1, graphics/metro/downloads/icons/play_sm_h )"
+				0="image( x0, y0, x1, y1, graphics/fluent/downloads/icons/play_sm_h )"
 			}
 		}
 
@@ -125,7 +125,7 @@
 		{
 			render
 			{
-				0="image( x0, y0, x1, y1, graphics/metro/downloads/icons/play_sm_p )"
+				0="image( x0, y0, x1, y1, graphics/fluent/downloads/icons/play_sm_p )"
 			}
 		}
 
@@ -135,7 +135,7 @@
 			bgcolor=none
 			render
 			{
-				0="image( x0, y0, x1, y1, graphics/metro/downloads/icons/promote )"
+				0="image( x0, y0, x1, y1, graphics/fluent/downloads/icons/promote )"
 			}
 		}
 
@@ -143,7 +143,7 @@
 		{
 			render
 			{
-				0="image( x0, y0, x1, y1, graphics/metro/downloads/icons/promote_h )"
+				0="image( x0, y0, x1, y1, graphics/fluent/downloads/icons/promote_h )"
 			}
 		}
 
@@ -153,7 +153,7 @@
 			bgcolor=none
 			render
 			{
-				0="image( x0, y0, x1, y1, graphics/metro/downloads/icons/close_sm )"
+				0="image( x0, y0, x1, y1, graphics/fluent/downloads/icons/close_sm )"
 			}
 		}
 
@@ -161,7 +161,7 @@
 		{
 			render
 			{
-				0="image( x0, y0, x1, y1, graphics/metro/downloads/icons/close_sm_h )"
+				0="image( x0, y0, x1, y1, graphics/fluent/downloads/icons/close_sm_h )"
 			}
 		}
 

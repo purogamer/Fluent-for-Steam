@@ -1,5 +1,21 @@
 "resource/layout/steamrootdialog.layout"
 {
+	controls
+	{
+		add_game
+		{
+			"ControlName"		"MenuBar"
+			style="AddGameButton"
+			
+		}
+		InboxButton
+		{
+			ControlName=CInboxButton
+			style="inbox_button"
+			textAlignment=west
+		}
+    }
+
 	styles
 	{
 		RootMenu
@@ -16,24 +32,51 @@
 
 		ClientTitle
 		{
+			font-size=12
 			textcolor="none"
 			bgcolor="none"
 		}
 
 		view_friends
 		{
-			padding-left=6
-			bgcolor="none"
-			image="graphics/metro/icons/navbar/friends"
-			padding-right=2
+			textcolor="none"
+				render_bg
+		{
+			1="image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/ChatNonSelected"
+		}
+			
+			
 		}
 		view_friends:hover
 		{
-			bgcolor=white05
+			bgcolor="none"
+					render_bg
+		{
+			1="image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/ChatActive"
 		}
+			
+			
+		
 		view_friends:active
 		{
-			bgcolor=white10
+			
+			bgcolor="none"
+			render_bg
+		{
+			1="image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/ChatActive"
+		}
+        }
+		
+		view_friends:selected
+		{
+			
+			bgcolor="none"
+					render_bg
+		{
+			1="image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/ChatSelected"
+		}	
+			
+		}
 		}
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -96,7 +139,7 @@
 
 		inboxmenuitem
 		{
-			textcolor=white45
+			textcolor=none
 			padding-left=7
 		}
 		inboxmenuitem:hover
@@ -110,27 +153,39 @@
 
 		announcement_button
 		{
-			inset-top=-6
-			bgcolor=none
-			image="graphics/updatenone_notification"
-			padding-right=4
+			render_bg
+		{
+			1="image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/NewsNonSelected"
+		}
+			
 		}
 		announcement_button:hover
 		{
-			bgcolor=White05
+				bgcolor="none"
+				render_bg
+		{
+			1="image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/NewsHover"
+		}
 		}
 		announcement_button:active
 		{
-			bgcolor=White10
+			bgcolor=none
+				render_bg
+		{
+			1="image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/NewsSelected"
+		}
 		}
 		announcement_button_active
 		{
-			inset-top=-6
-			bgcolor=Focus
-			image="graphics/updatenew_notification"
-			padding-right=4
+			
+			bgcolor="none"
+			render
+			{
+				0="image(x0+4,y0+2,x8,y1,graphics/fluent/icons/navbar/leftnav/dot)"
+			}
+			
 		}
-
+                                                      --------------------            BOTON MENSAJES      --------------------
 		inbox_button
 		{
 			inset="8 0 8 0"
@@ -139,7 +194,7 @@
 			font-style="none"
 			render_bg
 			{
-				0="image(x0+8,y0+12,x1,y1,graphics/metro/icons/navbar/notifications)"
+				0="image(x0+2,y0+0,x1,y1,graphics/fluent/icons/navbar/notifications)"
 			}
 			render {}
 			padding-left=0
@@ -149,20 +204,20 @@
 		inbox_button:hover
 		{
 			textcolor=white
-			bgcolor=white05
+			bgcolor=none
 			render_bg
 			{
-				0="image(x0+8,y0+12,x1,y1,graphics/metro/icons/navbar/notifications)"
+				0="image(x0+2,y0+0,x1,y1,graphics/fluent/icons/navbar/noti_sinpulsar)"
 			}
 			render {}
 		}
 		inbox_button:selected
 		{
 			textcolor=white
-			bgcolor=white10
+			bgcolor=none
 			render_bg
 			{
-				0="image(x0+8,y0+12,x1,y1,graphics/metro/icons/navbar/notifications)"
+				0="image(x0+2,y0+0,x1,y1,graphics/fluent/icons/navbar/noti_sinpulsar)"
 			}
 			render {}
 		}
@@ -172,59 +227,45 @@
 			bgcolor="none"
 			render_bg
 			{
-				0="image(x0+8,y0+12,x1,y1,graphics/metro/icons/navbar/notifications)"
-				1="fill(x0,y1,x1,y1+1,white45)"
+				0="image(x0+0,y0+0,x1,y1,graphics/fluent/icons/navbar/notifications)"
 			}
-			render {}
 		}
-
+                                                   --------------------            BOTON MENSAJES      --------------------
 		inbox_button_active
 		{
-			inset="8 0 -1 0"
-			textcolor=white
+			textcolor=red
 			bgcolor="none"
 			render_bg
 			{
-				0="image(x0+8,y0+12,x1,y1,graphics/metro/icons/navbar/notifications_active)"
-				1="fill(x0,y1,x1,y1+1,focus)"
+				0="image(x0+0,y0+0,x1,y1,graphics/fluent/icons/navbar/notiac)"
 			}
-			render {}
-			padding-left=13
-			padding-right=0
-			padding-top=-5	//numbers are centered
 		}
-		inbox_button_active:hover
+		inbox_button_active:none
 		{
-			textcolor=white
-			bgcolor=white05
+			textcolor=red
+			bgcolor="none"
 			render_bg
 			{
-				0="image(x0+8,y0+12,x1,y1,graphics/metro/icons/navbar/notifications_active)"
-				1="fill(x0,y1,x1,y1+1,focus)"
+				0="image(x0+0,y0+0,x1,y1,graphics/fluent/icons/navbar/notiac_no)"
 			}
-			render {}
 		}
 		inbox_button_active:selected
 		{
-			textcolor=white
-			bgcolor=white10
-			render_bg
-			{
-				0="image(x0+8,y0+12,x1,y1,graphics/metro/icons/navbar/notifications_active)"
-				1="fill(x0,y1,x1,y1+1,focus)"
-			}
-			render {}
-		}
-		inbox_button_active:disabled
-		{
-			textcolor=white
+			textcolor=red
 			bgcolor="none"
 			render_bg
 			{
-				0="image(x0+8,y0+12,x1,y1,graphics/metro/icons/navbar/notifications_active)"
-				1="fill(x0,y1,x1,y1+1,white45)"
+				0="image(x0+0,y0+0,x1,y1,graphics/fluent/icons/navbar/notiac_no)"
 			}
-			render {}
+		}
+		inbox_button_active:disabled
+		{
+		    textcolor=white
+			bgcolor="none"
+			render_bg
+			{
+				0="image(x0+0,y0+0,x1,y1,graphics/fluent/icons/navbar/notiac_no)"
+			}
 		}
 
 		parental_lock_button
@@ -234,7 +275,7 @@
 			{
 				0="fill(x0,y1,x1,y1+1,Red)"
 			}
-			image="graphics/metro/icons/navbar/parent_unlocked"
+			image="graphics/fluent/icons/navbar/parent_unlocked"
 			padding-right=4
 		}
 		parental_lock_button:hover
@@ -248,7 +289,7 @@
 			{
 				0="fill(x0,y1,x1,y1+1,green)"
 			}
-			image="graphics/metro/icons/navbar/parent_locked"
+			image="graphics/fluent/icons/navbar/parent_locked"
 		}
 		parental_lock_button:selected:hover
 		{
@@ -285,19 +326,30 @@
 //======Hidden Elements(width=0/height=0 still causes spikes and i doubt it will conflict with the linux font-size=0 problems=============//
 		FullscreenButton
 		{
-			inset-left=-999
 			textcolor="none"
 			bgcolor="none"
+				render_bg
+		{
+			1="image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/Bigpicture"
+		}
 		}
 		FullscreenButton:hover
 		{
 			textcolor="none"
 			bgcolor="none"
+				render_bg
+		{
+			1="image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/Bigpicturehover"
+		}
 		}
 		FullscreenButton:active
 		{
 			textcolor="none"
 			bgcolor="none"
+				render_bg
+		{
+			1="image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/Bigpictureactive"
+		}
 		}
 		FullscreenButton:disabled
 		{
@@ -306,29 +358,130 @@
 		}
 		AddGameButton
 		{
-			inset-left=-999
+				textcolor="none"
+				render_bg
+		{
+			1="image( x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/addgame )"
+		}
+					
+		}
+		AddGameButton:hover
+		{
 			textcolor="none"
-			bgcolor="none"
+			render_bg
+			{
+				0="image( x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/addgameactive)"
+			}
+		}
+		AddGameButton_active
+		{
+			textcolor="none"
+			render_bg
+			{
+				0="image( x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/addgameactive )"
+			}
 		}
 	}
 
 	layout
 	{
-		region { name=top align=top width=max height=48 margin-top=0 }
-
-		//Caption Buttons
-		place [!$OSX] { control="frame_minimize,frame_maximize,frame_close" y=1 align=right width=40 height=38 }
-
+		region { name=top align=top width=max height=48 margin-top=0 margin-left=40}
+		
+				
 		//Content
-		place { control="UINavigatorPanel" width=max height=max x=1 margin-right=1 }
+		place { 
+			region="navbars" 
+			control="UINavigatorPanel" 
+			align="left" 
+			end-left="AccountButton" 
+			width="max" 
+			height=max 
+			margin-top=10 
+			x=1 
+			margin-left=74
+			}
+
 
 		//Controls
-		place { control="XPVistaAlert,SupportAlert,AccountButton,InboxButton,view_friends,startvr,exitvr,ParentalLockButton" region=top align=right end-right=UIStatusPanel spacing=1 margin-right=1 height=39 }
-		place { control="UIStatusPanel" region=top align=right end-right=frame_minimize margin-right=1 width=27 height=40 }
+		place { control="XPVistaAlert,SupportAlert,AccountButton,startvr,exitvr,ParentalLockButton,InboxButton" region=top align=right end-right=frame_minimize  spacing=0 margin-right=3 height=39 }
+		place { control="" region=top align=right end-right=frame_minimize margin-right=1 height=40 }
 		place [$OSX] { control="UIStatusPanel" region=top align=right margin-right=1 width=27 height=40 }
-		place { control="MenuBar" region=top height=38 width=67 x=1 y=1 }
+		place { region=lefty control="MenuBar" margin-left=14 margin-top=12 height=28 width=98 }
+		place { region=lefty control="ClientTitle" margin-left=60}
+	
+	   region 
+	   { 
+			
+			name="navbars" 
+			height="max"
+			widht="50"
+			
+			
+			
+					
+	   }
+		
+        //help by mixter213 
+
+		
+		region { 
+			
+			name="lefty" 
+			height="max" 
+			widht=64 
+			margin-left=6 
+			margin-bottom=14
+			
+			}
+		
+		place { 
+			region="lefty" 
+			control=" AnnouncementButton, view_friends,fullscreen, add_game  " 
+			spacing=2 
+			align=top 
+			dir=down 
+			margin-top=50
+			height=64 
+			width=64
+			}
+        region { 
+			
+			name="downloadbar" 
+			height="max" 
+			widht= 
+			margin-left=6
+			 
+			
+			
+			}
+		place { 
+			region="downloadbar" 
+			control="UIStatusPanel" 
+			spacing=8 
+			align=bottom 
+			dir=down 
+			height="72" 
+			width="75"
+			margin-left=2
+			}
+
+		//cerrrabrirminizar
+
+		place [!$OSX] { 
+
+			control="frame_minimize,frame_maximize,frame_close" 
+			
+			align=right 
+			width=46 
+			height=32 
+            margin-right=1 
+
+			}
+
+	
+		place { control="frame_captiongrip" margin=2 width=max height=104 }
 
 		// Hidden
-		place { control="AnnouncementButton,fullscreen,add_game,universe_label,New" margin-left=-999 dir=down }
+		place { control=",a,universe_label,New," margin-left=-999 dir=down }
 	}
 }

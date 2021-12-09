@@ -10,54 +10,53 @@
 		communityfile_rating_image{ controlname="ImagePanel" zpos=2 image=resource/1_star style="communityfile_rating_image" }
 		friendimage{ controlname="ImagePanel" zpos=2}
 	}
-	
+
 	colors
 	{
 		// The extra space needed vertical beyond the autocomputed size of the blurb contents
 		// this is used in code to make the vertical size of the panel fit the title/author/morelink
 		// and should be updated if you change vertical padding/margins/layout.
 		GameDetailsCommunityFile.ExtraVerticalSpacing "107"  
-		GameDetailsCommunityFile.ExtraHorizontalSpacing "192"
+		GameDetailsCommunityFile.ExtraHorizontalSpacing "110"
 		GameDetailsCommunityFile.MaxTooltipWidth "300"
 		GameDetailsCommunityFile.MaxTooltipHeight "90"
 	}
-	
+
 	styles
 	{
-		communityfile_name
-		{
-			font-size=16
-			textcolor="White"
-		}
-		
-		communityfile_image_border
+		CCommunityFilePanel
 		{
 			bgcolor=black45
-			render_bg
-			{      
-				// lines around
-				//1="fill( x0, y0+0, x1, y0 + 33, black45 )"  // top
+			minimum-width=110
+		}
+		communityfile_name
+		{
+			textcolor=itemWorkshopPanel
+		}
+		communityfile_image_border
+		{
+			bgcolor=bgItemWorkshopPanel
+		}
 
-			}	
-		}	
-    
+		//Hidden
 		communityfile_rating_image_background
 		{
-			render_bg
-			{     
-				// transparent background
-				//0="fill( x0, y0, x1, y1, Black45 )"
-			}	
-		}	    
+			bgcolor="none"
+		}
+		communityfile_rating_image
+		{
+			inset-right=999
+		}
 	}
 
 	layout
 	{
-		place { region=body control=communityfile_name align=top-center y=8 margin-left=11 margin-right=11 }
-		place { region=body control=communityfile_image_border x=0 y=0 width=192 height=112 }
-		place { region=body control=communityfile_image x=0 y=0 width=192 height=108 } 
-		place { region=body control=communityfile_rating_image_background x=3 y=79 width=186 height=30 }
-		place { region=body control=communityfile_rating_image x=3 y=79 width=186 height=30 }
-		place { region=body control=friendimage width=42 height=40 spacing=8 x=156 y=77 }
+		place { region=body control=communityfile_name align=top-center }
+		place { region=body control=communityfile_image x=0 y=0 width=max height=108 } 
+		place { region=body control=communityfile_image_border width=max height=20 } 
+		place { region=body control=friendimage width=42 height=40 spacing=8 x=156 y=86 }
+
+		//Hidden
+		place { control=communityfile_rating_image_background,communityfile_rating_image width=1 }
 	}
 }

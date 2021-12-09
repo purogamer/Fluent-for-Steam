@@ -1,44 +1,140 @@
 "resource/layout/gameproperties_general.layout"
 {
+	controls
+	{
+		"GamePropertiesGeneral"
+		{
+			"ControlName"		"CSubGamePropertiesGeneralPage"
+		}
+		"HomepageLabel"
+		{
+			"ControlName"		"URLLabel"
+			"labelText"		"#Steam_DeveloperUnknownThirdParty"
+			"URLText"		"http://www.half-life2.com"
+		}
+		"DeveloperLabel"
+		{
+			"ControlName"		"URLLabel"
+			"labelText"		"#Steam_DeveloperUnknownThirdParty"
+			"URLText"		"http://www.half-life2.com"
+		}
+		"ManualLabel"
+		{
+			"ControlName"		"URLLabel"
+			"labelText"		"#Steam_Game_DefaultManual"
+			"URLText"		"http://www.half-life2.com/manual/HL2_quickrefcard.pdf"
+		}
+		"HomepageLabelName"
+		{
+			"ControlName"		"Label"
+			"labelText"		"#Steam_Game_Homepage"		
+			"textAlignment"		"west"
+		}
+		"DeveloperLabelName"
+		{
+			"ControlName"		"Label"
+			"labelText"		"#Steam_Game_Developer"
+		}
+		"ManualLabelName"
+		{
+			"ControlName"		"Label"
+			"labelText"		"#Steam_Game_Manual"
+		}
+		"EnableOverlayCheck"
+		{
+			"ControlName"		"CheckButton"
+			"labelText"		"#Overlay_SettingsEnable"
+			"Default"		"0"
+		}
+		"EnableDesktopGameTheater"
+		{
+			"ControlName"		"CheckButton"
+			"labelText"		"#Overlay_SettingsDesktopGameTheaterCheck"
+			"Default"		"0"
+		}
+		"SteamInputPerGameLabel" { controlname=label labeltext="#Steam_GameProperties_SteamInputSettings_PerGameOptIn" style="Highlight" }
+		"SteamInputPerGameCombo" { controlname=combobox }
+
+		"LaunchOptionsButton"
+		{
+			"ControlName"		"Button"
+			"labelText"		"#Steam_Game_SetLaunchOptions"
+			"Command"		"SetLaunchOptions"
+		}
+		"CreateDesktopShortcutButton"
+		{
+			"ControlName"		"Button"
+			"labelText"		"#Steam_Game_CreateDesktopShortcut"
+			"Command"		"CreateDesktopShortcut"
+		}
+		"NoManualLabel"
+		{
+			"ControlName"		"Label"
+			"fieldName"		"NoManualLabel"
+			"style"		"LabelDull"
+			"labelText"		"#Steam_Game_NoManual"
+		}
+		"Divider1"
+		{
+			"ControlName"		"Divider"
+		}
+		"ExternalSignupButton"
+		{
+			"ControlName"		"Button"
+			"labelText"		"#Steam_ExternalSignupPropertiesButton"
+			"Command"		"ExternalSignup"
+		}
+		"ExternalSignupLabel"
+		{
+			"ControlName"		"Label"
+			"labelText"		"#Steam_ExternalSignupPropertiesLabel"
+		}
+		"Divider2"
+		{
+			"ControlName"		"Divider"
+		}
+		"FamilySharingUnsupportedLabel"
+		{
+			"ControlName"		"Label"
+			"labelText"		"#Steam_Game_Family_Sharing_Unsupported"
+		}
+	}
 	colors
 	{
 	}
-
 	styles
 	{
-		Label
-		{
-			font-size=24
-			font-family=semilight
-			textcolor=white
-		}
-		LabelDull
-		{
-			font-family=basefont
-			font-size=16
-			textcolor=White45
-		}
 		Highlight
 		{
+			textcolor=white50
 			font-family=basefont
 			font-size=16
-			textcolor=White45
 		}
 	}
-
 	layout
 	{
 		region { name=main margin=16 }
-		place { control=HomepageLabelName,HomePageLabel,DeveloperLabelName,DeveloperLabel,ManualLabelName,ManualLabel,NoManualLabel,Divider1 spacing=0 dir=down region=main height=24 }
+		place { control=HomepageLabelName,DeveloperLabelName,ManualLabelName spacing=16 dir=down region=main }
+		place { controls=HomepageLabel,DeveloperLabel spacing=16 dir=down x=100 region=main }
+		place { control=NoManualLabel,ManualLabel start=DeveloperLabel spacing=16 margin-top=16 dir=down region=main }
 
-		place {controls=ExternalSignupLabel,ExternalSignupButton x=260 margin-top=34 dir=down margin-left=20 width=260 height=24 spacing=0 region=main }
+		place {controls=ExternalSignupLabel,ExternalSignupButton x=260 margin-top=34 dir=down margin-left=16 width=260 height=24 spacing=0 region=main }
 
-		place {control=Divider1 start=ManualLabelName dir=down margin-top=8 region=main width=max }
-		place { start=Divider1 controls=EnableOverlayCheck,EnableDesktopGameTheater,SteamInputPerGameLabel,SteamInputPerGameCombo,BPMOverlayPerGameLabel,BPMOverlayPerGameCombo dir=down height=24 dir=down margin-top=8 spacing=0 width=max region=main }
+		place {control=Divider1 start=ManualLabelName dir=down margin-top=16 region=main width=max }
 
-		place {control=Divider2 start=EnableDesktopGameTheater dir=down margin-top=8 region=main width=max }
-		place { start=Divider2 controls=SteamInputPerGameLabel,SteamInputPerGameCombo,BPMOverlayPerGameLabel,BPMOverlayPerGameCombo dir=down height=24 dir=down margin-top=8 spacing=0 width=max region=main }
+		place {controls=EnableOverlayCheck,EnableDesktopGameTheater start=Divider1 dir=down margin-top=16 spacing=0 width=max region=main }
+		place {controls=LaunchOptionsButton,CreateDesktopShortcutButton start=EnableDesktopGameTheater dir=down margin-top=15 spacing=10 width=240 height=24 region=main }
 
-		place { controls=LaunchOptionsButton,CreateDesktopShortcutButton align=bottom dir=right spacing=8 height=28 region=main }
+		place {control=Divider2 start=CreateDesktopShortcutButton dir=down margin-top=16 region=main width=max }
+		place {control=SteamInputPerGameLabel start=Divider2 dir=down margin-top=10 }
+		place {control=SteamInputPerGameCombo start=SteamInputPerGameLabel y=6 dir=down width=450 }
+
+    place {controls=BPMOverlayPerGameLabel start=SteamInputPerGameCombo dir=down margin-top=10 }
+    place {controls=BPMOverlayPerGameCombo start=BPMOverlayPerGameLabel y=6 dir=down width=450 }
+
+		place {control=Divider3 start=BPMOverlayPerGameCombo dir=down margin-top=16 region=main width=max }
+		place {controls=SteamPlayOverrideCheck,SteamPlayOverrideCombo start=Divider3 dir=down margin-top=16 spacing=0 width=max region=main }
+
+		place {controls=FamilySharingUnsupportedLabel margin-top=500 margin-left=16 }
 	}
 }

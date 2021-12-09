@@ -82,14 +82,14 @@
     {
         render_bg
         {
-            0="image(x0+10,y0+10,x1,y1,graphics/metro/icons/caption/sm/min_sm)"
+            0="image(x0+10,y0+10,x1,y1,graphics/fluent/icons/caption/sm/min_sm)"
         }
     }
     FrameMinimizeButton:hover
     {
         render_bg
         {
-            0="image(x0+10,y0+10,x1,y1,graphics/metro/icons/caption/sm/min_sm)"
+            0="image(x0+10,y0+10,x1,y1,graphics/fluent/icons/caption/sm/min_sm)"
             1="fill(x0,y0,x1,y1-1,White05)"
         }
     }
@@ -97,7 +97,7 @@
     {
         render_bg
         {
-            0="image(x0+10,y0+10,x1,y1,graphics/metro/icons/caption/sm/min_sm)"
+            0="image(x0+10,y0+10,x1,y1,graphics/fluent/icons/caption/sm/min_sm)"
             1="fill(x0,y0,x1,y1-1,White10)"
         }
     }
@@ -105,14 +105,14 @@
     {
         render_bg
         {
-            0="image(x0+10,y0+10,x1,y1,graphics/metro/icons/caption/sm/max_sm)"
+            0="image(x0+10,y0+10,x1,y1,graphics/fluent/icons/caption/sm/max_sm)"
         }
     }
     FrameMaximizeButton:hover
     {
         render_bg
         {
-            0="image(x0+10,y0+10,x1,y1,graphics/metro/icons/caption/sm/max_sm_h)"
+            0="image(x0+10,y0+10,x1,y1,graphics/fluent/icons/caption/sm/max_sm_h)"
             1="fill(x0,y0,x1,y1-1,White05)"
         }
     }
@@ -120,7 +120,7 @@
     {
         render_bg
         {
-            0="image(x0+10,y0+10,x1,y1,graphics/metro/icons/caption/sm/max_sm_p)"
+            0="image(x0+10,y0+10,x1,y1,graphics/fluent/icons/caption/sm/max_sm_p)"
             1="fill(x0,y0,x1,y1-1,White10)"
         }
     }
@@ -128,14 +128,14 @@
     {
     render_bg 
         {
-            0="image(x0+10,y0+10,x1,y1,graphics/metro/icons/caption/sm/res_sm)"
+            0="image(x0+10,y0+10,x1,y1,graphics/fluent/icons/caption/sm/res_sm)"
         }
     }
     FrameRestoreButton:hover
     {
     render_bg 
         {
-            0="image(x0+10,y0+10,x1,y1,graphics/metro/icons/caption/sm/res_sm_h)"
+            0="image(x0+10,y0+10,x1,y1,graphics/fluent/icons/caption/sm/res_sm_h)"
             1="fill(x0,y0,x1,y1-1,White05)"
         }
     }
@@ -143,7 +143,7 @@
     {
     render_bg 
         {
-            0="image(x0+10,y0+10,x1,y1,graphics/metro/icons/caption/sm/res_sm_p)"
+            0="image(x0+10,y0+10,x1,y1,graphics/fluent/icons/caption/sm/res_sm_p)"
             1="fill(x0,y0,x1,y1-1,White10)"
         }
     }
@@ -151,7 +151,7 @@
     {
         render_bg 
         {
-            0="image(x0+10,y0+10,x1,y1,graphics/metro/icons/caption/sm/close_sm)"
+            0="image(x0+10,y0+10,x1,y1,graphics/fluent/icons/caption/sm/close_sm)"
         }
     }
     
@@ -159,7 +159,7 @@
     {
         render_bg 
         {
-            0="image(x0+10,y0+10,x1,y1,graphics/metro/icons/caption/sm/close_sm_h)"
+            0="image(x0+10,y0+10,x1,y1,graphics/fluent/icons/caption/sm/close_sm_h)"
             1="fill(x0,y0,x1,y1-1,White05)"
         }
     }
@@ -168,7 +168,7 @@
     {
         render_bg 
         {
-            0="image(x0+10,y0+10,x1,y1,graphics/metro/icons/caption/sm/close_sm_p)"
+            0="image(x0+10,y0+10,x1,y1,graphics/fluent/icons/caption/sm/close_sm_p)"
             1="fill(x0,y0,x1,y1-1,White10)"
         }
     }

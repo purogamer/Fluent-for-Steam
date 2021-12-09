@@ -122,13 +122,14 @@
 	{
 		region { name=main margin=16 }
 		
-		place { controls="AutoUpdatesLabel,UpdateInfoText,UpdateCombo,UpdateNewsURL" region=main dir=down width=334 spacing=8 }
+		place { controls="AutoUpdatesLabel,UpdateInfoText,UpdateCombo,UpdateNewsURL" region=main dir=down width=450 spacing=8 }
 		
 		place { controls="Divider1" region=main start=UpdateNewsURL dir=down width=max margin-top=16 }
 		
-		place { controls="BackgroundDownloadsLabel,BackgroundDownloadsInfo,BackgroundDownloadsCombo" region=main start=Divider1 dir=down width=334 spacing=8 margin-top=8 }
+		place { controls="BackgroundDownloadsLabel,BackgroundDownloadsInfo" region=main start=Divider1 dir=down width=450 spacing=8 margin-top=8 }
+		place { controls="BackgroundDownloadsCombo" region=main start=BackgroundDownloadsInfo dir=down width=450 height=24 margin-top=8 }
 		
-		place { controls="Divider2" region=main start=BackgroundDownloadsCombo dir=down width=max margin-top=16 }
+		place { controls="Divider2" region=main start=BackgroundDownloadsCombo dir=down width=max margin-top=26 }
 		
 		place { controls="CloudLabel" region=main start=Divider2 dir=down width=450 margin-top=16 }
 		place { controls="CloudInfoLabel,EnableCloudCheck,CloudUsageLabel" region=main start=CloudLabel dir=down width=450 spacing=8 margin-top=8 }

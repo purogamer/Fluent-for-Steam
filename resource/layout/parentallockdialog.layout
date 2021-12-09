@@ -5,7 +5,6 @@
 		ParentalLockDialog { controlname="Frame" title="#steam_parental_locktitle" style="ParentalLockDialog" }
 
 		Instructions { controlname="Label" style="Hey" labeltext="#steam_parental_lockinstructions" wrap=1 }
-
 		KeyImage { controlname="Label" style="Key" zpos=-4 }
 
 		OK { controlname="Button" tabposition=1 command="DoParentalLock" labeltext="#PropertyDialog_OK" default=1 }
@@ -14,37 +13,29 @@
 
 	styles
 	{
-		ParentalLockDialog
-		{
-			minimum-width = 400
-			minimum-height = 250
-		}
-
 		Hey
 		{
-			font-size=24
-			font-family=semilight
 			textcolor="White"
+			font-family=semilight
 		}
-
+		//Hidden
 		Key
 		{
+			textcolor="none"
+			bgcolor="none"
 		}
 	}
 
 	layout
 	{
-		place { control="frame_minimize,frame_maximize,frame_close" align=right width=40 height=40 margin-right=1 }
-
 		//Text
-		place { control="Instructions" x=16 y=40 width=max height=max margin-right=16 }
+		place { control="Instructions" x=16 y=44 width=max margin-right=16 }
 
 		//Footer
 		region { name=bottom align=bottom height=44 margin=8 }
 		place { control="OK,Cancel" region=bottom align=right spacing=8 width=84 height=28 }
 
 		//Hidden
-		place { control="KeyImage" width=0 height=0 }
+		place { control="KeyImage" }
 	}
-
 }

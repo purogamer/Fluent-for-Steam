@@ -16,14 +16,13 @@
 		{
 			textcolor=white
 		}
-		
+
 		FindEntry
 		{
 			inset-left=0
 			inset-top=-2
 			font-family=basefont
 			font-weight=300
-			font-size=16
 			textcolor=white
 			bgcolor=none
 			shadowtextcolor=white
@@ -35,95 +34,72 @@
 
 		NextButtonSm
 		{
-			inset="-6 0 0 0"
+			inset="-5 0 0 0"
 			render_bg{}
-			bgcolor=none
-			image="graphics/metro/icons/navbar/forward"
+			bgcolor="none"
+			image="graphics/fluent/icons/navbar/forward"
+			padding-left=12
 		}
-
 		NextButtonSm:hover
 		{
-			image="graphics/metro/icons/navbar/forward_h"
+			bgcolor=white05
+			image="graphics/fluent/icons/navbar/forward_h"
 		}
-		
 		NextButtonSm:active
 		{
-			image="graphics/metro/icons/navbar/forward_p"
+			bgcolor=white10
+			image="graphics/fluent/icons/navbar/forward_p"
 		}
-		
 		NextButtonSm:disabled
 		{
-			image="graphics/metro/icons/navbar/forward_d"
+			image="graphics/fluent/icons/navbar/forward_d"
 		}
 
 		PrevButtonSm
 		{
-			inset="-6 0 0 0"
+			inset="-5 0 0 0"
 			render_bg{}
-			bgcolor=none
-			image="graphics/metro/icons/navbar/back"
+			bgcolor="none"
+			image="graphics/fluent/icons/navbar/back"
+			padding-left=12
 		}
-
 		PrevButtonSm:hover
 		{
-			image="graphics/metro/icons/navbar/back_h"
+			bgcolor=white05
+			image="graphics/fluent/icons/navbar/back_h"
 		}
-		
 		PrevButtonSm:active
 		{
-			image="graphics/metro/icons/navbar/back_p"
+			bgcolor=white10
+			image="graphics/fluent/icons/navbar/back_p"
 		}
-		
 		PrevButtonSm:disabled
 		{
-			image="graphics/metro/icons/navbar/back_d"
+			image="graphics/fluent/icons/navbar/back_d"
 		}
-		
-		CloseButtonSm
-    {
-			textcolor=none
-			bgcolor=none
-			render_bg 
-			{
-				0="image( x0+3, y0+5, x1, y1, graphics/win32_win_close_inactive )"
-			}
-    }
-		
-		CloseButtonSm:framefocus
-    {
-			render_bg 
-			{
-				0="image( x0+3, y0+5, x1, y1, graphics/win32_win_close )"
-			}
-    }
 
+		CloseButtonSm
+		{
+			bgcolor="none"
+			inset="9 3 0 0"
+			image="graphics/fluent/icons/caption/close"
+		}
 		CloseButtonSm:hover
-    {
-			render_bg 
-			{
-        0="fill( x0, y0+1, x1-1, y1, white12 )"
-				1="image( x0+3, y0+5, x1, y1, graphics/win32_win_close )"
-			}
-    }
-    
+		{
+			bgcolor=white05
+		}
 		CloseButtonSm:active
-    {
-			render_bg 
-			{
-        0="fill( x0, y0+1, x1-1, y1, white24 )"
-				1="image( x0+3, y0+5, x1, y1, graphics/win32_win_close )"
-			}
-    }
+		{
+			bgcolor=white10
+		}
 	}
-		
 	layout
 	{
-		place { control="SearchThisPage" height=0 width=0 } //Search//Icon
-
-		place { control="Previous,Next" align=left x=8 y=7 height=26 width=26 spacing=4 } //Buttons
-		place { control="FindEntry" x=72 width=max height=max end-right=FindCount margin-right=35 } //TextBox
-		
-		place { control="FindCount" align=right height=40 margin-right=8 end-right=Close } //Count
-		place { control="Close" align=right width=40 height=40 }
+    place { control="Previous,Next" align=left x=1 y=1 height=38 width=40 }
+    place { control="FindEntry" start=Next width=max height=max margin-right=116 }
+    place { control="FindCount" align=right width=70 height=40 margin-right=44 }
+    place { control="Close" align=right y=1 width=40 height=38 margin-right=1 }
+    // Hidden
+    place { control="SearchThisPage" width=1 } //Search//Icon
 	}
 }

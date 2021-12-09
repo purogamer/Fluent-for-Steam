@@ -1,184 +1,68 @@
 "resource/layout/toolwindow.layout"
 {
-	controls
-	{
-		// the container
-		ToolWindowSheet	{	controlname="PropertySheet" }
-	} 
-	
-		
 	styles
 	{
-	
 		ToolWindow
 		{
-			minimum-width=450
-			minimum-height=400
 			render_bg
 			{
-				0="fill( x0, y0, x1, y0+80, Header_Dark )"
+				1="fill( x0, y0+39, x1, y0+40, frameBorder)"
+				2="fill( x0, y0+1, x1, y0+39, Header_Dark)"
 			}
 		}
-		
+
+		CChatTabPanel
+		{
+			render_bg
+			{
+				0="fill( x0+2,y0,x1-2,y0+7,Focus )"
+				1="fill( x0,y0+2,x1,y1-2,Focus )"
+				2="fill( x0+1,y0+1,x1-1,y0+6,Focus )"
+			}
+		}
+
 		Button
-	  {     
-	  	textcolor="none"
+		{
+			textcolor="none"
 			bgcolor="none"
-			//minimum-width=24
-			//minimum-height=24
-			render_bg 
+			render_bg
 			{
 				0="image(x0+8,y0+8,x1,y1,graphics/new_tab)"
 			}
-	  }
-	  
-	  Button:hover
+		}
+		Button:hover
 		{
-			render_bg 
+			render_bg
 			{
 				0="image(x0+8,y0+8,x1,y1,graphics/new_tab_hover)"
 			}
 		}
 
-	  MenuButton
-	  {
-	  	padding-right=8
-			minimum-width=24
-			minimum-height=24
-		 	bgcolor=none
-			render_bg {}
+		MenuButton
+		{
+		 	padding-left=3
+			bgcolor="none"
+			render_bg{}
 		}
-	  
-	  TabMenuButtonFlash
-	  { 
+
+		TabMenuButtonFlash
+		{
 			render_bg
 			{
-				0="fill(x0+6,y0+6,x1-6,y1-6,Focus)"
+				0="fill(x0+2,y0+5,x1+1,y1-6,Focus)"
 			}
-	  }
-	  
-	  TabMenuItemFlash
-	  {
-	  	textcolor="Focus"
-	  }
-		
-		FrameButton
-    {
-			//image="graphics/tab_close_def"
-			//inset-left=-6
-			//inset-top=0
-    }
-		FrameButton:hover
-    {
-			//bgcolor=white12
 		}
-		
-		FrameButton:active
-    {
-			//bgcolor=white24
+
+		TabMenuItemFlash
+		{
+			textcolor="Focus"
 		}
-		
-    FrameMinimizeButton
-    {
-        render_bg
-        {
-            0="image(x0+10,y0+10,x1,y1,graphics/metro/icons/caption/sm/min_sm)"
-        }
-    }
-    FrameMinimizeButton:hover
-    {
-        render_bg
-        {
-            0="image(x0+10,y0+10,x1,y1,graphics/metro/icons/caption/sm/min_sm)"
-            1="fill(x0,y0,x1,y1-1,White05)"
-        }
-    }
-    FrameMinimizeButton:active
-    {
-        render_bg
-        {
-            0="image(x0+10,y0+10,x1,y1,graphics/metro/icons/caption/sm/min_sm)"
-            1="fill(x0,y0,x1,y1-1,White10)"
-        }
-    }
-    FrameMaximizeButton
-    {
-        render_bg
-        {
-            0="image(x0+10,y0+10,x1,y1,graphics/metro/icons/caption/sm/max_sm)"
-        }
-    }
-    FrameMaximizeButton:hover
-    {
-        render_bg
-        {
-            0="image(x0+10,y0+10,x1,y1,graphics/metro/icons/caption/sm/max_sm_h)"
-            1="fill(x0,y0,x1,y1-1,White05)"
-        }
-    }
-    FrameMaximizeButton:active
-    {
-        render_bg
-        {
-            0="image(x0+10,y0+10,x1,y1,graphics/metro/icons/caption/sm/max_sm_p)"
-            1="fill(x0,y0,x1,y1-1,White10)"
-        }
-    }
-    FrameRestoreButton
-    {
-    render_bg 
-        {
-            0="image(x0+10,y0+10,x1,y1,graphics/metro/icons/caption/sm/res_sm)"
-        }
-    }
-    FrameRestoreButton:hover
-    {
-    render_bg 
-        {
-            0="image(x0+10,y0+10,x1,y1,graphics/metro/icons/caption/sm/res_sm_h)"
-            1="fill(x0,y0,x1,y1-1,White05)"
-        }
-    }
-    FrameRestoreButton:active
-    {
-    render_bg 
-        {
-            0="image(x0+10,y0+10,x1,y1,graphics/metro/icons/caption/sm/res_sm_p)"
-            1="fill(x0,y0,x1,y1-1,White10)"
-        }
-    }
-    FrameCloseButton
-    {
-        render_bg 
-        {
-            0="image(x0+10,y0+10,x1,y1,graphics/metro/icons/caption/sm/close_sm)"
-        }
-    }
-    
-    FrameCloseButton:hover
-    {
-        render_bg 
-        {
-            0="image(x0+10,y0+10,x1,y1,graphics/metro/icons/caption/sm/close_sm_h)"
-            1="fill(x0,y0,x1,y1-1,White05)"
-        }
-    }
-    
-    FrameCloseButton:active
-    {
-        render_bg 
-        {
-            0="image(x0+10,y0+10,x1,y1,graphics/metro/icons/caption/sm/close_sm_p)"
-            1="fill(x0,y0,x1,y1-1,White10)"
-        }
-    }
 	}
 
 	layout
 	{
 		//Original
 		place { control="frame_minimize,frame_maximize,frame_close" align=right width=28 height=28 y=1 margin-right=1 }
-		place { control="frame_captiongrip" height=80 width=max }
-		place { control="ToolWindowSheet" x=0 y=17 height=max width=max margin-top=-5 }
+		place { control="ToolWindowSheet" x=0 y=12 height=max width=max margin=1 }
 	}
 }

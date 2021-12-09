@@ -5,20 +5,17 @@
 		contributioncount { controlname="Label" style="headertext" labeltext="" zpos="2" }
 		contributionlabel { controlname="Label" style="headertext2" labeltext="#steam_details_contributioncount" zpos="2" }
 	}
-	
 	colors
 	{
 		contributiontext="166 188 206 255"
 	}
-	
-
 	styles
 	{
 		CDetailsSubHeaderLabelsRightPanel
 		{
 			render_bg
 			{
-			0="fill(x0,y0,x0+2,y1,Focus)"
+				0="fill(x0,y0,x0+2,y1,Focus)"
 			}
 		}
 		headertext
@@ -28,9 +25,8 @@
 			padding-top=1
 			font-size=16
 			textcolor=white
-			font-style=uppercase;
+			font-style=uppercase
 		}
-		
 		headertext2
 		{
 			padding-left=8
@@ -38,19 +34,13 @@
 			padding-top=0
 			font-size=16
 			textcolor=contributiontext
-			font-style=uppercase;
+			font-style=uppercase
 		}
 	}
 
 	layout
 	{
 		region { name="subheaderlabels" y=0 x=0 width=max height=max }
-
-		place { 
-			control=contributioncount,contributionlabel
-			region=subheaderlabels
-			dir=down
-			align=left
-		}
+		place { control=contributioncount,contributionlabel region=subheaderlabels dir=down align=left }
 	}
 }
