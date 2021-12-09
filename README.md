@@ -51,7 +51,8 @@
 <!-- Sobre este projecto -->
 ## About The Project 📢
 
-![Fluent Steam](https://user-images.githubusercontent.com/87723899/145287138-7dec612a-eca2-435b-8cf4-c8f99c060050.png)
+<img href="https://i.gyazo.com/98138b73e00c8305d0f1b3aa0e757fe8.gif">
+
 
 
 This is a simple skin which turns the old steam design into a completely renewed one, this skin is inspired by the Microsft Store Fluent Design template launched with Windows 11. 
@@ -113,7 +114,7 @@ The rounded edges are only work on Windows 11. This skin was created only but in
 ### Prerequisites ✅
 1. Have installed [Segoe UI Variable](https://docs.microsoft.com/en-us/windows/apps/design/downloads/#fonts) (It is not necessary if you have windows 11
 ).
-2. Have windows 10 or 11 since it was only tested on these operating systems.
+2. Have windows since it was only tested on these operating systems.
 
 ## Installation 
 
