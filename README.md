@@ -29,7 +29,7 @@
     <img src="https://user-images.githubusercontent.com/87723899/145442348-2b255cff-862a-4985-824c-1dc447bfcf21.png" alt="Logo">
   </a>
 
-  <h3 align="center">Fluent For Steam</h3>
+  <h3 align="center">Fluent For Steam 0.1b</h3>
 
  <p align="center">
    At the moment it only works on windows
@@ -51,11 +51,14 @@
 <!-- Sobre este projecto -->
 ## About The Project 📢
 
-<img href="https://i.gyazo.com/98138b73e00c8305d0f1b3aa0e757fe8.gif">
+
+![983177a9267bcdb3c3a936f8ea33451e](https://user-images.githubusercontent.com/87723899/145469590-6f8145a2-2d5e-4591-bb8a-35083d86b3a4.gif)
 
 
 
-This is a simple skin which turns the old steam design into a completely renewed one, this skin is inspired by the Microsft Store Fluent Design template launched with Windows 11. 
+"This is a simple skin which turns the old steam design into a completely renewed one, this skin is inspired by the Microsft Store Fluent Design template launched with Windows 11." 
+
+Fluent for Steam is a skin that is based on the "Windows 11 design principles". Mainly inspired by the new design of the Microsoft Store that can be found in the latest version of windows 11. This implied a great challenge since I redesigned the old Steam scheme and created a left sidebar, like the one you see in the image, this includes more interactive icons, a new download bar and a much more modern style.
 
 
 
