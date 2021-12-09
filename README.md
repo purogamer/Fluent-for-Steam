@@ -34,7 +34,7 @@
  <p align="center">
    At the moment it only works on windows
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">Donate</a>
+    <a href="https://github.com/othneildrew/Best-README-Template">Donate 🍩☕</a>
     ·
     <a href="https://github.com/purogamer/Fluent-for-Steam/issues">Report Bug☠️</a>
     ·
