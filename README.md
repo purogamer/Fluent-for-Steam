@@ -79,16 +79,16 @@
 ![Fluent Steam](https://user-images.githubusercontent.com/87723899/145287138-7dec612a-eca2-435b-8cf4-c8f99c060050.png)
 
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+This is a simple skin which turns the old steam design into a completely renewed one, this skin is inspired by the Microsft Store Fluent Design template launched with Windows 11. 
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+![image](https://user-images.githubusercontent.com/87723899/145308352-8d48f52e-ab9a-413c-ac61-b126ab4379ba.png)
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+<p> This skin starts from the base code of the <a href="https://github.com/minischetti/metro-for-steam">Metro for Steam 4.4 by minischetti </a> and <a href="https://github.com/redsigma/UPMetroSkin">UP MetroSkin from RedSigma</a>, although the future I plan to get rid of these bases since they have some obsolete files compared to the new versions of steam. </p>
 
-Use the `BLANK_README.md` to get started.
+
+
+
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -127,25 +127,23 @@ This is an example of how you may give instructions on setting up your project l
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-## It will be necessary for the correct functioning of the skin to have Windows, since for other operating systems it was not tested
+1. Have installed Segoe UI Variable.
+2. Have windows 10 or 11 since it was only tested on these operating systems.
 
 # Installation
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+1. Download the skin [here](https://github.com/purogamer/Fluent-for-Steam/releases).
+2. Unzip the 7z and install the fonts found in the SegoueUI-VF folder ( not necessary if you have windows 11)
+   
+3. Once the font is installed you must drag the skins folder into the main folder of your steam so that it should look like this steam / skins
+   
+4. Then go to steam settings (found at the top left of steam
+) >> Interface and select skin >> and select fluentforsteam
+5. 
+6. For last restart steam and enjoy
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -213,14 +211,14 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-* [AikiMidori](https://choosealicense.com)
-* [Mixter213](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [RedSigma](https://flexbox.malven.co/)
+* [Webkit by AikiMidori](https://choosealicense.com)
+* [Help Download Bar Mixter213](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [RedSigma UPMetroSkin](https://flexbox.malven.co/)
 * [Metro Skin Comunity](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+* [Metro for Steam 4.4](https://shields.io)
+* [zakk_ponsen Help with Icons](https://pages.github.com)
+* [Icon8 - FluencyIcons](https://fontawesome.com)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
