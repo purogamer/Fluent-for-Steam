@@ -142,15 +142,17 @@ _Below is an example of how you can instruct your audience on installing and set
 
 
 <!-- USAGE EXAMPLES -->
-## Screenshots 📷
+# Screenshots 📷
 
 ##### Steam with Fluent For Steam
 ![image](https://user-images.githubusercontent.com/87723899/145313137-8fd615a1-37b7-40a2-991e-e6733cb14a63.png)
 ##### Microsoft Store
 ![image](https://user-images.githubusercontent.com/87723899/145313156-ebe161a0-72d5-4e89-b284-184c3bdf4178.png)
-###
+##### Profile with Webkit by AikoMidori
+![image](https://user-images.githubusercontent.com/87723899/145314405-e8bf073a-4468-4b4f-9a8d-e7bd8c10e926.png)
+##### Download Page with new download status bar
+![image](https://user-images.githubusercontent.com/87723899/145314569-9b171bd2-5dc2-4414-b1a9-6e43ecfa1e1d.png)
 
-###
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -210,7 +212,7 @@ Reddit! @elpurogamer
  
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-* [Webkit by AikiMidori](https://choosealicense.com)
+* [Webkit by AikoMidori](https://github.com/AikoMidori/steam-dark-mode)
 * [Help Download Bar by Mixter213](https://github.com/Mixter213/Steam-Skins)
 * [RedSigma UPMetroSkin](https://github.com/redsigma/UPMetroSkin)
 * [Metro Skin Comunity](https://steamcommunity.com/groups/metroskin)
