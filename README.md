@@ -32,11 +32,13 @@
   <p align="center">
     A simple steam skin, which aims to adapt its old design to a totally renewed one based on current Microsoft design standards released together with Windows 11. This skin is currently in development and is in a very early stage, so please be patient.
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/purogamer/Fluent-for-Steam/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/purogamer/Fluent-for-Steam/issues">Request Feature</a>
+    .
+    
   </p>
 </div>
 
@@ -61,7 +63,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#Screenshots">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -81,7 +83,7 @@
 
 This is a simple skin which turns the old steam design into a completely renewed one, this skin is inspired by the Microsft Store Fluent Design template launched with Windows 11. 
 
-![image](https://user-images.githubusercontent.com/87723899/145308352-8d48f52e-ab9a-413c-ac61-b126ab4379ba.png)
+
 
 <p> This skin starts from the base code of the <a href="https://github.com/minischetti/metro-for-steam">Metro for Steam 4.4 by minischetti </a> and <a href="https://github.com/redsigma/UPMetroSkin">UP MetroSkin from RedSigma</a>, although the future I plan to get rid of these bases since they have some obsolete files compared to the new versions of steam. </p>
 
@@ -139,10 +141,9 @@ _Below is an example of how you can instruct your audience on installing and set
    
 3. Once the font is installed you must drag the skins folder into the main folder of your steam so that it should look like this steam / skins
    
-4. Then go to steam settings (found at the top left of steam
-) >> Interface and select skin >> and select fluentforsteam
-5. 
-6. For last restart steam and enjoy
+4. Then go to Steam settings (found at the top left of steam
+) >> Interface and select skin >> and select Fluentforsteam
+6. For last restart Steam and enjoy
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -150,11 +151,17 @@ _Below is an example of how you can instruct your audience on installing and set
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Screenshots
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+### 
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+
+###
+
+###
+
+###
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -162,7 +169,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/purogamer/fluentforsteam) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -198,9 +205,11 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Francis As - meteorosa@hotmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Reddit! @elpurogamer
+
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
