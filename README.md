@@ -82,7 +82,7 @@ Fluent for Steam is a skin that is based on the "Windows 11 design principles". 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-# Support the project! 💰💸💲
+# Support the project! 💰💸
 
 If you liked the work, think that every corner of this skin is made with dedication, and it is completely free! But time is not free and if you want this project to continue more and more active you can contribute by donating in the following networks
 
