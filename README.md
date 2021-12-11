@@ -145,6 +145,15 @@ The rounded edges are only work on Windows 11. This skin was created only but in
 ##### Download Page with new download status bar
 ![image](https://user-images.githubusercontent.com/87723899/145314569-9b171bd2-5dc2-4414-b1a9-6e43ecfa1e1d.png)
 
+## Overlay - dont included - Early Concept
+![WIP](https://user-images.githubusercontent.com/87723899/145640249-699970b3-76fd-4f33-8b7c-d1bf9804f8f9.png)
+
+## Overlay - No Concept - WIP
+![image](https://user-images.githubusercontent.com/87723899/145662773-f7472845-43fc-42dd-9b0c-03cb7c22a72c.png)
+
+
+
+
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
