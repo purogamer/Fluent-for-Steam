@@ -155,6 +155,7 @@ The rounded edges are only work on Windows 11. This skin was created only but in
 ![image](https://user-images.githubusercontent.com/87723899/145662773-f7472845-43fc-42dd-9b0c-03cb7c22a72c.png)
 
 
+![image](https://user-images.githubusercontent.com/87723899/147366690-7f60d649-58bc-43ca-8817-bb60871a67b4.png)
 
 
 
