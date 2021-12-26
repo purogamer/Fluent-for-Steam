@@ -159,6 +159,9 @@ The rounded edges are only work on Windows 11. This skin was created only but in
 ## Improved Login Dialog
 ![image](https://user-images.githubusercontent.com/87723899/147380244-298e1f62-509f-438f-9f9e-4a72b115e128.png)
 
+![image](https://user-images.githubusercontent.com/87723899/147399682-a5cd58a6-e1a1-4a36-a000-9265584fbad2.png)
+
+
 
 
 
