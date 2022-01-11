@@ -149,12 +149,6 @@ The rounded edges are only work on Windows 11. This skin was created only but in
 #### Overlay
 ![overlay casi](https://user-images.githubusercontent.com/87723899/148888020-0357f63c-b75b-4f41-8eb8-3d8965c03bc7.png)
 
-
-
-
-
-![image](https://user-images.githubusercontent.com/87723899/147366690-7f60d649-58bc-43ca-8817-bb60871a67b4.png)
-
 ## Improved Login Dialog
 ![image](https://user-images.githubusercontent.com/87723899/147380244-298e1f62-509f-438f-9f9e-4a72b115e128.png)
 
