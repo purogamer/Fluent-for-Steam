@@ -29,7 +29,7 @@
       <img src="https://user-images.githubusercontent.com/87723899/148888284-465d0a33-b72f-40cd-a8d4-c099bc48c553.png" alt="Logo">
   </a>
 
-  <h3 align="center">Fluent For Steam BETA0.1b</h3>
+  <h3 align="center">Fluent For Steam BETA0.2C</h3>
 
  <p align="center">
    At the moment it only works on windows
@@ -145,21 +145,14 @@ The rounded edges are only work on Windows 11. This skin was created only but in
 ##### Download Page with new download status bar
 ![image](https://user-images.githubusercontent.com/87723899/145314569-9b171bd2-5dc2-4414-b1a9-6e43ecfa1e1d.png)
 
+![Captura de pantalla 2022-02-05 021947](https://user-images.githubusercontent.com/87723899/154415862-f8589204-23f2-4156-a1bd-ba7974132bab.png)
 
-#### Overlay
-![overlay casi](https://user-images.githubusercontent.com/87723899/148888020-0357f63c-b75b-4f41-8eb8-3d8965c03bc7.png)
 
-## Improved Login Dialog
-![image](https://user-images.githubusercontent.com/87723899/147380244-298e1f62-509f-438f-9f9e-4a72b115e128.png)
-
-![image](https://user-images.githubusercontent.com/87723899/147399682-a5cd58a6-e1a1-4a36-a000-9265584fbad2.png)
-
-![image](https://user-images.githubusercontent.com/87723899/147399718-c1607484-4baa-413b-bca3-1c561e4d4b22.png)
-
-![image](https://user-images.githubusercontent.com/87723899/148887954-0ef31591-7366-418b-b0e5-29c9ad77134f.png)
+![Captura de pantalla 2022-02-17 010131](https://user-images.githubusercontent.com/87723899/154415888-b77275a8-6044-4b05-bb99-2a841db4623a.png)
 
 
 
+![Captura de pantalla 2022-02-13 024959](https://user-images.githubusercontent.com/87723899/154415868-0b11811e-fdd3-47a4-903c-485e148bafd5.png)
 
 
 
