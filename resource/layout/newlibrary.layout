@@ -1,0 +1,25 @@
+"resource/layout/newlibrary.layout"
+{
+	controls
+	{
+		HTMLRoot { controlname=HTML style="HTMLRoot" }
+	}
+
+	styles
+	{
+		HTMLRoot
+		{
+			inset="0 0 0 0"
+		}
+	}
+
+	layout
+	{
+		region	{ name="space" y=0 x=0 width=max height=max }
+
+		place
+		{
+			control=HTMLRoot  region=space	x=0 	y=0 	width=max   	height=max
+		}
+	}
+}

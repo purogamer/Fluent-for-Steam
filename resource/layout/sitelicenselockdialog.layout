@@ -1,0 +1,54 @@
+"resource/layout/sitelicenselockdialog.layout"
+{
+	controls
+	{
+		SiteLicenseLockDialog { controlname="Frame" title="#steam_sitelicense_locktitle" style="SiteLicenseLockDialog" }
+
+		Instructions { controlname="Label" style="Hey" labeltext="#steam_sitelicense_lockinfo" wrap=1 }
+
+		KeyImage { controlname="Label" style="Key" zpos=-4 }
+
+		OK { controlname="Button" tabposition=1 command="Close" labeltext="#PropertyDialog_OK" default=1 }
+	}
+	
+	styles
+	{
+		SiteLicenseLockDialog
+		{
+			minimum-width = 400
+			minimum-height = 250
+		}
+
+		Hey
+		{
+			font-size=18
+		}
+
+		Key
+		{
+			bgcolor=none
+			render_bg={}
+			image="graphics/keybg"
+			inset="20 20 0 0"
+		}
+	}
+	
+	layout
+	{
+		region { name="top" width=max height=260 margin=10 margin-top=40}
+		region { name="middle" width=max height=150 y=100 margin=10 }
+		region { name="bottom" width=max align=bottom height=36 align="bottom" }
+
+		place { control="KeyImage" region="top" align=left x=85 y=0 width=max height=max margin-top=-30 margin-right=0}	
+
+		place { control="Instructions" region="top" align=center width=max }
+		
+		// bottom: OK
+		place { control="OK" region="bottom" align=right
+						width=92 height=25 align=right
+						margin-right=10 margin-top=0
+						margin-bottom=2 spacing=10 }
+	}
+
+}
+

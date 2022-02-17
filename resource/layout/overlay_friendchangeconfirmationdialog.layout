@@ -1,0 +1,48 @@
+"resource/layout/overlay_friendchangeconfirmationdialog.layout"
+{
+	
+	layout
+	{
+	
+		region {
+
+			name="botones" 
+			align="bottom"
+			width="max" 
+			margin-top=6
+			height=35 
+			margin-right=9
+		
+		}	region {
+		 	
+			name="principal" 
+			margin-top=38
+			margin-left=15 
+			margin-right=15
+			width=502 
+			height=252 
+			
+		}
+				
+
+		place { 
+			
+			region="botones" 
+			control=ConfirmButton,CancelButton 
+			dir=left 
+			align=right 
+			spacing=10 
+			
+		}
+
+		place { 
+			
+			region="principal" 
+			control=ReasonLabel 
+		    dir=down
+			spacing=16 
+			width=max 
+			
+		}
+	}
+}

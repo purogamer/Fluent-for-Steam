@@ -1,0 +1,82 @@
+"resource/layout/subpaneloptionsingame.layout"
+{
+	controls
+	{
+		TitleLabel { controlname=label labeltext="#Steam_SettingsInGameTitle" style=highlight }
+		EnableOverlayCheck { ControlName=CheckButton labelText="#Overlay_SettingsEnable" }
+		EnableSCTenfootOverlayCheck [!$OSX&&!$LINUX] { ControlName=CheckButton labelText="#Overlay_SettingsSCTenfootEnable" }
+		EnableVRDesktopGameTheaterCheck [!$OSX&&!$LINUX] {	ControlName=CheckButton labelText="#Overlay_SettingsEnableVRDesktopGameTheaterCheck" }	
+		HotKeySelector { ControlName=HotKeyEntry }
+		ScreenshotHotKeySelector { ControlName=HotKeyEntry }
+		DescriptionLabel { ControlName=Label labeltext="#Overlay_SettingsDescription" wrap=1  }
+		HotKeySelectorLabel { ControlName=Label labelText="#Overlay_SettingsHotKeyLabel" }
+		ScreenshotLabel { ControlName=Label labelText="#Overlay_SettingsScreenshotHotKeyLabel"	}
+		ScreenshotActionLabel { ControlName=Label	labelText="#Overlay_SettingsScreenshotActionLabel" }
+		ScreenshotNotifyCheck { ControlName=CheckButton labelText="#Friends_DisplayNotification" style=checkbox }
+		ScreenshotPlaySoundCheck { ControlName=CheckButton labelText="#Friends_PlayASound" }
+		ScreenshotSaveUncompressedCheck { ControlName=CheckButton labelText="#Overlay_SaveUncompressed" }
+
+		SetScreenshotFolderButton { ControlName=Button labelText="#Steam_SettingsInGameScreenshotFolder" 	command=SetScreenshotFolder }
+
+		ShowIngameFPSLabel { ControlName=Label labelText="#Steam_Settings_Ingame_ShowFPS_Title" }
+		ShowIngameFPSCornerCombo { ControlName="ComboBox" fieldName="ShowIngameFPSCombo" editable="0" }
+		ShowIngameFPSContrastCheck { ControlName=CheckButton labelText="#Steam_Settings_Ingame_ShowFPS_HightContrast" style=checkbox }
+
+		Divider1 { ControlName=Divider }
+		PingRateLabel {	controlname=label labeltext=#Steam_ServerBrowserPingRateLabel wrap=1 style=highlight }
+		PingRateInfo { controlname=label labeltext=#Steam_ServerBrowserPingRateInfo wrap=1 }
+		PingRateCombo { controlname=combobox editable="0" }
+	}
+
+	colors
+	{
+	}
+
+	styles
+	{
+		highlight
+		{
+			textcolor=White	// this keeps the 'Steam Overlay' title white
+		}
+		checkbox
+		{
+			padding-top=0
+			padding-bottom=0
+		}
+	}
+
+	layout
+	{
+		region { name=box margin-left=16 margin-right=16 }
+		//Title + Description + Check
+		place { region=box controls=TitleLabel,EnableOverlayCheck dir=down spacing=4 }
+		place [!$OSX&&!$LINUX] { region=box start=EnableOverlayCheck controls=EnableSCTenfootOverlayCheck,EnableVRDesktopGameTheaterCheck dir=down }
+		place { region=box start=EnableVRDesktopGameTheaterCheck controls=OverlayHomePageLabel,OverlayHomePage,Divider1 y=4 dir=down spacing=4 width=max }
+		place [$OSX||$LINUX] { region=box start=EnableOverlayCheck controls=EnableSCTenfootOverlayCheck,OverlayHomePageLabel,OverlayHomePage,Divider1 dir=down spacing=4 width=max }
+
+		//Left - Screenshot
+		place { start=Divider1 control=ScreenshotLabel,ScreenshotHotKeySelector dir=down margin-top=8 width=240 height=24 }
+		place { start=ScreenshotHotKeySelector control=ScreenshotActionLabel,ScreenshotNotifyCheck,ScreenshotPlaySoundCheck,ScreenshotSaveUncompressedCheck dir=down height=24 }
+	
+		//Right - Shortcut
+		place { start=ScreenshotLabel controls=HotKeySelectorLabel x=16 width=220 height=24 }
+		place { start=HotKeySelectorLabel controls=HotKeySelector width=220 height=24 dir=down }
+		place { start=HotKeySelector controls=ShowIngameFPSLabel,ShowIngameFPSCombo,ShowIngameFPSContrastCheck,SetScreenshotFolderButton spacing=2 width=220 height=24 dir=down }
+		
+		//Ping
+		place { controls="PingRateLabel" start=ScreenshotSaveUncompressedCheck y=8 width=max dir=down }
+		place { controls="PingRateCombo" start=PingRateLabel y=4 width=400 height=24 dir=down }
+		place { controls="PingRateInfo" start=PingRateCombo y=4 width=max dir=down }
+		
+		//Profanity
+		place { controls="TextFilterUpdateSettingURL" start=PingRateInfo y=4 width=400 height=26 dir=down }
+		place { controls="TextFilterStatus" start=TextFilterUpdateSettingURL y=4 width=max dir=down }
+		
+		place { controls="ShareIPNetworkingLabel" start=TextFilterStatus y=4 width=max dir=down }
+		place { controls="ShareIPNetworkingCombo" start=ShareIPNetworkingLabel y=4 width=400 height=24 dir=down }
+		place { controls="ShareIPNetworkingInfo" start=ShareIPNetworkingCombo y=4 width=max dir=down }
+
+		//Hidden
+		place { control=DescriptionLabel,TextFilterLabel,ShareIPNetworkingURL width=10 height=10 align=right }
+	}
+}

@@ -1,0 +1,485 @@
+"resource/layout/steamrootdialog.layout"
+{
+	controls
+	{
+		add_game
+		{
+			"ControlName"		"MenuBar"
+			style="AddGameButton"
+			
+		}
+		InboxButton
+		{
+			ControlName=CInboxButton
+			style="inbox_button"
+			
+		}
+    }
+
+	styles
+	{
+		RootMenu
+		{
+			bgcolor="none"
+		}
+
+		FrameTitle
+		{
+			textcolor="white"
+			bgcolor="red"
+			render_bg{}
+		}
+
+		ClientTitle
+		{
+			
+			textcolor=none
+			bgcolor="none"
+		}
+
+		view_friends
+		{
+			textcolor="none"
+				render_bg
+		{
+			1="image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/ChatNonSelected"
+		}
+			
+			
+		}
+		view_friends:hover
+		{
+			bgcolor="none"
+					render_bg
+		{
+			1="image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/ChatActive"
+		}
+			
+			
+		
+		view_friends:active
+		{
+			
+			bgcolor="none"
+			render_bg
+		{
+			1="image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/ChatActive"
+		}
+        }
+		
+		view_friends:selected
+		{
+			
+			bgcolor="none"
+					render_bg
+		{
+			1="image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/ChatSelected"
+		}	
+			
+		}
+		}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//======This is the VAC Ban Button wich appears only if you are VAC Banned(made it an icon rather than text)====//
+		support_alert
+		{
+			textcolor=white75
+			bgcolor="none"
+			render_bg
+			{
+				0="image(x0+6,y0+8,x1,y1,graphics/warning)"
+			}
+			padding-right=3
+			padding-left=15
+		}
+		support_alert:hover
+		{
+			render_bg
+			{
+				0="image(x0+6,y0+8,x1,y1,graphics/warning)"
+				1="fill(x0,y0,x1,y1,white05)"
+			}
+		}
+		support_alert:active
+		{
+			render_bg
+			{
+				0="image(x0+6,y0+8,x1,y1,graphics/warning)"
+				1="fill(x0,y0,x1,y1,white10)"
+			}
+		}
+
+		support_alert_ack
+		{
+			textcolor=white75
+			bgcolor="none"
+			render_bg
+			{
+				0="image(x0+6,y0+8,x1,y1,graphics/warning)"
+			}
+			padding-right=3
+			padding-left=15
+		}
+		support_alert_ack:hover
+		{
+			render_bg
+			{
+				0="image(x0+6,y0+8,x1,y1,graphics/warning)"
+				1="fill(x0,y0,x1,y1,white05)"
+			}
+		}
+		support_alert_ack:active
+		{
+			render_bg
+			{
+				0="image(x0+6,y0+8,x1,y1,graphics/warning)"
+				1="fill(x0,y0,x1,y1,white10)"
+			}
+		}
+
+		inboxmenuitem
+		{
+			textcolor=whie
+			
+		}
+		inboxmenuitem:hover
+		{
+			textcolor=white
+		}
+		inboxmenuitem_active
+		{
+			textcolor=white
+		}
+
+		announcement_button
+		{
+			render_bg
+		{
+			1="image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/NewsNonSelected"
+		}
+			
+		}
+		announcement_button:hover
+		{
+				bgcolor="none"
+				render_bg
+		{
+			1="image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/NewsHover"
+		}
+		}
+		announcement_button:active
+		{
+			bgcolor=none
+				render_bg
+		{
+			1="image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/NewsSelected"
+		}
+		}
+		announcement_button_active
+		{
+			
+			bgcolor="none"
+			render
+			{
+				0="image(x0+4,y0+2,x8,y1,graphics/fluent/icons/navbar/leftnav/dot)"
+			}
+			
+		}
+                                                      --------------------            BOTON MENSAJES      --------------------
+		inbox_button
+		{
+			inset="8 0 8 0"
+			textcolor=white
+			font-family=basefont
+			font-style="none"
+			render_bg
+			{
+				0="image(x0+2,y0+0,x1,y1,graphics/fluent/icons/navbar/notifications)"
+			}
+			render {}
+			padding-left=0
+			padding-right=0
+			padding-top=0
+		}
+		inbox_button:hover
+		{
+			textcolor=white
+			bgcolor=none
+			render_bg
+			{
+				0="image(x0+2,y0+0,x1,y1,graphics/fluent/icons/navbar/noti_sinpulsar)"
+			}
+			render {}
+		}
+		inbox_button:selected
+		{
+			textcolor=white
+			bgcolor=none
+			render_bg
+			{
+				0="image(x0+2,y0+0,x1,y1,graphics/fluent/icons/navbar/noti_sinpulsar)"
+			}
+			render {}
+		}
+		inbox_button:disabled
+		{
+			textcolor=white
+			bgcolor="none"
+			render_bg
+			{
+				0="image(x0+0,y0+0,x1,y1,graphics/fluent/icons/navbar/notifications)"
+			}
+		}
+                                                   --------------------            BOTON MENSAJES      --------------------
+		inbox_button_active
+		{
+			textcolor=red
+			bgcolor="none"
+			render_bg
+			{
+				0="image(x0+0,y0+0,x1,y1,graphics/fluent/icons/navbar/notiac)"
+			}
+		}
+		inbox_button_active:none
+		{
+			textcolor=red
+			bgcolor="none"
+			render_bg
+			{
+				0="image(x0+0,y0+0,x1,y1,graphics/fluent/icons/navbar/notiac_no)"
+			}
+		}
+		inbox_button_active:selected
+		{
+			textcolor=red
+			bgcolor="none"
+			render_bg
+			{
+				0="image(x0+0,y0+0,x1,y1,graphics/fluent/icons/navbar/notiac_no)"
+			}
+		}
+		inbox_button_active:disabled
+		{
+		    textcolor=white
+			bgcolor="none"
+			render_bg
+			{
+				0="image(x0+0,y0+0,x1,y1,graphics/fluent/icons/navbar/notiac_no)"
+			}
+		}
+
+		parental_lock_button
+		{
+			bgcolor="none"
+			render_bg
+			{
+				0="fill(x0,y1,x1,y1+1,Red)"
+			}
+			image="graphics/fluent/icons/navbar/parent_unlocked"
+			padding-right=4
+		}
+		parental_lock_button:hover
+		{
+			bgcolor=white05
+		}
+		parental_lock_button:selected
+		{
+			bgcolor="none"
+			render_bg
+			{
+				0="fill(x0,y1,x1,y1+1,green)"
+			}
+			image="graphics/fluent/icons/navbar/parent_locked"
+		}
+		parental_lock_button:selected:hover
+		{
+			bgcolor=white05
+		}
+
+		VRButton
+		{
+			image="graphics/icon_vr"
+			bgcolor=none
+			padding-right=4
+		}
+		VRButton:hover
+		{
+			image="graphics/icon_vr_over"
+			bgcolor=white05
+		}
+		VRButton:active
+		{
+			bgcolor=White10
+		}
+		VRButton:disabled
+		{
+			image="graphics/icon_vr_disabled"
+			bgcolor=White10
+		}
+		VRButtonExit
+		{
+			padding-left=8
+			padding-right=8
+		}
+
+		FullscreenButton
+		{
+			textcolor="none"
+			bgcolor="none"
+				render_bg
+		{
+			1="image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/Bigpicture"
+		}
+		}
+		FullscreenButton:hover
+		{
+			textcolor="none"
+			bgcolor="none"
+				render_bg
+		{
+			1="image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/Bigpicturehover"
+		}
+		}
+		FullscreenButton:active
+		{
+			textcolor="none"
+			bgcolor="none"
+				render_bg
+		{
+			1="image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/Bigpictureactive"
+		}
+		}
+		FullscreenButton:disabled
+		{
+			textcolor="none"
+			bgcolor="none"
+		}
+		AddGameButton
+		{
+				textcolor="none"
+				render_bg
+		{
+			1="image( x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/addgame )"
+		}
+					
+		}
+		AddGameButton:hover
+		{
+			textcolor="none"
+			render_bg
+			{
+				0="image( x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/addgameactive)"
+			}
+		}
+		AddGameButton:focus
+		{
+			bgcolor=red
+			textcolor="none"
+			render_bg
+			{
+				0="image( x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/addgameactive )"
+			}
+		}
+	}
+
+layout
+	{
+		region { name=top align=top width=max height=48 margin-top=0 margin-left=40}
+		
+				
+		//Content
+		place { 
+			region="navbars" 
+			control="UINavigatorPanel" 
+			align="left" 
+			end-left="AccountButton" 
+			width="max" 
+			height=max 
+			margin-top=10 
+			x=1 
+			margin-left=74
+			}
+
+
+		//Controls
+		place { control="XPVistaAlert,SupportAlert,AccountButton,ParentalLockButton,InboxButton,startvr,exitvr" region=top align=right end-right=frame_minimize  spacing=0 margin-right=3 height=39 }
+		place { control="" region=top align=right end-right=frame_minimize margin-right=1 height=40 }
+		place [$OSX] { control="UIStatusPanel" region=top align=right margin-right=1 width=27 height=40 }
+		place { region=lefty control="MenuBar" margin-left=14 margin-top=12 height=28 width=98 }
+		place { region=lefty control="ClientTitle" margin-left=60}
+	
+	   region 
+	   { 
+			
+			name="navbars" 
+			height="max"
+			widht="50"
+			
+			
+			
+					
+	   }
+		
+        //help by mixter213 
+
+		
+		region { 
+			
+			name="lefty" 
+			height="max" 
+			widht=64 
+			margin-left=6 
+			margin-bottom=14
+			
+			}
+		
+		place { 
+			region="lefty" 
+			control=" AnnouncementButton, view_friends,fullscreen, add_game  " 
+			spacing=6 
+			align=top 
+			dir=down 
+			margin-top=50
+			height=64 
+			width=64
+			}
+        region { 
+			
+			name="downloadbar" 
+			height="max" 
+			widht= 
+			margin-left=6
+			 
+			
+			
+			}
+		place { 
+			region="downloadbar" 
+			control="UIStatusPanel" 
+			spacing=8 
+			align=bottom 
+			dir=down 
+			height="72" 
+			width="75"
+			margin-left=2
+			}
+
+		//cerrrabrirminizar
+
+		place [!$OSX] { 
+
+			control="frame_minimize,frame_maximize,frame_close" 
+			
+			align=right 
+			width=46 
+			height=32 
+            margin-right=1 
+
+			}
+
+	
+		place { control="frame_captiongrip" margin=2 width=max height=104 }
+
+		/ocultos
+		place { control=",a,universe_label,New," margin-left=-999 }
+}

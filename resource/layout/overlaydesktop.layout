@@ -1,0 +1,256 @@
+"resource/layout/overlaydesktop.layout"
+{
+	
+
+	styles
+	{ 
+		//// workshop, force quit ////
+		sidemenu
+		{
+			textcolor="white35"
+			font-family="cachetazo"
+			font-size="20"
+			font-style=regular
+			padding-left=5
+			padding-right=5
+			
+
+		}
+		sidemenu:hover
+		{
+			textcolor="white"
+			font-family="cachetazo"
+			font-size="20"
+			render_bg
+			{
+				{
+				0="fill(x0+2,y0+2,x1-2,y1-2,white07)"
+
+				///////////////////esquina izquierda inferior/////////////////////////////
+				1="image(x0-1,y1-4,x0+2,y1+4, bordescurvos/b/ai)"
+
+				////////////////////parte inferior/////////////////////////////////////////
+				2="image_tiled(x0+4,y1-2,x1-4,y1+4, bordescurvos/b/am)"
+			
+                ////////////medio de parte izquierda///////////////////////////////////////////////////
+				3="image_tiled(x0-3,y0+4,x0+2,y1-4, bordescurvos/b/mi)"
+				
+				//////////////////////////esquina izquierda superior///////////////////////////////////////////
+				5="image(x0-1,y0-0,x0+2,y0+3, bordescurvos/b/ti)"
+
+                ////////////////////////Parte del medio superior//////////////////////////////
+				6="image_tiled(x0+4,y0-2,x1-4,y0+2,bordescurvos/b/tm)"
+
+                //////////////medio derecha/////////////////////////////////////////////////////////////////////
+				4="image_tiled(x1-2,y0+4,x1+3,y1-4,bordescurvos/b/md)"
+
+				/////////////////////////esquina derecha superior///////////////////////////////////////////////
+				7="image(x1-4,y0-0,x1+3,y0+2, bordescurvos/b/td)"
+
+				/////////////////////esquina inferior derecha//////////////////////////////////////////////////////
+				8="image(x1-4,y1-4,x1+3,y1+2, bordescurvos/b/ad)"
+			}
+			font-style=regular
+		}
+		//// reloj
+		
+	
+		
+		
+		///====Tiempo de juego====///
+		timeStrings
+		{
+			textcolor="tiempodejuego"
+			textcolor="white10"
+			font-family="cachetazo"
+			font-size="18"
+		
+		}
+		clocksuffix
+		{
+			textcolor="OverlayClock"
+			font-family="basefont"
+			font-style="uppercase"
+		}
+
+		topbar
+		{
+			textcolor="white"
+			font-family="cachetazo"
+			font-style="regular"
+			font-size="32"
+			
+		}
+	}
+	layout
+	{
+		//botones quitar, workshop etc//
+		region {
+
+			name="botones"
+			margin-bottom="29"
+			margin-left=62
+			
+			
+
+		}
+
+		place { 
+			
+			region="botones"
+			control="WorkshopButton,EditControllerConfig, ForceQuitButton, WebSiteButton, GameGroupsButton" 
+			spacing=24
+			dir=right
+			align=bottom
+			margin-bottom=32
+			margin-left=20
+
+			
+		
+		 }
+
+		
+			
+		
+	
+		//Panels
+
+			
+		/for ocultar
+		place { control="DLCButton,GuideButton,LegacyCDKeyButton,RecommendButton" align=right margin-right=-999 }
+		 
+		///==== Nuevo panel inferior ====///
+        region {
+
+           name="cardsleft"
+		   align="left"
+		   margin-top="344"
+		   margin-left="60"
+		   
+		} 
+
+		region {
+
+           name="cardsright"
+		   align="right"
+		   margin-top="344"
+		   margin-right="80"
+		  		    
+		} 
+
+		region {
+
+           name="Dashboard"
+		   align="right"
+		   width="700"
+		  		    
+		} 
+
+		region {
+
+           name="items"
+           margin-top=250
+		   margin-left=100
+		  
+		} 
+
+		place  {
+
+			region="items"
+			control="ChatRoomButton"
+			height="83"
+			width="336"
+			align="right"
+			dir=down
+			spacing=4
+			
+		}
+
+        ////====Logros====////
+		place {
+			
+			
+			control=" clock, clocksuffix"
+			align=bottom-right
+			margin-bottom=35
+			dir=down
+			height=50
+			widht=100
+			margin-right=90
+			
+			
+
+		}
+
+		////Tiempos de juegos//// ////===s==////
+		place { 
+			
+			control="SessionText,TwoWeeksText,ForeverText"
+			align=top-left  
+			spacing=0
+			dir=down
+			margin-left=69
+			margin-top=86
+			
+			}
+
+		
+	
+
+		place {
+
+			
+			control="AchievementsDetailPanel, CommunityHubDetailPanel, GuidesDetailPanel, CommunityDiscussionsDetailPanel, ScreenshotsDetailPanel"
+			start=FriendsDetailPanel
+			height="114"
+			width="533"
+			align=right
+			margin-top=5
+			margin-right=0
+			dir=down
+			spacing=10
+			
+		
+
+		}
+
+		place  {
+
+			region="cardsright"
+			control=", "
+			height="117"
+			width="394"
+			spacing=15
+			align=right
+			dir=down
+	
+		}
+
+
+		
+		place  {
+
+			
+			control="FriendsDetailPanel"
+			width="533" height="176" 
+			align=right
+			dir=down
+			
+			
+
+			
+	
+		}
+
+		////===Ocultos===////
+		place {
+
+			control="NewsDetailPanel"
+			margin-right=9999
+
+		}
+	
+	   //// FALTANTE Z-BroadcastDetailPanel-Z //// 
+
+	}
+}

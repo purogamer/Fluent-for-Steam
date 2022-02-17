@@ -1,0 +1,43 @@
+"resource/layout/editfriendsgroupsdialog.layout"
+{
+	layout
+	{
+		place { 
+
+			control="frame_captiongrip" 
+			width=max
+			height=42
+
+		}
+		place { 
+
+			control="frame_minimize,frame_maximize,frame_close" 
+			align=right 
+			width=40 
+			height=40 
+			margin-right=2
+			
+		}
+		
+		
+		region { 
+
+			name="inferior" 
+			align=bottom 
+			height=43 
+			margin=9 
+			
+		}
+			
+		place {	
+
+			region="inferior" 	
+			control="OKButton,CancelButton" 
+			width=84 
+			height=32 
+			align=right 
+			spacing=8 
+			
+		}
+	}
+}

@@ -1,0 +1,74 @@
+"resource/layout/overlay_communityhubpanel.layout"
+{
+	controls
+	{
+		CommunityHubDetailPanel { controlname="COverlay_Details_CommunityHub_Panel" style=detailsbox }
+		TitleText { controlname="label" labeltext="#Overlay_CommunityHub_Panel_Title" style=detailsboxtitle }
+		NumContributionsText { controlname="label" labeltext="#Overlay_CommunityHub_Panel_NumContributions"  style=highlight }
+
+		ViewCommunityHub { controlname="Button" labeltext="#Overlay_View_CommunityHub" command="viewcommunityhub" }
+	}
+	
+	styles
+	{
+		Button
+		{
+			bgcolor="none"
+			textcolor="none"
+			render_bg
+			{
+				1="image( x0, y0+0, x0, y0+0, overlay/panels/home)"
+			}
+		}
+		Button:hover
+		{
+			render_bg
+			{
+				1="image( x0, y0+0, x0, y0+0, overlay/panels/home_h)"
+			}	
+		}
+		Button:active
+		{
+			render_bg
+			{
+				1="image( x0, y0+0, x0, y0+0, overlay/panels/home_h)"
+			}		
+		}
+	}
+	layout
+	{
+		///====label====///
+		place { controls=ViewCommunityHub x=0 y=0 margin-right=0 width=533 height=114 }
+
+		region {
+
+			name="text"
+			margin-left="90"
+			margin-top=23
+
+
+		}	
+
+		///==="texto"===///
+		
+		
+			place { 
+			
+			region="text"
+		    control="TitleText"   
+			margin-top="16"
+			
+	    }
+		place { 
+
+			region="text"
+			control="NumContributionsText" 
+			margin-top="35"
+
+			
+			
+			}
+
+		
+	}
+}

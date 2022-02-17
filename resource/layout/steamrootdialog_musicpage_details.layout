@@ -1,0 +1,8 @@
+"resource/layout/steamrootdialog_musicpage_details.layout"
+{
+	layout
+	{
+		region { name="content" y=0 x=0 width=max height=max }
+		place { control=CMusicPage_Details_Content region=content x=0 y=0 width=max height=max }
+	}
+}

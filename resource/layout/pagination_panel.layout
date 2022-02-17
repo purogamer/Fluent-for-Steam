@@ -1,0 +1,98 @@
+"resource/layout/pagination_panel.layout"
+{
+	controls
+	{
+		pagination { controlname="CPaginationPanel" style="pagination" }
+		pagedescription { controlname="Label" labeltext="#steam_paginationtext" style="pagedescriptionstyle" }
+		FirstLink { controlname="Button" labeltext="1" style="PageButton" }
+		PreviousLink { controlname="Button" labeltext="<" style="JumpButton" }
+		page1 { controlname="Button" visible=0 style="PageButton" }
+		page2 { controlname="Button" visible=0 style="PageButton" }
+		page3 { controlname="Button" visible=0 style="PageButton" }
+		page4 { controlname="Button" visible=0 style="PageButton" }
+		page5 { controlname="Button" visible=0 style="PageButton" }
+		page6 { controlname="Button" visible=0 style="PageButton" }
+		page7 { controlname="Button" visible=0 style="PageButton" }
+		page8 { controlname="Button" visible=0 style="PageButton" }
+		page9 { controlname="Button" visible=0 style="PageButton" }
+		page10 { controlname="Button" visible=0 style="PageButton" }
+		page11 { controlname="Button" visible=0 style="PageButton" }
+		page12 { controlname="Button" visible=0 style="PageButton" }
+		page13 { controlname="Button" visible=0 style="PageButton" }
+		page14 { controlname="Button" visible=0 style="PageButton" }
+		page15 { controlname="Button" visible=0 style="PageButton" }
+		page16 { controlname="Button" visible=0 style="PageButton" }
+		page17 { controlname="Button" visible=0 style="PageButton" }
+		page18 { controlname="Button" visible=0 style="PageButton" }
+		page19 { controlname="Button" visible=0 style="PageButton" }
+		page20 { controlname="Button" visible=0 style="PageButton" }
+		NextLink { controlname="Button" labeltext=">" style="JumpButton" }
+		LastLink { controlname="Button" labeltext="Last" style="PageButton" }
+		LeftSpacer { controlname="Label" labeltext="..." style="spacerstyle" }
+		RightSpacer { controlname="Label" labeltext="..." style="spacerstyle" }
+	}
+
+	colors
+	{
+		PaginationPanel.ExtraVerticalSpacing "25"
+	}
+
+	styles
+	{
+		paginationLinkDisabledStyle
+		{
+			textcolor=white35 
+			font-style=underline
+		}
+
+		pagedescriptionstyle
+		{
+		  padding-left=3
+		  font-size=17
+		}
+
+		PageButton
+		{
+			render_bg {}
+			minimum-width=30
+		}
+
+		PageButton:hover
+		{
+			render_bg {}
+			textcolor=White
+			font-style=uppercase
+		}
+
+		JumpButton
+		{
+		  padding-left=10
+		  padding-right=10
+		}
+	
+		paginationLinkStyle
+		{
+			font-style=""
+			textcolor=Text2
+		}
+	
+		paginationLinkStyle:hover
+		{
+			textcolor=White
+			font-style=uppercase
+		}
+		
+		spacerstyle
+		{
+			padding-right=10
+			textcolor=Text2
+		}
+	}
+
+	layout
+	{
+		region { name=body margin=0 width=max height=max }
+		place { region=body y=2 control=pagedescription }
+		place { region=body align=right control=PreviousLink,FirstLink,LeftSpacer,page1,page2,page3,page4,page5,page6,page7,page8,page9,page10,page11,page12,page13,page14,page15,page16,page17,page18,page19,page20,RightSpacer,LastLink,NextLink }
+	}
+}

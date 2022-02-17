@@ -1,0 +1,17 @@
+"resource/layout/overlay_achievement_item.layout"
+{
+	
+	colors
+	{
+	}
+	styles
+	{
+	}
+	layout
+	{
+		region { name=empty width=max }
+		place { region=empty control="icon"  y=0 x=0 width=0 height=0 margin=9999}
+		place { region=empty control="caption"  y=0 x=9999 width=max height=0 margin=9999 }
+		place { region=empty control="name"  x=0 width=max margin=9999 y=9999 }
+	}
+}

@@ -1,0 +1,66 @@
+"resource/layout/announcement_web.layout"
+{
+	colors
+	{
+		
+	}
+	
+	styles
+	{
+		announcementwebpanel
+		{
+			inset="0 0 0 0"
+		}
+
+		announcementweb
+		{
+			inset="0 0 0 0"
+		}
+
+		announcementnotch
+		{
+			
+			
+		}
+
+		
+	}
+	
+	layout
+	{
+		region { 
+			
+			width=max 
+			height=max 
+			name="inferior" 
+			y=16
+			
+			
+		}
+		place { 
+
+			control=announcementnotch 
+			width=32 
+			height=16 
+			
+		}
+
+		place { 
+			
+			region="inferior"
+			control=announcementbg 		 
+			width=max 
+			height=max
+			
+		}
+		place { 
+
+			region="inferior" 
+			control=announcementweb 
+			margin=10 
+			width=max 
+			height=max 
+			
+		}
+	}
+}

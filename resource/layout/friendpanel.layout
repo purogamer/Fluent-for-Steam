@@ -1,0 +1,386 @@
+"resource/layout/friendpanel.layout"
+{
+	controls
+	{
+		AvatarImage
+		{
+		}
+	
+		AvatarOverlayImage
+		{
+			zpos=2
+		}
+		
+		// clan officer image
+		ClanStatusImage
+		{
+		}
+		
+		// speaker icons for voice chat, still procedurally controlled		
+		MultiUserChatStatusImage
+		{
+		}
+		
+		NameLabel
+		{
+			style="namestyle"
+		}
+
+		// the (1) next to the name when multiple friends have the same name
+		FriendsNameInstanceLabel
+		{
+			style="NameInstanceStyle"
+		}
+
+		MobileStatusImage
+		{
+			style="MobileStatusStyle"
+			tooltiptext="#Friends_MobileStatus_Tooltip"
+		}
+
+		BigPictureStatusImage
+		{
+			style="BigPictureStatusStyle"
+			tooltiptext="#Friends_BigPictureStatus_Tooltip"
+		}
+
+		WebStatusImage
+		{
+			style="WebStatusStyle"
+			tooltiptext="#Friends_WebStatus_Tooltip"
+		}
+
+		MobileStatusImageInGame
+		{
+			style="MobileStatusStyleInGame"
+			tooltiptext="#Friends_MobileStatus_Tooltip"
+		}
+
+		BigPictureStatusImageInGame
+		{
+			style="BigPictureStatusStyleInGame"
+			tooltiptext="#Friends_BigPictureStatus_Tooltip"
+		}
+
+		WebStatusImageInGame
+		{
+			style="WebStatusStyleInGame"
+			tooltiptext="#Friends_WebStatus_Tooltip"
+		}
+
+		VRStatusImage
+		{
+			style="VRStatusStyle"
+			tooltiptext="#Friends_VRStatusStatus_Tooltip"
+		}
+
+		VRStatusImageInGame
+		{
+			style="VRStatusStyleInGame"
+			tooltiptext="#Friends_VRStatusStatus_Tooltip"
+		}
+
+
+		StatusLabel
+		{
+			style="statusStyle"
+		}
+		
+		GameLabel
+		{
+			style="statusStyle"
+		}
+		
+		// the little drop-down arrow
+		MenuButton
+		{
+			style="menuButtonStyle"
+		}
+		
+		// used at the top of the friends list for the current user
+		ControlPanelLink
+		{
+			style="controlPanelLinkStyle"
+		}
+		
+		// used in the invite-to-game dialog for when in a game		
+		InviteToGameButton
+		{
+		}
+		
+		AcceptLink { style="inviteLinkStyle" }
+		IgnoreLink { style="inviteLinkStyle" }
+		BlockLink { style="inviteLinkStyle" }
+	}
+	
+	colors
+	{
+	
+	}
+
+	styles
+	{
+		menuButtonStyle
+		{
+			minimum-width=26
+			minimum-height=50
+			render {
+
+				0="image(x0, y0, x0, y0, overlay/panels/friends/chevron)"
+
+			}
+		
+		}
+		menuButtonStyle:hover
+		{
+			render {
+
+				0="image(x0, y0, x0, y0, overlay/panels/friends/chevron_h)"
+
+			}
+		}
+		menuButtonStyle:focus
+		{
+			render {
+
+				0="image(x0, y0, x0, y0, overlay/panels/friends/chevron_h)"
+
+			}
+		}
+
+		CFriendPanel {
+			minimum-width=158
+			minimum-height=52
+			render_bg{
+
+				0="image(x0, y0, x0, y0, overlay/panels/friends/card)"
+		
+			}
+			render{
+				
+				1="image(x0, y0, x0, y0, overlay/panels/friends/mask)"
+
+			}
+		
+		}
+
+		CFriendPanel:hover {
+			
+		}
+
+		
+		CFriendPanel:selected
+		{
+			
+		}
+
+		ScrollBarHandle {
+
+			bgcolor=none
+		}
+
+		namestyle
+		{
+			font-family=FriendsPanel
+			font-size=16
+			font-weight=700
+		}
+		
+		nameInstanceStyle
+		{
+			font-family=FriendsPanel
+			textcolor="white"
+			font-size=16
+			font-weight=700
+		}
+
+		SelfPanel:hover
+		{	
+			render_bg {}
+			bgcolor=none
+			
+		}
+	
+		
+		ControlPanelLinkStyle
+		{
+			font-family=button
+			font-size=17
+		}
+		ControlPanelLinkStyle:hover
+		{
+			Font-size=17
+			font-family=button
+		}
+		statusStyle
+		{
+			font-family=FriendsPanel
+			font-size=17
+			font-weight=600
+		
+		}
+		
+		statusStyle:hover
+		{
+			textcolor=white45
+		}
+		
+		inviteLinkStyle
+		{
+			font-style="basefont"
+			textcolor=white45
+		}
+	
+		inviteLinkStyle:hover
+		{
+			textcolor=White
+			font-style=underline
+		}
+		
+		WebStatusStyle
+		{
+			image="graphics/icon_status_web"
+			padding-left=4
+		}
+	
+		BigPictureStatusStyle
+		{
+			image="graphics/icon_status_bigpic"
+			padding-left=4
+		}
+		
+		MobileStatusStyle
+		{
+			image="graphics/icon_status_mobile"
+			padding-left=4
+		}
+		
+		VRStatusStyle
+		{
+			image="graphics/icon_status_vr"
+			padding-left=4
+		}		
+
+		WebStatusStyleInGame
+		{
+			image="graphics/icon_status_web_ingame"
+			padding-left=4
+		}
+	
+		BigPictureStatusStyleInGame
+		{
+			image="graphics/icon_status_bigpic_ingame"
+			padding-left=2
+		}
+	
+		MobileStatusStyleInGame
+		{
+			image="graphics/icon_status_mobile_ingame"
+			padding-left=4
+		}
+		
+		VRStatusStyleInGame
+		{
+			image="graphics/icon_status_vr_ingame"
+			padding-left=4
+		}
+
+}
+	
+	
+	layout
+	{
+		place {	
+
+			control="AvatarOverlayImage"	
+			x=5 
+			margin-top=6 
+			width=40 
+			height=40
+
+		}
+		
+		place {	
+			
+			control="AvatarImage"
+			x=8 y=10 width=32 height=32	
+
+			}
+			
+		place {	
+
+			control="Clanstatusimage"		
+			x=20  
+			width=15 
+			
+			}
+	
+		region { 
+
+			name=card 
+			dir=down 
+			spacing=2
+			margin-right=26 
+
+		 }
+
+		place { 
+
+			control="MenuButton" 
+			heigth=50 
+			width=26
+			align=right 
+			
+		}
+		
+		place { 
+			
+			control="NameLabel,GameLabel" 
+			dir=down
+			spacing=-1 
+			x=50 
+			margin-right=27 
+			margin-top=10   
+			
+		}
+
+		place { control="BigPictureStatusImage,VRStatusImage,MobileStatusImage,WebStatusImage,BigPictureStatusImageInGame,VRStatusImageInGame,MobileStatusImageInGame,WebStatusImageInGame" margin-top=25 x="54"}
+		
+	
+		//oculto
+
+		place { 
+			
+			control="StatusLabel" 
+			x=9899 
+			y=9989 
+			
+		}
+
+		// these controls are shown for friendship requests
+		place { 
+			control="AcceptLink,IgnoreLink,BlockLink"
+		    x=50 y=31 spacing=8 
+			
+		}
+		
+		// this control is shown in the invite-to-game dialog in the overlay
+		place { 
+
+			control="InviteToGameButton" 
+			align=right 
+			y=4 
+			padding-right=7 
+			margin-right=21
+			
+		 }
+		
+		place { control="suggestedImage,SuggestedLabel"  y=20 x=49 spacing=5 } 
+
+		place { control="controlPanelLink"  y=32 x=52 }
+		
+		place { control="suggestedInvite,SuggestedIgnore" spacing=7  y=30 x=49  }
+	}
+
+
+}

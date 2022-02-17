@@ -1,0 +1,83 @@
+"resource/layout/subpaneloptionscloud.layout"
+{
+	controls
+	{
+		FamilySharingTitle { controlname=label	labeltext=#Steam_Settings_Family_Sharing_Title style=highlight}
+		FamilySharingInfoText { controlname=label labeltext=#Steam_Settings_Family_Sharing_Info wrap=1 }
+
+		AuthorizedDeviceCheck { ControlName=checkbutton labeltext=#Steam_Settings_Family_Sharing_AuthorizedDevice tooltiptext=#Steam_Settings_Family_Sharing_AuthorizedDevice_ToolTip }
+
+		BorrowersLabel { controlname=label labeltext=#Steam_Settings_Family_Sharing_Borrowers wrap=1 }
+		BorrowersList { controlname=listpanel }
+
+		ManageSharingLabel { ControlName="URLLabel" fieldName="ManageSharingLabel" labelText="#Steam_Settings_Family_Sharing_ManageSharing" URLText="steam://url/FamilySharing" }
+
+		FamilyOptionsTitle { controlname=label	labeltext=#Steam_Settings_Family_Options_Title style=highlight }
+		FamilyOptionsText { controlname=label	labeltext=#Steam_Settings_Family_Options_Text	wrap=1 }
+
+		ManageOptionsLabel { ControlName="URLLabel" fieldName="ManageOptionsLabel" labelText="#Steam_Parental_Manage" URLText="steam://url/ParentalSetup" }
+		ShowNotificationsCheck { ControlName=checkbutton labeltext=#Steam_Settings_Family_Show_Notifications }
+
+		Divider1 { ControlName=Divider	}
+	}
+	colors
+	{
+	}
+	styles
+	{
+		ListPanel
+		{
+			bgcolor=Header_Dark
+		}
+		"ListPanelColumnHeader ListPanelCheckBox"
+		{
+			padding-top=2
+			padding-left=6
+		}
+		ListPanelCheckBox
+		{
+			padding-top=1
+			padding-left=5
+		}
+		padded
+		{
+			padding-top=6
+		}
+		URLLabel
+		{
+			font-style=regular
+			bgcolor="none"
+			render_bg
+			{
+				0="image(x0+3,y0+10,x1,y1,graphics/fluent/downloads/icons/cog_sm)"
+			}
+			padding-left=20
+			padding-right=8
+		}
+		URLLabel:hover
+		{
+			render_bg
+			{
+				0="image(x0+3,y0+10,x1,y1,graphics/fluent/downloads/icons/cog_sm_h)"
+			}
+		}
+	}
+	layout
+	{
+		region { name=box margin-left=16 margin-right=16 }
+
+		//Family Options
+		place { region=box controls="FamilyOptionsTitle,FamilyOptionsText" width=max spacing=6 dir=down }
+		place { region=box controls="ManageOptionsLabel" y=74 height=28 }
+		place { region=box controls="Divider1" start=ManageOptionsLabel y=6 width=max dir=down }
+
+		//Family Sharing
+		place { region=box controls="FamilySharingTitle,FamilySharingInfoText" start=Divider1 y=6 width=max spacing=6 dir=down }
+		place { region=box controls="AuthorizedDeviceCheck,ManageSharingLabel" start=FamilySharingInfoText height=28 dir=down }
+
+		//Borrowers List
+		place { region=box start=ManageSharingLabel controls="BorrowersLabel" y=6 width=490 dir=down }
+		place { region=box start=ManageSharingLabel controls="BorrowersList" y=46 width=max height=161 dir=down }
+		place { region=box start=BorrowersList controls="ShowNotificationsCheck" y=2 dir=down width=max height=28 }
+	}
+}

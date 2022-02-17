@@ -1,0 +1,143 @@
+"resource/layout/gamespage_mini.layout"
+{
+	styles
+	{
+
+		LibrarySearchIcon
+		{
+			bgcolor=none
+			image="graphics/search"
+			padding-left=12
+		}
+		
+		NavLabel2:hover
+		{
+			textcolor="none"
+			image="grapichs/gamefilter"
+			
+		}
+		NavLabel2
+		{
+			textcolor="none"
+			image="grapichs/gamefilter_h"
+			
+		}
+	
+		NavLabel2:selected
+		{
+			textcolor="none"
+			
+		}
+		"CGamesPage_Mini CMiniGameFilterMenuButton"
+		{
+		
+		}
+		
+	
+		richText
+		{
+			selectedbgcolor="none"
+			textcolor="none"
+		}
+	}
+
+ 	layout
+ 	{
+		
+
+	
+
+		region { name=SUPERIOR align=top y=40 height=40 x=0 margin-right=0 }
+
+		place { control="library_filters" region=top start=library_search height=40 width=38 }
+
+		place { 
+			
+			control="MenuBar" 
+			margin-left=10
+			height=38 
+			margin-top=7
+			width=113 
+			 
+		}
+
+	
+		
+		place {  control="label_search_icon" 
+			
+			
+			region="SUPERIOR" 
+			width=24 
+			height=24 
+			
+			
+		}
+
+		place {  control="library_search" 
+			
+			region="SUPERIOR" 
+			start=Label_search_icon
+			height=24 
+			margin-right=44
+			width=max
+			
+			}
+
+		
+		
+
+		place {  control="subnavgroup_library" 
+			
+			
+			align=top-center
+			y=79
+			height=27 
+			width=max
+			margin-right=10 margin-left=10
+
+		}
+		
+		place {  control="gameslist"
+			
+			
+			align=left 
+			margin-right=1 
+			margin-top=79
+			margin-left=1 
+			margin-top=79 
+			width=max 
+			height=max 
+			
+		}
+
+	
+
+		place { 
+			
+			control="frame_brGrip" 
+			region="GRIP"
+			width=5 
+			height=5 
+			align=right 
+			
+		}
+		region { 
+			
+			name="GRIP"
+			width=max 
+			height=5 
+			align=bottom 
+			
+			}
+
+		place { control="rightGrip"
+			
+			
+			align=right
+			width=3
+			height=max 
+			
+		}
+	
+ 	}
+}

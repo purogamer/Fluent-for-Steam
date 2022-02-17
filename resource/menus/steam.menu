@@ -1,0 +1,186 @@
+"menubar"
+{
+	Store [$WINDOWS||$LINUX]
+	{
+		text = ""
+		FluentForSteam{	text="Support Us - Fluent For Steam 0.2c 💸💲"  shellcmd="steam://openurl/https://https://www.patreon.com/FluentForSteam" }
+				Divider {}
+
+		Webkit by AikoMidori {	text="Webkit by AikoMidori 👍♥️"  shellcmd="steam://openurl/https://github.com/AikoMidori" }
+				Divider {}
+
+				Divider {} 
+		Webkit by AikoMidori {	text="Metro for Steam Community 👍♥️"  shellcmd="https://steamcommunity.com/groups/metroskin" }
+				Divider {}
+		Mini_Mode {	text="#steam_menu_minimode"  shellcmd="steam://open/minigameslist" }
+		Large_Mode { text="#steam_menu_largemode"  shellcmd="steam://open/largegameslist" }
+		
+		
+		BackupGames { text="#steam_menu_backupgames"  command="backupgames" }
+		
+		Support { text="#steam_menu_support"  command="Support" }
+		Legal { text="#steam_menu_LegalInformation"  shellcmd="steam://url/LegalInformation" }
+		
+
+		CheckForUpdates { text="#steam_menu_checkforupdates"  command="CheckForUpdates" }
+		SystemInfo { text="#steam_menu_systeminfo"  command="SystemInfo" }
+		
+		About { text="#steam_about"  command="About" }
+		
+		ChangeUser { text="#steam_menu_changeuser"  command="ChangeUser" }
+		GoOnline { text="#SteamUI_OfflineMode_GoOnline"  command="goonline" }
+		GoOffline { text="#SteamUI_OfflineMode_GoOffline"  command="gooffline" }
+		
+		
+		ManageGuestPasses {	text="#Steam_ManageGuestPasses"  command="ManageGuestPasses" }
+		
+		NewForYou { text="#Steam_GamesDialog_RightClick_UpdateNews"	shellcmd="steam://open/newforyou" }
+		MusicPlayer { text="#steam_menu_view_musicplayer"  shellcmd="steam://open/musicplayer" }
+		MusicDetails { text="#steam_menu_view_music_details"  shellcmd="steam://nav/music/details" }
+		
+		CommentHistory { text="#ServerBrowser_HistoryTab" shellcmd="steam://openurl/https://steamcommunity.com/my/commenthistory" }
+		ThirdPartyLogins { text="#Steam_DeveloperUnknownThirdParty" shellcmd="steam://openurl/https://help.steampowered.com/en/accountdata/ThirdPartyLogins" }
+		ViewPlayerList { text="#steam_menu_view_players" shellcmd="steam://friends/players" }
+		Servers { text="#steam_menu_servers"  shellcmd="steam://open/servers" }
+		Screenshots { text="#steam_screenshots"  command="Screenshots" }
+		Divider {}
+		Settings { text="#steam_menu_settings"  command="Settings" }
+		Divider {}
+		Restart { text="#Steam_MustRestart_Button"  command="RestartSteam" }
+		Divider {}
+		Exit { text="#Steam_ExitSteam" command="Exit" }
+		Divider {}
+
+		
+	}
+
+	
+
+	Steam [$OSX] 
+	{
+		text = "Account" 
+		
+		ViewProfile { text="#steam_menu_account_view_profile" shellcmd="steam://url/SteamIDMyProfile" }
+		EditProfile { text="#steam_menu_edit_profile_name_avatar" shellcmd="steam://url/SteamIDEditPage" }
+		Divider {}
+		AccountDetails { text="#Steam_Account_Link" shellcmd="steam://url/StoreAccount" }
+		FamilySharing { text="#Steam_AccountPage_ManageDeviceAuth" shellcmd="steam://url/FamilySharing" }
+		ManageGuestPasses { text="#Steam_ManageGuestPasses" command="ManageGuestPasses" }
+		Divider {}
+		ChangeUser { text="#steam_menu_changeuser" command="ChangeUser" }
+		GoOnline { text="#SteamUI_OfflineMode_GoOnline" command="goonline" }
+		GoOffline { text="#SteamUI_OfflineMode_GoOffline" command="gooffline" }
+		Divider {}
+		Settings { text="#steam_menu_settings" shellcmd="steam://open/settings" }
+		Restart { text="#Steam_MustRestart_Button" command="RestartSteam" }
+		Exit { text="#Steam_ExitSteam" command="Exit" }
+	}
+	
+	Store [$OSX] 
+	{
+		text="#steam_store"
+
+		SteamPoints { text="SteamPoints" shellcmd="steam://openurl/https://store.steampowered.com/points/shop/" }
+		Featured { text="#steam_subnav_featured" shellcmd="steam://url/StoreFrontPage"  }
+		Explore { text="#Steam_P2P_ExploreButton" shellcmd="steam://url/StoreExplore" }
+		Upcoming { text="Upcoming" shellcmd="steam://openurl/https://store.steampowered.com/explore/upcoming/" }
+		Curators { text="Curators" shellcmd="steam://url/StoreCurators" }
+		Wishlist { text="#steam_subnav_wishlist" shellcmd="steam://url/UserWishlist" }
+		News { text="#steam_subnav_news" shellcmd="steam://open/news" }
+		Stats { text="#steam_subnav_stats" shellcmd="steam://url/StoreStats" }
+		Divider {}
+		RedeemWalletVoucher { text="#Steam_RedeemWalletVoucher" shellcmd="steam://url/RedeemWalletVoucher" }
+	}
+
+	Library [$OSX] 
+	{
+		text="#steam_library"
+		
+		Games { text="#steam_menu_view_games" shellcmd="steam://nav/games" }
+		GamesDetails { text="#steam_menu_games_details" shellcmd="steam://nav/games/details" }
+		GamesList { text="#steam_menu_games_list" shellcmd="steam://nav/games/list" }
+		GamesGrid { text="#steam_menu_games_grid" shellcmd="steam://nav/games/grid" }
+		Divider {}
+		MusicDetails { text="#steam_menu_view_music_details" shellcmd="steam://nav/music/details" }
+		MusicPlayer { text="#steam_menu_view_musicplayer" shellcmd="steam://open/musicplayer" }
+		Divider {}
+		AddShortcut { text="#Steam_menu_AddShortcut" shellcmd="steam://AddNonSteamGame" }
+		ActivateRetail { text="#Steam_RegisterProductCode" command="ActivateRetail" }
+		Divider {}
+		BackupGames { text="#steam_menu_backupgames" command="backupgames" }
+	}
+
+	Community [$OSX] 
+	{
+		text="#steam_menu_community"
+
+		Home { text="#steam_subnav_community_home" shellcmd="steam://url/CommunityHome" }
+		Discussions { text="#steam_subnav_discussions" shellcmd="steam://url/SteamDiscussions" }
+		Workshop { text="#steam_subnav_workshop" shellcmd="steam://url/SteamWorkshop" }
+		Greenlight { text="#steam_subnav_greenlight" shellcmd="steam://url/SteamGreenlight" }
+		Market { text="#steam_subnav_market" shellcmd="steam://url/CommunityMarket" }
+		Broadcasts { text="#steam_subnav_broadcast" shellcmd="steam://openurl/http://steamcommunity.com/?subsection=broadcasts" }
+	}
+	
+	Friends [$OSX] 
+	{
+		text="#steam_menu_friends_view"
+
+		Activity { text="#steam_subnav_activity" shellcmd="steam://url/SteamIDControlPage" }
+		Divider {}
+		ViewFriends { text="#steam_menu_view_friends" shellcmd="steam://open/friends" }
+		AddFriend { text="#steam_menu_add_friend" shellcmd="steam://friends/add" }
+		Divider {}
+		Online { text="#friends_online" shellcmd="steam://friends/status/online" checkable=1 }
+		Away { text="#friends_away" shellcmd="steam://friends/status/away" checkable=1  }
+		Invisible { text="#friends_invisible" shellcmd="steam://friends/status/invisible" checkable=1  }
+		Play { text="#friends_lookingtoplay"  shellcmd="steam://friends/status/play" checkable=1 }
+		Trade { text="#friends_lookingtotrade" shellcmd="steam://friends/status/trade" checkable=1 }
+		Busy { text="#friends_busy" shellcmd="steam://friends/status/busy" checkable=1 }
+		Offline  { text="#friends_offline" shellcmd="steam://friends/status/offline" checkable=1 }
+		Divider {}
+		SortByName  { text="#steam_menu_friends_sortbyname" shellcmd="steam://friends/settings/sortbyname" checkable=1 }
+		ShowAvatars { text="#steam_menu_friends_showavatars" shellcmd="steam://friends/settings/showavatars" checkable=1 }
+		OnlineUsersOnly { text="#steam_menu_friends_hideoffline" shellcmd="steam://friends/settings/hideoffline" checkable=1 }
+		ShowTagged { text="#steam_menu_friends_showtagged" shellcmd="steam://friends/settings/showtagged" checkable=1 }
+	}
+
+	View [$OSX] 
+	{
+		text="#steam_menu_view"
+
+		Divider {}
+		Inventory { text="#steam_inventory" shellcmd="steam://open/inventory" }
+		Screenshots { text="#steam_screenshots" command="Screenshots" }
+		ViewPlayerList { text="#steam_menu_view_players" shellcmd="steam://friends/players" }
+		Servers { text="#steam_menu_servers" shellcmd="steam://open/servers" }
+		Divider {}
+		MiniMode { text="#steam_menu_minimode" shellcmd="steam://open/minigameslist" }
+		LargeMode { text="#steam_menu_largemode" shellcmd="steam://open/largegameslist" }
+	}
+
+	Window [$OSX] 
+	{
+		text="#steam_menu_window"
+
+		Divider {}
+		StartVR { text="#steam_menu_startvr" command="startvr" }
+		BigPictureMode { text="#steam_menu_bigpicturemode" shellcmd="steam://open/bigpicture" } 
+	}
+	
+	Help [$OSX] 
+	{
+		text="#steam_menu_help"
+		
+		Support { text="#steam_menu_support" command="Support" }
+		Divider {}
+		Privacy { text="#steam_menu_PrivacyPolicy" shellcmd="steam://url/PrivacyPolicy" }
+		Legal { text="#steam_menu_LegalInformation" shellcmd="steam://url/LegalInformation" }
+		SSA { text="#steam_menu_SteamSubscriberAgreement" shellcmd="steam://url/SSA" }
+		Divider {} 
+		SystemInfo { text="#steam_menu_systeminfo" command="SystemInfo" }
+		About { text="#steam_about" command="About" }
+		Divider {} 
+		SkinVersion { text="fluent for Steam" shellcmd="steam://openurl/https://steamcommunity.com/groups/fluentskin"	}
+	}
+}

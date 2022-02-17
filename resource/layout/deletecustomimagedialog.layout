@@ -1,0 +1,61 @@
+"resource/layout/deletecustomimagedialog.layout"
+{
+	styles {
+
+		deletecustomimagedialog
+		{
+			minimum-width = 300
+			minimum-height = 186
+		}
+	}
+	
+	layout
+	{	
+		region { 
+
+			name="inferior" 
+			align=bottom
+			margin=10
+			height=46
+		}
+
+		place { 
+
+			control="Frame_minimize,Frame_maximize,Frame_close" 
+			align=right 
+			width=40
+			height=40 
+			margin-right=4 
+			
+		}
+
+		place { 
+
+			control="Frame_Captiongrip" 
+			width=max 
+			height=52 
+			
+		}
+		
+		place { control="ConfirmText" 
+		
+			y=42
+			width=max 
+			margin=14
+
+		}
+	
+		place {	
+			
+			control="Continue,Cancel"
+			region="inferior"
+			align=right 
+			spacing=8 
+			height=28 
+			width=84 
+			
+		}
+
+	}
+
+}

@@ -1,0 +1,115 @@
+"resource/layout/overlay_achievementsdetails.layout"
+{
+	styles
+	{
+		detailsbox
+		{
+			
+		}
+		Button
+		{
+			textcolor=none
+			bgcolor=none
+			render_bg
+			{
+				1="image( x0, y0+0, x0, y0+0, overlay/panels/logros )"
+			}
+		}
+		Button:hover
+		{
+			render_bg
+			{
+				1="image( x0, y0+0, x0, y0+0, overlay/panels/logros_h )"
+			}	
+		}
+		Button:active
+		{
+			render_bg
+			{
+				1="image( x0, y0+0, x0, y0+0, overlay/panels/logros_h)"
+			}		
+		}
+	
+		progressbackground
+		{
+			bgcolor="none"
+			
+		}
+		progressbarimage
+		{
+			bgcolor="bluesito"
+			
+		}
+	}
+	layout
+	{
+		region {	
+
+			name="barra"
+			margin-top=100
+		
+		}
+
+		region {
+
+			name="text"
+			margin-left="90"
+			margin-top=10
+
+
+		}			
+		place { 
+
+		
+			controls="ViewAchievementsButton" 
+			width="533" 
+			height="114" 
+		
+			
+			
+		}
+
+		place { 
+			
+			region="text"
+		    control="TitleText"   
+			margin-top="16"
+			
+	    }
+		place { 
+			
+			region="text"
+		    control="ProgressTextEarned"   
+			margin-top="35"
+			
+	    }
+		
+		
+		place {
+
+			region="barra"
+			control="progressbackground" 
+			width=533
+			height=2 
+			
+			}
+
+		place {
+
+			region="barra"
+			control="progressbarimage"  
+			height=4 
+			margin-top=1
+			margin-right=1
+			
+			}
+
+	
+
+
+		/////Oculto////
+		place { control=*achievement margin=9784 width=max  }
+		
+	}
+	
+}

@@ -1,0 +1,36 @@
+"resource/layout/remotedeviceauthorization.layout"
+{
+	controls
+	{
+		RemoteDeviceAuthorization { controlname="Frame" title="#SteamUI_RemoteDeviceAuthorization_Title" style="RemoteDeviceAuthorization" }
+		"AuthorizeDeviceText"{ ControlName="Label" style="Instructions" wrap=1 labelText="#SteamUI_RemoteDeviceAuthorization_Text" }
+		AuthCode { controlname="TextEntry" style="AuthCode" command="Authorize" tabposition=1 }
+		OK { controlname="Button" tabposition=2 command="Authorize" labeltext="#PropertyDialog_OK" default=1 enabled=false }
+		Cancel { controlname="Button" tabposition=3 command="Close" labeltext="#PropertyDialog_Cancel" }
+	}
+	
+	styles
+	{
+		RemoteDeviceAuthorization
+		{
+			minimum-width = 380
+			minimum-height = 180
+		}
+		AuthCode
+		{
+			minimum-height=45
+			font-size=35
+			bgcolor=Header_Dark
+		}
+		Instructions
+		{
+			font-size=16
+		}
+	}
+	layout
+	{
+		region { name="buttons" width=max height=36 align="bottom" }
+		place { control="AuthorizeDeviceText,AuthCode" dir=down align=top width=max margin-left=20 margin-right=20 margin-top=40 spacing=10 }
+		place { control="OK,Cancel" region="buttons" width=92 height=25 align=right margin-right=10 margin-top=0 margin-bottom=2 spacing=10 }
+	}
+}

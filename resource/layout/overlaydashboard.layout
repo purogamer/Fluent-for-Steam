@@ -1,0 +1,197 @@
+"resource/layout/overlaydashboard.layout"
+{
+	
+	controls
+	{
+		BaseDashboardPanel 
+		{ 
+			controlname="EditablePanel" 
+			style="overlaymain"	
+		}
+		TaskbarPanel
+		{ 
+			controlname="EditablePanel" 
+		}
+		TopFadePanel
+		{
+			controlname="EditablePanel"
+			style=topfade
+			zpos=-1
+			mouseinputenabled=0
+		}
+		BottomFadePanel
+		{
+			controlname="EditablePanel"
+			style=bottomfade
+			zpos=-1
+		}
+
+		GameName
+		{
+			controlname="Label"
+			labeltext="%gamename%"
+			style=topbar
+			textalignment=east
+		}
+		PowerMeterDim
+		{
+			controlname=	"ImagePanel"
+			image=			"resource/battery_dim"
+		}
+		PowerMeterBright
+		{
+			controlname=	"ImagePanel"
+			image=			"resource/battery_bright"
+		}
+
+		CloseButton	{ controlname="URLLabel" labeltext="#Overlay_Taskbar_Close" style="OverlayURLLabel"}
+		HotkeyLabel { controlname="Label" labeltext="%hotkey%" style="hotkey" }	
+		HotkeyExplain { controlname="Label" labeltext="#Overlay_Hotkey_Explain" margin-left=4 style="LabelOverlay"}
+	}
+
+	colors
+	{
+
+		degrade = "0 0 0 175"
+
+
+	}
+
+	styles
+	{
+		overlaymain
+		{
+								
+		}
+
+		OverlayURLLabel
+		{
+			bgcolor="none"
+			textcolor="none"
+			render_bg
+			{
+				1="image( x0, y0+0, x0, y0+0, overlay/buttons/close )"
+			}
+		}
+		OverlayURLLabel:hover
+		{
+			bgcolor="none"
+			render_bg
+			{
+				1="image( x0, y0+0, x0, y0+0, overlay/buttons/close_h )"
+			}
+		}
+
+		
+		////imagenes posbiles /for degrades////
+		bottomfade
+		{
+			render_bg
+			{
+				1="image_proportional(x0, y0, y1+30, x1, overlay/panels/gradient)"
+			}				
+								
+		}
+		
+		topbar
+		{
+			font-size="49"
+			font-family=cachetazo
+			textcolor=white
+		}
+		hotkey
+		{
+			bgcolor="none"
+			textcolor="none"
+		}
+		TopFade
+		{
+			bgcolor="none"
+			textcolor="none"
+			render_bg {
+
+				1="image( x1-554, y0, x0, y1+0, overlay/panels/bg)"
+				
+
+			}
+		}
+
+		LabelOverlay
+		{
+			bgcolor="none"
+			textcolor="none"
+		}
+	}
+
+	layout
+	{
+		/for botton de cerrar
+		
+		place { control="CloseButton" align=bottom-right margin-right="38" margin-bottom="39" width=36 height=36 }
+		
+		//Time Panel
+
+		place {
+
+			control="clock,clocksuffix"
+			align=top-right 
+			y=20 
+
+		}
+		
+		place { 
+
+			control="SessionText" 
+			align=top-right 
+			dir=down 
+			start=clock
+		
+		}
+
+		////===web browser, settings===////
+		place { 
+
+			control="TaskbarPanel" 
+			
+		
+		}
+
+		place { 
+
+			controls="gamename" 
+			align=left 
+			margin-left="64" 
+			margin-top="37" 
+			
+		}
+		
+		place {
+
+			controls="TopFadePanel"
+			align="RIGHT"
+		
+
+
+		}
+	
+		/for degradez or logosteam
+		place { 
+
+			control="BottomFadePanel" 
+			width=max 
+			height=max 
+			
+			}
+		
+		/for bateriadim
+		place { 
+			
+			control="PowerMeterDim" 
+			align=left 
+			width=96 }
+
+		/for ocultar
+
+		place { control="HotkeyLabel,HotkeyExplain," align=right margin-right=-999 }
+	}
+}

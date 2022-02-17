@@ -1,0 +1,38 @@
+"resource/layout/dialogsettings.layout"
+{
+
+	layout
+	{
+		place { 
+			
+			control="frame_minimize,frame_maximize,frame_close" 
+			width=40 
+			height=40
+			align=Right
+			margin-right=2 
+			
+		}
+		
+		region { 
+			
+			name="derecha" 
+			height=max 
+			width=192 
+			align=right 
+			margin=6 
+			margin-top=0 
+			
+		}
+
+		place { 
+
+			region="derecha"	
+			control="okButton,cancelButton" 
+			align=bottom
+			width=86 
+			height=32 
+			spacing=8
+			
+		}
+	}
+}

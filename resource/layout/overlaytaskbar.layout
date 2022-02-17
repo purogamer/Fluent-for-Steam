@@ -1,0 +1,58 @@
+"resource/layout/overlaytaskbar.layout"
+{
+	
+	styles
+	{
+		
+		
+		online_friends
+		{
+			
+			bgcolor="none"
+			textcolor="none"
+			
+		}
+		view_friends
+		{
+			bgcolor="none"
+			textcolor="none"
+			
+		}
+		ImagePanel
+		{
+			inset-right=9999
+		}
+
+		/////////////boton de navegador, settings y music player/////////////////////////////
+		taskbar
+		{
+			textcolor=red
+			font-family=button
+			font-style=regular
+		}
+		taskbar:hover
+		{
+			font-family=button
+			textcolor=white
+			font-style=regular
+		}
+
+	
+	}
+
+	layout
+	{
+		//Links
+		place { 
+			control="WebBrowserButton,MusicPlayerButton,SettingsButton" 
+			align=bottom-right 
+			dir=right
+			spacing=1 
+			margin-right=95 
+		}
+
+		
+		//Hidden
+		place { control="SteamLogo" align=right margin-right=-999 }
+	}
+}

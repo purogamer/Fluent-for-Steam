@@ -1,0 +1,87 @@
+"resource/layout/overlay_guidespanel.layout"
+{
+	controls
+	{
+		GuidesDetailPanel { controlname="COverlay_Details_Guides_Panel" style=detailsbox }
+		TitleText { controlname="label" labeltext="#Overlay_Guides_Panel_Title" style=detailsboxtitle }
+		NumGuidesText { controlname="label" labeltext="#Overlay_Guides_Panel_NumGuides"  style=highlight }
+
+		ViewGuides { controlname="Button" labeltext="#Overlay_View_Guides" command="viewguides" }
+	}
+	colors
+	{
+	}
+	styles
+	{
+		PreviewImage
+		{
+		}
+		detailsboxtitle
+		{
+			bgcolor=none
+		}
+		Button
+		{
+			bgcolor=none
+			textcolor=none
+			render_bg
+			{
+				1="image( x0, y0+0, x0, y0+0, overlay/panels/guias )"
+			}
+		}
+		Button:hover
+		{
+			render_bg
+			{
+				1="image( x0, y0+0, x0, y0+0, overlay/panels/guias_h )"
+			}		
+		}
+		Button:active
+		{
+			render_bg
+			{
+				1="image( x0, y0+0, x0, y0+0, overlay/panels/guias_h )"
+			}		
+		}
+	}
+	layout
+	{
+	
+		place { controls=ViewGuides x=0 y=0 width=533 height=114  }
+
+		
+		
+		region {
+
+			name="text"
+			margin-left="90"
+			margin-top=22
+
+
+		}	
+
+		///==="texto"===///
+		
+		
+			place { 
+			
+			region="text"
+		    control="TitleText"   
+			margin-top="16"
+			
+	    }
+		place { 
+
+			region="text"
+			control="NumGuidesText" 
+			margin-top="35"
+
+			
+			
+			}
+
+
+		//ssssssssssss
+		place { control=*guideitem y=68 width=max height=68 dir=down }
+	}
+}

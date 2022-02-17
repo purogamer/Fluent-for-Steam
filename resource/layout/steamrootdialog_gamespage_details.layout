@@ -1,0 +1,150 @@
+"resource/layout/steamrootdialog_gamespage_details.layout"
+{
+	styles
+	{
+		emptylisttext
+		{
+			textcolor="White"
+		}
+
+		// Some overrides for our listpanel
+		"GamesPage_Details ListPanel"
+		{
+			bgcolor="none"
+			inset-top=0
+			padding-left=8
+			padding-right=0
+		}
+
+		"GamesPage_Details ListPanelInterior"
+		{
+			inset="0 0 0 0"
+			bgcolor="none"
+		}
+		"GamesPage_Details ListPanelInterior:scrollbar"
+		{
+			bgcolor="none"
+		}
+
+		"GamesPage_Details ListPanelDragger"
+		{
+			bgcolor="none"
+		}
+
+		"GamesPage_Details ListPanelColumnHeader"
+		{
+			inset="0 0 0 0"
+			font-size=14
+			bgcolor="none"
+		}
+
+		"CGamesListPanel ListPanelColumnSelectButton"
+		{
+			bgcolor=bgGameList
+		}
+
+		rightcolumnheadertext
+		{
+			textcolor=titleColumn
+			bgcolor=bgTitleColumn
+			font-family=semibold
+			font-style="uppercase"
+			font-weight=400
+			padding-left=8
+		}
+		rightcolumnheadertext-red
+		{
+			textcolor=titleColumn
+			bgcolor=bgTitleColumn
+			font-family=semibold
+			font-style="uppercase"
+			font-weight=400
+			padding-left=8
+		}
+		rightcolumnheadertext-green
+		{
+			textcolor=titleColumn
+			bgcolor=bgTitleColumn
+			font-family=semibold
+			font-style="uppercase"
+			font-weight=400
+			padding-left=8
+		}
+		rightcolumnheadertext-blue
+		{
+			textcolor=titleColumn
+			bgcolor=bgTitleColumn
+			font-family=semibold
+			font-style="uppercase"
+			font-weight=400
+			padding-left=8
+		}
+
+		rightcolumnlink
+		{
+			textcolor=textColumn
+			font-style=regular
+			padding-left=8
+			bgcolor=bgTextColumn
+		}
+		rightcolumnlink:hover
+		{
+			textcolor=textColumn_a
+			bgcolor=bgTextColumn_a
+		}
+		rightcolumnlink:disabled
+		{
+			textcolor=white24
+			bgcolor="none"
+		}
+
+		rightcolumntag
+		{
+			inset="0 0 0 0"
+			textcolor=tagColumn
+			bgcolor=bgTagColumn
+			font-family=semibold
+			font-style=regular
+			padding-left=8
+			padding-top=0
+			padding-bottom=0
+			bgcolor="none"
+		}
+
+		DetailsBorderPanel
+		{
+			bgcolor="none"
+		}
+	}
+
+	layout
+	{
+		region	{ name="details" y=0 x=262 width=max height=max overflow=scroll-vertical margin-left=0 margin-right=0 }
+		region	{ name="headertext" region=details y=0 width=max height=max margin-right=170 }
+
+		//List
+		place 	{ control=GamesList width=262 height=max margin-bottom=1 }
+
+		//Empty List Text
+		place	{ control=emptylisttext y=1 width=max height=max margin-left=8 }
+
+		//Header
+		place 	{ control=gametitleheader region=headertext width=max height=144 dir=down margin-left=10 }
+
+		//Panels
+		region  { name="detailsbody" region=details y=144 width=max margin-right=170 overflow=allow-vertical }
+		place 	{ region=headertext control=gamesubheader start=gametitleheader width=max height=68 dir=down }
+		place 	{ region=detailsbody control=compatsubheader,turnnotifications,welcomedetails,nonsteamdetails,rentaldetails,friendsdetails,achievementsdetails,screenshotsdetails,communityfilesdetails,dlcdetails,clouddetails,newsdetails start=gamesubheader dir=down width=max margin-bottom=8 margin-top=10 spacing=10 }
+
+		//Sidebar
+		region	{ name="rightcolumn" region=details y=144 align=right height=max width=162 margin-right=8 overflow=allow-vertical }
+		place { control=linkslabel,sendguestpasslink,gamehublink,achievementslink,forumlink,ogglink,manuallink,editconfiglink,newslink,storelink,dlclink,cdkeylink,guidelink,guideslink,supportlink,recommendlink,tagslabel,edittagslink,*taglink region=rightcolumn dir=down height=32 width=max }
+
+		//Background Images
+		place 	{ control=headerimagea align=left margin-left=262 height=550 width=1024 }
+		place 	{ control=headerimageb align=left margin-left=262 height=550 width=1024 }
+
+		//?
+		place 	{ control=DetailsBorder y=1 x=1 width=max height=max }
+	}
+}

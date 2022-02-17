@@ -1,0 +1,3 @@
+"Public/SteamCacheWorkDialog.res"
+{
+}
