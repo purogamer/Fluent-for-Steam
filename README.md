@@ -76,6 +76,7 @@ Fluent for Steam is a skin that is based on the "Windows 11 design principles". 
 * [VsCode - VGUI plugin](https://code.visualstudio.com/Download)
 * [Adobe Photoshop CC](https://www.adobe.com/)
 * [Adobe Ilustrator CC](https://www.adobe.com/)
+* [Figma](https://www.figma.com/)
 * [Paint.NET](https://www.getpaint.net/)
 * [Steam -Dev](https://store.steampowered.com/?l=spanish/)
 
@@ -201,7 +202,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Francis As - meteorosa@hotmail.com
 
-Reddit! @elpurogamer
+Reddit! /r/elpurogamer
 
 
 
