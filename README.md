@@ -220,7 +220,7 @@ Reddit! /r/elpurogamer
 * [Metro Skin Comunity](https://steamcommunity.com/groups/metroskin)
 * [Metro for Steam 4.4](https://github.com/minischetti/metro-for-steam)
 * [zakk_ponsen Help with Icons](https://www.reddit.com/user/zakk_ponsen)
-* [Icon8 - FluencyIcons](https://icons8.com/icons/fluency-systems-regular)
+
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
