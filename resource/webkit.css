@@ -65,9 +65,6 @@ body::-webkit-scrollbar-track{-webkit-box-shadow:none!important;background:var(-
 body::-webkit-scrollbar{background-clip:padding-box!important;border:5px solid transparent!important;background-color:transparent!important}
 .DialogBody::-webkit-scrollbar{display:none!important;border:5px solid transparent!important}
 
-/* Resolution Fix */
-@media only screen and (min-width:3000px){
-.responsive_page_content{-webkit-transform:scale(2)!important;-webkit-transform-origin:50% 00% 0!important;border-top-left-radius: 8px!important;border-color: #191919!important;}
 
 .modal_frame{width:66%!important;height:80%!important}
 #footer{display:none!important}
@@ -155,7 +152,7 @@ body.v6.summer2018_home .home_page_gutter_giftcard{background:#1c202a00!importan
 .FeaturedBlock.First{background:var(--darkgrey)!important}
 .home_page_body_ctn{background:var(--darkgrey)!important}
 body.v6.summer2018_home .home_page_body_ctn{background:var(--darkgrey)!important}
-.responsive_page_content{background:var(--darkgrey)!important;border-top-left-radius: 8px!important;border-color: #191919!important;}
+.responsive_page_content{border-top-left-radius: 8px!important;border-color: #191919!important;}
 .compact .wishlist_row .capsule img{width:162px!important;height:78px!important}
 .discovery_queue img{border-radius:var(--border0)!important}
 .home_ctn{background:var(--darkgrey)!important}
@@ -326,7 +323,7 @@ body.v6 .home_rightcol .tab_preview h2{color:var(--white)!important}
 .header_installsteam_btn_green .header_installsteam_btn_content,.header_installsteam_btn_green .header_installsteam_btn_leftcap,.header_installsteam_btn_green .header_installsteam_btn_rightcap{background-color:var(--lightgrey)!important;color:var(--white)!important}
 .page_header_ctn{background:0 0!important}
 .page_header_ctn{background:0 0!important}
-.responsive_page_content{overflow-x:hidden!important;border-top-left-radius: 8px!important;border-color: #191919!important;}
+.responsive_page_content{overflow-x:hidden!important}
 .home_ctn.discovery_queue_ctn{background:var(--bedarkgrey)!important;border-radius:var(--border0)!important}
 body.v6.newonsteam .newonsteam_headercaps>a{background:var(--grey)!important}
 .tabarea .tab.active .tab_content{background:var(--bedarkgrey)!important}
@@ -487,7 +484,7 @@ div#headerSearch.friend_activity_header_search{border-radius:var(--border0)!impo
 .btn_profile_action>span{background:transparent!important}
 .profile_rightcol {
     backdrop-filter: none !important;
-    border-radius: 4px !important;
+   
     background-color: transparent !important;
   }
 .profile_friend_links.profile_count_link_preview_ctn.responsive_groupfriends_element{margin-bottom:40px!important}
@@ -496,7 +493,7 @@ div#headerSearch.friend_activity_header_search{border-radius:var(--border0)!impo
 .profile_in_common.responsive_hidden{margin-bottom:6px!important}
 .profile_topfriends .friendBlock:hover {
     background-color:rgba(0, 0, 0, 0.2) !important;
-    border-radius: 4px !important;
+  
   }
   .profile_count_link_preview{display:block!important}
 .friendBlock.persona.in-game{color:var(--ingame)!important;height:36px!important;padding:4px 0 4px 4px!important;margin-bottom:4px!important;font-size:11px!important;line-height:13px!important;overflow:hidden!important;white-space:nowrap!important;text-overflow:ellipsis!important;position:relative!important}
@@ -505,8 +502,9 @@ div#headerSearch.friend_activity_header_search{border-radius:var(--border0)!impo
 .profile_content.has_profile_background {
     backdrop-filter: blur(18px) !important;
     background: #15151580 !important;
-    border-radius: 4px !important;
+   
   }
+  
 .workshop_showcase_details_row{background-image:none!important}
 .profile_header_content{padding-top:0px!important}
 .workshop_showcase_details_content{background-color:transparent!important}
@@ -546,7 +544,16 @@ div#headerSearch.friend_activity_header_search{border-radius:var(--border0)!impo
 .player_avatar{border-radius:4px!important}
 .player_avatar img{border-radius:4px!important}
 .friend_block_link_overlay{border-top-style:solid!important;border-bottom-style:solid!important;border-left-style:solid!important;border-right-style:solid!important;border-width:1px!important}
-.profile_content{background-image:none!important;background:var(--darkgrey)!important}
+
+.profile_content{ 
+  min-height: 226px !important;
+  background-color: #15151580 !important;
+  border-radius: 4px !important;
+  position:relative !important;
+  backdrop-filter: blur(30px) !important;
+  
+  }
+  
 .guideTop .workshopItemControls{background-color:var(--bedarkgrey)!important}
 .guideTop{background-color:var(--darkgrey)!important}
 .friend_reviews .review_box{border-left:1px solid var(--thegrey)!important;border-top:1px solid var(--thegrey)!important;background:var(--thegrey)!important}
