@@ -3,14 +3,14 @@
 	Store [$WINDOWS||$LINUX]
 	{
 		text = ""
-		FluentForSteam{	text="Support Us - Fluent For Steam 0.2c 💸💲"  shellcmd="steam://openurl/https://https://www.patreon.com/FluentForSteam" }
+		FluentForSteam{	text="Support Us - Fluent For Steam 0.2c 💸💲"  shellcmd="steam://openurl/https://www.patreon.com/FluentForSteam" }
 				Divider {}
 
 		Webkit by AikoMidori {	text="Webkit by AikoMidori 👍♥️"  shellcmd="steam://openurl/https://github.com/AikoMidori" }
 				Divider {}
 
 				Divider {} 
-		Webkit by AikoMidori {	text="Metro for Steam Community 👍♥️"  shellcmd="https://steamcommunity.com/groups/metroskin" }
+		Webkit by AikoMidori {	text="Metro for Steam Community 👍♥️"}
 				Divider {}
 		Mini_Mode {	text="#steam_menu_minimode"  shellcmd="steam://open/minigameslist" }
 		Large_Mode { text="#steam_menu_largemode"  shellcmd="steam://open/largegameslist" }
