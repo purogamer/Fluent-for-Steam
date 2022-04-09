@@ -32,13 +32,13 @@
   <h3 align="center">Fluent For Steam BETA0.2C</h3>
 
  <p align="center">
-   At the moment it only works on windows
+   At the moment this theme only works on Windows
     <br />
     <a href="https://www.patreon.com/FluentForSteam">Support Us 💸🍩☕</a>
     ·
-    <a href="https://github.com/purogamer/Fluent-for-Steam/issues">Report Bug☠️</a>
+    <a href="https://github.com/purogamer/Fluent-for-Steam/issues">Report a Bug☠️</a>
     ·
-    <a href="https://github.com/purogamer/Fluent-for-Steam/issues">Request Feature📝</a>
+    <a href="https://github.com/purogamer/Fluent-for-Steam/issues">Request a Feature📝</a>
   </p>
 </div>
 
@@ -62,7 +62,7 @@ Fluent for Steam is a skin that is based on the "Windows 11 design principles". 
 
 
 
-<p> This skin starts from the base code of the <a href="https://github.com/minischetti/metro-for-steam">Metro for Steam 4.4 by minischetti </a> and <a href="https://github.com/redsigma/UPMetroSkin">UP MetroSkin from RedSigma</a>, although the future I plan to get rid of these bases since they have some obsolete files compared to the new versions of steam. </p>
+<p> This skin starts from the base code of the <a href="https://github.com/minischetti/metro-for-steam">Metro for Steam 4.4 by minischetti </a> and <a href="https://github.com/redsigma/UPMetroSkin">UP MetroSkin from RedSigma</a>, although the future I plan to get rid of these bases since they have some obsolete files when compared to the new versions of steam. </p>
 
 
 
@@ -90,7 +90,7 @@ If you liked the work, think that every corner of this skin is made with dedicat
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 # Important! ⚠️
-The rounded edges are only work on Windows 11. This skin was created only but in the roadmap it is planned to work for linux and ios as well.
+The rounded edges only work on Windows 11. This skin was created only for Windows but in the roadmap it is planned to workon Linux and MacOS as well.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -118,7 +118,7 @@ The rounded edges are only work on Windows 11. This skin was created only but in
 ### Prerequisites ✅⚠️
 1. Have installed [Segoe UI Variable](https://docs.microsoft.com/en-us/windows/apps/design/downloads/#fonts) (It is not necessary if you have windows 11
 ).
-2. Have windows since it was only tested on these operating systems.
+2. Have Windows since FluentForSteam was only tested on Windows.
 
 ## Installation 📄
 
@@ -127,7 +127,7 @@ The rounded edges are only work on Windows 11. This skin was created only but in
 3. Drop fluentforsteam into the Skins folder
 4. Go to Steam and open the options and go to the interface section
 5. Select my skin "fluentforsteam" and restart STEAM
-6. For last ENJOY! 😁
+6. ENJOY! 😁
 
 
 
@@ -242,4 +242,5 @@ Reddit! /r/elpurogamer
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
+
 
