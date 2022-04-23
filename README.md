@@ -155,6 +155,8 @@ The rounded edges only work on Windows 11. This skin was created only for Window
 
 ![Captura de pantalla 2022-02-13 024959](https://user-images.githubusercontent.com/87723899/154415868-0b11811e-fdd3-47a4-903c-485e148bafd5.png)
 
+new overlay compact
+![image](https://user-images.githubusercontent.com/87723899/164876846-d2309ed0-aaad-4072-b4ea-1a76e6444d8c.png)
 
 
 
