@@ -134,7 +134,6 @@ Scheme
 				wide	24 [$OSX]
 				tall	32
 				tall	24 [$OSX]
-				visible 0 [!$OSX]
 				PinCorner	1
 				PinCorner	0 [$OSX]
 			}			
