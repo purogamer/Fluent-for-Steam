@@ -160,6 +160,7 @@ new overlay compact
 ![image](https://user-images.githubusercontent.com/87723899/165015595-586acc2c-3e09-4d62-bbba-9c2f31cc1517.png)
 new settings
 ![image](https://user-images.githubusercontent.com/87723899/167223350-48944f0d-6875-4a58-9298-a0ac05cfb8d7.png)
+![image](https://user-images.githubusercontent.com/87723899/167228999-dbdf0cda-41be-4142-9cc0-81dd3e6f0642.png)
 
 
 
