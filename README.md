@@ -162,6 +162,9 @@ new settings
 ![image](https://user-images.githubusercontent.com/87723899/167223350-48944f0d-6875-4a58-9298-a0ac05cfb8d7.png)
 ![image](https://user-images.githubusercontent.com/87723899/167228999-dbdf0cda-41be-4142-9cc0-81dd3e6f0642.png)
 
+workflow in figma
+![image](https://user-images.githubusercontent.com/87723899/167724947-07a43470-de86-47af-b33c-bdb5ce9a8e08.png)
+
 
 
 
