@@ -164,6 +164,7 @@ new settings
 
 workflow in figma
 ![image](https://user-images.githubusercontent.com/87723899/167724947-07a43470-de86-47af-b33c-bdb5ce9a8e08.png)
+![image](https://user-images.githubusercontent.com/87723899/168718840-80023cf8-8fae-47fc-b91d-f37db2c38ceb.png)
 
 
 
