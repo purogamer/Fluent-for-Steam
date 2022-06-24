@@ -29,7 +29,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/purogamer/Fluent-for-Steam">
-      <img src="https://user-images.githubusercontent.com/87723899/148888284-465d0a33-b72f-40cd-a8d4-c099bc48c553.png" alt="Logo">
+    
   </a>
 
   <h3 align="center">Fluent BETA0.2C For Steam</h3>
@@ -264,3 +264,4 @@ Reddit! /r/elpurogamer
 [product-screenshot]: images/screenshot.png
 
 
+  <img src="https://user-images.githubusercontent.com/87723899/148888284-465d0a33-b72f-40cd-a8d4-c099bc48c553.png" alt="Logo">
