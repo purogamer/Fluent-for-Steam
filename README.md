@@ -32,7 +32,7 @@
     
   </a>
 
-  <h3 align="center">Fluent BETA0.2C For Steam</h3>
+
 
  <p align="center">
    At the moment this theme only works on Windows
