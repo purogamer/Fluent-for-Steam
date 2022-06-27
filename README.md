@@ -33,7 +33,7 @@
   </a>
 
 
-
+## Special thanks to [Jotech](https://twitter.com/JoTechOfficial) for sponsoring the project.   ♥️
  <p align="center">
    At the moment this theme only works on Windows
     <br />
@@ -50,6 +50,7 @@
 
 
 <!-- TABLE OF CONTENTS -->
+
 
 <!-- Sobre este projecto -->
 # About The Project 📢
