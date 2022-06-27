@@ -34,8 +34,10 @@
 
 
 ## Special thanks to [Jotech](https://twitter.com/JoTechOfficial) for sponsoring the project.   ♥️
+ 
+ 
  <p align="center">
-   At the moment this theme only works on Windows
+   ⚠️At the moment this theme only works on Windows⚠️
     <br />
     <a href="https://www.patreon.com/FluentForSteam">Support Us 💸🍩☕</a>
     ·
