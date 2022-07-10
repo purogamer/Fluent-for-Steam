@@ -33,7 +33,7 @@
   </a>
 
 
-## Special thanks to [Jotech](https://twitter.com/JoTechOfficial) for sponsoring the project.   ♥️
+## Special thanks to [JoTech](https://twitter.com/JoTechOfficial) for sponsoring the project.   ♥️
  
  
  <p align="center">
