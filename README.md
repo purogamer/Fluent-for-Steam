@@ -58,7 +58,7 @@
 # About The Project 📢
 
 
-![983177a9267bcdb3c3a936f8ea33451e](https://i.imgur.com/WpFA8yA.gif)
+[![983177a9267bcdb3c3a936f8ea33451e]([https://i.imgur.com/WpFA8yA.gif](https://i.imgur.com/0wsiChj.gif))](https://i.imgur.com/0wsiChj.gif)
 
 
 
