@@ -57,7 +57,7 @@
 
 <!-- Sobre este projecto -->
 # About The Project 📢
-![WpFA8yA](https://user-images.githubusercontent.com/87723899/178165205-d865001c-34d0-49ff-b4c3-f94cb4ce8856.gif)
+![steam_g3yqeOrMzD](https://user-images.githubusercontent.com/87723899/178166709-6f2c750a-1b0a-4544-973e-37b4a5e56f8b.gif)
 
 
 "This is a simple skin which turns the old steam design into a completely renewed one, this skin is inspired by the Microsft Store Fluent Design template launched with Windows 11." 
