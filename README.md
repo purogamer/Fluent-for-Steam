@@ -58,7 +58,7 @@
 # About The Project 📢
 
 
-![983177a9267bcdb3c3a936f8ea33451e](https://user-images.githubusercontent.com/87723899/145469590-6f8145a2-2d5e-4591-bb8a-35083d86b3a4.gif)
+![983177a9267bcdb3c3a936f8ea33451e](https://i.imgur.com/WpFA8yA.gif)
 
 
 
