@@ -1,3 +1,0 @@
-"Public/SteamCacheWorkDialog.res"
-{
-}

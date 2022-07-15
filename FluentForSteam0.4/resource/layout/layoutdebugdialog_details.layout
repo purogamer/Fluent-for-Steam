@@ -1,0 +1,41 @@
+"resource/layout/layoutdebugdialog_details.layout" {
+
+	layout {
+
+		//-----------------------------------------------------------------------------------
+
+			// Style Label - Styles
+			place {
+				control = "style_label"
+				x = "6"
+				y = "8"
+				width = "170"
+			}
+
+			// Style List - Styles - List
+			place {
+				control = "style_list"
+				x = "10"
+				y = "30"
+				width = "160"
+			}
+
+			// Parent Label - Details
+			place {
+				control = "parent_label"
+				x = "176"
+				y = "8"
+				width = "170"
+			}
+			
+			// Parent List - Details - List
+			place {
+				control = "parent_list"
+				x = "180"
+				y = "30"
+				width = "160"
+			}
+
+		//-----------------------------------------------------------------------------------
+
+	}

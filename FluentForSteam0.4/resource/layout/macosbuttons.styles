@@ -1,0 +1,266 @@
+"resource/layout/macosbuttons.styles"	
+{ 
+	
+
+	styles {
+    	//unique styles for the client main window
+		FrameMinimizeButton
+		{
+			render_bg {}
+			render {}
+			
+			
+			inset="-6 0 -2 -8" 
+			padding-top=9 
+			
+			image="graphics/osx_win_dis_new_dark"
+		}
+
+		FrameMinimizeButton:hover
+		{
+			render_bg {}
+			render {}
+			bgcolor="none"
+			
+			inset="-6 0 -2 -8" 
+			padding-top=9 
+			
+			image="graphics/osx_min_hov_new"
+		}
+
+		FrameMinimizeButton:framefocus
+		{
+			render_bg {}
+			render {}
+			inset="-6 0 -2 -8"
+		
+			image="graphics/osx_min_def_new"
+		}
+
+		FrameMinimizeButton:framefocus:hover
+		{
+			render_bg {}
+			render {}
+			inset="-6 0 -2 -8"
+		
+			image="graphics/osx_min_hov_new" 
+		}
+
+		FrameMinimizeButton:active 
+		{
+			render_bg {}
+			render {}
+			inset="-6 0 -2 -8"
+			
+			image="graphics/osx_min_down_new"
+		}
+
+
+		// need the maximize button to have different styles for OSX & win32
+		FrameMaximizeButton
+		{
+			render_bg {}
+			render {}
+		
+			inset="-6 0 -2 -8"
+			padding-top=9
+		
+			image="graphics/osx_win_dis_new_dark"
+		}
+
+		FrameMaximizeButton:hover
+		{
+			render_bg {}
+			render {}
+		
+			inset="-6 0 -2 -8"
+			padding-top=9 
+			bgcolor="none"
+			image="graphics/osx_max_hov_new"
+		}
+
+		FrameMaximizeButton:framefocus
+		{
+			render_bg {}
+			render {}
+			inset="-6 0 -2 -8"
+			padding-top=9 
+			bgcolor="none"
+			
+			image="graphics/osx_max_def_new"
+		}
+
+		FrameMaximizeButton:framefocus:hover
+		{
+			render_bg {}
+			render {}
+		
+			inset="-6 0 -2 -8"
+			padding-top=9
+			bgcolor="none"
+		
+			image="graphics/osx_max_hov_new"
+		}
+
+		FrameMaximizeButton:active
+		{
+			render_bg {}
+			render {}
+		
+			inset="-6 0 -2 -8"
+			padding-top=9
+			bgcolor="none"
+			
+			image="graphics/osx_max_down_new"
+		}
+
+		// these are for when the maximize button becomes the restore button
+		FrameRestoreButton
+		{
+			render_bg {}
+			render {}
+			
+			inset="-6 0 -2 -8"
+			padding-top=9
+			
+			image="graphics/osx_win_dis_new_dark"
+		}
+
+		FrameRestoreButton:hover
+		{
+			render_bg {}
+			render {}
+			
+			inset="-6 0 -2 -8"
+			padding-top=9
+			bgcolor="none"
+			
+			image="graphics/osx_max_hov_new"
+		}
+
+		FrameRestoreButton:framefocus
+		{
+			render_bg {}
+			render {}
+			
+			inset="-6 0 -2 -8"
+			padding-top=9 
+			bgcolor="none"
+		
+			image="graphics/osx_max_def_new"
+		}
+
+		FrameRestoreButton:framefocus:hover
+		{
+			render_bg {}
+			render {}
+			
+			inset="-6 0 -2 -8"
+			padding-top=9
+			bgcolor="none"
+			
+			image="graphics/osx_max_hov_new" 
+		}
+
+		FrameRestoreButton:active
+		{
+			render_bg {}
+			render {}
+			
+			inset="-6 0 -2 -8"
+			padding-top=9
+			bgcolor="none"
+			
+			image="graphics/osx_max_down_new"
+		}
+
+		FrameCloseButton
+		{
+			render_bg {}
+			render {}
+			inset="-6 0 -2 -8" 
+			padding-top=9 
+			
+		
+			image="graphics/osx_win_dis_new_dark"
+		}
+
+		FrameCloseButton:hover
+		{
+			render_bg {}
+			render {}
+		
+			inset="-6 0 -2 -8" 
+			padding-top=9
+			
+			bgcolor=none
+			image="graphics/osx_close_hov_new"
+		}
+
+		FrameCloseButton:framefocus
+		{
+			render_bg {}
+			render {}
+			inset="-6 0 -2 -8"
+			bgcolor="none"
+			
+			image="graphics/osx_close_def_new"
+		}
+
+		FrameCloseButton:framefocus:hover
+		{
+			render_bg {}
+			render {}
+			inset="-6 0 -2 -8"
+			bgcolor="none"
+			
+			image="graphics/osx_close_hov_new"
+		}
+
+		FrameCloseButton:active
+		{
+			render_bg {}
+			render {}
+			inset="-6 0 -2 -8"
+			bgcolor="none"
+			
+			image="graphics/osx_close_down_new"
+		}
+
+		FrameCloseButton:disabled
+		{
+			render_bg {}
+			render {}
+			
+			inset="-6 0 -2 -8"
+			bgcolor="none"
+			
+			image="graphics/osx_win_dis_new_dark"
+		}
+    }
+	layout {    
+	place [!$OSX] { 
+
+			control="frame_close,frame_minimize,frame_maximize," 
+
+			margin-left=11
+			align=left 
+			spacing=5
+          
+
+			}
+		}
+
+		place [Windows] { 
+
+			control=",frame_minimize,frame_maximize,frame_close" 
+
+			
+			align=right 
+			width=46
+			height=32
+          
+
+			}
+
+}

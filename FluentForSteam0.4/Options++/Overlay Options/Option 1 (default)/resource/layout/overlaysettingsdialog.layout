@@ -1,0 +1,24 @@
+"resource/layout/overlaydialogsettings.layout"
+{
+	controls
+	{
+	}
+	
+	layout
+	{
+		region { name=bottom align=bottom height=60 margin=8 }
+		place { control="okbutton,cancelbutton" region=bottom  margin-right=10 margin-bottom=0 align=right spacing=8 height=32 width=88 }
+			place { 
+			
+			control="frame_minimize,frame_maximize,frame_close" 
+			width=46 
+			height=33
+			align=Right
+			margin-right=1
+			
+		}
+		
+				
+		
+	}
+}

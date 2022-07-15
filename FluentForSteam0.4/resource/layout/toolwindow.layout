@@ -1,0 +1,247 @@
+"resource/layout/toolwindow.layout"
+{
+	styles
+	{
+		///////////FONDO DEL NAVEGADOR/////////////////
+		toolwindow
+		{
+			
+				render_bg
+			{
+				
+				0="fill(x0+2,y0+7,x1-2,y1-7,ClientBG)"
+
+				///////////////////esquina izquierda inferior/////////////////////////////
+				1="image(x0,y1-7,x0,y1, materiales/clientbg8px/ai)"
+
+				////////////////////parte inferior/////////////////////////////////////////
+				10="fill(x0+7,y1-7,x1-7,y1-1, ClientBG)"
+				////////////////////parte inferior/////////////////////////////////////////
+				9="fill(x0+7,y1-1,x1-7,y1, 757575xx40)"
+
+                ////////////medio de parte izquierda///////////////////////////////////////////////////
+				3="image_tiled(x0-3,y0+7,x0+2,y1-7, materiales/clientbg8px/mi)"
+				
+				//////////////////////////esquina izquierda superior///////////////////////////////////////////
+				5="image(x0,y0,x0,y0, materiales/clientbg8px/ti)"
+
+                ////////////////////////Parte del medio superior//////////////////////////////
+				10="fill(x0+7,y0+1,x1-7,y0+7, ClientBG)"
+				 ////////////////////////Parte del medio superior//////////////////////////////
+				6="fill(x0+7,y0,x1-7,y0+1, 757575xx40)"
+
+                //////////////medio derecha/////////////////////////////////////////////////////////////////////
+				4="image_tiled(x1-2,y0+7,x1+3,y1-7, materiales/clientbg8px/md)"
+
+				/////////////////////////esquina derecha superior///////////////////////////////////////////////
+				7="image(x1-7,y0,x1,y0, materiales/clientbg8px/td)"
+
+				/////////////////////esquina inferior derecha//////////////////////////////////////////////////////
+				8="image(x1-7,y1-7,x1,y1,materiales/clientbg8px/ad)"
+			
+			
+			}
+			bgcolor=none
+		}
+
+		PageTab {
+			textcolor=white
+			font-size = 17
+			minimum-height=24
+			font-family=cachetazo
+			font-style=Regular
+			padding-right=8
+			inset-top=-1
+			render {}
+			render_bg {}
+		}
+		
+		PageTab:hover {
+			textcolor=white
+			font-size = 17
+			font-family=cachetazo
+			font-style=Regular
+				render_bg {
+
+				0="fill(x0+7,y0+2,x1-6,y1-2,textentrada)"
+
+				///////////////////for esquina izquierda inferior/////////////////////////////
+				////////left, bottom  ,left bottom
+				1="image(x0+4,y1-4,x0+0,y1+3, materiales/textentry/ai)"
+
+				////////////////////parte inferior/////////////////////////////////////////
+				2="fill(x0+8,y1-2,x1-7,y1+0, textentrada)"
+			
+                ////////////medio de parte izquierda///////////////////////////////////////////////////
+				3="fill(x0+5,y0+4,x0+7,y1-4, textentrada)"
+				
+				//////////////////////////for esquina izquierda superior///////////////////////////////////////////
+				5="image(x0+4,y0-0,x0,y0+3, materiales/textentry/ti)"
+
+                ////////////////////////Parte  superior//////////////////////////////
+				6="image_tiled(x0+8,y0-2,x1-7,y0+2, materiales/textentry/tm)"
+
+                //////////////medio derecha/////////////////////////////////////////////////////////////////////
+				10="fill(x1-7,y0+4,x1-3,y1-4, textentrada)"
+
+				/////////////////////////for esquina derecha superior///////////////////////////////////////////////
+				7="image(x1-7,y0-0,x1,y0+2, materiales/textentry/td)"
+
+				/////////////////////for esquina inferior derecha//////////////////////////////////////////////////////
+				8="image(x1-7,y1-4,x1,y1+2, materiales/textentry/ad)"
+			}
+		}
+	
+		PageTab:selected {
+
+			textcolor=white
+			font-size = 17
+			font-style=Regular
+			font-family=cachetazo
+			render_bg {
+
+				0="fill(x0+7,y0+2,x1-6,y1-2,textentrada)"
+
+				///////////////////for esquina izquierda inferior/////////////////////////////
+				////////left, bottom  ,left bottom
+				1="image(x0+4,y1-4,x0+0,y1+3, materiales/textentry/ai)"
+
+				////////////////////parte inferior/////////////////////////////////////////
+				2="fill(x0+8,y1-2,x1-7,y1+0, textentrada)"
+			
+                ////////////medio de parte izquierda///////////////////////////////////////////////////
+				3="fill(x0+5,y0+4,x0+7,y1-4, textentrada)"
+				
+				//////////////////////////for esquina izquierda superior///////////////////////////////////////////
+				5="image(x0+4,y0-0,x0,y0+3, materiales/textentry/ti)"
+
+                ////////////////////////Parte  superior//////////////////////////////
+				6="image_tiled(x0+8,y0-2,x1-7,y0+2, materiales/textentry/tm)"
+
+                //////////////medio derecha/////////////////////////////////////////////////////////////////////
+				10="fill(x1-7,y0+4,x1-3,y1-4, textentrada)"
+
+				/////////////////////////for esquina derecha superior///////////////////////////////////////////////
+				7="image(x1-7,y0-0,x1,y0+2, materiales/textentry/td)"
+
+				/////////////////////for esquina inferior derecha//////////////////////////////////////////////////////
+				8="image(x1-7,y1-4,x1,y1+2, materiales/textentry/ad)"
+			}
+		}
+
+		PageTab:selected:hover {
+
+				textcolor=white
+				font-size = 17
+				font-family=cachetazo
+				font-style=Regular
+				render_bg 	{
+			
+				0="fill(x0+2,y0+2,x1-2,y1-2,textentrada)"
+
+				///////////////////esquina izquierda inferior/////////////////////////////
+				1="image(x0-1,y1-4,x0+2,y1+4, materiales/textentry/ai)"
+
+				////////////////////parte inferior/////////////////////////////////////////
+				2="image_tiled(x0+4,y1-2,x1-4,y1+4, materiales/textentry/am)"
+				
+                ////////////medio de parte izquierda///////////////////////////////////////////////////
+				3="image_tiled(x0-3,y0+4,x0+2,y1-4, materiales/textentry/mi)"
+				
+				//////////////////////////esquina izquierda superior///////////////////////////////////////////
+				5="image(x0-1,y0-0,x0+2,y0+3, materiales/textentry/ti)"
+
+                ////////////////////////Parte del medio superior//////////////////////////////
+				6="image_tiled(x0+4,y0-2,x1-4,y0+2, materiales/textentry/tm)"
+
+                //////////////medio derecha/////////////////////////////////////////////////////////////////////
+				4="image_tiled(x1-2,y0+4,x1+3,y1-4, materiales/textentry/md)"
+
+				/////////////////////////esquina derecha superior///////////////////////////////////////////////
+				7="image(x1-4,y0-0,x1+3,y0+2, materiales/textentry/td)"
+
+				/////////////////////esquina inferior derecha//////////////////////////////////////////////////////
+				8="image(x1-4,y1-4,x1+3,y1+2,materiales/textentry/ad)"
+				
+			
+		    }
+		}
+		
+		MenuButton
+		{
+		 	padding-left=3
+			bgcolor="red"
+			render_bg{}
+		}
+	
+		
+		TabMenuItemFlash
+		{
+			textcolor="red"
+		}
+		
+		Button
+		{
+			textcolor="none"
+			bgcolor="none"
+			render_bg
+			{
+				0="image(x0+2,y0+7,x1,y1,graphics/newtab)"
+				
+			}
+		}
+		Button:hover
+		{
+			render_bg
+			{
+				0="image(x0+2,y0+7,x1,y1,graphics/newtabhover)"
+			}
+		}
+
+		
+		
+	}
+
+	layout
+	{
+	
+		
+		place { 
+
+			control="frame_minimize,frame_maximize,frame_close" 
+			width=10 
+			height=10 
+			y=2
+			align=right 
+			margin-right=2
+			
+		}
+
+		place {
+
+			control="ToolWindowSheet"
+			width=max
+			height=max
+			margin-top=6
+			margin-right=6
+			margin-left=6
+					
+		}
+
+		place { 
+
+			control="TabMenuButton" 
+			height=24 width=24 
+
+		}
+		
+		place { 
+			
+			Control="Tab" 
+			margin-left="36"
+			height=30 
+			
+		}
+	
+	}
+}

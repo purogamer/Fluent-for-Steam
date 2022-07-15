@@ -1,0 +1,133 @@
+"resource/layout/accountmenu.layout"
+{
+  styles
+  {
+    AccountMenuStyle
+    {
+      bgcolor=ClientBG
+      render
+      {
+          1="image(x0+12, y0+8, x1, y1, accountbutton/verperfil)"
+          2="image(x0+12, y0+32, x1, y1, accountbutton/detallecuenta)"
+          3="image(x0+12, y0+56, x1, y1, accountbutton/preferenciacuenta)"
+          4="image(x0+12, y0+80, x1, y1, accountbutton/billetera)"
+          5="image(x0+12, y0+104, x1, y1, accountbutton/cerrarsesion)"
+      }
+    }
+
+    account_menu_button
+    {
+      bgcolor=bgcolor
+      inset="20 0 0 0"
+      textcolor=white
+			font-family=button
+			font-size=17
+      font-weight=400
+      
+       render_bg
+      {
+          1="image(x0, y0, x1+10, y0+6, graphics/fluent/icons/navbar/label_buttons/selected)"
+      }
+    
+    }
+    account_menu_button:hover
+    {
+      bgcolor=none
+     	font-family=button
+      font-size=17
+      font-weight=400
+      render_bg {
+
+				0="fill(x0+8,y0+1,x1-8,y1-1, bluesito)"
+					
+                ////////////medio de parte izquierda///////////////////////////////////////////////////
+				3="fill(x0+5,y0+5,x0+8,y1-5, bluesito)"
+				
+				//////////////////////////for esquina izquierda superior///////////////////////////////////////////
+				5="image(x0+4,y0+1,x0,y0, materiales/progressbar/ti)"
+      
+	  			/////////////////////////for esquina derecha superior///////////////////////////////////////////////
+				7="image(x1-9,y0+1,x1,y0, materiales/progressbar/td)"
+
+                //////////////medio derecha/////////////////////////////////////////////////////////////////////
+				10="fill(x1-9,y0+5,x1-5,y1-5, bluesito)"
+ 							
+				///////////////////for esquina izquierda inferior/////////////////////////////
+				////////left, bottom  ,left bottom
+				1="image(x0+4,y1-5,x0+0,y1+3, materiales/progressbar/ai)"
+
+				/////////////////////for esquina inferior derecha//////////////////////////////////////////////////////
+				8="image(x1-9,y1-5,x1,y1+2, materiales/progressbar/ad)"
+			}
+    }
+    account_menu_button:active
+    {
+      bgcolor=none
+        render_bg
+      {
+          1="image(x0, y0+0, x1+10, y0+6, graphics/fluent/icons/navbar/label_buttons/selected)"
+      }
+     
+    
+    }
+    account_menu_label {
+					
+			font-size=16
+			font-family=basefont
+			textcolor=darkblue
+      padding-right=6
+			
+				
+		}
+
+			
+		
+    
+    
+  }
+
+  layout
+
+  {
+    
+    place {       control="view_profile_button, "       align=left       margin-left=1       margin-top=4        height=24       width=max      }
+
+    place {       control="view_account_button"         align=left        margin-left=1        margin-top=28       height=24       width=max      }
+    
+    place { 
+      
+      control="change_user_button" 
+      align=left 
+      margin-left=1 
+      margin-top=100 
+      height=24 
+      width=max 
+      
+      }
+      
+    place { 
+      
+      control="view_preferences_button" 
+      align=left 
+      margin-left=1 
+      margin-top=52 
+      height=24 
+      width=max 
+      
+      }
+    
+    place { 
+
+      control="view_wallet_button, " 
+      align=left 
+      margin-left=1 
+      margin-top=76 
+      height=24 
+      width=max 
+      
+      }
+    
+    ///////////for agregar de nuevo///////////////
+    
+  }
+}

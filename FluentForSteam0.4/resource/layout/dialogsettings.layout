@@ -1,0 +1,18 @@
+"resource/layout/dialogsettings.layout"
+{
+
+	layout
+	{
+		place { 
+			
+			control="frame_minimize,frame_maximize,frame_close" 
+			width=46 
+			height=33
+			align=Right
+			margin-right=2 
+			
+		}
+		
+		
+	}
+}

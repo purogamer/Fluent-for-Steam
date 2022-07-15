@@ -1,0 +1,11 @@
+"resource/layout/zoodialog.layout"
+{
+	controls
+	{
+	}
+	
+	layout
+	{
+		place { control="frame_minimize,frame_maximize,frame_close" align=right width=46 height=33 margin-right=1 }
+	}
+}

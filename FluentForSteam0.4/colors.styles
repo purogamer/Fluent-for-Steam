@@ -1,0 +1,386 @@
+"colors.styles"
+{
+	include "custom.styles"
+	colors
+	{
+// _a = active (clicked, hover, focused)
+// _h = hover
+// _c = clicked
+// _d = disabled
+
+////////////////////////
+//======No Color======//
+		none="0 0 0 0"
+
+///////////////////////////
+//======Base Colors======//
+		white01="255 255 255 1"
+		white03="255 255 255 7.65"
+		white05="255 255 255 12.75" ///////////////// importante es para friendspanels
+		white07="255 255 255 18"
+		white08="255 255 255 20.4"
+		white10="255 255 255 25.5"
+		white12="255 255 255 30.6"
+		white15="255 255 255 38.25"
+		white20="255 255 255 51"
+		white24="255 255 255 61.2"
+		white25="255 255 255 63.75"
+		white35="255 255 255 89.25"
+		white45="255 255 255 114.75"
+		white50="255 255 255 127.5"
+		white75="255 255 255 191.25"
+		white95="255 255 255 231.25"
+		white="255 255 255 255"
+		
+		
+		black03="0 0 0 7.65"
+		black08="0 0 0 20.4"
+		black05="0 0 0 12.75"
+		black10="0 0 0 25.5"
+		black12="0 0 0 30.6"
+		black15="0 0 0 38.25"
+		black20="0 0 0 51"
+		black24="0 0 0 61.2"
+		black35="0 0 0 106"
+		black25="0 0 0 63.75"
+		black45="0 0 0 114.75"
+		black75="0 0 0 191.25"
+		black="0 0 0 255"
+
+
+/////////////////////////
+//===Specific Colors===//
+		W11close_Red_h="232 18 35 255"
+		W11close_Red_p="241 112 121 255"
+
+		Grey1="40 40 40 255"
+		Grey2="48 48 48 255"
+		Grey3="75 75 75 255"
+		1e1e1f="30 30 31 255"
+		green50="87 119 15 255"
+		green="130 186 0 255"
+		green_bright="0 255 0 255"
+		Red="255 0 0 255"
+		Red45="255 0 0 114.75"
+		Red75="255 0 0 191.25"
+/////////////////////////////////////
+//======Base Background Color======//
+		ClientBG="25 25 25 255" Colorpa
+		ClientBGa="25 25 25 145" Colorpa
+		ClientBGTransparent="43 43 43 255"
+		ClientBGHeader="32 33 44 255" 
+		ClientBGHeader2="35 36 47 255"
+		//Alt ClientBGHeaderAlt"28 29 40 255" 
+		ingamecard = "30 41 29 255"
+		onlinecard = "25 39 50 255"
+		darkblue="19 94 242 255"
+		logrosbackground105="88 88 88 105"
+		darkbluea="19 25 37 255"
+		darkblueabg="25 32 47 255"
+		panele="19 19 19 255"
+		scrollbardark="255 255 255 139"
+		/////////////HEX//////////////
+		135EF2xx100 = "19 94 242 255"
+		135EF2xx12 = "19 94 242 31"
+		199FFFxx12 = "25 159 255 28"
+		4DAE41xx11 = "73 173 64 28"
+		FFFFFFxx419 = "255 255 255 11"
+		272727xx100 = "39 39 39 255"
+		292929xx100 = "41 41 41 255"
+		757575xx40 = "117 117 117 102"
+		FFFFFFxx8 = "255 255 255 7"
+		FFFFFFxx11 = "255 255 255 11"
+		1F1F1FXxx100 = "31 31 31 255"
+		1e1e1exx100 = "30 30 31 255"
+///////////////////overlay
+
+		cardfriends="13 19 27 150"
+
+/////////////////////////
+//======Scrollbar======//
+		scroll=white05
+		scroll_a=white10
+//////////////////////////////
+//=====boton=======//
+azulito = "0 103 192 255"
+botoncolor = "45 45 45 255"
+botoncolorhover = "50 50 50 255"
+botoncoloractive = "39 39 39 255"
+////////////////////
+//======Text======//
+		text=white50
+		text_a=white50
+		url=text
+		url_a=white75
+
+/////////////////////////////
+//======LIST DROPDOWN=======///
+		bluesito = "42 115 255 255"
+		darksito = "25 25 25 255"
+		transparencia = "30 30 31 255"
+/////////////////////////////
+//======Friends Panel======//
+		Friends_InGame="130 186 0 255"
+		Friends_Online="93 178 255 255"
+		Friends_Offline=White45
+		Friends_Golden="255 255 99 255"
+
+/////////////////////////////
+//======Degradez======//
+		Degrade = "0 0 0 115"
+
+///////////////////////////////////////
+//======Nickname/Balance Button======//
+		ingameNick=Friends_InGame
+		onlineNick=Friends_Online
+		offlineNick=Friends_Offline
+
+		bgIngameNick=none
+		bgOnlineNick=none
+		bgOfflineNick=none
+
+		bgIngameNearAvatar=Friends_InGame
+		bgOnlineNearAvatar=Friends_Online
+		bgOfflineNearAvatar=Friends_Offline
+
+		textCash=white
+		bgTextCash=none
+
+
+////////////////////////////////////
+//======Steam Windows Border======//
+		frameBorder="none"
+		frameBorder_a=frameBorder
+
+
+//////////////////////////////////
+//======Top Bar Background======//
+		Header_Dark="none"
+
+
+
+
+///////////////////////////////
+//======Top Bar Buttons======//
+		mainButton=white50
+		mainButton_h=white75
+		mainButton_c=white
+		mainButton_d=white24
+
+
+////////////////////////////////
+//======Drop Menus===========//
+		bgMenu=ClientBG
+
+		itemMenu=white
+		itemMenu_a=white
+
+		bgItemMenu=none
+		bgItemMenu_a=white05
+
+
+//////////////////////////////////
+//======Tooltip Panel===========//
+		titleToolTip=White
+		bgToolTip=ClientBG
+
+		textToolTip=White50
+		bgTitleToolTip=none
+		bgTextToolTip=none
+
+
+///////////////////////////////////////
+//======Library Game/Music List======//
+		bgGameList="38 38 38 255"
+		bgMusicList=bgGameList
+
+		game_installed=white
+		game_installed_hover=white
+		game_installed_selected=white
+
+		game_shortcut=game_installed
+		game_shortcut_hover=game_installed_hover
+		game_shortcut_selected=game_installed_selected
+
+		game_mod=game_installed
+		game_mod_hover=game_installed_hover
+		game_mod_selected=game_installed_selected
+
+		game_uninstalled=white50
+		game_uninstalled_hover=white75
+		game_uninstalled_selected=white
+
+		game_run=Focus
+		game_run_hover=Focus
+		game_run_selected=white
+
+
+////////////////////////////////////////
+//======Steam Detail View Panels======//
+		bgPanel=black45
+		bgLaunchPanel=bgPanel
+
+		titleGame=White
+		bgTitleGame=none
+
+		//Launch
+		lastplayedLaunchPanel=text
+		timeLaunchPanel=White75
+
+		//Friends
+		titleFriendsPanel=White
+		bgTitleFriendsPanel=none
+
+		//Achievements
+		titleAchievementPanel=white
+		bgTitleAchievementPanel=none
+
+		recentAchievementPanel=white35
+		bgRecentAchievementPanel=none
+
+		progressAchievementPanel=White75
+		bgProgressAchievementPanel=Focus
+
+		//Workshop
+		itemWorkshopPanel=White
+		bgItemWorkshopPanel=black45
+
+		//DLC
+		textDLCPanel=White
+		highlightDLCPanel=White
+		installedDLCPanel=White
+		uninstalledDLCPanel=White45
+
+		//News
+		titleNewsPanel=White
+		bgTitleNewsPanel=none
+
+		textAuthorNewsPanel=text
+		bgAuthorNewsPanel=none
+
+		textNewsPanel=White75
+		urlTextNewsPanel=textNewsPanel
+		urlTextNewsPanel_a=White
+		boldTextNewsPanel=Focus
+
+		overlay_bgTitleNewsPanel=none
+		overlay_titleNewsPanel=White35
+		overlay_titleNewsPanel_a=White
+		overlay_authorNewsPanel=White50
+
+
+/////////////////////////////////////////////////////////
+//======Steam Detail View Links/Custom Categories======//
+		titleColumn=White
+		bgTitleColumn=none
+
+		textColumn=White50
+		textColumn_a=White75
+		bgTextColumn=none
+		bgTextColumn_a=white05
+		tagColumn=White50
+		bgTagColumn=none
+
+///////////////////////////////
+//======Steam Grid View======//
+		gridInstalled=Friends_Online
+		gridRunning=Friends_InGame
+		gridUninstalled=none
+		gridUpdating=Focus
+		gridShortcut=White
+		gridMod=Friends_Golden
+
+//////////////////////////
+//======List Panel======//
+		bgList_a=Focus
+		bgHeaderList=white10
+		bgHeaderList_a=bgHeaderList
+
+		textHeaderList=white
+		textHeaderList_a=white75
+
+		textList=white50
+		textList_a=white
+		textList_d=white45
+
+
+//////////////////////////////////////////////
+//======Divider / List Panel Separator======//
+		Dividers=white12
+		Separators=frameBorder
+
+
+//////////////////////////////
+//======Downloads Page======//
+		appName=text
+		bgAppName=none
+
+		statusDownload=text
+		bgStatusDownload=none
+
+
+////////////////////////////////
+//======Overlay Elements======//
+		OverlayBackground="0 0 0 127.5"
+		OverlayPanels="0 0 0 0"
+		OverlayClock="255 255 255 255"
+
+
+///////////////////////////////////////
+//======Compact Overlay Buttons======//
+		OverlaySideButtons="255 255 255 255"
+		OverlaySideButtons_h="255 255 255 144.75"
+		OverlaySideButtons_c="255 255 255 144.75"
+		OverlayHover05="255 255 255 12.75"
+
+
+/////////////////////////////
+//======Notifications======//
+		notifBG=ClientBG
+		notifOverlayBG="5 5 5 229.5"
+
+
+//////////////////////////////////
+//======Chat Window border======//
+		chatframe=white50
+
+
+//////////////////////////
+//======Search Bar======//
+		TextEntry="39 39 39 255"
+
+////////////overlay///////////////////////
+
+        botonnormalpa = "26 26 26 255"    
+		textentrada = "39 39 39 255"
+		bottonsito = "31 31 31 255"
+		tiempodejuego = "255 255 255 70"
+
+/////////////////////////////////////////////////
+//======Recent/Installed/Tools Categories======//
+		CategoryBG=none
+		CategoryText=Focus
+
+///////////////////////////////////////////
+		NavButton = "25 159 255 255"
+///////////////////////////////////////
+//======URL Secure / Not Secure======//
+		SecureURL= "133 212 100 255"
+		NotSecureURL="170 20 20 255"
+
+	/////Button
+		button="19 94 242 255"
+		selected2 = "42 42 42 255"
+
+
+////////////////logindialog and twofactorchallenge///////////////////////////////
+		warninglogindialog = "71 30 25 255"
+		checkbutton_hover = "19 94 242 199"
+		checkbutton_active = "19 94 242 255"
+		dialogbgtrans="38 38 38 100"
+///////////////GOLD USER/////////////////////////
+		GoldUser = "240 204 0 255"
+
+	}
+
+}

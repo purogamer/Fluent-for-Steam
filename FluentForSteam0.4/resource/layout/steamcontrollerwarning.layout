@@ -1,0 +1,112 @@
+"resource/layout/steamcontrollerwarning.layout"
+{
+	controls
+	{
+		SteamController10ft { controlname="Frame" title=" " style="SteamController10ft" }
+
+		ConfirmTextHeader { controlname="Label" labeltext="#Steam_VGUIControllerWarningHeader" wrap=0 style=ConfirmTextHeader }
+		ConfirmText { controlname="Label" labeltext="#Steam_VGUIControllerWarning" wrap=1 style=ConfirmText }
+
+		ControllerDontShowCheckButton { controlname="CheckButton" tabposition=3 labeltext="#SteamUI_NotifyTrayHintDialog_DontShow" }
+		Help { controlname="Button" tabposition=2 labeltext="#steam_menu_help" }
+		Close { controlname="Button" tabposition=1 labeltext="#vgui_close" }
+	}
+	
+	styles
+	{   
+        checkbutton {
+
+            image=graphics/buttons/checkbutton
+            font-family=basefont
+            textcolor=white
+             inset="0 0 1 0"
+
+
+        }
+        checkbutton:active {
+
+            image=graphics/buttons/checkbutton_a
+            font-family=basefont
+            textcolor=white
+            inset="0 0 1 0"
+
+        }
+         checkbutton:selected {
+
+            image=graphics/buttons/checkbutton_a
+            font-family=basefont
+            textcolor=white
+            inset="0 0 1 0"
+
+        }
+
+        button {
+            render_bg {
+
+                 1="image( x0 , y0 , x1, y1, graphics/buttons/button )"
+               
+            }
+             padding-left=125
+             padding-right=125
+           
+        }
+        
+        button:hover {
+            textcolor=white75
+            render_bg {
+
+                 1="image( x0 , y0 , x1, y1, graphics/buttons/button_h )"
+               
+            }
+           
+        }
+        
+        button:active {
+            render_bg {
+
+                 1="image( x0 , y0 , x1, y1, graphics/buttons/button_p )"
+              
+            }
+           
+        }
+		SteamController10ft
+		{
+			minimum-width = 706
+			minimum-height = 434
+			inset="0	0 0 0"
+			
+			render_bg 
+			{				
+				1="image( x0, y0+17 , x1, y1, graphics/buttons/db )"
+                2="image( x0 + 30, y0 + 115 , x1, y1, graphics/buttons/bgpic )"
+			}			
+		}
+
+		ConfirmTextHeader
+		{
+			textcolor=white
+			font-size=28
+            font-family=semibold2
+		}	
+
+		ConfirmText
+		{
+			textcolor=white
+            font-family=basefont
+			font-size=24
+		}	
+	}
+	
+	layout
+	{
+		region { name="bottom" width=max align=bottom height=80 margin=10 }
+
+		place { control="ConfirmTextHeader" width=658 margin-top=34 margin-left=30 }
+		place { control="ConfirmText" width=400 margin-top=12 start=ConfirmTextHeader dir=down height=40 }
+		place { control="ControllerBackground" width=max y=40 height=max margin=15 }
+		place { control="Close,Help" region="bottom" align=top-center margin-top=10 spacing=20 width=325 height=32  }
+		place { control="ControllerDontShowCheckButton" start=ConfirmText margin-top=175 dir=down }
+		
+	}
+
+}

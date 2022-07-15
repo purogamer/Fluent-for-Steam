@@ -1,0 +1,280 @@
+"resource/layout/musiclibrarypanel.layout"
+{
+	controls
+	{	
+		MusicPage_Details_Content { controlname="CMusicPage_Details_Content" } 
+		
+		library_search	   { ControlName=TextEntry maxchars=16 hintText="#steam_library_search" style="LibrarySearch" group=library tabposition=2 }
+		label_search_icon	{ ControlName=Label style="LibrarySearchIcon" group=library zpos="4" }
+		library_music_menu { ControlName=MenuButton labelText="#Music_Nav_Menu_Artists" style="NavLabel2" showDownArrow=0 align=left group=music }
+		library_music_add_button {	ControlName=Button labelText=""	tooltiptext="#Music_Playlist_Details_Menu_Add" style="MusicAddButton" group=music_add_button visible=true }
+		library_music_player_icon { ControlName=Button labelText="" tooltiptext="#music_tooltip_view_player" style="MusicPlayerIcon" align=right group=music }
+		
+		frame_title
+		{
+			ControlName=Label
+	
+			style="ClientTitle"
+			"textAlignment"   "west"
+			"textAlignment"   "center" [$OSX]
+		}
+		
+		"subnavgroup_library"
+		{
+			"ControlName"		"imagepanel"
+			style="grouper"
+
+			zpos="-2"
+		}
+	}
+
+	colors
+	{
+	
+		dialogbgtrans="38 38 38 100"
+	}
+
+	styles
+	{
+
+		PlayButtonStyle{
+			bgcolor=red
+		}
+		CMusicLibraryPanel	
+		{
+			bgcolor=none
+			
+			minimum-width = 296
+			minimum-height = 300
+			
+			render_bg
+			{
+				// top area and graphic
+				0="gradient( x0, y0, x1, y0+275, ClientBG, DialogBG )"
+				2="image( x0, y0, x1, y0+175, graphics/clienttexture2)"
+				// fill in the bottom area
+				3="fill( x0, y0 + 275, x1, y1, DialogBG )"
+			}
+		}		
+		
+		ClientTitle [!$OSX]
+		{
+			font-family=basefont
+			font-size=14
+      		font-weight=400
+      		textcolor="labeldisabled"
+      		bgcolor="none"
+      		inset="12 6 0 0"
+		}
+		
+		ClientTitle [$OSX]
+		{
+			font-family=basefont
+			font-size=15
+      		font-weight=400
+      		textcolor="textdisabled"
+      		bgcolor="none"
+      		inset="0 6 0 0"
+		}
+		
+		ClientTitle:FrameFocus [!$OSX]
+		{
+			font-family=basefont
+   			font-size=14
+   			font-weight=400
+   			textcolor="label"
+   			bgcolor="none"
+   			inset="12 6 0 0"
+		}
+			
+			
+		ClientTitle:FrameFocus [$OSX]
+		{
+			font-family=basefont
+   			font-size=15
+   			font-weight=400
+   			textcolor="texthover"
+   			bgcolor="none"
+   			inset="0 6 0 0"
+		}
+			
+		LibrarySearch
+		{
+			padding-left=0
+			inset="2 4 0 0" 
+			font-family=basefont
+			font-size=14
+			font-weight=400	
+			textcolor="text"
+			render {}
+		}
+		
+		LibrarySearch:empty
+		{
+			inset="2 10 0 0" 			
+			font-style=italic
+			textcolor="LabelDisabled"
+		}
+		
+		LibrarySearch:hover
+		{	
+			inset="2 4 0 0" 		
+			textcolor="texthover"	
+		}
+		
+		LibrarySearch:empty:hover
+		{
+			inset="2 10 0 0" 		
+			font-style=italic
+			textcolor="texthover"
+			
+		}
+			
+		LibrarySearch:disabled
+		{
+			inset="2 10 0 0" 					
+			font-style=italic
+			textcolor="None"
+			
+		}
+			
+		LibrarySearchIcon
+		{
+			bgcolor="none"
+			inset="10 0 0 0"
+			render_bg={}
+			image="graphics/icon_button_search"	
+		}
+		
+		LibrarySearchIcon:disabled
+		{
+			bgcolor="none"
+			inset="10 0 0 0"
+			render_bg={}
+			image="none"		
+		}
+
+		MusicAddButton
+		{
+			font-size=14
+			font-size=13 [$OSX]
+			font-family=basefont
+			textcolor="labelfocus"
+			font-style=uppercase
+			render_bg
+			{
+				0="image( x0, y0 + 5, x1, y1, graphics/icon_collapse )"
+			}
+		}
+		
+		MusicAddButton:hover
+		{
+			textcolor="white"
+			render_bg
+			{
+				0="image( x0, y0 + 5, x1, y1, graphics/icon_collapse_over )"
+			}
+		}			
+		
+		MusicPlayerIcon
+		{
+			bgcolor="none"
+			inset="-1 3 0 0"
+			render_bg={}
+			image="graphics/icon_music_player"
+			padding-left=-4
+			padding-right=-1
+			padding-top=-1
+		}
+		
+		MusicPlayerIcon:hover
+		{
+			bgcolor="none"
+			inset="-1 3 0 0"
+			render_bg={}
+			image="graphics/icon_music_player_hover"
+			padding-left=-4
+			padding-right=-1
+			padding-top=-1
+		}
+		
+		MusicPlayerIcon:selected
+		{
+			bgcolor="none"
+			inset="-1 3 0 0"
+			render_bg={}
+			image="graphics/icon_music_player_selected"
+			padding-left=-4
+			padding-right=-1
+			padding-top=-1
+		}
+		
+		NavLabel2 [!$OSX]
+		{
+			inset="0 2 0 0"
+			font-family=basefont
+			font-size=14
+			font-weight=400
+			textcolor="labelfocus"
+			font-style="uppercase"
+		}
+
+		NavLabel2 [$OSX]
+		{
+			inset="0 2 0 0"
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			textcolor="labelfocus"
+			font-style="uppercase"
+		}	
+		
+		NavLabel2:hover
+		{
+			inset="0 2 0 0"
+			textcolor="texthover"
+			font-style="outerglow,uppercase"
+			font-outerglow-color="TextGlowHover"
+			font-outerglow-offset=1
+			font-outerglow-filtersize=3
+		}	
+		
+		NavLabel2:selected
+		{
+			inset="0 2 0 0"
+			textcolor="white"
+			font-style="outerglow,uppercase"
+			font-outerglow-color="TextGlowHover"
+			font-outerglow-offset=1
+			font-outerglow-filtersize=3
+		}
+				
+		grouper
+		{
+			bgcolor=none
+			render_bg
+			{
+				// background fill
+				0="fill( x0 + 2, y0 + 1, x1 - 10, y1 - 1, dialogbgtrans )"
+			}
+			
+		}
+	}
+	
+	
+	layout
+	{
+		region { name=searchrow x= 5 y=30 }
+		region { name=details y=60 width=max }	
+		
+		place { control="subnavgroup_library" align=top-center y=30 height=28 width=max margin-right=1 margin-left=10 }
+		
+		place { control=label_search_icon region=searchrow y=6 }
+		place { control=library_search region=searchrow y=2 x=24 width=256 }
+	
+		place { control=library_music_menu,library_music_add_button region=searchrow x=285 y=3 }
+		place { control="library_music_player_icon"  region=searchrow align=right y=6 height=18 width=18 margin-right=10 }
+		place {	control="MusicPage_Details_Content"	region=details x=10 y=0 width=max height=max	margin-bottom=40 margin-right=10}
+	}
+	
+}

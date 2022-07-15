@@ -1,0 +1,83 @@
+"resource/layout/overlay_screenshotspanel.layout"
+{
+	controls
+	{
+		TitleText { controlname="label" labeltext="#Overlay_Screenshots_Panel_Title" style=detailsboxtitle }
+		InstructionText { controlname="label" labeltext="#Overlay_Screenshots_Press_Hotkey"  style=highlight }
+		ViewScreenshots { controlname="Button" labeltext="#Overlay_View_Screenshots" command="viewscreenshots" }
+		SetShortcut { controlname="Button" labeltext="#Overlay_Set_Shortcut" command="setshortcut" }
+	}
+	styles
+	{	
+
+		highlight {
+
+			textcolor=none
+		}
+		Button
+		{
+			bgcolor="none"
+			padding=0
+			textcolor="none"
+			render_bg
+			{
+				1="image( x0, y0+0, x0, y0+0, graphics/overlay/bottom/Screenshots)"
+			}
+		}
+		Button:hover
+		{
+			render_bg
+			{
+				1="image( x0, y0+0, x0, y0+0, graphics/overlay/bottom/hover)"
+				2="image( x0, y0+0, x0, y0+0, graphics/overlay/bottom/hover/Screenshots)"
+				
+			}	
+		}
+		Button:active
+		{
+			render_bg
+			{
+				1="image( x0, y0+0, x0, y0+0, graphics/overlay/bottom/hover)"
+				2="image( x0, y0+0, x0, y0+0, graphics/overlay/bottom/Screenshots)"
+			}		
+		}
+	}
+	layout
+	{
+	
+
+	///====label====///
+		place { controls=ViewScreenshots width=max height=max }
+
+		region {
+
+			name="text"
+			align=bottom
+						
+
+
+		}	
+		place { 
+			
+			
+			margin-top=65
+			align=top-center
+		    control="TitleText"   
+			
+	    }
+		place { 
+
+			region="text"
+			control="InstructionText" 
+			margin-top="2"
+			dir=down
+			start=TitleText
+
+			
+			
+			}
+		place { control=SetShortcut margin-left=9999 height="24" spacing=10 align=bottom }	
+	
+		
+	}
+}

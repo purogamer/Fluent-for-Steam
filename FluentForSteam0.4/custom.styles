@@ -1,0 +1,36 @@
+"custom.styles"{colors{Focus="45 115 255  255"
+basefont="segoe ui variable text" 
+semibold="segoe ui variable text bold" 
+semibold2="segoe ui variable text semibold" 
+semilight="segoe ui variable" 
+light="segoe ui variable text"
+static="Segoe UI Variable Static Text"
+overlaytext="Segoe Ui Variable Display bold"
+cachetazo="Segoe UI Variable Display Semibold"
+regularfont="Segoe UI Variable Regular"
+
+
+CardHighlight =  "Segoe UI Variable Static Display SemiBold"
+CardTitle = "Segoe UI Variable Static Display Bold"
+Button = "Segoe UI Variable Static Text"
+Title = "Segoe UI Variable Static Small Text"
+FriendsPanel = "Segoe UI Variable Static Display"
+
+
+basefont="segoe ui variable text bold" [$OSX] 
+semibold="Helvetica Neue Medium" [$OSX] semilight="Helvetica Neue Light" [$OSX] 
+
+light="Helvetica Neue Thin" [$OSX] }styles{"CSteamRootDialog"{bgcolor=ClientBG 
+
+render_bg {
+				1="fill(x0,y0-10,x1,y0+40, none)"
+				
+				0= "fill(x0,y0+850,x1,y1, none )"
+			}
+			
+			} 
+			}
+			}
+ 
+ 
+ //ClientBGHeader, ClientBGHeader2)" 8="image( x1 - 821, y1 - 375, x1, y1, graphics/decal_steam_btmr)" 99="fill( x0, y0, x1, y0+39, Header_Dark)

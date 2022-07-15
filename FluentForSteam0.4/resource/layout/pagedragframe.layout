@@ -1,0 +1,81 @@
+"resource/layout/pagedragframe.layout"
+{
+	controls
+	{
+		DragPropertySheet { controlname="PropertySheet" }
+	}
+	
+	styles
+	{
+		PageDragFrame
+		{			
+			0="fill(x0+2,y0+2,x1-2,y1-2,bluebutton)"
+
+				///////////////////esquina izquierda inferior/////////////////////////////
+				1="image(x0-1,y1-4,x0+2,y1+4, materiales/bblue/ai)"
+
+				////////////////////parte inferior/////////////////////////////////////////
+				2="image_tiled(x0+4,y1-2,x1-4,y1+4, materiales/bblue/am)"
+				
+                ////////////medio de parte izquierda///////////////////////////////////////////////////
+				3="image_tiled(x0-3,y0+4,x0+2,y1-4, materiales/bblue/mi)"
+				
+				//////////////////////////esquina izquierda superior///////////////////////////////////////////
+				5="image(x0-1,y0-0,x0+2,y0+3, materiales/bblue/ti)"
+
+                ////////////////////////Parte del medio superior//////////////////////////////
+				6="image_tiled(x0+4,y0-2,x1-4,y0+2, materiales/bblue/tm)"
+
+                //////////////medio derecha/////////////////////////////////////////////////////////////////////
+				4="image_tiled(x1-2,y0+4,x1+3,y1-4, materiales/bblue/md)"
+
+				/////////////////////////esquina derecha superior///////////////////////////////////////////////
+				7="image(x1-4,y0-0,x1+3,y0+2, materiales/bblue/td)"
+
+				/////////////////////esquina inferior derecha//////////////////////////////////////////////////////
+				8="image(x1-4,y1-4,x1+3,y1+2,materiales/bblue/ad)"
+			}
+		}
+		
+		PageDragPanel
+		{
+				render_bg
+			{
+		
+				0="fill(x0+2,y0+2,x1-2,y1-2,buttona)"
+
+				///////////////////esquina izquierda inferior/////////////////////////////
+				1="image(x0-1,y1-4,x0+2,y1+4, materiales/b/ai)"
+
+				////////////////////parte inferior/////////////////////////////////////////
+				2="image_tiled(x0+4,y1-2,x1-4,y1+4, materiales/b/am)"
+				
+                ////////////medio de parte izquierda///////////////////////////////////////////////////
+				3="image_tiled(x0-3,y0+4,x0+2,y1-4, materiales/b/mi)"
+				
+				//////////////////////////esquina izquierda superior///////////////////////////////////////////
+				5="image(x0-1,y0-0,x0+2,y0+3, materiales/b/ti)"
+
+                ////////////////////////Parte del medio superior//////////////////////////////
+				6="image_tiled(x0+4,y0-2,x1-4,y0+2, materiales/b/tm)"
+
+                //////////////medio derecha/////////////////////////////////////////////////////////////////////
+				4="image_tiled(x1-2,y0+4,x1+3,y1-4, materiales/b/md)"
+
+				/////////////////////////esquina derecha superior///////////////////////////////////////////////
+				7="image(x1-4,y0-0,x1+3,y0+2, materiales/b/td)"
+
+				/////////////////////esquina inferior derecha//////////////////////////////////////////////////////
+				8="image(x1-4,y1-4,x1+3,y1+2,materiales/b/ad)"
+			
+			
+			}
+			
+		}
+	}
+		
+	layout
+	{
+	  place { control="DragPropertySheet" y=8 width=max height=max }
+	}
+}

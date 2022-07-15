@@ -1,0 +1,38 @@
+"resource/layout/login_dialog.layout"
+{
+	controls
+	{
+		LoginDialog { controlname="Frame" title="#Steam_Login_Title" style="LoginDialog" }
+		HTMLRoot { controlname=HTML style="HTMLRoot" }
+	}
+
+	styles
+	{
+		LoginDialog
+		{
+			minimum-width = 800
+			minimum-height = 533
+		}
+
+		HTMLRoot
+		{
+			inset="0 0 0 0"
+		}
+	}
+
+	layout
+	{
+		region { name="root" y=50 x=0 width=max height=max }
+
+		place
+		{
+			control=HTMLRoot
+			region=root
+			x=0
+			y=0
+			width=max
+			height=max
+		}
+	}
+}
+

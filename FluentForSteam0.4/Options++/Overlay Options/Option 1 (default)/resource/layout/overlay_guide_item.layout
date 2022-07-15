@@ -1,0 +1,70 @@
+"resource/layout/overlay_guide_item.layout"
+{
+	controls
+	{
+		icon { controlname="ImagePanel" scaleimage=1 }
+		name { controlname=label style=name }
+
+		Background { controlname="ImagePanel" style=Background visible=1 }
+		IconBackground { controlname="ImagePanel" style=IconBackground visible=1 }
+	}
+	colors
+	{
+	}
+	styles
+	{
+		name
+		{
+			textcolor="white"
+			font-style="none"
+		}
+		name:hover
+		{
+			textcolor="white"
+		}
+		IconBackground
+		{}
+		Background
+		{
+			bgcolor="none"
+		}
+		
+		
+	}
+	layout
+	{
+		region { 
+
+			name=empty 
+			margin-left=9999
+
+		}
+
+		place { 
+
+			region=empty 
+			control="Background"
+			margin-left=9999
+			 
+		}
+		
+		place { 
+
+			region=empty 
+			control=IconBackground 
+			margin-left=9999
+		}
+		
+		place { 
+			
+			region=empty 
+			control=icon 
+			margin-left=9999
+			
+		}
+	    place { 
+			region="empty"
+			control=name 
+			margin-left=9999 }
+	}
+}

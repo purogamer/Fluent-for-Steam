@@ -1,0 +1,168 @@
+"resource/layout/musicpage_detail_content.layout"
+{
+	controls
+	{
+		AlbumList { tabposition=1 }
+		ArtistList { tabposition=1 }
+		PlaylistList { tabposition=1 }
+		DetailsBorder { controlname=EditablePanel style="DetailsBorderPanel" zpos="-5" }
+		EmptyDatabaseText { controlname="RichText" text="#Music_NoLibrary" style="EmptyDatabaseText" }
+		CrawlingText { controlname="RichText" style="CrawlingText" }
+		
+		// Background image, plus overlays 
+		BackgroundImageA { controlname="ImagePanel" style="HeaderImage" zpos="-4" visible=1 scaling="none" horizontal-align=left vertical-align=top }
+		BackgroundImageB { controlname="ImagePanel" style="HeaderImage" zpos="-4" visible=1 scaling="none" horizontal-align=left vertical-align=top }
+		BackgroundImageMask { controlname="ImagePanel" style="HeaderImage" zpos="-3" visible=1 scaling="none" horizontal-align=left vertical-align=top }
+
+	}
+
+	styles
+	{
+	DetailsBorderPanel
+	{ 
+		font-family=basefont
+		font-size=14
+		font-weight=400
+		textcolor="Text"
+		bgcolor="none"
+		render_bg{}
+  }
+		
+		AlbumOrArtistListStyle
+		{
+			render_bg { }
+		}
+		
+		EmptyDatabaseText
+		{
+			textcolor="Text"
+			font-size="15"
+			render_bg {}
+		}
+		
+		CrawlingText
+		{
+			textcolor="Text"
+			font-size="15"
+			render_bg {}
+		}
+		
+		CMusicPage_Details_Content
+		{
+			inset="0 0 0 1"
+			render
+			{
+			}
+			render_bg
+			{
+				 0="gradient( x0+2, y0+2, x1-1, y1 - 1, dialogbg, almostblack )"
+			}
+		}
+		
+
+		// Some overrides for our listpanel
+		"MusicPage_Details_Content ListPanel"
+		{
+			bgcolor="None"
+			font-size=15
+			render_bg {}
+			render {}
+			padding-left=4
+			padding-right=2
+		}
+
+		
+		"MusicPage_Details_Content ListPanelInterior"
+		{
+			bgcolor="none"
+			textcolor="text2"
+			inset="1 1 0 0"
+			render {}
+			render_bg {} 
+		}
+		
+		"MusicPage_Details_Content ListPanelInterior:scrollbar"
+			{     
+			inset="1 1 -2 0"
+			bgcolor=none
+			
+			render_bg {}
+			}
+		
+		"MusicPage_Details_Content ListPanelDragger"
+		{
+			bgcolor="none"
+			render {}
+			render_bg {}
+		}
+
+		"MusicPage_Details_Content ListPanelColumnHeader" [!$OSX]
+		{
+			bgcolor="none"
+			font-size=14
+			inset="2 2 0 0"
+			render {}
+			render_bg 
+			{
+				0="gradient_horizontal( x0+1, y0+2, x1, y1 + 1, ButtonFace, none )"
+			}
+
+		}
+		
+		"MusicPage_Details_Content ListPanelColumnHeader" [$OSX]
+		{
+			bgcolor="none"
+			font-size=13
+			inset="2 2 0 0"
+			render {}
+		}	
+
+		"AlbumOrArtistListStyle ListPanelColumnSelectButton"   
+		{
+       		inset="-3 3 0 0"
+        		render {
+          		5="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse )"
+        		}   
+        		render_bg {
+        			1="fill( x0 + 1, y0, x1 - 1, y1, none )"
+        		}
+		}
+		
+		DetailsBorderPanel
+		{
+			
+			bgcolor = "0 0 0 255"
+			render 
+			{
+
+			}
+		}	
+
+		BackgroundImage { bgcolor="0 0 0 0" }
+	}
+
+	layout
+	{
+		region { name="background" x=0 y=0 width=1024 height=1024 }
+		region	{ name="list" y=2 x=1 width=275 height=max margin-bottom=0 }
+		region	{ name="details"
+			y=1 x=275 width=max height=max overflow=scroll-vertical 
+			margin-left=1 margin-top=1 margin-bottom=1 margin-right=-1 dir=down }
+		
+		place	{ control=EmptyDatabaseText x=0 y=0 width=max height=max margin=10 }
+		place	{ control=CrawlingText x=0 y=0 width=max height=max margin=10 }
+		
+		place	{ control=DetailsBorder y=1 x=1 width=max height=max }
+
+		place { control=AlbumList region=list width=275 height=max margin=0 }
+		place { control=ArtistList region=list width=275 height=max margin=0 }
+		place { control=PlaylistList region=list width=275 height=max margin=0 }
+		place { control=*MusicPageDetailsAlbum region=details width=max dir=down spacing=10 }
+		place { control=*MusicPageDetailsPlaylist region=details width=max dir=down spacing=10 }
+		
+		place 	{ control=BackgroundImageA region=background width=1024 height=1024 x=2 y=2 }
+		place 	{ control=BackgroundImageB region=background width=1024 height=1024 x=2 y=2 }
+		place 	{ control=BackgroundImageMask region=background width=1024 height=1024 x=2 y=2 }
+	}
+
+}

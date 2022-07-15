@@ -1,0 +1,188 @@
+"resource/layout/subpaneloptionscloud.layout"
+{
+	controls
+	{
+		FamilySharingTitle { controlname=label	labeltext=#Steam_Settings_Family_Sharing_Title style=highlight}
+		FamilySharingInfoText { controlname=label labeltext=#Steam_Settings_Family_Sharing_Info wrap=1 }
+
+		AuthorizedDeviceCheck { ControlName=checkbutton labeltext=#Steam_Settings_Family_Sharing_AuthorizedDevice tooltiptext=#Steam_Settings_Family_Sharing_AuthorizedDevice_ToolTip }
+
+		BorrowersLabel { controlname=label labeltext=#Steam_Settings_Family_Sharing_Borrowers wrap=1 }
+		BorrowersList { controlname=listpanel }
+
+		ManageSharingLabel { ControlName="URLLabel" fieldName="ManageSharingLabel" labelText="#Steam_Settings_Family_Sharing_ManageSharing" URLText="steam://url/FamilySharing" }
+
+		FamilyOptionsTitle { controlname=label	labeltext=#Steam_Settings_Family_Options_Title style=highlight }
+		FamilyOptionsText { controlname=label	labeltext=#Steam_Settings_Family_Options_Text	wrap=1 }
+
+		ManageOptionsLabel { ControlName="URLLabel" fieldName="ManageOptionsLabel" labelText="#Steam_Parental_Manage" URLText="steam://url/ParentalSetup" }
+		ShowNotificationsCheck { ControlName=checkbutton labeltext=#Steam_Settings_Family_Show_Notifications }
+
+		Divider1 { ControlName=Divider	}
+	}
+	colors
+	{
+		
+	}
+	styles
+	{
+		checkbutton {
+			image="graphics/checkboxcircle_d"
+			font-size=16
+		}
+		checkbutton:hover {
+			image="graphics/checkboxcircle_d"
+			textcolor=white75
+			font-size=16
+		}
+		checkbutton:selected {
+			image="graphics/checkboxcircle_s"
+			font-size=16
+		}
+		   highlight
+		{
+		textcolor=white
+		font-size=22
+		font-style=semibold
+		}
+		label {
+		textcolor=white
+		font-family=basefont
+		font-size=18
+		}
+		ListPanel
+		{
+			padding-top=4
+			font-size=18
+			font-family=basefont
+			render_bg
+			{
+		
+				0="fill(x0+2,y0+7,x1-2,y1-7,panele)"
+
+				///////////////////esquina izquierda inferior/////////////////////////////
+				1="image(x0,y1-7,x0,y1, materiales/panel/ai)"
+
+				////////////////////parte inferior/////////////////////////////////////////
+				2="fill(x0+7,y1-7,x1-7,y1, panele)"
+				
+                ////////////medio de parte izquierda///////////////////////////////////////////////////
+				3="image_tiled(x0-3,y0+7,x0+2,y1-7, materiales/panel/mi)"
+				
+				//////////////////////////esquina izquierda superior///////////////////////////////////////////
+				5="image(x0,y0,x0,y0, materiales/panel/ti)"
+
+                ////////////////////////Parte del medio superior//////////////////////////////
+				6="fill(x0+7,y0,x1-7,y0+7, panele)"
+
+                //////////////medio derecha/////////////////////////////////////////////////////////////////////
+				4="image_tiled(x1-2,y0+7,x1+3,y1-7, materiales/panel/md)"
+
+				/////////////////////////esquina derecha superior///////////////////////////////////////////////
+				7="image(x1-7,y0,x1,y0, materiales/panel/td)"
+
+				/////////////////////esquina inferior derecha//////////////////////////////////////////////////////
+				8="image(x1-7,y1-7,x1,y1,materiales/panel/ad)"
+			
+			
+			}
+		}
+		
+		"ListPanelColumnHeader ListPanelCheckBox"
+		{
+			padding-top=4
+			padding-left=6
+			
+		}
+		ListPanelDragger {
+
+			render_bg {
+					1="image(x1-3,y1-14,x0,y0, graphics/divider)"
+			}
+			
+		}
+		ListPanelColumnHeader {
+			font-size=18
+			font-style=lowercase
+			bgcolor=none
+			font-family="semibold2"
+			font-weight=600
+			textcolor=white
+			
+			
+		}
+				
+		ListPanelCheckBox
+		{
+			padding-top=1
+			padding-left=8
+			
+			
+		}
+		padded
+		{
+			padding-top=2
+			
+		}
+		URLLabel {
+			font-size=18
+			font-family=basefont
+			textcolor=darkblue
+			padding-left=8
+			padding-right=8
+			font-style=none
+			  render_bg {
+
+				0="fill(x0+10,y0+0,x1-9,y1+1,135EF2xx12 )"
+			
+             			
+				//////////////////////////for esquina "izquierda"  superior///////////////////////////////////////////
+				5="image(x0+0,y0-0,x0,y0, materiales/135EF2%12/ti)"
+      
+	  			///////////////////for esquina "izquierda" inferior/////////////////////////////
+				////////left, bottom  ,left bottom
+				1="image(x0+0,y1-9,x0,y1, materiales/135EF2%12/ai)"
+
+					/////////////////////////for esquina derecha superior///////////////////////////////////////////////
+				7="image(x1-9,y0,x1,y0, materiales/135EF2%12/td)"
+				/////////////////////for esquina inferior derecha//////////////////////////////////////////////////////
+				8="image(x1-9,y1-9,x1,y1, materiales/135EF2%12/ad)"
+			}
+		}
+		URLLabel:hover {
+			textcolor=bluesito
+			
+		}
+		CSubPanelOptionsFamily {
+			render_bg{
+
+		
+			}
+		}
+		
+	}
+	layout
+	{
+		
+		region { name="pan3l" start="ShowNotificationsCheck" margin-left=14 width=555 height=111 }  
+
+		//Family Options
+		place {  control="FamilyOptionsTitle" spacing=8  margin-left=16 margin-top=18 width=555  }
+		place {  start=FamilyOptionsTitle dir=down margin-top=4 width=555 control="FamilyOptionsText" }
+		place {  start=FamilyOptionsText controls="ManageOptionsLabel" margin-top=14 dir=down}
+
+		//Family Sharing
+		place { start=ManageOptionsLabel margin-top=10 control="FamilySharingTitle " dir=down spacing=18 margin-top=10 }
+		place { start=FamilySharingTitle controls="FamilySharingInfoText" dir=down margin-top=2 width=535}
+		place { start=FamilySharingInfoText controls="ManageSharingLabel" margin-top=14 dir=down}
+		
+		place { start=ManageSharingLabel controls="AuthorizedDeviceCheck,ShowNotificationsCheck" dir=down margin-top=8 spacing=4 }
+
+		//Borrowers List
+		
+		place {start="ShowNotificationsCheck" margin-top=14 width=535 height=111 controls="BorrowersList"  dir=down }
+		
+
+		place {control="Divider1,BorrowersLabel"  margin-left=9999 margin-right=9999 margin-top=9999 margin-bottom=9999 }
+	}
+}
