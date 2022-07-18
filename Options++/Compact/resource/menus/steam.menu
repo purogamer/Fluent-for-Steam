@@ -2,32 +2,6 @@
 {
 	Store [$WINDOWS||$LINUX]
 	{
-		
-		text = ""
-		Mensaje{	text="💲💸  Support on Patreon "  shellcmd="steam://openurl/https://www.patreon.com/FluentForSteam" }
-			
-		Donate{	text="💲💸  Support on Paypal"  shellcmd="steam://openurl/https://www.patreon.com/FluentForSteam" }
-								Divider {}	
-
-		FluentForSteam{	text="📄🗃️  Fluent For Steam 0.4.0b "  shellcmd="steam://openurl/https://www.patreon.com/FluentForSteam" }
-				Divider {}	
-		Webkit by AikoMidori {	text="👍💚  Webkit DarkMode by AikoMidori "  shellcmd="steam://openurl/https://github.com/AikoMidori" }
-		Sponsors{	text="💚💚  Metro for Steam Community."  }
-		
-		
-		Webkit by Snudge {	text="👍💚  Webkit LightMode by Snudge "  shellcmd="steam://openurl/https://github.com/AikoMidori" }
-
-				Divider {}
-		Sponsors{	text="💚💚  Thanks to all patrons for supporting this project."  shellcmd="steam://openurl/https://www.patreon.com/FluentForSteam" }
-		Sponsors{	text="💚💚  Thanks to JoTech for sponsoring the project."  shellcmd="steam://openurl/https://twitter.com/JoTechOfficial" }
-				Divider {}
-				Divider {}
-		Discord { text="💬💬  Fluent For Steam Discord" shellcmd="steam://open/https://discord.gg/bAgtaNABUn"}
-	}
-	
-
-	rootmenu [$WINDOWS||$LINUX]
-	{
 				text = ""
 		
 		Large_Mode { text="#steam_menu_largemode"  shellcmd="steam://open/largegameslist" }
@@ -70,6 +44,32 @@
 
 		
 		
+
+	}
+	
+
+	rootmenu [$WINDOWS||$LINUX]
+	{
+		text = ""
+		Mensaje{	text="💲💸  Support on Patreon "  shellcmd="steam://openurl/https://www.patreon.com/FluentForSteam" }
+			
+		Donate{	text="💲💸  Support on Paypal"  shellcmd="steam://openurl/https://www.patreon.com/FluentForSteam" }
+								Divider {}	
+
+		FluentForSteam{	text="📄🗃️  Fluent For Steam 0.4.0b "  shellcmd="steam://openurl/https://www.patreon.com/FluentForSteam" }
+				Divider {}	
+		Webkit by AikoMidori {	text="👍💚  Webkit DarkMode by AikoMidori "  shellcmd="steam://openurl/https://github.com/AikoMidori" }
+		Sponsors{	text="💚💚  Metro for Steam Community."  }
+		
+		
+		Webkit by Snudge {	text="👍💚  Webkit LightMode by Snudge "  shellcmd="steam://openurl/https://github.com/AikoMidori" }
+
+				Divider {}
+		Sponsors{	text="💚💚  Thanks to all patrons for supporting this project."  shellcmd="steam://openurl/https://www.patreon.com/FluentForSteam" }
+		Sponsors{	text="💚💚  Thanks to JoTech for sponsoring the project."  shellcmd="steam://openurl/https://twitter.com/JoTechOfficial" }
+				Divider {}
+				Divider {}
+		Discord { text="💬💬  Fluent For Steam Discord" shellcmd="steam://open/https://discord.gg/bAgtaNABUn"}
 	}
 	Store [$OSX] 
 	{
