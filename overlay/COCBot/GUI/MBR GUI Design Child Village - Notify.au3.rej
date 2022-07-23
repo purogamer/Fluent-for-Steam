@@ -1,0 +1,46 @@
+diff a/COCBot/GUI/MBR GUI Design Child Village - Notify.au3 b/COCBot/GUI/MBR GUI Design Child Village - Notify.au3	(rejected hunks)
+@@ -34,20 +34,17 @@ Global $g_hLblNotifyWeekdays[7] = [0, 0, 0, 0, 0, 0, 0], $g_ahLblNotifyWeekdaysE
+ 
+ Func CreateVillageNotify()
+ 	$g_hGUI_NOTIFY = _GUICreate("", $g_iSizeWGrpTab2, $g_iSizeHGrpTab2, 5, 25, BitOR($WS_CHILD, $WS_TABSTOP), -1, $g_hGUI_VILLAGE)
+-	;GUISetBkColor($COLOR_WHITE, $g_hGUI_NOTIFY)
++	GUISetBkColor($COLOR_WHITE, $g_hGUI_NOTIFY)
+ 
+-	GUISwitch($g_hGUI_NOTIFY)
+-	$g_hGUI_NOTIFY_TAB = GUICtrlCreateTab(0, 0, $g_iSizeWGrpTab2, $g_iSizeHGrpTab2, BitOR($TCS_MULTILINE, $TCS_RIGHTJUSTIFY))
+-	$g_hGUI_NOTIFY_TAB_ITEM2 = GUICtrlCreateTabItem(GetTranslatedFileIni("MBR Main GUI", "Tab_02_STab_05_STab_01", "Telegram"))
+-		CreatePushBulletTelegramSubTab()
+-	GUICtrlCreateTabItem("")
++	;GUISwitch($g_hGUI_NOTIFY)
++	;$g_hGUI_NOTIFY_TAB = GUICtrlCreateTab(0, 0, $g_iSizeWGrpTab2, $g_iSizeHGrpTab2, BitOR($TCS_MULTILINE, $TCS_RIGHTJUSTIFY))
++	;$g_hGUI_NOTIFY_TAB_ITEM2 = GUICtrlCreateTabItem(GetTranslatedFileIni("MBR Main GUI", "Tab_02_STab_05_STab_01", "Telegram"))
++	;	CreatePushBulletTelegramSubTab()
++	;GUICtrlCreateTabItem("")
+ 
+-EndFunc   ;==>CreateVillageNotify
+-
+-Func CreatePushBulletTelegramSubTab()
+ 	Local $sTxtTip = ""
+-	Local $x = 25, $y = 45
+-	$g_hGrpNotify = GUICtrlCreateGroup(GetTranslatedFileIni("MBR GUI Design Child Village - Notify", "Group_01", "Telegram Notify") & " " & $g_sNotifyVersion, $x - 20, $y - 20, $g_iSizeWGrpTab3, $g_iSizeHGrpTab3)
++	Local $x = 20, $y = 20
++	$g_hGrpNotify = GUICtrlCreateGroup(GetTranslatedFileIni("MBR GUI Design Child Village - Notify", "Group_01", "Telegram Notify") & " " & $g_sNotifyVersion, $x - 20, $y - 20, $g_iSizeWGrpTab2, $g_iSizeHGrpTab2)
+ 
+ 		_GUICtrlCreateIcon ($g_sLibIconPath, $eIcnTelegram, $x + 3, $y, 32, 32)
+ 		$g_hChkNotifyTGEnable = GUICtrlCreateCheckbox(GetTranslatedFileIni("MBR GUI Design Child Village - Notify", "ChkNotifyTGEnable", "Enable Telegram"), $x + 40, $y + 5)
+@@ -166,7 +163,7 @@ Func CreatePushBulletTelegramSubTab()
+ 			GUICtrlSetState(-1, $GUI_UNCHECKED + $GUI_DISABLE)
+ 			_GUICtrlSetTip(-1, GetTranslatedFileIni("MBR Global GUI Design", "Clear_set_row_of_boxes", -1))
+ 			GUICtrlSetOnEvent(-1, "chkNotifyhoursE2")
+-		$g_hLblNotifyhoursPM = GUICtrlCreateLabel(GetTranslatedFileIni("MBR Global GUI Design", "PM", -1), $x + 10, $y)
++		$g_hLblNotifyhoursPM = GUICtrlCreateLabel(GetTranslatedFileIni("MBR Global GUI Design", "PM", -1), $x + 5, $y)
+ 
+ 	$y += 20
+ 		$g_hChkNotifyOnlyWeekDays = GUICtrlCreateCheckbox(GetTranslatedFileIni("MBR Global GUI Design", "Only_during_day", "Only during these day of week"), $x + 11, $y )
+@@ -212,5 +209,4 @@ Func CreatePushBulletTelegramSubTab()
+ 			GUICtrlSetColor(-1, $COLOR_NAVY)
+ 	GUICtrlCreateGroup("", -99, -99, 1, 1)
+ 
+-EndFunc   ;==>CreatePushBulletTelegramSubTab
+-
++EndFunc   ;==>CreateVillageNotify

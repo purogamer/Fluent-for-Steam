@@ -1,0 +1,14 @@
+diff a/COCBot/functions/Attack/AttackReport.au3 b/COCBot/functions/Attack/AttackReport.au3	(rejected hunks)
+@@ -222,10 +222,10 @@ Func AttackReport()
+ 	; Share Replay
+ 	If $g_bShareAttackEnable Then
+ 		If (Number($g_iStatsLastAttack[$eLootGold]) >= Number($g_iShareMinGold)) And (Number($g_iStatsLastAttack[$eLootElixir]) >= Number($g_iShareMinElixir)) And (Number($g_iStatsLastAttack[$eLootDarkElixir]) >= Number($g_iShareMinDark)) Then
+-			SetLog("Reached miminum Loot values. Share Replay")
++			SetLog("Reached minimum Loot values. Share Replay")
+ 			$g_bShareAttackEnableNow = True
+ 		Else
+-			SetLog("Below miminum Loot values. No Share Replay")
++			SetLog("Below minimum Loot values. No Share Replay")
+ 			$g_bShareAttackEnableNow = False
+ 		EndIf
+ 	EndIf

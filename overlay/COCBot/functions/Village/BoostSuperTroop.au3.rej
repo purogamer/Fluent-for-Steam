@@ -1,0 +1,116 @@
+diff a/COCBot/functions/Village/BoostSuperTroop.au3 b/COCBot/functions/Village/BoostSuperTroop.au3	(rejected hunks)
+@@ -28,7 +28,7 @@ Func BoostSuperTroop($bTest = False)
+ 
+ 	For $i = 0 To 1
+ 		Local $iPicsPerRow = 4, $picswidth = 125, $picspad = 18
+-		Local $curRow = 1, $columnStart = 150, $iColumnY1 = 280, $iColumnY2 = 440
++		Local $curRow = 1, $columnStart = 150, $iColumnY1 = 311, $iColumnY2 = 465
+ 
+ 		If $g_iCmbSuperTroops[$i] > 0 Then
+ 			If OpenBarrel() Then
+@@ -38,7 +38,7 @@ Func BoostSuperTroop($bTest = False)
+ 
+ 				Local $iColumnX = $columnStart
+ 				Select
+-					Case $g_iCmbSuperTroops[$i] = 2 Or $g_iCmbSuperTroops[$i] = 6 Or $g_iCmbSuperTroops[$i] = 10 ;second column
++					Case $g_iCmbSuperTroops[$i] = 2 Or $g_iCmbSuperTroops[$i] = 6 Or $g_iCmbSuperTroops[$i] = 10 Or $g_iCmbSuperTroops[$i] = 14 ;second column
+ 						$iColumnX = $columnStart + (1 * ($picswidth + $picspad))
+ 					Case $g_iCmbSuperTroops[$i] = 3 Or $g_iCmbSuperTroops[$i] = 7 Or $g_iCmbSuperTroops[$i] = 11 ;third column
+ 						$iColumnX = $columnStart + (2 * ($picswidth + $picspad))
+@@ -46,12 +46,12 @@ Func BoostSuperTroop($bTest = False)
+ 						$iColumnX = $columnStart + (3 * ($picswidth + $picspad))
+ 				EndSelect
+ 				
+-				Local $iRow = Floor($g_iCmbSuperTroops[$i] / $iPicsPerRow) ; get row Stroop
++				Local $iRow = Ceiling($g_iCmbSuperTroops[$i] / $iPicsPerRow) ; get row Stroop
+ 				StroopNextPage($iRow) ; go directly to the needed Row
+ 				
+-				If $iRow = 3 Then ; for last row, we cannot scroll it to middle page
+-					$iColumnY1 = 355
+-					$iColumnY2 = 515
++				If $iRow = 4 Then ; for last row, we cannot scroll it to middle page
++					$iColumnY1 = 388
++					$iColumnY2 = 550
+ 				EndIf
+ 				;Setlog("columnRect = " & $iColumnX & "," & $iColumnY1 &"," & $iColumnX + $picswidth & "," & $iColumnY2, $COLOR_DEBUG)
+ 
+@@ -67,12 +67,12 @@ Func BoostSuperTroop($bTest = False)
+ 					If FindStroopIcons($g_iCmbSuperTroops[$i], $iColumnX, $iColumnY1, $iColumnX + $picswidth, $iColumnY2) Then
+ 						;SetLog("QuickMIS(" & "BC1" & ", " & $g_sImgBoostTroopsIcons & "," & $iColumnX & "," & $iColumnY1 & "," & $iColumnX + $picswidth & "," & $iColumnY2 & ")", $COLOR_DEBUG );
+ 						If QuickMIS("BC1", $g_sImgBoostTroopsIcons, $iColumnX, $iColumnY1, $iColumnX + $picswidth, $iColumnY2, True, False) Then ;find pics of Stroop on spesific row / column
+-							Click($g_iQuickMISX + $iColumnX, $g_iQuickMISY + $iColumnY1, 1)
++							Click($g_iQuickMISX, $g_iQuickMISY, 1)
+ 							If _Sleep(1000) Then Return
+ 							If $g_bSuperTroopsBoostUsePotionFirst Then
+ 								Setlog("Using Super Potion...", $COLOR_INFO)
+ 								If QuickMIS("BC1", $g_sImgBoostTroopsPotion, 400, 530, 580, 600, True, False) Then ;find image of Super Potion
+-									Click($g_iQuickMISX + 400, $g_iQuickMISY + 530, 1)
++									Click($g_iQuickMISX, $g_iQuickMISY, 1)
+ 									If _Sleep(1000) Then Return
+ 									If QuickMIS("BC1", $g_sImgBoostTroopsPotion, 330, 430, 520, 510, True, False) Then ;find image of Super Potion again (confirm upgrade)
+ 										;do click boost
+@@ -80,7 +80,7 @@ Func BoostSuperTroop($bTest = False)
+ 											CancelBoost("Using Potion")
+ 											ContinueLoop
+ 										EndIf
+-										Click($g_iQuickMISX + 330, $g_iQuickMISY + 430, 1)
++										Click($g_iQuickMISX, $g_iQuickMISY, 1)
+ 										Setlog("Using Potion, Successfully Boost " & $sTroopName, $COLOR_SUCCESS)
+ 										ClickAway()
+ 									Else
+@@ -91,7 +91,7 @@ Func BoostSuperTroop($bTest = False)
+ 								Else ;try to use dark elixir because potion not found
+ 									Setlog("Cannot Find Potion, Using Dark Elixir...", $COLOR_INFO)
+ 									If QuickMIS("BC1", $g_sImgBoostTroopsButtons, 600, 530, 750, 600, True, False) Then ;find image of dark elixir button
+-										Click($g_iQuickMISX + 600, $g_iQuickMISY + 530, 1)
++										Click($g_iQuickMISX, $g_iQuickMISY, 1)
+ 										If _Sleep(1000) Then Return
+ 										If QuickMIS("BC1", $g_sImgBoostTroopsButtons, 320, 430, 550, 510, True, False) Then ;find image of dark elixir button again (confirm upgrade)
+ 											;do click boost
+@@ -99,7 +99,7 @@ Func BoostSuperTroop($bTest = False)
+ 												CancelBoost("Using Dark Elixir")
+ 												ContinueLoop
+ 											EndIf
+-											Click($g_iQuickMISX + 320, $g_iQuickMISY + 430, 1)
++											Click($g_iQuickMISX, $g_iQuickMISY, 1)
+ 											Setlog("Using Dark Elixir, Successfully Boost " & $sTroopName, $COLOR_SUCCESS)
+ 											ClickAway()
+ 										Else
+@@ -115,7 +115,7 @@ Func BoostSuperTroop($bTest = False)
+ 							Else
+ 								Setlog("Using Dark Elixir...", $COLOR_INFO)
+ 								If QuickMIS("BC1", $g_sImgBoostTroopsButtons, 600, 530, 750, 600, True, False) Then ;find image of dark elixir button
+-									Click($g_iQuickMISX + 600, $g_iQuickMISY + 530, 1)
++									Click($g_iQuickMISX, $g_iQuickMISY, 1)
+ 									If _Sleep(1000) Then Return
+ 									If QuickMIS("BC1", $g_sImgBoostTroopsButtons, 320, 430, 550, 510, True, False) Then ;find image of dark elixir button again (confirm upgrade)
+ 										;do click boost
+@@ -123,7 +123,7 @@ Func BoostSuperTroop($bTest = False)
+ 											CancelBoost("Using Dark Elixir")
+ 											ContinueLoop
+ 										EndIf
+-										Click($g_iQuickMISX + 320, $g_iQuickMISY + 430, 1)
++										Click($g_iQuickMISX, $g_iQuickMISY, 1)
+ 										Setlog("Successfully Boost " & $sTroopName, $COLOR_SUCCESS)
+ 										ClickAway()
+ 									Else
+@@ -190,8 +190,8 @@ EndFunc   ;==>OpenBarrel
+ 
+ Func StroopNextPage($iRow)
+ 	Local $iXMidPoint = 425
+-	For $i = 0 To $iRow
+-		If $i >= $iRow Then Return ; nothing left to scroll
++	SetDebugLog("Goto Row: " & $iRow, $COLOR_DEBUG)
++	For $i = 1 To $iRow - 1
+ 		ClickDrag($iXMidPoint, 280, $iXMidPoint, 95, 500)
+ 		If _Sleep(1000) Then Return
+ 	Next
+@@ -227,7 +227,7 @@ EndFunc   ;==>FindStroopIcons
+ 
+ Func CancelBoost($aMessage = "")
+ 	SetLog($aMessage & ", Test = True", $COLOR_DEBUG)
+-	SetLog("Emulate Click(" & $g_iQuickMISX + 320 & "," & $g_iQuickMISY + 430 & ") -- Cancelling", $COLOR_DEBUG)
++	SetLog("Emulate Click(" & $g_iQuickMISX & "," & $g_iQuickMISY & ") -- Cancelling", $COLOR_DEBUG)
+ 	ClickAway()
+ 	ClickAway()
+ 	ClickAway()

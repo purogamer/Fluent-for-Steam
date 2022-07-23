@@ -111,6 +111,7 @@
 		view_friends:hover {
 				bgcolor = "ClientBG"
 			render_bg {
+				0 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/friends"
 				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/friends"
 				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/hover"
 			}
@@ -120,7 +121,7 @@
 			 	bgcolor = "ClientBG"
 			bgcolor = "clientbg"
 			render_bg {
-				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/friends"
+				0 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/friends"
 				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/hover"
 			}
         }
@@ -213,14 +214,16 @@
 				bgcolor = "ClientBG"
 			render_bg {
 				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/news"
-				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/hover"
+				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/news"
+				3 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/hover"
+				4 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/hover"
 			}
 		}
 
 		announcement_button:active {
 				bgcolor = "ClientBG"
 			render_bg {
-				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/leftnav/news"
+				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/news"
 				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/hover"
 			}
 		}
@@ -236,13 +239,10 @@
 
 		inbox_button {
 			textcolor = "white"	
-				bgcolor = "ClientBG"
+			bgcolor = "ClientBG"
 			font-family = "basefont"
 			font-style = "none"
-			padding-left = "0"
-			padding-right = "0"
-			padding-top = "0"
-			minimum-width=24
+			padding-right=30
 			render {}
 			render_bg {
 				0 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/topbar/inbox)"
@@ -256,7 +256,10 @@
 			render {}
 			render_bg {
 				0 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/topbar/inbox)"
-				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/hover"
+				1 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/topbar/inbox)"
+				2 = "image(x0,y0,x1,y1,graphics/hover42)"
+
+			
 
 			}
 		}
@@ -277,60 +280,90 @@
 			bgcolor = "none"
 			render_bg {
 					0 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/topbar/inbox)"
-					2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/hover"
 			}
 		}
 
 	// --------------------            BOTON MENSAJES      --------------------
-
+		
 		inbox_button_active {
-				bgcolor = "ClientBG"
-			textcolor = "none"
-			font-family=button
-			font-size=17
-			inset="15 0 0 2"
+			textcolor = "white45"
+			font-family=semibold2
+			font-size=18
+			inset="0 -1 0 0"
+			padding-right=30
 			bgcolor = "none"
 			render_bg {
-				0 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/topbar/inboxunread)"
-				1 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/topbar/badge_circle)"
-				
+				0 = "image(x1-36,y0,x1,y1,graphics/fluent/icons/navbar/topbar/inboxunread)"
+				20 = "image(x1-32,y0+1,x1,y1,graphics/fluent/icons/navbar/topbar/badge)"
 
 			}
 		}
 
 		inbox_button_active:hover {
-				bgcolor = "ClientBG"
-			textcolor = "white"
-			font-family=button
-			font-size=17
-			inset="15 0 0 2"
 			bgcolor = "none"
+			textcolor = "white75"
 			render_bg {
-				0 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/topbar/alertcircle)"
-				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/hover"
+				0 = "image(x1-36,y0,x1,y1,graphics/fluent/icons/navbar/topbar/inboxunread)"
+				20 = "image(x1-36,y0,x1,y1,graphics/fluent/icons/navbar/topbar/inboxunread)"
+				10="fill(x0+2,y0+2,x1-2,y1-2,FFFFFFxx8)"
+
+				///////////////////esquina izquierda inferior/////////////////////////////
+				1="image(x0-1,y1-4,x0+2,y1+4, materiales/button/ai)"
+
+				////////////////////parte inferior/////////////////////////////////////////
+				2="image_tiled(x0+4,y1-2,x1-4,y1+4, materiales/button/am)"
+				
+                ////////////medio de parte izquierda///////////////////////////////////////////////////
+				3="image_tiled(x0-3,y0+4,x0+2,y1-4, materiales/button/mi)"
+				
+				//////////////////////////esquina izquierda superior///////////////////////////////////////////
+				5="image(x0-1,y0-0,x0+2,y0+3, materiales/button/ti)"
+
+                ////////////////////////Parte del medio superior//////////////////////////////
+				6="image_tiled(x0+4,y0-2,x1-4,y0+2, materiales/button/tm)"
+
+                //////////////medio derecha/////////////////////////////////////////////////////////////////////
+				4="image_tiled(x1-2,y0+4,x1+3,y1-4, materiales/button/md)"
+
+				/////////////////////////esquina derecha superior///////////////////////////////////////////////
+				7="image(x1-4,y0-0,x1+3,y0+2, materiales/button/td)"
+
+				/////////////////////esquina inferior derecha//////////////////////////////////////////////////////
+				8="image(x1-4,y1-4,x1+3,y1+2,materiales/button/ad)"
+
 			}
 		}
 
 		inbox_button_active:selected {
-				bgcolor = "ClientBG"
-			textcolor = "white"
-			font-family=button
-			font-size=17
-			inset="15 0 0 2"
 			bgcolor = "none"
 			render_bg {
-				0 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/topbar/alertcircle)"
-				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/hover"
+				0 = "image(x1-36,y0,x1,y1,graphics/fluent/icons/navbar/topbar/inboxunread)"
+				10="fill(x0+2,y0+2,x1-2,y1-2,FFFFFFxx8)"
+
+				///////////////////esquina izquierda inferior/////////////////////////////
+				1="image(x0-1,y1-4,x0+2,y1+4, materiales/button/ai)"
+
+				////////////////////parte inferior/////////////////////////////////////////
+				2="image_tiled(x0+4,y1-2,x1-4,y1+4, materiales/button/am)"
 				
+                ////////////medio de parte izquierda///////////////////////////////////////////////////
+				3="image_tiled(x0-3,y0+4,x0+2,y1-4, materiales/button/mi)"
+				
+				//////////////////////////esquina izquierda superior///////////////////////////////////////////
+				5="image(x0-1,y0-0,x0+2,y0+3, materiales/button/ti)"
 
-			}
-		}
+                ////////////////////////Parte del medio superior//////////////////////////////
+				6="image_tiled(x0+4,y0-2,x1-4,y0+2, materiales/button/tm)"
 
-		inbox_button_active:disabled {
-		    textcolor = "white"
-			bgcolor = "none"
-			render_bg {
-				0 = "image(x0+0,y0+0,x1,y1,graphics/fluent/icons/navbar/alert)"
+                //////////////medio derecha/////////////////////////////////////////////////////////////////////
+				4="image_tiled(x1-2,y0+4,x1+3,y1-4, materiales/button/md)"
+
+				/////////////////////////esquina derecha superior///////////////////////////////////////////////
+				7="image(x1-4,y0-0,x1+3,y0+2, materiales/button/td)"
+
+				/////////////////////esquina inferior derecha//////////////////////////////////////////////////////
+				8="image(x1-4,y1-4,x1+3,y1+2,materiales/button/ad)"
+
 			}
 		}
 
@@ -339,24 +372,41 @@
 			image = "graphics/fluent/icons/navbar/parent_unlocked"
 			padding-right = "4"
 			render_bg {
-				0 = "fill(x0,y1,x1,y1+1,Red)"
+				0 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/topbar/unlock)"
+			
 			}
 		}
 
 		parental_lock_button:hover {
-			bgcolor = "white05"
+			bgcolor = "none"
+			render_bg {
+
+				0 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/topbar/unlock)"
+				1 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/topbar/unlock)"
+				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/hover"
+			
+			}
 		}
 
 		parental_lock_button:selected {
 			bgcolor = "none"
-			image = "graphics/fluent/icons/navbar/parent_locked"
 			render_bg {
-				0 = "fill(x0,y1,x1,y1+1,green)"
+				0 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/topbar/lock)"
+				
+
 			}
 		}
 
 		parental_lock_button:selected:hover {
-			bgcolor = "white05"
+			bgcolor = "none"
+			render_bg {
+				0 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/topbar/lock)"
+				1 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/topbar/lock)"
+				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/hover"
+				
+
+			}
+
 		}
 
 		VRButton {
@@ -372,6 +422,8 @@
 			textcolor=none
 			render_bg {
 				0 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/topbar/xx1)"
+				1 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/topbar/xx1)"
+
 				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/hover"
 			}
 			bgcolor = "none"
@@ -382,6 +434,7 @@
 			bgcolor = "none"
 			render_bg {
 				0 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/topbar/xx1)"
+				1 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/topbar/xx1)"
 				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/hover"
 			}
 		}
@@ -411,6 +464,7 @@
 			bgcolor="white05"
 			render_bg {
 				0 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/topbar/xx1)"
+				1 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/topbar/xx1)"
 				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/hover"
 			}
 			
@@ -480,6 +534,7 @@
 			textcolor = "none"
 			bgcolor=clientbg
 			render_bg {
+				0 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/addgame"
 				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/addgame"
 				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/hover"
 			}
@@ -520,7 +575,7 @@ layout
 
 
 		//Controls
-		place { control="XPVistaAlert,SupportAlert,ParentalLockButton," region=top align=right end-right=frame_minimize  spacing=0 margin-right=3 height=39 }
+		place { control="XPVistaAlert,SupportAlert," region=top align=right end-right=frame_minimize  spacing=0 margin-right=3 height=39 }
 		place { control="" region=top align=right end-right=frame_minimize margin-right=1 height=40 }
 		place [$OSX] { control="UIStatusPanel" region=top align=right margin-right=1 width=27 height=40 }
 		place { region=lefty control="" margin-left=18 margin-top=12 height=23 width=120 }
@@ -545,7 +600,7 @@ layout
 		place { control="" margin-right=12 align=right  margin-top=33  height=50  }
 		place { 
 			
-			control=" ,AnnouncementButton,add_game, startvr, exitvr ,view_friends, InboxButton,universe_label," 
+			control=" ParentalLockButton,UIStatusPanel,AnnouncementButton,add_game, startvr, exitvr ,view_friends, ,universe_label," 
 			spacing=0
 			
 			dir=right 
@@ -553,8 +608,21 @@ layout
 			margin-top=34
 			height=50	 
 			width=50
+			end-right="InboxButton"
+			}
+			place { 			
+			control=" InboxButton" 
+			spacing=0
+			
+			dir=right 
+			align=right
+			margin-top=37
+			height=44	 
+			
 			end-right="AccountButton"
 			}
+
+			
 		place { control="MenuBar" height=44 width=88 margin-left=53 align=left margin-top=37	dir=right }
 
 	
@@ -569,12 +637,12 @@ layout
 		
 		place { 
 			
-			control="UIStatusPanel" 
+			control="" 
 			align=bottom 
 			margin-top=
-			height="32"
+			height="50"
 			
-			width="max"
+			width="50"
 			
 			}
 

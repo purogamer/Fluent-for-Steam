@@ -1,0 +1,15 @@
+diff a/COCBot/functions/Attack/ReturnHome.au3 b/COCBot/functions/Attack/ReturnHome.au3	(rejected hunks)
+@@ -180,10 +180,10 @@ Func ReturnHome($TakeSS = 1, $GoldChangeCheck = True) ;Return main screen
+ 		$g_bIsFullArmywithHeroesAndSpells = False ; forcing check the army
+ 		If ReturnHomeMainPage() Then Return
+ 		$counter += 1
+-		If $counter >= 50 Or isProblemAffect(True) Then
++		If $counter >= 2 Or isProblemAffect(True) Then
+ 			SetLog("Cannot return home.", $COLOR_ERROR)
+-			checkMainScreen()
+-			RebootAndroid()
++			;checkMainScreen()
++			CloseAndroid("UniversalCloseWaitOpenCoC")
+ 			Return
+ 		EndIf
+ 	WEnd

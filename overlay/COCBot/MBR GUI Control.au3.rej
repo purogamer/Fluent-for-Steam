@@ -1,0 +1,10 @@
+diff a/COCBot/MBR GUI Control.au3 b/COCBot/MBR GUI Control.au3	(rejected hunks)
+@@ -2036,7 +2036,7 @@ Func Bind_ImageList($nCtrl, ByRef $hImageList)
+ 			Local $aIconIndex = [$eIcnTrain, $eIcnGem, $eIcnReOrder, $eIcnOptions]
+ 
+ 		Case $g_hGUI_MISC_TAB
+-			Local $aIconIndex = [$eIcnTH1, $eIcnBuilderHall, $eIcnStrongMan]
++			Local $aIconIndex = [$eIcnTH1, $eIcnBuilderHall, $eIcnStrongMan, $eIcnClanCapital]
+ 
+ 		Case $g_hGUI_DONATE_TAB
+ 			; the icons for donate tab

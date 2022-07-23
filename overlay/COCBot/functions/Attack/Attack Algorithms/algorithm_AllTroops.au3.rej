@@ -1,0 +1,44 @@
+diff a/COCBot/functions/Attack/Attack Algorithms/algorithm_AllTroops.au3 b/COCBot/functions/Attack/Attack Algorithms/algorithm_AllTroops.au3	(rejected hunks)
+@@ -117,7 +117,7 @@ Func algorithm_AllTroops() ;Attack Algorithm for all existing troops
+ 							[MatchTroopDropName(36), MatchSidesDrop(36), MatchTroopWaveNb(36), 1, MatchSlotsPerEdge(36)], _
+ 							[MatchTroopDropName(37), MatchSidesDrop(37), MatchTroopWaveNb(37), 1, MatchSlotsPerEdge(37)]]
+ 				Else
+-					Local $listInfoDeploy[38][5] = [[$eGole, $nbSides, 1, 1, 2] _
++					Local $listInfoDeploy[39][5] = [[$eGole, $nbSides, 1, 1, 2] _
+ 							, [$eIceG, $nbSides, 1, 1, 2] _
+ 							, [$eLava, $nbSides, 1, 1, 2] _
+ 							, [$eYeti, $nbSides, 1, 1, 2] _
+@@ -125,6 +125,7 @@ Func algorithm_AllTroops() ;Attack Algorithm for all existing troops
+ 							, [$eGiant, $nbSides, 1, 1, $g_iSlotsGiants] _
+ 							, [$eSGiant, $nbSides, 1, 1, $g_iSlotsGiants] _
+ 							, [$eDrag, $nbSides, 1, 1, 0] _
++							, [$eSDrag, $nbSides, 1, 1, 0] _
+ 							, ["CC", 1, 1, 1, 1] _
+ 							, [$eBall, $nbSides, 1, 1, 0] _
+ 							, [$eRBall, $nbSides, 1, 1, 0] _
+@@ -235,7 +236,7 @@ Func algorithm_AllTroops() ;Attack Algorithm for all existing troops
+ 							[MatchTroopDropName(34), MatchSidesDrop(34), MatchTroopWaveNb(34), 1, MatchSlotsPerEdge(34)], _
+ 							[MatchTroopDropName(35), MatchSidesDrop(35), MatchTroopWaveNb(35), 1, MatchSlotsPerEdge(35)]]
+ 				Else
+-					Local $listInfoDeploy[37][5] = [[$eGole, $nbSides, 1, 1, 2] _
++					Local $listInfoDeploy[38][5] = [[$eGole, $nbSides, 1, 1, 2] _
+ 							, [$eIceG, $nbSides, 1, 1, 2] _
+ 							, [$eLava, $nbSides, 1, 1, 2] _
+ 							, [$eYeti, $nbSides, 1, 1, 2] _
+@@ -243,6 +244,7 @@ Func algorithm_AllTroops() ;Attack Algorithm for all existing troops
+ 							, [$eGiant, $nbSides, 1, 1, $g_iSlotsGiants] _
+ 							, [$eSGiant, $nbSides, 1, 1, $g_iSlotsGiants] _
+ 							, [$eDrag, $nbSides, 1, 1, 0] _
++							, [$eSDrag, $nbSides, 1, 1, 0] _
+ 							, ["CC", 1, 1, 1, 1] _
+ 							, [$eBall, $nbSides, 1, 1, 0] _
+ 							, [$eBabyD, $nbSides, 1, 1, 1] _
+@@ -375,7 +377,7 @@ Func SetSlotSpecialTroops()
+ 	$g_iClanCastleSlot = -1
+ 
+ 	For $i = 0 To UBound($g_avAttackTroops) - 1
+-		If $g_avAttackTroops[$i][0] = $eCastle Or $g_avAttackTroops[$i][0] = $eWallW Or $g_avAttackTroops[$i][0] = $eBattleB Or $g_avAttackTroops[$i][0] = $eStoneS Or $g_avAttackTroops[$i][0] = $eSiegeB Or $g_avAttackTroops[$i][0] = $eLogL Then
++		If $g_avAttackTroops[$i][0] = $eCastle Or $g_avAttackTroops[$i][0] = $eWallW Or $g_avAttackTroops[$i][0] = $eBattleB Or $g_avAttackTroops[$i][0] = $eStoneS Or $g_avAttackTroops[$i][0] = $eSiegeB Or $g_avAttackTroops[$i][0] = $eLogL Or $g_avAttackTroops[$i][0] = $eFlameF Then
+ 			$g_iClanCastleSlot = $i
+ 		ElseIf $g_avAttackTroops[$i][0] = $eKing Then
+ 			$g_iKingSlot = $i

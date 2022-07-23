@@ -1,0 +1,9 @@
+diff a/COCBot/functions/CreateArmy/openArmyOverview.au3 b/COCBot/functions/CreateArmy/openArmyOverview.au3	(rejected hunks)
+@@ -1,6 +1,6 @@
+ ; #FUNCTION# ====================================================================================================================
+ ; Name ..........: OpenArmyOverview
+-; Description ...: Opens and waits for Army Overiew window and verifes success
++; Description ...: Opens and waits for Army Overview window and verifies success
+ ; Syntax ........: OpenArmyOverview()
+ ; Parameters ....:
+ ; Return values .: None

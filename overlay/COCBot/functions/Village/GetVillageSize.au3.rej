@@ -1,0 +1,76 @@
+diff a/COCBot/functions/Village/GetVillageSize.au3 b/COCBot/functions/Village/GetVillageSize.au3	(rejected hunks)
+@@ -39,8 +44,8 @@ Func GetVillageSize($DebugLog = Default, $sStonePrefix = Default, $sTreePrefix =
+ 	Local $stone = [0, 0, 0, 0, 0, ""], $tree = [0, 0, 0, 0, 0, ""], $fixed = [0, 0, 0, 0, 0, ""]
+ 	Local $x0, $y0, $d0, $x, $y, $x1, $y1, $right, $bottom, $a
+ 
+-	Local $iAdditionalY = 75
+-	Local $iAdditionalX = 100
++	Local $iAdditionalY = 125 ;75
++	Local $iAdditionalX = 200 ;100
+ 
+ 	If $bOnBuilderBase = Default Then
+ 		$bOnBuilderBase = isOnBuilderBase(True)
+@@ -178,6 +183,11 @@ Func GetVillageSize($DebugLog = Default, $sStonePrefix = Default, $sTreePrefix =
+ 					$tree[3] = $y0 ; y ref. center of tree
+ 					$tree[4] = $d0 ; distance to village map in pixel
+ 					$tree[5] = $findImage
++					
++					Local $asTreeName = StringSplit($findImage,"-") ; get filename only
++					Local $sTreeName = StringReplace($asTreeName[1], "2", "") ; remove 2 in 2tree
++					$g_iTree = Int(Eval("e" & $sTreeName))
++					If $DebugLog Then SetLog($sTreeName & " " & $g_iTree, $COLOR_INFO)
+ 					ExitLoop
+ 				EndIf
+ 
+@@ -193,6 +203,33 @@ Func GetVillageSize($DebugLog = Default, $sStonePrefix = Default, $sTreePrefix =
+ 
+ 		If $tree[0] = 0 And $fixed[0] = 0 And Not $g_bRestart Then
+ 			SetDebugLog("GetVillageSize cannot find tree", $COLOR_WARNING)
++			If $DebugLog Then SetLog("GetVillageSize cannot find tree", $COLOR_WARNING)
++			If $DebugLog Then SetLog("$g_aiSearchZoomOutCounter[0] : " & $g_aiSearchZoomOutCounter[0])
++			
++			
++			If $g_aiSearchZoomOutCounter[0] > 2 Then
++				; zoomout script has been executed 3 times and still can't find the tree, assumed at max'ed zoom, 
++				; and force ZoomOut to center on the Stone.
++				; an alternative would be to measure the distance between 2 stones but this will still be needed if that fails
++				Local $stone_x_exp = $stone[2]
++				Local $stone_y_exp = $stone[3]
++				ConvertVillagePos($stone_x_exp, $stone_y_exp, 1.0) ; expected x, y position of stone
++				$x = $stone[0] - $stone_x_exp
++				$y = $stone[1] - $stone_y_exp
++				
++				Dim $aResult[10]
++				$aResult[0] = 0
++				$aResult[1] = 1
++				$aResult[2] = $x ; offset x
++				$aResult[3] = $y ; offset y
++				$aResult[4] = $stone[0] ; x center of stone found
++				$aResult[5] = $stone[1] ; y center of stone found
++				$aResult[6] = $stone[5] ; stone image file name
++				$aResult[7] = $tree[0] ; x center of tree found
++				$aResult[8] = $tree[1] ; y center of tree found
++				$aResult[9] = $tree[5] ; tree image file name
++			EndIf
++			
+ 			Return FuncReturn($aResult)
+ 		EndIf
+ 	EndIf
+@@ -209,8 +246,16 @@ Func GetVillageSize($DebugLog = Default, $sStonePrefix = Default, $sTreePrefix =
+ 
+ 	; initial reference village had a width of 473.60282919315 (and not 440) and stone located at 226, 567, so center on that reference and used zoom factor on that size
+ 	;Local $z = $c / 473.60282919315 ; don't use size of 440, as beta already using reference village
+-	Local $iRefSize = 445;458 ; 2019-01-02 Update village measuring as outer edges didn't align anymore
++	;Local $iRefSize = 445; 458 ; 2019-01-02 Update village measuring as outer edges didn't align anymore 445
++
++	If $bOnBuilderBase Then
++		Local $iRefSize = 445; 458 ; 2019-01-02 Update village measuring as outer edges didn't align anymore 445
++	Else
++		Local $iRefSize = $g_afRefVillage[$g_iTree][0]
++	EndIf
++	
+ 	Local $iDefSize = 444 ; 2019-04-01 New default size using shared_prefs zoom level
++
+ 	Local $z = $c / $iRefSize
+ 
+ 	Local $stone_x_exp = $stone[2]

@@ -1,0 +1,31 @@
+diff a/COCBot/functions/Image Search/imglocTHSearch.au3 b/COCBot/functions/Image Search/imglocTHSearch.au3	(rejected hunks)
+@@ -22,7 +22,9 @@ Global $IMGLOCTHRDISTANCE
+ Func imglocTHSearch($bReTest = False, $myVillage = False, $bForceCapture = True)
+ 	Local $xdirectorya = @ScriptDir & "\imgxml\Buildings\Townhall"
+ 	Local $xdirectoryb = @ScriptDir & "\imgxml\Buildings\Townhall2"
+-	Local $xdirectory
++	Local $xdirectorySnowa = @ScriptDir & "\imgxml\Buildings\snow-Townhall"
++	Local $xdirectorySnowb = @ScriptDir & "\imgxml\Buildings\snow-Townhall2"
++	Local $xdirectory, $xdirectorySnow
+ 	Local $sCocDiamond = "ECD"
+ 	Local $redLines = ""
+ 	Local $minLevel = 6 ; We only support TH6+
+@@ -50,12 +52,17 @@ Func imglocTHSearch($bReTest = False, $myVillage = False, $bForceCapture = True)
+ 		Local $iLvlFound = 0
+ 		If Mod($retry, 2) = 0 Then
+ 			$xdirectory = $xdirectorya
++			$xdirectorySnow = $xdirectorySnowa
+ 		Else
+ 			$xdirectory = $xdirectoryb
++			$xdirectorySnow = $xdirectorySnowb
+ 		EndIf
++		
++		SetDebugLog("$xdirectory = " & $xdirectory, $COLOR_DEBUG)
+ 
+ 		If $g_iDetectedImageType = 1 And $retry < 2 Then ;Snow theme on
+-			$xdirectory = "snow-" & $xdirectory
++			$xdirectory = $xdirectorySnow ;"snow-" & $xdirectory
++			SetDebugLog("With snow $xdirectory = " & $xdirectory, $COLOR_DEBUG)
+ 		EndIf
+ 
+ 		If $retry > 0 And $g_sImglocRedline <> "" Then ; on retry IMGLOCREDLNE is already populated

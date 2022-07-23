@@ -1,0 +1,17 @@
+diff a/COCBot/functions/Read Text/getOcr.au3 b/COCBot/functions/Read Text/getOcr.au3	(rejected hunks)
+@@ -62,7 +62,6 @@ Func getResourcesLoot($x_start, $y_start) ; -> Gets complete value of Gold/Elixi
+ 	Return getOcrAndCapture("coc-loot", $x_start, $y_start, 160, 22, True)
+ EndFunc   ;==>getResourcesLoot
+ 
+-;HArchH Needs to be a bit longer.  Was 75, trying 85
+ Func getResourcesLootDE($x_start, $y_start) ; -> Gets complete value of Dark Elixir after attack xxx,xxx "AttackReport"
+ 	Return getOcrAndCapture("coc-loot", $x_start, $y_start, 85, 22, True)
+ EndFunc   ;==>getResourcesLootDE
+@@ -80,6 +79,7 @@ Func getResourcesBonusPerc($x_start, $y_start) ; -> Gets complete value of Bonus
+ EndFunc   ;==>getResourcesBonusPerc
+ 
+ Func getLabUpgrdResourceWht($x_start, $y_start) ; -> Gets complete value of Elixir/DE on the troop buttons, xxx,xxx for "laboratory.au3" and "starlaboratory.au3" when white text
++	;SetDebugLog("Getting lab upgrade cost from x,y=" & $x_start & "," & $y_start) ;HArchH
+ 	Return getOcrAndCapture("coc-lab-w", $x_start, $y_start, 70, 14, True)
+ EndFunc   ;==>getLabUpgrdResourceWht
+ 

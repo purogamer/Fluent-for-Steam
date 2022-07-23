@@ -1,0 +1,23 @@
+diff a/COCBot/functions/Village/ReplayShare.au3 b/COCBot/functions/Village/ReplayShare.au3	(rejected hunks)
+@@ -1,6 +1,6 @@
+ ; #FUNCTION# ====================================================================================================================
+ ; Name ..........: ReplayShare
+-; Description ...: This function will publish replay if mimimun loot reach
++; Description ...: This function will publish replay if minimum loot reached
+ ; Syntax ........:
+ ; Parameters ....: None
+ ; Return values .: None
+@@ -28,8 +28,13 @@ Func ReplayShare($bShareLastReplay)
+ 	If _Sleep($DELAYREPLAYSHARE2) Then Return
+ 
+ 	If ClickB("MessagesButton", Default, 300) Then
++		If _Sleep(2000) Then Return
++		SetDebugLog("ClickB true", $COLOR_DEBUG)
+ 		Local $aiAttackLogTab = findButton("AttackLogTab")
++		SetDebugLog("Trying to find AttackLogTab button", $COLOR_DEBUG)
++		If _Sleep(2000) Then Return
+ 		If IsArray($aiAttackLogTab) And UBound($aiAttackLogTab, 1) >= 2 Then
++			SetDebugLog("Found Attack Log tab", $COLOR_DEBUG)
+ 			Local $aIsAttackLogTabOpen[4] = [$aiAttackLogTab[0] - 30, $aiAttackLogTab[1], 0xF4F4F0, 20]
+ 			If Not _CheckPixel($aIsAttackLogTabOpen, True) Then ClickP($aiAttackLogTab) ; Check if Attack Log Tab is already open otherwise click it
+ 

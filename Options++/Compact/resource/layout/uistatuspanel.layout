@@ -16,54 +16,41 @@
 			textcolor="none"
 			font-family=button
 			bgcolor="none"
-			render
-			{
-				0="image(x0,y0,x1,y1,download/acitvator)"
+			render {
+				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/download"
 			}
 		}
 		StatusLabel:hover
 		{
-			bgcolor="none"
-			textcolor="none"
-			font-family=cachetazo
-			font-size=16
-			inset="0 -2 0 0"
-			render
-			{
+			render {
+				0 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/download"
+				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/download"
+				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/hover"
+				3 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/hover"
 				
 			}
 		}
-		StatusLabel:Selected
-		{
-			bgcolor="none"
-			textcolor="none"
-			render
-			{
-				0="image(x0+4,y0+2,x8,y1,graphics/fluent/icons/navbar/leftnav/DownloadActive)"
-			}
-		}
-		//cuantos descargas hay en cola
-		StatusLabelDim
-		{
-			textcolor="none"
-			bgcolor="none"
-			
-			
-		}
-		StatusLabelDim:hover
-		{
-			textcolor="none"
-			bgcolor="none"
-					}
+		
+		
+		
 		// Barra de descarga
 		SlimProgressBar
 		{
-			textcolor = "bluesito"
-			bgcolor = "white07"
-			render
-			{
-				0="image(x0-10,y0-11,x1,y1,download/maskdwntest)"
+			textcolor = "darkblue"
+			bgcolor="white05"
+			render {
+				1 = "image(x0, y0, x0, y0, graphics/fluent/icons/navbar/topbar/downloadmask"
+				
 			}
+		}
+
+
+		//hidden
+		StatusLabelDim
+		{
+			textcolor="none"
+			bgcolor="green"
+			
 			
 		}
 		
@@ -78,10 +65,10 @@
 	  region { name="statusRegion" y=28 width=max height=28 align=bottom margin=6 } 
 	  region { name="ProgressRegion"  width=max height=10 align=top margin-top=2 }
 	 	
-	  place { control="StatusDownloading" region="ProgressRegion" align="top-center" margin-top=12 }
-		place { control="" region="ProgressRegion"  align="top-center" margin-top=3 }
-	 	place { control="StatusProgressbar" region="ProgressRegion" width=max margin-right=15 margin-left=15 height=10 margin-top=0 align="top-center" }
-	place {control="StatusPaused, StatusComplete" margin-left=9999}
+	  place { control="StatusDownloading" height=50	 width=50 }
+	  place { control="StatusProgressbar"  width=46 margin-left="2" margin-bottom=2 height=6 align="bottom" }
+		///hidden
+	  place {control="StatusPaused, StatusComplete" margin-left=9999}
 
 	}
 	

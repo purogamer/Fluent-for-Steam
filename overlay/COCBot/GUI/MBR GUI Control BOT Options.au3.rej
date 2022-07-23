@@ -1,0 +1,35 @@
+diff a/COCBot/GUI/MBR GUI Control BOT Options.au3 b/COCBot/GUI/MBR GUI Control BOT Options.au3	(rejected hunks)
+@@ -598,6 +599,9 @@ Func btnTestImage()
+ EndFunc   ;==>btnTestImage
+ 
+ Func btnTestVillageSize()
++	SetLog("Test Village Size")
++	
++	_GUICtrlTab_ClickTab($g_hTabMain, 0)
+ 
+ 	BeginImageTest()
+ 	Local $currentRunState = $g_bRunState
+@@ -623,6 +627,23 @@ Func btnTestVillageSize()
+ 			SetLog("Village offset y: " & $village[3])
+ 			SetLog("Village stone " & $village[6] & ": " & $village[4] & ", " & $village[5])
+ 			SetLog("Village tree " & $village[9] & ": " & $village[7] & ", " & $village[8])
++			
++			If $village[4] > 0 And $village[5] > 0 And $village[7] > 0 And $village[8] > 0 And $i < 1 Then
++				; reset village measures
++				setVillageOffset(0, 0, 1)
++				ConvertInternalExternArea()
++				;SearchZoomOut($aCenterEnemyVillageClickDrag, True, "btnTestAttackCSV")
++				If CheckZoomOut("btnTestAttackCSV", True, False) = False Then
++					SetLog("CheckZoomOut failed", $COLOR_INFO)
++				EndIf
++
++				ConvertInternalExternArea()
++
++				SaveVillageDebugImage()
++			EndIf
++			
++			
++			
+ 		EndIf
+ 	Next
+ 	EndImageTest()

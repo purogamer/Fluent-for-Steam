@@ -181,7 +181,74 @@ colors
 }
 
 styles
-{
+{    
+	StopButton {
+     
+	 bgcolor=none
+	 render_bg {
+				1 = "image(x0, y0+0, x0, y0+0, graphics/dismiss"
+			}
+	
+
+	}
+	StopButton:hover {
+		 
+		bgcolor=none
+		render_bg {
+					0 = "image(x0, y0+0, x0, y0+0, graphics/dismiss"
+					1 = "image(x0, y0+0, x0, y0+0, graphics/dismiss"
+					2 = "image(x0, y0+0, x0, y0+0, graphics/dismiss"
+					3 = "image(x0, y0+0, x0, y0+0, graphics/hover32"
+					
+				}
+		
+
+	}
+	StopButton:active {
+		 
+		bgcolor=none
+		render_bg {
+					1 = "image(x0, y0+0, x0, y0+0, graphics/dismiss"
+					2 = "image(x0, y0+0, x0, y0+0, graphics/dismiss"
+					3 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/hover32"
+					
+				}
+		
+
+	}
+
+	ReloadButton {
+
+	 render_bg {
+				1 = "image(x0, y0+0, x0, y0+0, graphics/refresh"
+			}
+	
+
+	}
+	ReloadButton:hover{
+
+	render_bg {
+				0 = "image(x0, y0+0, x0, y0+0, graphics/refresh"
+				1 = "image(x0, y0+0, x0, y0+0, graphics/refresh"
+				2 = "image(x0, y0+0, x0, y0+0, graphics/refresh"
+				5 = "image(x0, y0+0, x0, y0+0, graphics/refresh"
+				3 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/hover32"
+				
+			}
+	
+
+	}
+	ReloadButton:active{
+
+	render_bg {
+				1 = "image(x0, y0+0, x0, y0+0, graphics/refresh"
+				2 = "image(x0, y0+0, x0, y0+0, graphics/refresh"
+				3 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/hover32"
+				
+			}
+	
+
+	}
 	"CSteamRootDialog CGameFilterMenuButton"
 	{
 		textcolor="none"
@@ -235,7 +302,18 @@ styles
 			
 			
 	}
-
+	LabelEVCert:hover
+	{
+		font-family=NONE
+		textcolor="NONE"
+		render_bg {
+				1 = "image(x0, y0+0, x0, y0+0, graphics/SecureURL"
+				2 = "image(x0, y0+0, x0, y0+0, graphics/SecureURL"
+			}
+		
+			
+			
+	}
 	zoomslider
 	{
 		inset="0 -1 0 0"
@@ -364,8 +442,8 @@ styles
 	TextEntryURL
 	{
 		bgcolor="none"
-		font-family="cachetazo"
-		textcolor=white
+		font-family="semibold2"
+		textcolor=white45
 		render_bg {}
 		render {}
 	}
@@ -479,7 +557,7 @@ styles
 //======Hidden Elements(width=0/height=0 still causes spikes and i doubt it will conflict with the linux font-size=0 problems=============//
 	NavLabelZoom
 	{
-		textcolor="none"
+		textcolor="white"
 		bgcolor="none"
 	}
 	LibrarySeparator
@@ -502,6 +580,63 @@ styles
 		bgcolor="none"
 		render_bg{}
 	}
+	BackButton
+		{
+			bgcolor="none"
+			textcolor=none
+			inset="0 0 0 0"
+			
+			render_bg {
+				0 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/backsidebar"
+				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/backsidebar"
+				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/backsidebar"
+				3 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/backsidebar"
+				4 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/backsidebar"
+				5 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/backsidebar"
+
+			}
+			
+			
+			
+		}
+		BackButton:hover
+		{
+			bgcolor=none
+			render_bg {
+				6 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/backsidebar"
+				5 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/backsidebar"
+				4 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/backsidebar"
+				3 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/backsidebar"
+				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/backsidebar"
+				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/menu_hover"
+				0 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/menu_hover"
+			}
+		}
+		BackButton:active
+		{
+			bgcolor=none
+			
+			render_bg {
+				
+				5 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/backsidebar"
+				4 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/backsidebar"
+				3 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/backsidebar"
+				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/backsidebar"
+				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/menu_hover"
+
+			}
+		}
+		BackButton:disabled
+		{
+			bgcolor=none
+			render_bg {
+				0 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/backsidebar"
+			}
+			
+		}
+	
+
+	
 }
 
 layout [$WINDOWS]
@@ -517,13 +652,14 @@ layout [$WINDOWS]
 			}
 
 	place { region="lefty" margin-left="8" control="back" margin-top=3 width=44 height=44  }
-	place {   control="label_store,label_library,label_news,label_friends,label_community,label_me,label_console" start=back  margin-left=90 spacing=0 height=44}
+	place {   control="label_store,label_library,label_news,label_friends,label_community,label_me,,label_console,label_library_zoom," start=back  margin-left=90 spacing=0 height=44}
 
 	//URLBar
-	place { control="stop,refresh,subnavgroup_library" height=40 dir=down } // hacky solution for the url checkbox on/off
-	place { control="URLBar" start="EVCert"  y=0 align=left width=max height=32 margin-right=80 margin-left=10 }
-	place { control="EVCert" start=back dir=down height=32 margin-top=9 width=62 margin-left=15 }
-	place { control="PageLoadThrobber,refresh,stop" start=URLBar align=right width=38 height=39 }
+	place { control="label_community_new" margin-top=89 height=1 width=max}
+	place { control="stop,refresh,subnavgroup_library" height=42 dir=down } // hacky solution for the url checkbox on/off
+	place { control="EVCert" start=back dir=down height=32 margin-top=4 width=32 margin-left=5 }
+	place { control="URLBar" start="EVCert"  y=-1 align=left width=max height=32 margin-right=80 margin-left=4 }
+	place { control="PageLoadThrobber,refresh,stop" start=URLBar align=right margin-right=8 margin-top=4 width=32 height=32 }
 
 	//Community Sub-Links
 	place { control="label_community_friends,label_community_profile,label_community_groups,label_community_gamehubs,label_community_forums,label_community_workshop,label_community_greenlight,label_community_marketplace" region=top align=right x=0 y="0" spacing=0 height=39 }
@@ -548,28 +684,28 @@ layout [$WINDOWS]
 
 	// content pages - these are all pushed down by the email reminder bar (above) if it's visible
 	place { control=DownloadsPage y=42 width=max height=max margin-bottom=1 }
-	place { control=GamesPage_List y=42 margin-bottom=28 width=max height=max margin-bottom=1 start=subnavgroup_library dir=down }
-	place { control=GamesPage_Details y=42 margin-bottom=28 width=max height=max margin-bottom=1 start=subnavgroup_library dir=down }
-	place { control=GamesPage_Grid y=42 margin-bottom=28 width=max height=max start=subnavgroup_library dir=down }
+	place { control=GamesPage_List y=42  width=max height=max margin-bottom=1 start=subnavgroup_library dir=down }
+	place { control=GamesPage_Details y=42  width=max height=max margin-bottom=1 start=subnavgroup_library dir=down }
+	place { control=GamesPage_Grid y=42  width=max height=max start=subnavgroup_library dir=down }
 
-	place { control="WebPanel" y=51 margin-bottom=28 margin=2 width=max height=max margin-bottom=0 start=subnavgroup_library dir=down }
-	place { control="NewLibraryPage" margin-bottom=28 margin=2  width=max height=max margin-bottom=0 margin-top=50 margin-left=0 margin-right=0 margin-bottom=1 start=subnavgroup_library dir=down }
+	place { control="WebPanel" y=48  margin=2 width=max height=max margin-bottom=0 start=subnavgroup_library dir=down }
+	place { control="NewLibraryPage"  margin=2  width=max height=max margin-bottom=0 margin-top=50 margin-left=0 margin-right=0 margin-bottom=1 start=subnavgroup_library dir=down }
 
 	place { control=MusicPage_Details y=42 width=max height=max start=subnavgroup_library dir=down }
-	place { control=ScreenshotsPage margin-bottom=28 y=42 width=max height=max margin-top=1 start=subnavgroup_library dir=down }
+	place { control=ScreenshotsPage  y=42 width=max height=max margin-top=1 start=subnavgroup_library dir=down }
 	
-	place { control=ConsolePage y=42 margin-bottom=28 width=max height=max margin-bottom=1 start=subnavgroup_library dir=down }
+	place { control=ConsolePage y=42  width=max height=max margin-bottom=1 start=subnavgroup_library dir=down }
 
 
-	place { control=MediaPage margin=1 margin-bottom=28 y=42 width=max height=max margin-bottom=1 start=subnavgroup_library dir=down }
-	place { control=ToolsPage margin=1 margin-bottom=28 y=42 width=max height=max margin-bottom=1 start=subnavgroup_library dir=down }
+	place { control=MediaPage margin=1  y=42 width=max height=max margin-bottom=1 start=subnavgroup_library dir=down }
+	place { control=ToolsPage margin=1  y=42 width=max height=max margin-bottom=1 start=subnavgroup_library dir=down }
 
 	place { control=BroadcastPage y=42 width=max height=max margin-bottom=1 start=subnavgroup_library dir=down }
 	place { control=BroadcastPageMin width=300 height=168 margin-top=0 margin-left=0 margin-right=30 margin-bottom=26 dir=down align=bottom-right }
 	place { control=BroadcastPageMinHoriz	width=300 height=168 margin-top=0 margin-left=0 margin-right=30 margin-bottom=40 dir=down align=bottom-right }
 
 	//Hidden
-	place { control="label_library_zoom,label_zoom_separator,label_community_new,label_library_view,URLStatusImage,forward" dir=down margin-left=-999 }
+	place { control="label_zoom_separator,label_library_view,URLStatusImage,forward" dir=down margin-left=-999 }
 }
 
 }

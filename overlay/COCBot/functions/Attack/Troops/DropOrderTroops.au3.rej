@@ -1,0 +1,197 @@
+diff a/COCBot/functions/Attack/Troops/DropOrderTroops.au3 b/COCBot/functions/Attack/Troops/DropOrderTroops.au3	(rejected hunks)
+@@ -45,50 +45,52 @@ Func MatchTroopDropName($Num)
+ 		Case 15
+ 			Return $eDrag
+ 		Case 16
+-			Return $ePekk
++			Return $eSDrag
+ 		Case 17
+-			Return $eBabyD
++			Return $ePekk
+ 		Case 18
+-			Return $eInfernoD
++			Return $eBabyD
+ 		Case 19
+-			Return $eMine
++			Return $eInfernoD
+ 		Case 20
+-			Return $eEDrag
++			Return $eMine
+ 		Case 21
+-			Return $eYeti
++			Return $eEDrag
+ 		Case 22
+-			Return $eRDrag
++			Return $eYeti
+ 		Case 23
+-			Return $eMini
++			Return $eRDrag
+ 		Case 24
+-			Return $eSMini
++			Return $eMini
+ 		Case 25
+-			Return $eHogs
++			Return $eSMini
+ 		Case 26
+-			Return $eValk
++			Return $eHogs
+ 		Case 27
+-			Return $eSValk
++			Return $eValk
+ 		Case 28
+-			Return $eGole
++			Return $eSValk
+ 		Case 29
+-			Return $eWitc
++			Return $eGole
+ 		Case 30
+-			Return $eSWitc
++			Return $eWitc
+ 		Case 31
+-			Return $eLava
++			Return $eSWitc
+ 		Case 32
+-			Return $eIceH
++			Return $eLava
+ 		Case 33
+-			Return $eBowl
++			Return $eIceH
+ 		Case 34
+-			Return $eSBowl
++			Return $eBowl
+ 		Case 35
+-			Return $eIceG
++			Return $eSBowl
+ 		Case 36
+-			Return $eHunt
++			Return $eIceG
+ 		Case 37
+-			Return "CC"
++			Return $eHunt
+ 		Case 38
++			Return "CC"
++		Case 39
+ 			Return "HEROES"
+ 	EndSwitch
+ EndFunc   ;==>MatchTroopDropName
+@@ -140,91 +142,97 @@ Func MatchSlotsPerEdge($Num)
+ 			Else
+ 				Return 2
+ 			EndIf
+-		Case 16 ;$ePekk
++		Case 16 ;$eSDrag
++			If $g_iMatchMode = $LB And $g_aiAttackStdDropSides[$LB] = 5 Then
++				Return 0
++			Else
++				Return 2
++			EndIf
++		Case 17 ;$ePekk
+ 			If $g_iMatchMode = $LB And $g_aiAttackStdDropSides[$LB] = 5 Then
+ 				Return 1
+ 			Else
+ 				Return 2
+ 			EndIf
+-		Case 17 ;$eBabyD
++		Case 18 ;$eBabyD
+ 			Return 1
+-		Case 18 ;$eInfernoD
++		Case 19 ;$eInfernoD
+ 			Return 1
+-		Case 19 ;$eMine
++		Case 20 ;$eMine
+ 			If $g_iMatchMode = $LB And $g_aiAttackStdDropSides[$LB] = 5 Then
+ 				Return 0
+ 			Else
+ 				Return 1
+ 			EndIf
+-		Case 20 ; $eEDrag
++		Case 21 ; $eEDrag
+ 			If $g_iMatchMode = $LB And $g_aiAttackStdDropSides[$LB] = 5 Then
+ 				Return 0
+ 			Else
+ 				Return 2
+ 			EndIf
+-		Case 21 ; $eYeti
++		Case 22 ; $eYeti
+ 			If $g_iMatchMode = $LB And $g_aiAttackStdDropSides[$LB] = 5 Then
+ 				Return 0
+ 			Else
+ 				Return 2
+ 			EndIf
+-		Case 22 ; $eRDrag
++		Case 23 ; $eRDrag
+ 			If $g_iMatchMode = $LB And $g_aiAttackStdDropSides[$LB] = 5 Then
+ 				Return 0
+ 			Else
+ 				Return 2
+ 			EndIf
+-		Case 23 ;$eMini
++		Case 24 ;$eMini
+ 			Return 0
+-		Case 24 ;$eSMini
++		Case 25 ;$eSMini
+ 			Return 0
+-		Case 25 ;$eHogs
++		Case 26 ;$eHogs
+ 			If $g_iMatchMode = $LB And $g_aiAttackStdDropSides[$LB] = 5 Then
+ 				Return 1
+ 			Else
+ 				Return 2
+ 			EndIf
+-		Case 26 ;$eValk
++		Case 27 ;$eValk
+ 			If $g_iMatchMode = $LB And $g_aiAttackStdDropSides[$LB] = 5 Then
+ 				Return 0
+ 			Else
+ 				Return 2
+ 			EndIf
+-		Case 27 ;$eSValk
++		Case 28 ;$eSValk
+ 			If $g_iMatchMode = $LB And $g_aiAttackStdDropSides[$LB] = 5 Then
+ 				Return 0
+ 			Else
+ 				Return 2
+ 			EndIf
+-		Case 28 ;$eGole
++		Case 29 ;$eGole
+ 			Return 2
+-		Case 29 ;$eWitc
++		Case 30 ;$eWitc
+ 			If $g_iMatchMode = $LB And $g_aiAttackStdDropSides[$LB] = 5 Then
+ 				Return 1
+ 			Else
+ 				Return 2
+ 			EndIf
+-		Case 30 ;$eSWitc
++		Case 31 ;$eSWitc
+ 			If $g_iMatchMode = $LB And $g_aiAttackStdDropSides[$LB] = 5 Then
+ 				Return 1
+ 			Else
+ 				Return 2
+ 			EndIf
+-		Case 31 ;$eLava
++		Case 32 ;$eLava
+ 			Return 2
+-		Case 32 ;$eIceH
++		Case 33 ;$eIceH
+ 			Return 2
+-		Case 33 ;$eBowl
++		Case 34 ;$eBowl
+ 			Return 0
+-		Case 34 ;$eSBowl
++		Case 35 ;$eSBowl
+ 			Return 0
+-		Case 35 ;$eIceG
++		Case 36 ;$eIceG
+ 			Return 2
+-		Case 36 ;$eHunt
++		Case 37 ;$eHunt
+ 			Return 0
+-		Case 37 ;CC
++		Case 38 ;CC
+ 			Return 1
+-		Case 38 ;HEROES
++		Case 39 ;HEROES
+ 			Return 1
+ 	EndSwitch
+ EndFunc   ;==>MatchSlotsPerEdge

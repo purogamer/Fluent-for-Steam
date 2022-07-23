@@ -1,0 +1,10 @@
+diff a/COCBot/functions/Village/SwitchAccount.au3 b/COCBot/functions/Village/SwitchAccount.au3	(rejected hunks)
+@@ -713,7 +713,7 @@ Func SwitchCOCAcc_ClickAccountSCID(ByRef $bResult, $NextAccount, $iStep = 2)
+ 				SetLog("[" & $j & "] Account coordinates: " & $aCoord[$j][0] & "," & $aCoord[$j][1] & " named: " & $g_asProfileName[$NextAccount-$iIndexSCID+$j])
+ 			Next
+ 			
+-			If UBound($aCoord) < 4 Then 
++			If UBound($aCoord) < 4 And $NextAccount >= 3 Then 
+ 				SetLog("Only Found " & UBound($aCoord) & " SCID Account, Select Last Account", $COLOR_INFO)
+ 				$iIndexSCID = UBound($aCoord) - 1
+ 			EndIf

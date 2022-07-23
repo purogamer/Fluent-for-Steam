@@ -1,0 +1,18 @@
+diff a/COCBot/functions/Attack/Attack Algorithms/SmartFarm.au3 b/COCBot/functions/Attack/Attack Algorithms/SmartFarm.au3	(rejected hunks)
+@@ -583,7 +583,7 @@ Func AttackSmartFarm($Nside, $SIDESNAMES)
+ 				[MatchTroopDropName(36), $nbSides, MatchTroopWaveNb(36), 1, MatchSlotsPerEdge(36)], _
+ 				[MatchTroopDropName(37), $nbSides, MatchTroopWaveNb(37), 1, MatchSlotsPerEdge(37)]]
+ 	Else
+-		Local $listInfoDeploy[39][5] = [[$eGole, $nbSides, 1, 1, 2] _
++		Local $listInfoDeploy[40][5] = [[$eGole, $nbSides, 1, 1, 2] _
+ 				, [$eLava, $nbSides, 1, 1, 2] _
+ 				, [$eIceH, $nbSides, 1, 1, 2] _
+ 				, [$eIceG, $nbSides, 1, 1, 2] _
+@@ -591,6 +591,7 @@ Func AttackSmartFarm($Nside, $SIDESNAMES)
+ 				, [$eGiant, $nbSides, 1, 1, $g_iSlotsGiants] _
+ 				, [$eSGiant, $nbSides, 1, 1, $g_iSlotsGiants] _
+ 				, [$eDrag, $nbSides, 1, 1, 0] _
++				, [$eSDrag, $nbSides, 1, 1, 0] _
+ 				, [$eBall, $nbSides, 1, 1, 0] _
+ 				, [$eRBall, $nbSides, 1, 1, 0] _
+ 				, [$eBabyD, $nbSides, 1, 1, 0] _

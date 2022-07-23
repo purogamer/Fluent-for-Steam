@@ -1,0 +1,44 @@
+diff a/COCBot/functions/Village/Auto Upgrade.au3 b/COCBot/functions/Village/Auto Upgrade.au3	(rejected hunks)
+@@ -17,6 +17,7 @@ Func AutoUpgrade($bTest = False)
+ 	$g_bRunState = True
+ 	Local $Result = _AutoUpgrade()
+ 	$g_bRunState = $bWasRunState
++	ZoomOut() ; re-center village
+ 	Return $Result
+ EndFunc
+ 
+@@ -53,23 +54,23 @@ Func _AutoUpgrade()
+ 		If _Sleep($DELAYAUTOUPGRADEBUILDING1) Then Return
+ 
+ 		; search for 000 in builders menu, if 000 found, a possible upgrade is available
+-		If QuickMIS("BC1", $g_sImgAUpgradeZero, 180, 80 + $g_iNextLineOffset, 480, 350) Then
++		If QuickMIS("BC1", $g_sImgAUpgradeZero, 180, $g_iNextLineOffset, 480, 350) Then
+ 			SetLog("Possible upgrade found !", $COLOR_SUCCESS)
+-			$g_iCurrentLineOffset = $g_iNextLineOffset + $g_iQuickMISY
++			$g_iCurrentLineOffset = $g_iQuickMISY
+ 		Else
+ 			SetLog("No upgrade available... Exiting Auto Upgrade...", $COLOR_INFO)
+ 			ExitLoop
+ 		EndIf
+ 
+ 		; check in the line of the 000 if we can see "New" or the Gear of the equipment, in this case, will not do the upgrade
+-		If QuickMIS("NX",$g_sImgAUpgradeObst, 180, 80 + $g_iCurrentLineOffset - 15, 480, 80 + $g_iCurrentLineOffset + 15) <> "none" Then
++		If QuickMIS("NX",$g_sImgAUpgradeObst, 180, $g_iCurrentLineOffset - 15, 480, $g_iCurrentLineOffset + 15) <> "none" Then
+ 			SetLog("This is a New Building or an Equipment, looking next...", $COLOR_WARNING)
+ 			$g_iNextLineOffset = $g_iCurrentLineOffset
+ 			ContinueLoop
+ 		EndIf
+ 
+ 		; if it's an upgrade, will click on the upgrade, in builders menu
+-		Click(180 + $g_iQuickMISX, 80 + $g_iCurrentLineOffset)
++		Click($g_iQuickMISX, $g_iCurrentLineOffset)
+ 		If _Sleep($DELAYAUTOUPGRADEBUILDING1) Then Return
+ 
+ 		; check if any wrong click by verifying the presence of the Upgrade button (the hammer)
+@@ -255,4 +256,4 @@ Func _AutoUpgrade()
+ 	SetLog("Auto Upgrade finished", $COLOR_INFO)
+ 	ClickAway()
+ 
+-EndFunc   ;==>AutoUpgrade
+\ No newline at end of file
++EndFunc   ;==>AutoUpgrade

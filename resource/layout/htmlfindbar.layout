@@ -1,0 +1,164 @@
+"resource/layout/htmlfindbar.layout"
+{
+	controls
+	{
+		FindEntry { controlname=TextEntry default=1 unicode=1 tabposition=1 style="FindEntry" }
+		FindCount { controlname=Label labeltext="#vgui_HTMLSearchMatch" }
+		Close { controlname=Button command="Close" style="CloseButtonSm" }
+		Next { controlname=Button command="next" style="NextButtonSm" }
+		Previous { controlname=Button command="previous" style="PrevButtonSm" }
+		SearchThisPage { controlname=Label labeltext="#vgui_HTMLSearchThisPage" style="" }
+	}
+
+	styles
+	{
+		Label { 
+			textcolor=white
+				render_bg
+			{
+				
+			
+			
+			}
+
+			font-family=basefont
+			font-size=14
+		}
+		CHTMLfindbar{
+			minimum-height="32"
+			minimum-width=170
+				render_bg
+			{
+				
+				0="fill(x0+2,y0+7,x1-2,y1-7,ClientBG)"
+
+				///////////////////esquina izquierda inferior/////////////////////////////
+				1="image(x0,y1-7,x0,y1, materiales/clientbg8px/ai)"
+
+				////////////////////parte inferior/////////////////////////////////////////
+				10="fill(x0+7,y1-7,x1-7,y1-1, ClientBG)"
+				////////////////////parte inferior/////////////////////////////////////////
+				9="fill(x0+7,y1-1,x1-7,y1, 757575xx40)"
+
+                ////////////medio de parte izquierda///////////////////////////////////////////////////
+				3="image_tiled(x0-3,y0+7,x0+2,y1-7, materiales/clientbg8px/mi)"
+				
+				//////////////////////////esquina izquierda superior///////////////////////////////////////////
+				5="image(x0,y0,x0,y0, materiales/clientbg8px/ti)"
+
+                ////////////////////////Parte del medio superior//////////////////////////////
+				10="fill(x0+7,y0+1,x1-7,y0+7, ClientBG)"
+				 ////////////////////////Parte del medio superior//////////////////////////////
+				6="fill(x0+7,y0,x1-7,y0+1, 757575xx40)"
+
+                //////////////medio derecha/////////////////////////////////////////////////////////////////////
+				4="image_tiled(x1-2,y0+7,x1+3,y1-7, materiales/clientbg8px/md)"
+
+				/////////////////////////esquina derecha superior///////////////////////////////////////////////
+				7="image(x1-7,y0,x1,y0, materiales/clientbg8px/td)"
+
+				/////////////////////esquina inferior derecha//////////////////////////////////////////////////////
+				8="image(x1-7,y1-7,x1,y1,materiales/clientbg8px/ad)"
+			
+			
+			}
+
+
+		}
+		FindEntry
+		{
+			
+			
+		}
+		CloseButtonSm
+		{
+			textcolor=none
+			bgcolor=none
+			render_bg { 
+
+				0="image(x0,y0,x1,y1,graphics/findbar_close )"
+
+			}
+		}
+		CloseButtonSm:hover
+		{	
+			textcolor=none
+			bgcolor=none
+			render_bg { 
+
+				0="image(x0,y0,x1,y1,graphics/findbar_close_h )"
+
+			}
+			
+		}
+		NextButtonSm
+		{	
+			textcolor=none
+			bgcolor=none
+			render_bg { 
+
+				0="image(x0,y0,x1,y1,graphics/findbar_down )"
+
+			}
+			
+		}
+		NextButtonSm:hover
+		{
+			textcolor=none
+			render_bg { 
+
+				0="image(x0,y0,x1,y1,graphics/findbar_down_h )"
+
+			}
+		}
+		NextButtonSm:active
+		{
+			textcolor=none
+			render_bg { 
+
+				0="image(x0,y0,x1,y1,graphics/findbar_down_a )"
+
+			}
+		}
+		
+		
+		PrevButtonSm
+		{
+			textcolor=none
+			bgcolor=none
+			render_bg { 
+
+				0="image(x0,y0,x1,y1,graphics/findbar_up )"
+
+			}
+		}
+		PrevButtonSm:hover
+		{
+			textcolor=none
+			render_bg { 
+
+				0="image(x0,y0,x1,y1,graphics/findbar_up_h )"
+
+			}
+		}
+		PrevButtonSm:active
+		{
+			textcolor=none
+			render_bg { 
+
+				0="image(x0,y0,x1,y1,graphics/findbar_up_a )"
+
+			}
+		}
+	}
+		
+	layout
+	{
+		place { control="FindEntry" margin-left=4 height=26 margin-top=3  width=max end-right=next }
+		place { control="FindCount" x=70    margin-top=8}
+		place { control=",Next,Previous,close" align=right margin-right=3 height=32 width=18 }
+
+		place { control="SearchThisPage" align=left height=1 width=1 }
+
+	}
+}

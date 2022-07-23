@@ -1,0 +1,61 @@
+diff a/COCBot/functions/Attack/PrepareAttack.au3 b/COCBot/functions/Attack/PrepareAttack.au3	(rejected hunks)
+@@ -94,8 +94,8 @@ Func PrepareAttack($pMatchMode, $bRemaining = False) ;Assigns troops
+ 							; Select castle, siege machine and warden mode
+ 							If $pMatchMode = $DB Or $pMatchMode = $LB Then
+ 								Switch $avAttackBar[$j][0]
+-									Case $eCastle, $eWallW, $eBattleB, $eStoneS, $eSiegeB, $eLogL
+-										If $g_aiAttackUseSiege[$pMatchMode] <= 6 Then
++									Case $eCastle, $eWallW, $eBattleB, $eStoneS, $eSiegeB, $eLogL, $eFlameF
++										If $g_aiAttackUseSiege[$pMatchMode] <= 7 Then
+ 											SelectCastleOrSiege($avAttackBar[$j][0], Number($avAttackBar[$j][5]), $g_aiAttackUseSiege[$pMatchMode])
+ 
+ 											If $g_aiAttackUseSiege[$pMatchMode] = 0 And Not($avAttackBar[$j][0] = $eCastle) Then ; if the user wanted to drop castle and no troops were available, do not drop a siege
+@@ -151,7 +151,7 @@ EndFunc   ;==>PrepareAttack
+ Func SelectCastleOrSiege(ByRef $iTroopIndex, $iX, $iCmbSiege)
+ 
+ 	Local $hStarttime = _Timer_Init()
+-	Local $aSiegeTypes[7] = [$eCastle, $eWallW, $eBattleB, $eStoneS, $eSiegeB, $eLogL, "Any"]
++	Local $aSiegeTypes[8] = [$eCastle, $eWallW, $eBattleB, $eStoneS, $eSiegeB, $eLogL, $eFlameF, "Any"]
+ 
+ 	Local $ToUse = $aSiegeTypes[$iCmbSiege]
+ 	Local $bNeedSwitch = False, $bAnySiege = False
+@@ -165,7 +165,7 @@ Func SelectCastleOrSiege(ByRef $iTroopIndex, $iX, $iCmbSiege)
+ 				SetLog(GetTroopName($iTroopIndex) & " level " & $g_iSiegeLevel & " detected. Try looking for higher level.")
+ 			EndIf
+ 
+-		Case $eCastle, $eWallW, $eBattleB, $eStoneS, $eSiegeB, $eLogL ; NOT the same as current castle/siege
++		Case $eCastle, $eWallW, $eBattleB, $eStoneS, $eSiegeB, $eLogL, $eFlameF ; NOT the same as current castle/siege
+ 			$bNeedSwitch = True
+ 			SetLog(GetTroopName($iTroopIndex) & ($ToUse <> $eCastle ? " level " & $g_iSiegeLevel & " detected. Try looking for " : " detected. Switching to ") & GetTroopName($ToUse))
+ 
+@@ -187,9 +187,9 @@ Func SelectCastleOrSiege(ByRef $iTroopIndex, $iX, $iCmbSiege)
+ 			Local $iLastX = $aiSwitchBtn[0] - 30, $iLastY = $aiSwitchBtn[1]
+ 			If _Sleep(1250) Then Return
+ 
+-			; Lets detect the CC & Sieges and click - search window is - X, 530, X + 390, 530 + 30
+-			Local $sSearchArea = GetDiamondFromRect(_Min($iX - 50, 470) & ",530(390,30)") ; x = 470 when Castle is at slot 6+ and there are 5 slots in siege switching window
+-
++			; Lets detect the CC & Sieges and click - search window is - X, 530, X + 390, 530 + 60
++			Local $sSearchArea = GetDiamondFromRect(_Min($iX - 50, 470) & ",530(500,60)") ; x = 470 when Castle is at slot 6+ and there are 5 slots in siege switching window
++			SetLog($sSearchArea)
+ 			Local $aSearchResult = findMultiple($g_sImgSwitchSiegeMachine, $sSearchArea, $sSearchArea, 0, 1000, 5, "objectname,objectpoints", True)
+ 			SetDebugLog("Benchmark Switch Siege imgloc: " & StringFormat("%.2f", _Timer_Diff($hStarttime)) & "'ms")
+ 			$hStarttime = _Timer_Init()
+@@ -211,7 +211,7 @@ Func SelectCastleOrSiege(ByRef $iTroopIndex, $iX, $iCmbSiege)
+ 						ExitLoop
+ 					EndIf
+ 
+-					If $iSiegeIndex >= $eWallW And $iSiegeIndex <= $eLogL And ($bAnySiege Or $iSiegeIndex = $ToUse) Then
++					If $iSiegeIndex >= $eWallW And $iSiegeIndex <= $eFlameF And ($bAnySiege Or $iSiegeIndex = $ToUse) Then
+ 						For $j = 0 To UBound($aAllCoords) - 1
+ 							Local $aCoords = $aAllCoords[$j]
+ 							Local $SiegeLevel = getTroopsSpellsLevel(Number($aCoords[0]) - 30, 587)
+@@ -321,7 +321,7 @@ Func IsUnitUsed($iMatchMode, $iTroopIndex)
+ 					If (BitAND($g_aiAttackUseHeroes[$iMatchMode], $eHeroWarden) = $eHeroWarden) Then Return True
+ 				Case $eChampion
+ 					If (BitAND($g_aiAttackUseHeroes[$iMatchMode], $eHeroChampion) = $eHeroChampion) Then Return True
+-				Case $eCastle, $eWallW, $eBattleB, $eStoneS, $eSiegeB, $eLogL
++				Case $eCastle, $eWallW, $eBattleB, $eStoneS, $eSiegeB, $eLogL, $eFlameF
+ 					If $g_abAttackDropCC[$iMatchMode] Then Return True
+ 				Case $eLSpell
+ 					If $g_abAttackUseLightSpell[$iMatchMode] Or $g_bSmartZapEnable Then Return True

@@ -1,0 +1,10 @@
+diff a/COCBot/functions/CreateArmy/TrainSystem.au3 b/COCBot/functions/CreateArmy/TrainSystem.au3	(rejected hunks)
+@@ -665,7 +665,7 @@ EndFunc   ;==>GetSlotRemoveBtnPosition
+ Func GetSlotNumber($bSpells = False)
+ 	Select
+ 		Case $bSpells = False
+-			Local Const $Orders = [$eBarb, $eSBarb, $eArch, $eSArch, $eGiant, $eSGiant, $eGobl, $eSGobl, $eWall, $eSWall, $eBall, $eRBall, $eWiza, $eSWiza, $eHeal, $eDrag, $eYeti, $eRDrag, $ePekk, $eBabyD, $eInfernoD, $eMine, $eEDrag, _
++			Local Const $Orders = [$eBarb, $eSBarb, $eArch, $eSArch, $eGiant, $eSGiant, $eGobl, $eSGobl, $eWall, $eSWall, $eBall, $eRBall, $eWiza, $eSWiza, $eHeal, $eDrag, $eSDrag, $eYeti, $eRDrag, $ePekk, $eBabyD, $eInfernoD, $eMine, $eEDrag, _
+ 					$eMini, $eSMini, $eHogs, $eValk, $eSValk, $eGole, $eWitc, $eSWitc, $eLava, $eIceH, $eBowl, $eSBowl, $eIceG, $eHunt] ; Set Order of troop display in Army Tab
+ 
+ 			Local $allCurTroops[UBound($Orders)]

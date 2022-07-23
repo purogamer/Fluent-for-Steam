@@ -1,0 +1,143 @@
+diff a/COCBot/functions/CreateArmy/TrainSiege.au3 b/COCBot/functions/CreateArmy/TrainSiege.au3	(rejected hunks)
+@@ -27,12 +27,17 @@ Func TrainSiege($bTrainFullSiege = False)
+ 
+ 	Local $aCheckIsOccupied[4] = [822, 206, 0xE00D0D, 10]
+ 	Local $aCheckIsFilled[4] = [802, 186, 0xD7AFA9, 10]
+-	Local $aCheckIsAvailableSiege[4] = [58, 556, 0x47717E, 10]
++	Local $aCheckIsAvailableSiege[4] = [58, 556, 0x47717E, 10] 
+ 	Local $aCheckIsAvailableSiege1[4] = [229, 556, 0x47717E, 10]
+ 	Local $aCheckIsAvailableSiege2[4] = [400, 556, 0x47717E, 10]
+ 	Local $aCheckIsAvailableSiege3[4] = [576, 556, 0x47717E, 10]
+-	Local $aCheckIsAvailableSiege4[4] = [750, 556, 0x47717E, 10]
+-
++	Local $aCheckIsAvailableSiege4[4] = [750, 556, 0x47717E, 10] 
++	;Sale pixel values
++	Local $aCheckIsAvailableSiege5[5] = [58, 556, 0x64BA29, 10] ;There are blue when on "sale"
++	Local $aCheckIsAvailableSiege6[6] = [229, 556, 0x64BA29, 10]
++	Local $aCheckIsAvailableSiege7[7] = [400, 556, 0x64BA29, 10]
++	Local $aCheckIsAvailableSiege8[8] = [576, 556, 0x64BA29, 10]
++	Local $aCheckIsAvailableSiege9[9] = [750, 556, 0x64BA29, 10]
+ 	Local $aiQueueSiegeMachine[$eSiegeMachineCount] = [0, 0, 0, 0, 0]
+ 	Local $aiTotalSiegeMachine = $g_aiCurrentSiegeMachines
+ 
+@@ -59,41 +64,82 @@ Func TrainSiege($bTrainFullSiege = False)
+ 		Next
+ 	EndIf
+ 
+-	; Refill
+-	For $iSiegeIndex = $eSiegeWallWrecker To $eSiegeMachineCount - 1
+-		Local $HowMany = $g_aiArmyCompSiegeMachines[$iSiegeIndex] - $g_aiCurrentSiegeMachines[$iSiegeIndex] - $aiQueueSiegeMachine[$iSiegeIndex]
++	; Refill.  Do twice as many.  Regular price is green, sale price is blue.
++	Local $i
++	For $iSiegeIndex = $eSiegeWallWrecker To ($eSiegeMachineCount * 2) - 1
++		$i = $iSiegeIndex ;Don't index over the actual count of Sieges
++		if $i >= $eSiegeMachineCount Then
++			$i = $i - $eSiegeMachinecount
++		EndIf
++		SetDebugLog("HArchH: Refill", $COLOR_DEBUG)
++		Local $HowMany = $g_aiArmyCompSiegeMachines[$i] - $g_aiCurrentSiegeMachines[$i] - $aiQueueSiegeMachine[$i]
+ 		Local $checkPixel
++		SetDebugLog("HArchH: $HowMany = " & $HowMany, $COLOR_DEBUG)
++		If $HowMany > 0 And $iSiegeIndex = $eSiegeFlameFlinger Then 
++			DragSiege("Next", 1)
++		EndIf
++		;Regular price pixel colors
+ 		If $iSiegeIndex = $eSiegeWallWrecker Then $checkPixel = $aCheckIsAvailableSiege
+ 		If $iSiegeIndex = $eSiegeBattleBlimp Then $checkPixel = $aCheckIsAvailableSiege1
+ 		If $iSiegeIndex = $eSiegeStoneSlammer Then $checkPixel = $aCheckIsAvailableSiege2
+ 		If $iSiegeIndex = $eSiegeBarracks Then $checkPixel = $aCheckIsAvailableSiege3
+ 		If $iSiegeIndex = $eSiegeLogLauncher Then $checkPixel = $aCheckIsAvailableSiege4
+-		If $HowMany > 0 And _CheckPixel($checkPixel, True, Default, $g_asSiegeMachineNames[$iSiegeIndex]) Then
++		;Sale price pixel colors
++		If $iSiegeIndex = $eSiegeWallWrecker+$eSiegeMachineCount Then $checkPixel = $aCheckIsAvailableSiege5
++		If $iSiegeIndex = $eSiegeBattleBlimp+$eSiegeMachineCount Then $checkPixel = $aCheckIsAvailableSiege6
++		If $iSiegeIndex = $eSiegeStoneSlammer+$eSiegeMachineCount Then $checkPixel = $aCheckIsAvailableSiege7
++		If $iSiegeIndex = $eSiegeBarracks+$eSiegeMachineCount Then $checkPixel = $aCheckIsAvailableSiege8
++		If $iSiegeIndex = $eSiegeLogLauncher+$eSiegeMachineCount Then $checkPixel = $aCheckIsAvailableSiege9
++		SetDebugLog("HArchH: $iSiegeIndex = " & $iSiegeIndex, $COLOR_DEBUG)
++		If $HowMany > 0 And _CheckPixel($checkPixel, True, Default, $g_asSiegeMachineNames[$i]) Then
++			SetDebugLog("HArchH: Clicking in Refill.", $COLOR_DEBUG)
+ 			PureClick($checkPixel[0], $checkPixel[1], $HowMany, $g_iTrainClickDelay)
+-			Local $sSiegeName = $HowMany >= 2 ? $g_asSiegeMachineNames[$iSiegeIndex] & "s" : $g_asSiegeMachineNames[$iSiegeIndex] & ""
++			Local $sSiegeName = $HowMany >= 2 ? $g_asSiegeMachineNames[$i] & "s" : $g_asSiegeMachineNames[$i] & ""
+ 			Setlog("Build " & $HowMany & " " & $sSiegeName, $COLOR_SUCCESS)
+-			$aiTotalSiegeMachine[$iSiegeIndex] += $HowMany
++			$aiTotalSiegeMachine[$i] += $HowMany
+ 			If _Sleep(250) Then Return
+ 		EndIf
++		If $HowMany > 0 And $iSiegeIndex = $eSiegeFlameFlinger Then 
++			DragSiege("Prev", 1)
++		EndIf
+ 		If Not $g_bRunState Then Return
+ 	Next
+ 
+ 	; build 2nd army
+ 	If ($g_bDoubleTrain Or $bTrainFullSiege) And $g_iTotalTrainSpaceSiege <= 3 Then
+-		For $iSiegeIndex = $eSiegeWallWrecker To $eSiegeMachineCount - 1
+-			Local $HowMany = $g_aiArmyCompSiegeMachines[$iSiegeIndex] * 2 - $aiTotalSiegeMachine[$iSiegeIndex]
++		For $iSiegeIndex = $eSiegeWallWrecker To ($eSiegeMachineCount * 2) - 1
++		$i = $iSiegeIndex ;Don't index over the actual count of Sieges
++			if $i >= $eSiegeMachineCount Then
++				$i = $i - $eSiegeMachinecount
++			EndIf
++			SetDebugLog("HArchH: Refill2", $COLOR_DEBUG)
++			Local $HowMany = $g_aiArmyCompSiegeMachines[$i] * 2 - $aiTotalSiegeMachine[$i]
+ 			Local $checkPixel
++			If $HowMany > 0 And $iSiegeIndex = $eSiegeFlameFlinger Then 
++				DragSiege("Next", 1)
++			EndIf
++			;Regular price pixel colors
+ 			If $iSiegeIndex = $eSiegeWallWrecker Then $checkPixel = $aCheckIsAvailableSiege
+ 			If $iSiegeIndex = $eSiegeBattleBlimp Then $checkPixel = $aCheckIsAvailableSiege1
+ 			If $iSiegeIndex = $eSiegeStoneSlammer Then $checkPixel = $aCheckIsAvailableSiege2
+ 			If $iSiegeIndex = $eSiegeBarracks Then $checkPixel = $aCheckIsAvailableSiege3
+ 			If $iSiegeIndex = $eSiegeLogLauncher Then $checkPixel = $aCheckIsAvailableSiege4
+-			If $HowMany > 0 And _CheckPixel($checkPixel, True, Default, $g_asSiegeMachineNames[$iSiegeIndex]) Then
++			;Sale price pixel colors
++			If $iSiegeIndex = $eSiegeWallWrecker+$eSiegeMachineCount Then $checkPixel = $aCheckIsAvailableSiege5
++			If $iSiegeIndex = $eSiegeBattleBlimp+$eSiegeMachineCount Then $checkPixel = $aCheckIsAvailableSiege6
++			If $iSiegeIndex = $eSiegeStoneSlammer+$eSiegeMachineCount Then $checkPixel = $aCheckIsAvailableSiege7
++			If $iSiegeIndex = $eSiegeBarracks+$eSiegeMachineCount Then $checkPixel = $aCheckIsAvailableSiege8
++			If $iSiegeIndex = $eSiegeLogLauncher+$eSiegeMachineCount Then $checkPixel = $aCheckIsAvailableSiege9
++			SetDebugLog("HArchH: 2nd Army $iSiegeIndex = " & $iSiegeIndex, $COLOR_DEBUG)
++			If $HowMany > 0 And _CheckPixel($checkPixel, True, Default, $g_asSiegeMachineNames[$i]) Then
+ 				PureClick($checkPixel[0], $checkPixel[1], $HowMany, $g_iTrainClickDelay)
+-				Local $sSiegeName = $HowMany >= 2 ? $g_asSiegeMachineNames[$iSiegeIndex] & "s" : $g_asSiegeMachineNames[$iSiegeIndex] & ""
++				Local $sSiegeName = $HowMany >= 2 ? $g_asSiegeMachineNames[$i] & "s" : $g_asSiegeMachineNames[$i] & ""
+ 				Setlog("Build " & $HowMany & " " & $sSiegeName, $COLOR_SUCCESS)
+ 				If _Sleep(250) Then Return
+ 			EndIf
++			If $HowMany > 0 And $iSiegeIndex = $eSiegeFlameFlinger Then 
++				DragSiege("Prev", 1)
++			EndIf
+ 			If Not $g_bRunState Then Return
+ 		Next
+ 	EndIf
+@@ -107,6 +153,19 @@ Func TrainSiege($bTrainFullSiege = False)
+ 	EndIf
+ EndFunc   ;==>TrainSiege
+ 
++Func DragSiege($Direction = "Next", $HowMany = 1)
++	Local $DragYPoint =  500
++	For $i = 1 To $HowMany
++		Switch $Direction
++			Case "Next"
++				ClickDrag(550, $DragYPoint, 378, $DragYPoint, 500)
++			Case "Prev"
++				ClickDrag(370, $DragYPoint, 542, $DragYPoint, 500)
++		EndSwitch
++		If _Sleep(1000) Then Return
++	Next
++EndFunc
++
+ Func CheckQueueSieges($bGetQuantity = True, $bSetLog = True, $x = 839, $bQtyWSlot = False)
+ 	Local $aResult[1] = [""]
+ 	If $bSetLog Then SetLog("Checking siege queue", $COLOR_INFO)
+@@ -147,4 +206,5 @@ Func CheckQueueSieges($bGetQuantity = True, $bSetLog = True, $x = 839, $bQtyWSlo
+ 
+ 	_ArrayReverse($aResult)
+ 	Return $aResult
+-EndFunc   ;==>CheckQueueTroops
+\ No newline at end of file
++EndFunc   ;==>CheckQueueTroops
++

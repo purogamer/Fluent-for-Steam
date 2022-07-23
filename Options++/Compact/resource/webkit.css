@@ -1091,8 +1091,8 @@ div.profile_page.has_profile_background{z-index:0!important}
   backdrop-filter: blur(12px)!important;
 }
 body.v6 .deep_dive_tag {
-  background-color: red!important;
-  color:red !important;
+  background-color: hsl(220, 90, 51, 12%) !important;
+  color:hsl(220, 90, 51, 100%) !important;
   border-radius:38px!important;
 }
 

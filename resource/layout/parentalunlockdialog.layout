@@ -1,0 +1,109 @@
+"resource/layout/parentalunlockdialog.layout"
+{
+	controls
+	{
+		ParentalUnlockDialog { controlname="Frame" title="#steam_parental_unlocktitle" style="ParentalUnlockDialog" }
+
+		Instructions { controlname="Label" style="Hey" labeltext="#steam_parental_unlockinstructions" wrap=1 }
+		
+		Instructions2 { controlname="Label" style="Hey2" labeltext="#steam_parental_unlockinstructions2" wrap=1 }
+
+		Password { controlname="TextEntry" style="Password" command="DoParentalUnlock" tabposition=1 }
+		
+		KeyImage { controlname="Label" style="Key" zpos=-4 }
+
+		Recovery { controlname="URLLabel" labeltext="#steam_parental_norecoveryemail" command="ShowRecoveryDialog" }
+		
+		OK { controlname="Button" tabposition=2 command="DoParentalUnlock" labeltext="#PropertyDialog_OK" default=1 }
+		Cancel { controlname="Button" tabposition=3 command="Close" labeltext="#PropertyDialog_Cancel" }
+	}
+	
+	styles
+	{
+		
+		FrameTitle {
+
+			font-size=26
+			font-family=cachetazo
+			textcolor=white
+			inset="18 28 0 0"
+			minimum-height=60
+
+		}
+		FrameCloseButton 
+		{
+			bgcolor=none
+			render
+			{
+				
+			}
+		}
+		FrameCloseButton:hover:active
+		{
+			bgcolor=none
+			
+		}
+		ParentalUnlockDialog
+		{
+			minimum-width = 300
+			minimum-height = 242
+			textcolor=white
+		}
+
+		Password
+		{
+
+			inset="20 0 0 0"
+			font-size=38
+			bgcolor="none"
+
+		}
+
+	
+		Hey2
+		{
+			font-size=18
+			textcolor=white
+			font-family=basefont
+		
+		}
+		
+		Hey
+		{
+			font-size=18
+			textcolor=white
+			font-family=basefont
+		}
+
+		Key
+		{
+			bgcolor=black25
+			textcolor=none
+			
+		}
+	}
+	
+	layout
+	{
+		region { name="top" width=max height=162 margin=24 margin-top=66}
+
+		region { name="bottom" width=max height=81 align="bottom" }
+
+		place { control="KeyImage" region="bottom" width=max height=max }
+
+	
+		place { control="Instructions" region="top" align=center width=max }
+
+
+		place { control="Password" start=Instructions height=42 margin-top=16 dir=down region="top" width=80 }
+
+		place { control="Recovery" region="bottom" margin-left=10 margin-top=5 }
+		
+		// bottom: OK/cancel
+		place { control="OK,Cancel" region="bottom" align=top-center width=122 height=32 
+						 margin-top=25
+						 spacing=8 }
+	}
+
+}
+

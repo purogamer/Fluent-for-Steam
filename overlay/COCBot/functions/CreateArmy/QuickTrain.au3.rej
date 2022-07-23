@@ -1,0 +1,19 @@
+diff a/COCBot/functions/CreateArmy/QuickTrain.au3 b/COCBot/functions/CreateArmy/QuickTrain.au3	(rejected hunks)
+@@ -260,7 +260,7 @@ Func CheckQuickTrainTroop()
+ 	SetLog("Reading troops/spells/siege in quick train army")
+ 
+ 	; reset troops/spells in quick army
+-	Local $aEmptyTroop[$eTroopCount] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
++	Local $aEmptyTroop[$eTroopCount] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+ 	Local $aEmptySpell[$eSpellCount] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+ 	Local $aEmptySiegeMachine[$eSiegeMachineCount] = [0, 0, 0, 0, 0]
+ 	$g_aiArmyQuickTroops = $aEmptyTroop
+@@ -344,7 +344,7 @@ Func CheckQuickTrainTroop()
+ 					ElseIf $iTroopIndex >= $eLSpell And $iTroopIndex <= $eBtSpell Then
+ 						SetLog("  - " & $g_asSpellNames[$iTroopIndex - $eLSpell] & ": " & $aSearchResult[$j][3] & "x", $COLOR_SUCCESS)
+ 						$aiInGameSpell[$iTroopIndex - $eLSpell] = $aSearchResult[$j][3]
+-					ElseIf $iTroopIndex >= $eWallW And $iTroopIndex <= $eLogL Then
++					ElseIf $iTroopIndex >= $eWallW And $iTroopIndex <= $eFlameF Then
+ 						SetLog("  - " & $g_asSiegeMachineNames[$iTroopIndex - $eWallW] & ": " & $aSearchResult[$j][3] & "x", $COLOR_SUCCESS)
+ 						$aiInGameSiegeMachine[$iTroopIndex - $eWallW] = $aSearchResult[$j][3]
+ 					Else

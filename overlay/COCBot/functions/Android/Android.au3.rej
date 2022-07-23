@@ -1,0 +1,46 @@
+diff a/COCBot/functions/Android/Android.au3 b/COCBot/functions/Android/Android.au3	(rejected hunks)
+@@ -4657,11 +4657,17 @@ Func PushSharedPrefs($sProfile = $g_sProfileCurrentName, $bCloseGameIfRunning =
+ 						FileClose($hFile)
+ 						If $sStorage Then
+ 							Local $sStorageUpdated = $sStorage
+-							Local $aTags[5][3] = [[$g_bUpdateSharedPrefsLanguage, "d0h6phQUOxO/uSfvat949w==", "FWCNTu39RUlYoSt0Y6mCwg=="], _
+-											[$g_bUpdateSharedPrefsSnow, "WnITdUFs6FnH4NScnkEtyg==", "jS26iozgAh+i/424eyY5cA=="], _
+-											[$g_bUpdateSharedPrefsZoomLevel, "MjhxqoFNUV+begGvsz3gkg==", "oiMa1oDch9dThLoIKokZqQ=="], _
+-											[$g_bUpdateSharedPrefsRated, "7lJCTt3TmNyzikZuHh9wZQ==", "pmvEzdQuRQuKZob4KB0IeA=="], _
+-											[$g_bUpdateSharedPrefsGoogleDisconnected, "AQ+/D2n+JXPIPpMLdPZcqHpYSGJ5PpF3sOnowks5I5s=", "pmvEzdQuRQuKZob4KB0IeA=="]]
++						;Quick fix for "can't stop snow" proposed by Famine098 in Forum
++						Local $aTags[4][3] = _
++						[[$g_bUpdateSharedPrefsLanguage, "d0h6phQUOxO/uSfvat949w==", "FWCNTu39RUlYoSt0Y6mCwg=="], _
++						[$g_bUpdateSharedPrefsZoomLevel, "MjhxqoFNUV+begGvsz3gkg==", "vJsDdCCIGCzyfC7c1FsIrA=="], _
++                        [$g_bUpdateSharedPrefsRated, "7lJCTt3TmNyzikZuHh9wZQ==", "pmvEzdQuRQuKZob4KB0IeA=="], _
++                        [$g_bUpdateSharedPrefsGoogleDisconnected, "AQ+/D2n+JXPIPpMLdPZcqHpYSGJ5PpF3sOnowks5I5s=", "pmvEzdQuRQuKZob4KB0IeA=="]]
++;						Local $aTags[5][3] = [[$g_bUpdateSharedPrefsLanguage, "d0h6phQUOxO/uSfvat949w==", "FWCNTu39RUlYoSt0Y6mCwg=="], _
++;						[$g_bUpdateSharedPrefsSnow, "WnITdUFs6FnH4NScnkEtyg==", "jS26iozgAh+i/424eyY5cA=="], _
++;						[$g_bUpdateSharedPrefsZoomLevel, "MjhxqoFNUV+begGvsz3gkg==", "oiMa1oDch9dThLoIKokZqQ=="], _
++;						[$g_bUpdateSharedPrefsRated, "7lJCTt3TmNyzikZuHh9wZQ==", "pmvEzdQuRQuKZob4KB0IeA=="], _
++;						[$g_bUpdateSharedPrefsGoogleDisconnected, "AQ+/D2n+JXPIPpMLdPZcqHpYSGJ5PpF3sOnowks5I5s=", "pmvEzdQuRQuKZob4KB0IeA=="]]
+ 
+ 							For $i = 0 To UBound($aTags) -1
+ 								If $aTags[$i][0] Then
+@@ -4816,11 +4822,11 @@ Func CheckEmuNewVersions()
+ 
+ 	Switch $g_sAndroidEmulator
+ 		Case "BlueStacks2"
+-			$NewVersion = GetVersionNormalized("4.111.0.0")
++			$NewVersion = GetVersionNormalized("4.280.0.1022")
+ 		Case "MEmu"
+-			$NewVersion = GetVersionNormalized("6.3.0.0")
++			$NewVersion = GetVersionNormalized("7.6.6.0")
+ 		Case "Nox"
+-			$NewVersion = GetVersionNormalized("7.0.1.2")
++			$NewVersion = GetVersionNormalized("7.0.1.6")
+ 		Case Else
+ 			; diabled of the others
+ 			$NewVersion = GetVersionNormalized("99.0.0.0")
+@@ -4830,4 +4836,4 @@ Func CheckEmuNewVersions()
+ 		SetLog("You are using an unsupported " & $g_sAndroidEmulator & " version (" & $g_sAndroidVersion & ")!", $COLOR_ERROR)
+ 		SetLog($HelpLink, $COLOR_INFO)
+ 	EndIf
+-EndFunc   ;==>CheckEmuNewVersions
+\ No newline at end of file
++EndFunc   ;==>CheckEmuNewVersions

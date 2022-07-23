@@ -1,0 +1,65 @@
+diff a/COCBot/functions/Village/BuilderBase/SuggestedUpgrades.au3 b/COCBot/functions/Village/BuilderBase/SuggestedUpgrades.au3	(rejected hunks)
+@@ -232,11 +232,11 @@ Func GetIconPosition($x, $y, $x1, $y1, $directory, $Name = "Elixir", $Screencap
+ 
+ 	If QuickMIS("BC1", $directory, $x, $y, $x1, $y1, $Screencap, $Debug) Then
+ 		; Correct positions to Check Green 'New' Building word
+-		Local $iYoffset = $y + $g_iQuickMISY - 15, $iY1offset = $y + $g_iQuickMISY + 7
+-		Local $iX = 300, $iX1 = $g_iQuickMISX + $x
++		Local $iYoffset = $g_iQuickMISY - 15, $iY1offset = $g_iQuickMISY + 7
++		Local $iX = 300, $iX1 = $g_iQuickMISX
+ 		; Store the values
+-		$aResult[0] = $g_iQuickMISX + $x
+-		$aResult[1] = $g_iQuickMISY + $y
++		$aResult[0] = $g_iQuickMISX
++		$aResult[1] = $g_iQuickMISY
+ 		$aResult[2] = $Name
+ 		; The pink/salmon color on zeros
+ 		If QuickMIS("BC1", $g_sImgAutoUpgradeNoRes, $aResult[0], $iYoffset, $aResult[0] + 100, $iY1offset, True, $Debug) Then
+@@ -247,8 +247,8 @@ Func GetIconPosition($x, $y, $x1, $y1, $directory, $Name = "Elixir", $Screencap
+ 		; Proceeds with 'New' detection
+ 		If QuickMIS("BC1", $g_sImgAutoUpgradeNew, $iX, $iYoffset, $iX1, $iY1offset, True, $Debug) Then
+ 			; Store new values
+-			$aResult[0] = $g_iQuickMISX + $iX + 35
+-			$aResult[1] = $g_iQuickMISY + $iYoffset
++			$aResult[0] = $g_iQuickMISX + 35
++			$aResult[1] = $g_iQuickMISY
+ 			$aResult[2] = "New"
+ 		EndIf
+ 	EndIf
+@@ -285,10 +285,10 @@ Func GetUpgradeButton($sUpgButtom = "", $Debug = False)
+ 				SetLog("Ups! Wall is not to Upgrade!", $COLOR_ERROR)
+ 				Return False
+ 			EndIf
+-			Click($g_iQuickMISX + 300, $g_iQuickMISY + 650, 1)
++			Click($g_iQuickMISX, $g_iQuickMISY, 1)
+ 			If _Sleep(1500) Then Return
+ 			If QuickMIS("BC1", $sUpgButtom, $aBtnPos[0], $aBtnPos[1], $aBtnPos[0] + $aBtnPos[2], $aBtnPos[1] + $aBtnPos[3], True, $Debug) Then
+-				Click($g_iQuickMISX + $aBtnPos[0], $g_iQuickMISY + $aBtnPos[1], 1)
++				Click($g_iQuickMISX, $g_iQuickMISY, 1)
+ 				If isGemOpen(True) Then
+ 					SetLog("Upgrade stopped due to insufficient loot", $COLOR_ERROR)
+ 					ClickAway()
+@@ -344,18 +344,18 @@ Func NewBuildings($aResult)
+ 						If _Sleep(3000) Then Return
+ 						; Lets search for the Correct Symbol on field
+ 						If QuickMIS("BC1", $g_sImgAutoUpgradeNewBldgYes, 150, 150, 650, 550, $Screencap, $Debug) Then
+-							Click($g_iQuickMISX + 150, $g_iQuickMISY + 150, 1)
+-							SetLog("Placed a new Building on Builder Island! [" & $g_iQuickMISX + 150 & "," & $g_iQuickMISY + 150 & "]", $COLOR_INFO)
++							Click($g_iQuickMISX, $g_iQuickMISY, 1)
++							SetLog("Placed a new Building on Builder Island! [" & $g_iQuickMISX & "," & $g_iQuickMISY & "]", $COLOR_INFO)
+ 							If _Sleep(1000) Then Return
+ 							; Lets check if exist the [x] , Some Buildings like Traps when you place one will give other to place automaticly!
+ 							If QuickMIS("BC1", $g_sImgAutoUpgradeNewBldgNo, 150, 150, 650, 550, $Screencap, $Debug) Then
+-								Click($g_iQuickMISX + 150, $g_iQuickMISY + 150, 1)
++								Click($g_iQuickMISX, $g_iQuickMISY, 1)
+ 							EndIf
+ 							Return True
+ 						Else
+ 							If QuickMIS("BC1", $g_sImgAutoUpgradeNewBldgNo, 150, 150, 650, 550, $Screencap, $Debug) Then
+-								SetLog("Sorry! Wrong place to deploy a new building on BB! [" & $g_iQuickMISX + 150 & "," & $g_iQuickMISY + 150 & "]", $COLOR_ERROR)
+-								Click($g_iQuickMISX + 150, $g_iQuickMISY + 150, 1)
++								SetLog("Sorry! Wrong place to deploy a new building on BB! [" & $g_iQuickMISX & "," & $g_iQuickMISY & "]", $COLOR_ERROR)
++								Click($g_iQuickMISX, $g_iQuickMISY, 1)
+ 							Else
+ 								SetLog("Error on Undo symbol!", $COLOR_ERROR)
+ 							EndIf

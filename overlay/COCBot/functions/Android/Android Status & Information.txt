@@ -1,0 +1,95 @@
+List of Supported Android Emulator
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Newer versions of Android Emulators listed here might work.
+After DEC20 update only emulators with Android 4.4 and higher work with Clash of clans.
+The once listed here have been tested and do work.
+
+MEmu
+====
+http://www.memuplay.com/
+Versions 6.2.1, 6.1.1, 6.1.0, 6.0.7.6, 6.0.6.0, 5.3.2.0, 5.2.3.0, 5.0.1.0, 3.6.2.0, 3.5.0.2, 3.1.2.x
+MyBot Command Line Key: MEmu
+Default Instance Key: MEmu
+Second Instance Key:  MEmu_1
+
+Known issues/bugs: **Newest versions , 5.3.2 or 5.5.5 doesn't work the _ControlClick with window not active
+
+BlueStacks
+==========
+http://www.bluestacks.com/
+Find version 0.10.7.5601 here: https://filehippo.com/de/download_bluestacks_app_player/64518/
+Version 4.70.x, 4.60.x, 4.50.x, 4.32.x, 4.3.x, 3.50.x, 3.7.x, 2.7.x, 2.6.x, 2.5.x, 2.4.x, 2.3.x, 2.2.x, 2.1.x, 2.0.x, 0.11.x, 0.10.x
+MyBot Command Line Key (0.10.x - 0.11.x): BlueStacks
+MyBot Command Line Key (2.x/3.x/4.x): BlueStacks2
+Default Instance Key: Android
+Second Instance Key (only for BlueStacks 3.x/4.x):  Android_1
+
+Known issues/bugs: True Background mode using ADB not available for older 0.x versions.
+Older versions might not install the right Clash of Clans APK: "CPU ABI incompatible" error in Play Store.
+In that case just install the latest arm-v7a version from apkmirror.com: https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=654652
+ADB connection for BlueStacks2 can require one-time ADB daemon restart (initiated automatically by bot).
+
+Nox
+===
+http://en.bignox.com/
+Versions 6.6.0.9, 6.6.0.8, 6.6.0.5, 6.6.0.3, 6.2.8.1, 6.2.8, 6.2.7.x, 6.2.6.x, 6.2.5.3, 6.2.0.0, 6.0.1.0, 6.0.0.0, 5.2.1.0, 5.1.0.0, 5.0.0.1, 5.0.0.0, 3.8.1.3, 3.8.0.x, 3.7.6.x, 3.7.5.1, 3.7.5, 3.7.3, 3.7.1, 3.7.0, 3.6.0, 3.5.1, 3.3.0, 3.1.0, 3.0.0
+MyBot Command Line Key: Nox
+Default Instance Key: nox
+Second Instance Key:  Nox_1
+
+Info/known issues/bugs: Only in low computer screen resolutions and when Android Window doesn't have android screen size of 860x732
+due to different window size, MyBot resizing fails for any version. Bot set Nox to fixed size to avoid any resize issues.
+Since 3.3.0 Nox support also DirectX that can be used for faster Screen-Capture. Newer versions since 3.7.3 support setting of
+framerates and 20 fps or lower significantly reduce CPU load.
+Click delays should be 5ms down and 10ms up of clicks get lost.
+
+If you see errors like this "BigNoxVMMgr.exe: error: Code REGDB_E_CLASSNOTREG (0x80040154) - Class not registered (extended info not available)"
+your Nox installation is corrupt. Then open cmd.exe and register all dlls:
+FOR %1 IN ("C:\Program Files\Bignox\BigNoxVM\RT\*.DLL") DO REGSVR32 /S "%1"
+
+iTools AVM
+==========
+http://pro.itools.cn/simulate/
+Version 2.0.8.9, 2.0.7.9, 2.0.6.8
+MyBot Command Line Key: iTools
+Default Instance Key: iToolsVM
+Second Instance Key:  iToolsVM_01
+
+Known issues/bugs: Background mode only supported when iTools running in DirectX mode.
+Application is in Chinese and Android also. You can change Android language, but will not be saved.
+Tampering guestproperties and making the vbox VirtualBox file somehow read-only can work, see:
+https://mybot.run/forums/index.php?/topic/26023-itools-avm-support/
+
+
+MyBot Feature & Functions Matrix (not complete yet!)
+================================
+
+Feature/Function          | MEmu          | BlueStacks    | BlueStacks2/3/4 | Nox           | iTools AVM    |
+--------------------------|---------------|---------------|-----------------|---------------|---------------|
+DPI Support*              | Yes           | Yes           | Yes             | Yes (limited) | Yes           |
+Dock Mode                 | Yes           | Yes           | Yes             | Yes           | Yes           |
+Configure Android Screen  | Yes           | Yes           | Yes             | Yes           | No            |
+Configure Android Window  | Yes           | Yes           | Yes             | Yes           | Yes           |
+WinAPI/DirectX background | Yes, DirectX  | Yes           | Yes, DirectX    | Yes, DirectX  | Yes, DirectX  |
+AndroidScreencap          | Yes           | No            | Yes             | Yes           | Yes           |
+AndroidZoomOut            | Yes           | Yes           | Yes             | Yes           | Yes           |
+AndroidClick*             | Yes           | Yes           | Yes             | Yes           | Yes           |
+_ControlClick             | Yes**         | Yes           | Yes             | Yes           | Yes           |
+AndroidClickDrag          | Yes           | Yes           | Yes             | Yes           | Yes           |
+_PostMessage_ClickDrag    | No            | Yes, not used | Yes, not used   | No            | No            |
+AndroidSendText*          | Yes           | Yes           | Yes             | Yes           | Yes           |
+
+Feature & Functions Notes
+-------------------------
+DPI Support*: DPI Awareness is available for all Android Emulators, but is different depending on the Android Emulator and background settings and dock mode.
+When Android is running in DPI Aware Mode (bot by default is running in DPI un-aware mode) docking and non background mode will turn bot also into DPI Aware
+Mode, resulting in smaller Window scaled at 100%. Also, when Android is running in DPI un-aware mode (e.g. iTools), docking will not change anything, only when
+disabling background mode.
+
+AndroidSendText*: Works only for ASCII Characters, most symbols, but no Umlauts etc.
+It falls back to WinAPI when unsupported characters are detected, but might fail also.
+If sending text is not working, keep it empty in bot and last entered text will be sent.
+
+AndroidClick*: Can be only enabled in config.ini, use adb.click.enabled=1 and adb.clicks.enabled=1
