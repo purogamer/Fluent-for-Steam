@@ -3,7 +3,6 @@
 	Store [$WINDOWS||$LINUX]
 	{
 		
-		text = ""
 		Mensaje{	text="💲💸  Support on Patreon "  shellcmd="steam://openurl/https://www.patreon.com/FluentForSteam" }
 			
 		Donate{	text="💲💸  Support on Paypal"  shellcmd="steam://openurl/https://www.patreon.com/FluentForSteam" }
@@ -11,8 +10,10 @@
 
 		FluentForSteam{	text="📄  Fluent For Steam 0.4.4 "  shellcmd="steam://openurl/https://www.patreon.com/FluentForSteam" }
 				Divider {}	
-		Webkit by AikoMidori {	text="👍  Webkit DarkMode by AikoMidori, Snudge "  shellcmd="steam://openurl/https://github.com/AikoMidori" }
-		Sponsors{	text="💚  Metro for Steam Community."  }
+		Webkit by AikoMidori {	text="👍  Webkit DarkMode by AikoMidori"  shellcmd="steam://openurl/https://github.com/AikoMidori" }
+		Webkit by Snudgee { text="👍  Webkit DarkMode by Snudge"  shellcmd="steam://openurl/https://github.com/Snudgee" }
+		Metro{	text="💚  Metro for Steam Community."  }
+		
 		
 	
 			Divider {}
