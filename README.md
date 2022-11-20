@@ -21,7 +21,7 @@
 
 <!-- PROJECT LOGO -->
 
-[![image](https://user-images.githubusercontent.com/87723899/202878987-fbf06b59-30ae-4510-b2d2-bdc7baee988c.png)](https://www.patreon.com/FluentForSteam)
+[![image](https://user-images.githubusercontent.com/87723899/202879050-f54671b1-57f1-49cb-a953-5e1c6eae13a0.png)](https://www.patreon.com/FluentForSteam)
 
 
 
