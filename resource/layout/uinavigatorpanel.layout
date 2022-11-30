@@ -501,9 +501,9 @@ styles
 		
 		render
 		{
-			1="fill(x0+26, y1-4, x1-26, y1, darkblue)"
-			2="image(x0+24, y1-4, x1, y1, materiales/bar_h/izquierda)"
-			3="image(x1-26, y1-4, x1, y1, materiales/bar_h/derecha)"
+			1="fill(x0+16, y1-4, x1-16, y1, darkblue)"
+			2="image(x0+14, y1-4, x1, y1, materiales/bar_h/izquierda)"
+			3="image(x1-16, y1-4, x1, y1, materiales/bar_h/derecha)"
 			
 		}
 	}
