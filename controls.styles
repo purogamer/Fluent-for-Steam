@@ -22,11 +22,11 @@
 			textcolor=white
 			font-family=basefont
 			font-size=16
-			image="graphics/checkbox_s"
+			image="graphics/assets/accent/controls/checkbox_s"
 		}
 		checkbutton:selected:hover {
 			textcolor=white
-			image="graphics/checkbox_s_h"
+			image="graphics/assets/accent/controls/checkbox_s_h"
 		}
 		RadioButton
 		{
@@ -45,18 +45,19 @@
 		RadioButton:selected
 		{
 			render_bg {}
-			image="graphics/radiobutton_s"
+			image="graphics/assets/accent/controls/radiobutton_s"
 		}
 		RadioButton:selected:hover
 		{
 			render_bg {}
-			image="graphics/radiobutton_s_h"
+			image="graphics/assets/accent/controls/radiobutton_s_h"
 		}
 		Button
 		{
 			bgcolor="none"
 			font-family=Button
 			textcolor="white"
+			minimum-height=28
 			padding-left="8"
 			padding-bottom="2"
 			padding-top="2"

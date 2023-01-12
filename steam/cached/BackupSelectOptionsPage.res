@@ -1,11 +1,37 @@
 "steam/cached/BackupSelectOptionsPage.res"
 {
+	styles {
+		textentry{
+			font-size=18
+			textcolor=white75
+			font-family=basefont
+		}
+		textentry:selected{
+			font-size=18
+			textcolor=white
+			font-family=basefont
+		}
+		"Label"
+		{
+			font-size=18
+			textcolor=white
+			font-family=basefont
+		}
+		"Label2"
+		{
+			font-size=18
+			textcolor=white
+			font-family=basefont
+		}
+		
+	}
 	layout
 	{
-		place { control=Label5 y=16 width=max }
+		region { name="top" width=max margin=8 height=250}
+		place { control=Label5 region="top" dir=down  margin-top=32 width=max}
 		place { start=Label5 control=Label2 y=16 width=max dir=down }
 
-		place { start=Label2 control=ArchiveName y=6 width=max dir=down }
+		place { start=Label2 control=ArchiveName y=6 width=max height=32 dir=down }
 		place { start=ArchiveName control=Label1 y=6 height=24 dir=down }
 
 		place { start=Label1 control=CustomFileSizeEntry x=6 width=140 height=24 }

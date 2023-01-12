@@ -89,7 +89,7 @@ Scheme
 		{
 			frame_menu
 			{
-				visible	0	// hidden
+				visible	1	// hidden
 			}
 
 			frame_title

@@ -1,0 +1,104 @@
+"resource/layout/accountbutton.layout"
+{
+	
+	styles
+	{
+				
+		AccountPersonaStyleOffline
+		{
+			bgcolor=none
+			textcolor=white
+			font-size=16
+			font-family=semibold
+			inset="0 0 0 0"
+		}
+
+		AccountPersonaStyleOnline
+		{
+			bgcolor=none
+			textcolor=accent
+			font-size=16
+			font-family=semibold
+			inset="0 0 0 0"
+		}
+
+		AccountPersonaStyleInGame
+		{
+			bgcolor=none
+			textcolor=ingameNick
+			font-size=16
+			font-family=semibold
+			inset="0 0 0 0"
+		}
+
+		
+
+		AccountDropDownStyleOffline
+		{
+			bgcolor=none
+		}
+
+		AccountDropDownStyleOnline
+		{
+			bgcolor=none
+			render {
+				1 = "image(x0, y0, x1, y1, graphics/fluent/icons/navbar/topbar/2"
+			}
+		}
+
+		AccountDropDownStyleInGame
+		{
+			bgcolor=none
+		}
+
+		AccountBalanceStyle
+		{
+			bgcolor=ClientBG
+			textcolor=accent
+			font-size=16
+			font-family=semibold
+	   	}
+
+		AccountMenuButtonStyle
+		{
+			bgcolor=none
+			render_bg {
+				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/mask"
+			}
+		}
+		AccountMenuButtonStyle:hover
+		{
+			bgcolor=none
+			render_bg {
+				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/mask"
+				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/mask_h"
+			}
+				
+		}
+		AccountMenuButtonStyle:active
+		{
+			bgcolor=none
+			render_bg
+			{
+				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/mask"
+
+		    }
+		}
+	}
+
+	layout
+	{
+		place { control="account_menu_button" margin-left=10 align=left  height=50 width=50 } // span over everything
+		place { control="account_persona,"  align=right margin-right=14 margin-top=7 }    
+		place { control=account_balance start=account_persona  dir=down   margin-top=1}   
+		//place  //control=""  align=right margin-right=9 margin-top=15       
+		place { control="account_avatar" margin-top=11   align=left height=28 width=28 margin-left=21 }
+		place { control=",account_drop_down" width=0 height=0 }
+		
+
+		//hidden
+		place { control="" margin-left=-999 }
+	}
+}
+
+

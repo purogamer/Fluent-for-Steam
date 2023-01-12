@@ -6,39 +6,39 @@
 			image="graphics/checkbox_d"
 		}
 		checkbutton:selected {
-			image="graphics/checkbox_s"
+			image="graphics/assets/accent/controls/checkbox_s"
 		}
 		URLLabel {
 			font-size=18
 			font-family=basefont
-			textcolor=darkblue
+			textcolor=accent
 			padding-left=8
 			padding-right=8
 			font-style=none
 			  render_bg {
 
-				0="fill(x0+10,y0+0,x1-9,y1+1,135EF2xx12 )"
+				0="fill(x0+10,y0+0,x1-9,y1+1,accent_alpha_31 )"
 			
              			
 				//////////////////////////for esquina "izquierda"  superior///////////////////////////////////////////
-				5="image(x0+0,y0-0,x0,y0, materiales/135EF2%12/ti)"
+				5="image(x0+0,y0-0,x0,y0, graphics/assets/accent/materiales/accent_alpha_31_url/ti)"
       
 	  			///////////////////for esquina "izquierda" inferior/////////////////////////////
 				////////left, bottom  ,left bottom
-				1="image(x0+0,y1-9,x0,y1, materiales/135EF2%12/ai)"
+				1="image(x0+0,y1-9,x0,y1, graphics/assets/accent/materiales/accent_alpha_31_url/ai)"
 
          	  
  							
 			
 
 					/////////////////////////for esquina derecha superior///////////////////////////////////////////////
-				7="image(x1-9,y0,x1,y0, materiales/135EF2%12/td)"
+				7="image(x1-9,y0,x1,y0, graphics/assets/accent/materiales/accent_alpha_31_url/td)"
 				/////////////////////for esquina inferior derecha//////////////////////////////////////////////////////
-				8="image(x1-9,y1-9,x1,y1, materiales/135EF2%12/ad)"
+				8="image(x1-9,y1-9,x1,y1, graphics/assets/accent/materiales/accent_alpha_31_url/ad)"
 			}
 		}
 		URLLabel:hover {
-			textcolor=bluesito
+			textcolor=accent_h
 			
 		}
 		Divider

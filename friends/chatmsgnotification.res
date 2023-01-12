@@ -142,7 +142,7 @@
 		Black="0 0 0 0"
 	}
 	styles {
-
+	
 		label {
 			font-size=18
 			font-family=basefont

@@ -5,23 +5,29 @@
     AccountMenuStyle
     {
       bgcolor=ClientBG
+     	minimum-height=214
       render
       {
-          1="image(x0+12, y0+8, x1, y1, accountbutton/verperfil)"
-          2="image(x0+12, y0+32, x1, y1, accountbutton/detallecuenta)"
-          3="image(x0+12, y0+56, x1, y1, accountbutton/preferenciacuenta)"
-          4="image(x0+12, y0+80, x1, y1, accountbutton/billetera)"
-          5="image(x0+12, y0+104, x1, y1, accountbutton/cerrarsesion)"
+         
+          1="image(x0+14, y0+42, x1, y1, accountbutton/verperfil)"
+          2="image(x0+14, y0+74, x1, y1, accountbutton/detallecuenta)"
+          3="image(x0+14, y0+110, x1, y1, accountbutton/preferenciacuenta)"
+          4="image(x0+14, y0+146, x1, y1, accountbutton/billetera)"
+          5="image(x0+14, y0+182, x1, y1, accountbutton/cerrarsesion)"
+          6="fill(x0+1,y0+33,x1-1,y0+34,white07)"
+          7="fill(x0+6,y0+139,x1-6,y0+140,white07)"
+          8="fill(x0+6,y0+176,x1-6,y0+177,white07)"
       }
     }
 
     account_menu_button
     {
       bgcolor=bgcolor
-      inset="20 0 0 0"
+      inset="35 0 0 0"
       textcolor=white
-			font-family=button
-			font-size=17
+     
+			font-family=basefont
+			font-size=18
       font-weight=400
       
        render_bg
@@ -33,31 +39,28 @@
     account_menu_button:hover
     {
       bgcolor=none
-     	font-family=button
-      font-size=17
-      font-weight=400
-      render_bg {
+     	render_bg {
 
-				0="fill(x0+8,y0+1,x1-8,y1-1, bluesito)"
+				0="fill(x0+8,y0+1,x1-8,y1-1, accent)"
 					
-                ////////////medio de parte izquierda///////////////////////////////////////////////////
-				3="fill(x0+5,y0+5,x0+8,y1-5, bluesito)"
+           ////////////medio de parte izquierda///////////////////////////////////////////////////
+				3="fill(x0+5,y0+5,x0+8,y1-5, accent)"
 				
 				//////////////////////////for esquina izquierda superior///////////////////////////////////////////
-				5="image(x0+4,y0+1,x0,y0, materiales/progressbar/ti)"
+				5="image(x0+5,y0+1,x0,y0, graphics/assets/accent/materiales/accent_menuitem_h/ti)"
       
 	  			/////////////////////////for esquina derecha superior///////////////////////////////////////////////
-				7="image(x1-9,y0+1,x1,y0, materiales/progressbar/td)"
+				7="image(x1-9,y0+1,x1,y0, graphics/assets/accent/materiales/accent_menuitem_h/td)"
 
                 //////////////medio derecha/////////////////////////////////////////////////////////////////////
-				10="fill(x1-9,y0+5,x1-5,y1-5, bluesito)"
+				10="fill(x1-9,y0+5,x1-5,y1-5, accent)"
  							
 				///////////////////for esquina izquierda inferior/////////////////////////////
 				////////left, bottom  ,left bottom
-				1="image(x0+4,y1-5,x0+0,y1+3, materiales/progressbar/ai)"
+				1="image(x0+5,y1-5,x0+0,y1+3, graphics/assets/accent/materiales/accent_menuitem_h/ai)"
 
 				/////////////////////for esquina inferior derecha//////////////////////////////////////////////////////
-				8="image(x1-9,y1-5,x1,y1+2, materiales/progressbar/ad)"
+				8="image(x1-9,y1-5,x1,y1+2, graphics/assets/accent/materiales/accent_menuitem_h/ad)"
 			}
     }
     account_menu_button:active
@@ -72,16 +75,24 @@
     }
     account_menu_label {
 					
-			font-size=16
-			font-family=basefont
-			textcolor=darkblue
-      padding-right=6
+	  	font-size=18
+			font-family=semibold2
+			textcolor=accent
+			font-style=none
+			 
 			
 				
 		}
+    account_menu_label:hover
+    {
+      
+     	textcolor=accent_h
+    }
 
 			
-		
+		 wallet_amount_label {
+      render_bg {}
+        }
     
     
   }
@@ -89,45 +100,43 @@
   layout
 
   {
-    
-    place {       control="view_profile_button, "       align=left       margin-left=1       margin-top=4        height=24       width=max      }
+        place { control=account_name_label,wallet_amount_label spacing=4 align=left margin-left=14 margin-top=8  }
 
-    place {       control="view_account_button"         align=left        margin-left=1        margin-top=28       height=24       width=max      }
+    place {       control="view_profile_button, "           margin-top=38         height=32       width=max      }
+
+    place {       control="view_account_button"         start="view_profile_button" height=32 dir=down margin-top="2" width=max   }
     
+     place { 
+      
+      control="view_preferences_button" 
+      start=view_account_button
+      height=32 
+      width=max 
+      dir=down
+      margin-top="2"
+      
+      }
+       place { 
+
+      control="view_wallet_button, " 
+     
+      start=view_preferences_button
+      height=32 
+      dir=down
+      margin-top=4
+      width=max 
+      
+      }
     place { 
       
       control="change_user_button" 
-      align=left 
-      margin-left=1 
-      margin-top=100 
-      height=24 
+     
+      start=view_wallet_button
+      margin-top=4
+      height=32 
       width=max 
-      
-      }
-      
-    place { 
-      
-      control="view_preferences_button" 
-      align=left 
-      margin-left=1 
-      margin-top=52 
-      height=24 
-      width=max 
-      
-      }
-    
-    place { 
-
-      control="view_wallet_button, " 
-      align=left 
-      margin-left=1 
-      margin-top=76 
-      height=24 
-      width=max 
-      
-      }
-    
-    ///////////for agregar de nuevo///////////////
+      dir=down
+   }
     
   }
 }

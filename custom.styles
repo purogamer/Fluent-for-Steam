@@ -8,7 +8,7 @@ static="Segoe UI Variable Static Text"
 overlaytext="Segoe Ui Variable Display bold"
 cachetazo="Segoe UI Variable Display Semibold"
 regularfont="Segoe UI Variable Regular"
-
+Consola="Consolas"
 
 CardHighlight =  "Segoe UI Variable Static Display SemiBold"
 CardTitle = "Segoe UI Variable Static Display Bold"

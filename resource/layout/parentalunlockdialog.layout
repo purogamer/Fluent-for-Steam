@@ -25,9 +25,9 @@
 
 			font-size=26
 			font-family=cachetazo
-			textcolor=white
-			inset="18 28 0 0"
-			minimum-height=60
+			textcolor=none
+			inset="18 49 0 0"
+			minimum-height=100
 
 		}
 		FrameCloseButton 
@@ -45,17 +45,28 @@
 		}
 		ParentalUnlockDialog
 		{
-			minimum-width = 300
-			minimum-height = 242
+			minimum-width = 325
+			minimum-height = 234
 			textcolor=white
+			render_bg {
+
+				0="fill(x0,y1-81,x1,y1, none)"
+				1="image(x0+24,y0+24,x1,y1, graphics/key)"
+			
+			}
 		}
 
 		Password
 		{
 
 			inset="20 0 0 0"
-			font-size=38
+			font-size=30
 			bgcolor="none"
+			render_bg {
+
+				1="image(x0,y0,x1,y1, graphics/textentryparental)"
+
+			}
 
 		}
 
@@ -85,9 +96,9 @@
 	
 	layout
 	{
-		region { name="top" width=max height=162 margin=24 margin-top=66}
+		region { name="top" width=max height=244 margin=24  margin-top=68}
 
-		region { name="bottom" width=max height=81 align="bottom" }
+		region { name="bottom" width=max height=81  align="bottom" }
 
 		place { control="KeyImage" region="bottom" width=max height=max }
 
@@ -95,13 +106,13 @@
 		place { control="Instructions" region="top" align=center width=max }
 
 
-		place { control="Password" start=Instructions height=42 margin-top=16 dir=down region="top" width=80 }
+		place { control="Password" start=Instructions height=32 margin-top=10 dir=down region="top" width=75 }
 
 		place { control="Recovery" region="bottom" margin-left=10 margin-top=5 }
 		
 		// bottom: OK/cancel
-		place { control="OK,Cancel" region="bottom" align=top-center width=122 height=32 
-						 margin-top=25
+		place { control="OK,Cancel" region="bottom" margin=25 align=top-center width=134 height=32 
+						
 						 spacing=8 }
 	}
 

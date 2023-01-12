@@ -75,14 +75,18 @@
 	{
 		ConsolePage
 		{
-			bgcolor=ClientBG
+	bgcolor=ClientBG
+	
+      font-size=18
+      textcolor="white"
 		}
 
 		CConsoleHistory
     {
-      font-family=basefont
-      font-size=9
-      textcolor="White45"
+      font-family=monospace
+      font-size=18
+      textcolor="white75"
+	  font-weight=600
       selectedtextcolor="White"
 			padding=0
 			inset=0
@@ -90,7 +94,8 @@
 	}
 	layout
 	{
-		place { control="entry" align=top height=28 width=max }
-		place { control="console" start=entry height=max width=max dir=down }
+		region{name="consolepage" margin=14}
+		place { control="entry" margin-top=4 margin-right=12 margin-left=12 align=top height=32 width=max }
+		place { region=consolepage control="console" start="entry" margin-top=2 height=max width=max dir=down }
 	}
 }

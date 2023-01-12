@@ -231,7 +231,9 @@
 	{
 		Label
 		{
-			minimum-width=200
+			textcolor=white
+			font-size=18
+			font-family=basefont
 		}
 	}
 	layout

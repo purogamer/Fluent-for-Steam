@@ -141,7 +141,7 @@ windows.styles
 		//overlay_achievement_item.layout override 
 		Label
 		{
-			font-size=16
+			font-size=18
 		}
 		
 		/////////////////////////////////////////////
@@ -358,10 +358,7 @@ windows.styles
 
 		//backupstartpage.res
 		//Backup/Restore Start Page	// linux check if it works
-		"CBackupStartPage Label"
-	    {
-			font-size=32
-	    }
+		
 
 		//SettingsSubFriends.res
 		"CSettingsSubFriends Label"

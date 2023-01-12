@@ -12,7 +12,7 @@
 				bgcolor = "ClientBG"
 			render
 			{
-				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/donate_h"
+				1 = "image(x0, y0+0, x0, y0+0, graphics/assets/accent/icons/topbar/heart"
 				2 = "image(x0+46, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/more"
 			}
 		}
@@ -20,7 +20,7 @@
 				bgcolor = "ClientBG"
 			render
 			{
-				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/donate_h"
+				1 = "image(x0, y0+0, x0, y0+0, graphics/assets/accent/icons/topbar/heart"
 				3 = "image(x0+46, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/more"
 			}
 		}
@@ -103,7 +103,7 @@
 		view_friends:hover {
 				bgcolor = "ClientBG"
 			render_bg {
-				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/color/friends"
+				1 = "image(x0, y0+0, x0, y0+0, graphics/assets/accent/icons/sidebar/friends"
 				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/hover"
 				3 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/hover"
 			}
@@ -111,7 +111,7 @@
 		view_friends:active {
 				bgcolor = "ClientBG"
 			render_bg {
-				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/color/friends"
+				1 = "image(x0, y0+0, x0, y0+0, graphics/assets/accent/icons/sidebar/friends"
 				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/hover"
 				
 			}
@@ -172,7 +172,7 @@
 
 		inboxmenuitem {
 			textcolor = "white"
-			font-size = "16"
+			font-size = "18"
 			padding-left="0"
 		}
 
@@ -190,7 +190,7 @@
 				bgcolor = "ClientBG"
 			render_bg {
 				
-				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/color/news"
+				1 = "image(x0, y0+0, x0, y0+0, graphics/assets/accent/icons/sidebar/news"
 				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/hover"
 				3 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/hover"
 				
@@ -201,7 +201,7 @@
 				bgcolor = "ClientBG"
 			render_bg {
 				
-				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/color/news"
+				1 = "image(x0, y0+0, x0, y0+0, graphics/assets/accent/icons/sidebar/news"
 				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/hover"
 				
 			}
@@ -210,7 +210,7 @@
 		announcement_button:selected {
 				bgcolor = "ClientBG"
 			render {
-				1 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/sidebar/color/alert)"
+				1 = "image(x0,y0,x1,y1,graphics/assets/accent/icons/sidebar/noti)"
 			}
 		}
 
@@ -220,10 +220,10 @@
 			textcolor = "white"	
 			font-family = "basefont"
 			font-style = "none"
-			padding-right=16
+			minimum-width=30
 			render {}
 			render_bg {
-				0 = "image(x0,y0-1,x1,y1,graphics/fluent/icons/navbar/sidebar/inbox)"
+				0 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/sidebar/inbox)"
 				
 			
 			}
@@ -234,7 +234,7 @@
 			bgcolor = "none"
 			render {}
 			render_bg {
-				0 = "image(x0,y0-1,x1,y1,graphics/fluent/icons/navbar/sidebar/hover/inbox)"
+				0 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/sidebar/hover/inbox)"
 				
 				10="fill(x0+2,y0+2,x1-2,y1-2,FFFFFFxx8)"
 
@@ -391,7 +391,7 @@
 
 		parental_lock_button:hover {
 			render_bg {
-					1 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/sidebar/color/unlock)"
+					1 = "image(x0,y0,x1,y1,graphics/assets/accent/icons/sidebar/unlock)"
 					2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/hover"
 					3 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/hover"
 			}
@@ -407,14 +407,14 @@
 
 		parental_lock_button:selected:hover {
 			render_bg {
-					1 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/sidebar/color/lock)"
+					1 = "image(x0,y0,x1,y1,graphics/assets/accent/icons/sidebar/lock)"
 					2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/hover"
 					3 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/hover"
 			}
 		}
 		parental_lock_button:selected:hover:active {
 			render_bg {
-					1 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/sidebar/color/lock)"
+					1 = "image(x0,y0,x1,y1,graphics/assets/accent/icons/sidebar/lock)"
 					2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/hover"
 			}
 		}
@@ -432,7 +432,7 @@
 		VRButton:hover {
 			textcolor=none
 			render_bg {
-				0 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/sidebar/color/headsetvr)"
+				0 = "image(x0,y0,x1,y1,graphics/assets/accent/icons/sidebar/headsetvr)"
 				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/hover"
 				3 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/hover"
 			}
@@ -443,7 +443,7 @@
 			textcolor=none
 			bgcolor = "none"
 			render_bg {
-				0 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/sidebar/color/headsetvr)"
+				0 = "image(x0,y0,x1,y1,graphics/assets/accent/icons/sidebar/headsetvr)"
 				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/hover"
 			}
 		}
@@ -451,7 +451,7 @@
 		VRButton:disabled {
 			textcolor=none
 			render_bg {
-				0 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/sidebar/color/headsetvr)"
+				0 = "image(x0,y0,x1,y1,graphics/assets/accent/icons/sidebar/headsetvr)"
 				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/hover"
 			}
 			bgcolor = "none"
@@ -475,7 +475,7 @@
 			textcolor=none
 			bgcolor="white05"
 			render_bg {
-				0 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/sidebar/color/headsetvr)"
+				0 = "image(x0,y0,x1,y1,graphics/assets/accent/icons/sidebar/headsetvr)"
 				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/hover"
 				3 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/hover"
 			}
@@ -485,7 +485,7 @@
 		{
 			bgcolor="white10"
 			render_bg {
-				0 = "image(x0,y0,x1,y1,graphics/fluent/icons/navbar/sidebar/color/headset)"
+				0 = "image(x0,y0,x1,y1,graphics/assets/accent/icons/sidebar/headset)"
 				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/hover"
 			}
 			
@@ -515,7 +515,7 @@
 			bgcolor = "ClientBG"
 			textcolor = "none"
 			render_bg {
-				1 = "image(x0, y0+1, x0, y0+0, graphics/fluent/icons/navbar/sidebar/color/bigpicture"
+				1 = "image(x0, y0+1, x0, y0+0, graphics/assets/accent/icons/sidebar/bigpicture"
 				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/hover"
 				3 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/hover"
 			}
@@ -526,7 +526,7 @@
 			
 			render_bg {
 				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/hover"
-				1 = "image(x0, y0+1, x0, y0+0, graphics/fluent/icons/navbar/sidebar/color/bigpicture"
+				1 = "image(x0, y0+1, x0, y0+0, graphics/assets/accent/icons/sidebar/bigpicture"
 				
 			}
 		}
@@ -551,7 +551,7 @@
 			textcolor = "none"
 			bgcolor=clientbg
 			render_bg {
-				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/color/addgame"
+				1 = "image(x0, y0+0, x0, y0+0, graphics/assets/accent/icons/sidebar/addgame"
 				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/hover"
 				3 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/hover"
 			}
@@ -573,9 +573,9 @@
 			bgcolor=clientbg
 			textcolor = "none"
 			render_bg {
-				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/color/addgame"
+				1 = "image(x0, y0+0, x0, y0+0, graphics/assets/accent/icons/sidebar/addgame"
 				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/hover"
-				3 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/sidebar/color/selected"
+				3 = "image(x0, y0+0, x0, y0+0, graphics/assets/accent/icons/sidebar/selected"
 			}
 		}
 
@@ -656,7 +656,6 @@ layout
 			margin-right=0
 			align=right
 			margin-top=0
-			
 			height=50	 
 			}
 			place { end-right= control=InboxB-utton height=50 width=50 align=right}
@@ -689,7 +688,7 @@ layout
 			
 			name="downloadbar" 
 			height="max" 
-			widht= 
+			
 			margin-left=6
 			 
 			

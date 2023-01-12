@@ -19,8 +19,8 @@
 			font-size=26
 			font-family=cachetazo
 			textcolor=white
-			inset="18 28 0 0"
-			minimum-height=60
+			inset="18 56 0 0"
+			minimum-height=100
 
 		}
 		FrameCloseButton 
@@ -40,9 +40,15 @@
 		
 		ParentalLockDialog
 		{
-			minimum-width = 300
-			minimum-height = 208
+			minimum-width = 325
+			minimum-height = 244
 			textcolor=white
+			render_bg {
+
+				0="fill(x0,y1-81,x1,y1, none)"
+				1="image(x0+24,y0+24,x1,y1, graphics/lock)"
+			
+			}
 		}
 
 		Hey
@@ -62,7 +68,7 @@
 	
 	layout
 	{
-		region { name="top" width=max height=162 margin=24 margin-top=66}
+		region { name="top" width=max height=244 margin=24  margin-top=102}
 		region { name="bottom" width=max height=81 align="bottom" }
 
 		place { control="KeyImage" region="bottom" width=max height=max }

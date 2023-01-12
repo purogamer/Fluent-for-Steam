@@ -1,11 +1,23 @@
 "steam/cached/BackupSelectGamesPage.res"
 {
+	Styles
+	{
+
+	"Label"
+		{
+			font-size=18
+			textcolor=white
+			font-family=basefont
+		}
+	}
 	layout
 	{
-		place { control=Label1 y=16 width=max }
-		place { start=Label1 control=AppChecklist y=6 width=max dir=down }
-
-		place { start=AppChecklist control=Label2 y=6 dir=down }
-		place { start=Label2 control=SpaceRequiredLabel x=6 }
+		region { name="top" width=max margin=8 height=250}
+		place { start=Label2  region=top  height=max control=AppChecklist width=max dir=down }
+		
+		place { control="Label1" region=top dir=down  margin-top=30  width=max }
+		place { region=top  control=Label2 start=Label1 margin-top=6 dir=down }
+		place { region=top control=SpaceRequiredLabel start=label2 margin-left=2 dir=right}
+		
 	}
 }

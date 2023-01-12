@@ -18,15 +18,15 @@
 			bgcolor="none"
 			render {
 				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/download"
+				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/download"
 			}
 		}
 		StatusLabel:hover
 		{
 			render {
-				0 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/download"
-				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/download"
+				0 = "image(x0, y0+0, x0, y0+0, graphics/assets/accent/icons/topbar/download"
+				1 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/hover"
 				2 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/hover"
-				3 = "image(x0, y0+0, x0, y0+0, graphics/fluent/icons/navbar/topbar/hover"
 				
 			}
 		}
@@ -36,7 +36,7 @@
 		// Barra de descarga
 		SlimProgressBar
 		{
-			textcolor = "darkblue"
+			textcolor = "accent"
 			bgcolor="white05"
 			render {
 				1 = "image(x0, y0, x0, y0, graphics/fluent/icons/navbar/topbar/downloadmask"

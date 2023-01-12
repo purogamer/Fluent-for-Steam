@@ -2,6 +2,61 @@
 {
 	styles
 	{
+		//////////////////////////////////////
+		//======Add Non-Steam Game Page=====//
+		CAddShortcutDialog {
+			minimum-height=475
+			render_bg {
+
+				0="fill(x0,y1-81,x1,y1, black25)"
+				1="image(x0+24,y0+24,x1,y1, graphics/)"
+			
+			}
+
+		}
+
+		/////////////////////////////////////////
+		//======Friends Game Invite Dialog=====//
+		CFriendGameInviteDialog
+		{
+			bgcolor="none"
+			render_bg
+			{
+				
+				0="fill(x0+2,y0+7,x1-2,y1-7,ClientBG)"
+
+				///////////////////esquina izquierda inferior/////////////////////////////
+				1="image(x0,y1-7,x0,y1, materiales/clientbg8px/ai)"
+
+				////////////////////parte inferior/////////////////////////////////////////
+				12="fill(x0+7,y1-7,x1-7,y1-1, ClientBG)"
+				////////////////////parte inferior/////////////////////////////////////////
+				9="fill(x0+7,y1-1,x1-7,y1, 757575xx40)"
+
+                ////////////medio de parte izquierda///////////////////////////////////////////////////
+				3="image_tiled(x0-3,y0+7,x0+2,y1-7, materiales/clientbg8px/mi)"
+				
+				//////////////////////////esquina izquierda superior///////////////////////////////////////////
+				5="image(x0,y0,x0,y0, materiales/clientbg8px/ti)"
+
+                ////////////////////////Parte del medio superior//////////////////////////////
+				10="fill(x0+7,y0+1,x1-7,y0+7, ClientBG)"
+				 ////////////////////////Parte del medio superior//////////////////////////////
+				6="fill(x0+7,y0,x1-7,y0+1, 757575xx40)"
+
+                //////////////medio derecha/////////////////////////////////////////////////////////////////////
+				4="image_tiled(x1-2,y0+7,x1+3,y1-7, materiales/clientbg8px/md)"
+
+				/////////////////////////esquina derecha superior///////////////////////////////////////////////
+				7="image(x1-7,y0,x1,y0, materiales/clientbg8px/td)"
+
+				/////////////////////esquina inferior derecha//////////////////////////////////////////////////////
+				8="image(x1-7,y1-7,x1,y1,materiales/clientbg8px/ad)"
+			
+			
+			}
+			
+		}
 		CChatRoomDlg
 		{
 			render
@@ -249,14 +304,15 @@
 
 ///////////////////////////////////
 //======Backup Wizard Dialog=====//
-		CBackupWizard
-		{
-			render_bg
-			{
-				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
-				2="fill( x0, y1-43, x1, y1, Header_Dark )"
+		"CBackupWizard" {
+			render_bg {
+
+				0="fill(x0,y1-81,x1,y1, black25)"
+				
+
 			}
 		}
+		
 
 ///////////////////////////////////////////
 //======Steam Already Running Dialog=====//
@@ -285,45 +341,7 @@
 
 /////////////////////////////////
 //======Manger de capturas=====//
-		CScreenshotManager
-		{
-			bgcolor="none"
-			render_bg
-			{
-				
-				0="fill(x0+2,y0+7,x1-2,y1-7,ClientBG)"
-
-				///////////////////esquina izquierda inferior/////////////////////////////
-				1="image(x0,y1-7,x0,y1, materiales/clientbg8px/ai)"
-
-				////////////////////parte inferior/////////////////////////////////////////
-				10="fill(x0+7,y1-7,x1-7,y1-1, ClientBG)"
-				////////////////////parte inferior/////////////////////////////////////////
-				9="fill(x0+7,y1-1,x1-7,y1, 757575xx40)"
-
-                ////////////medio de parte izquierda///////////////////////////////////////////////////
-				3="image_tiled(x0-3,y0+7,x0+2,y1-7, materiales/clientbg8px/mi)"
-				
-				//////////////////////////esquina izquierda superior///////////////////////////////////////////
-				5="image(x0,y0,x0,y0, materiales/clientbg8px/ti)"
-
-                ////////////////////////Parte del medio superior//////////////////////////////
-				10="fill(x0+7,y0+1,x1-7,y0+7, ClientBG)"
-				 ////////////////////////Parte del medio superior//////////////////////////////
-				6="fill(x0+7,y0,x1-7,y0+1, 757575xx40)"
-
-                //////////////medio derecha/////////////////////////////////////////////////////////////////////
-				4="image_tiled(x1-2,y0+7,x1+3,y1-7, materiales/clientbg8px/md)"
-
-				/////////////////////////esquina derecha superior///////////////////////////////////////////////
-				7="image(x1-7,y0,x1,y0, materiales/clientbg8px/td)"
-
-				/////////////////////esquina inferior derecha//////////////////////////////////////////////////////
-				8="image(x1-7,y1-7,x1,y1,materiales/clientbg8px/ad)"
-			
-			
-			}
-		}
+		
 		CScreenshotDeleteDialog
 		{
 			render_bg
@@ -377,17 +395,7 @@
 			}
 		}
 
-//////////////////////////////////////
-//======Add Non-Steam Game Page=====//
-		CAddShortcutDialog
-		{
-			render_bg
-			{
-				//Bottom
-				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
-				2="fill( x0, y1-43, x1, y1, Header_Dark )"
-			}
-		}
+
 
 ///////////////////////////////
 //======View CD-Key Page=====//
@@ -460,17 +468,6 @@
 			}
 		}
 
-/////////////////////////////////////////
-//======Friends Game Invite Dialog=====//
-		CFriendGameInviteDialog
-		{
-			bgcolor="ClientBG"
-			render_bg
-			{
-				1="fill( x0, y1-44, x1, y1-43, frameBorder )"
-				2="fill( x0, y1-43, x1, y1, Header_Dark )"
-			}
-		}
 
 		CInternetGames
 		{

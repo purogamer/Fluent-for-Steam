@@ -12,6 +12,36 @@
 	styles
 	{
 
+		ListPanelColumnheader {
+			bgcolor=none
+			render_bg { 
+
+				1="image(x1-24,y0+7,x1,y1, graphics/textsort)"
+				
+
+			}
+		}
+		ListPanelColumnheader:hover {
+			bgcolor=none
+			render_bg { 
+
+				1="image(x1-24,y0+7,x1,y1, graphics/textsort)"
+				2="image(x1-24,y0+7,x1,y1, graphics/textsort)"
+				3="image(x1-24,y0+7,x1,y1, graphics/textsort)"
+
+			}
+		}
+		ListPanelColumnheader:active:selected {
+			bgcolor=red
+			render_bg { 
+
+				1="image(x1-24,y0+7,x1,y1, graphics/textsort2)"
+				2="image(x1-24,y0+7,x1,y1, graphics/textsort2)"
+				3="image(x1-24,y0+7,x1,y1, graphics/textsort2)"
+
+			}
+		}
+
 			ListPanel
 		{
 			selectedbgcolor=white03

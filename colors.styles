@@ -3,15 +3,25 @@
 	include "custom.styles"
 	colors
 	{
-// _a = active (clicked, hover, focused)
+
 // _h = hover
-// _c = clicked
+// _p = clicked
 // _d = disabled
 
 ////////////////////////
 //======No Color======//
 		none="0 0 0 0"
 
+/////////////////////////////////////
+//======Base Background Color======//
+		ClientBG="25 25 25 255" Colorpa
+		ClientBGa="25 25 25 145" Colorpa
+		ClientBGTransparent="43 43 43 255"
+		ClientBGHeader="32 33 44 255" 
+		ClientBGHeader2="35 36 47 255"
+		//Alt ClientBGHeaderAlt"28 29 40 255" 
+		ingamecard = "30 41 29 255"
+		onlinecard = "25 39 50 255"
 ///////////////////////////
 //======Base Colors======//
 		white01="255 255 255 1"
@@ -32,8 +42,9 @@
 		white95="255 255 255 231.25"
 		white="255 255 255 255"
 		
-		
+		black01="0 0 0 1"
 		black03="0 0 0 7.65"
+		black05="0 0 0 12.75"
 		black08="0 0 0 20.4"
 		black05="0 0 0 12.75"
 		black10="0 0 0 25.5"
@@ -41,10 +52,11 @@
 		black15="0 0 0 38.25"
 		black20="0 0 0 51"
 		black24="0 0 0 61.2"
-		black35="0 0 0 106"
 		black25="0 0 0 63.75"
+		black35="0 0 0 106"
 		black45="0 0 0 114.75"
 		black75="0 0 0 191.25"
+		black95="0 0 0 231.25"
 		black="0 0 0 255"
 
 
@@ -63,25 +75,17 @@
 		Red="255 0 0 255"
 		Red45="255 0 0 114.75"
 		Red75="255 0 0 191.25"
-/////////////////////////////////////
-//======Base Background Color======//
-		ClientBG="25 25 25 255" Colorpa
-		ClientBGa="25 25 25 145" Colorpa
-		ClientBGTransparent="43 43 43 255"
-		ClientBGHeader="32 33 44 255" 
-		ClientBGHeader2="35 36 47 255"
-		//Alt ClientBGHeaderAlt"28 29 40 255" 
-		ingamecard = "30 41 29 255"
-		onlinecard = "25 39 50 255"
-		darkblue="19 94 242 255"
+
+		
+		accent175="19 94 242 175"
 		logrosbackground105="88 88 88 105"
-		darkbluea="19 25 37 255"
-		darkblueabg="25 32 47 255"
+		
+		
+	
 		panele="19 19 19 255"
 		scrollbardark="255 255 255 139"
 		/////////////HEX//////////////
-		135EF2xx100 = "19 94 242 255"
-		135EF2xx12 = "19 94 242 31"
+	
 		199FFFxx12 = "25 159 255 28"
 		4DAE41xx11 = "73 173 64 28"
 		FFFFFFxx419 = "255 255 255 11"
@@ -115,7 +119,7 @@ botoncoloractive = "39 39 39 255"
 
 /////////////////////////////
 //======LIST DROPDOWN=======///
-		bluesito = "42 115 255 255"
+		
 		darksito = "25 25 25 255"
 		transparencia = "30 30 31 255"
 /////////////////////////////

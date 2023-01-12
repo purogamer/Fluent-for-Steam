@@ -1,0 +1,28 @@
+"resource/layout/backupwizard.layout"
+{
+
+	styles {
+		label {
+			textcolor=white
+			font-size=18
+		}
+		"CBackupwizard FrameCloseButton" {
+			render_bg{}
+			render {}
+			bgcolor=none
+		}
+		"CBackupwizard FrameCloseButton:hover"{
+			render_bg{}
+			render {}
+			bgcolor=none
+		}
+	}
+	layout
+	{
+		//Content
+		place { control="Label1,AppChecklist,Label2" y=0 dir=down spacing=8 }
+		//Footer
+		region { name=bottom align=bottom height=81  margin=24 }
+		place { control="PrevButton,NextButton,FinishButton,CancelButton" region=bottom height=32 width=162 spacing=8 }
+	}
+}

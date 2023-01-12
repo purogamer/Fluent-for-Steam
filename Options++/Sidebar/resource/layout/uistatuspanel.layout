@@ -16,8 +16,8 @@
 			bgcolor="none"
 			render
 			{
-				0="image(x0+6,y0+2,x8,y1,graphics/fluent/icons/navbar/sidebar/download)"
-				1="image(x0+6,y0+2,x8,y1,graphics/fluent/icons/navbar/sidebar/download)"
+				0="image(x0,y0+2,x8,y1,graphics/fluent/icons/navbar/sidebar/download)"
+				1="image(x0,y0+2,x8,y1,graphics/fluent/icons/navbar/sidebar/download)"
 			}
 		}
 		StatusLabel:hover
@@ -26,9 +26,9 @@
 			textcolor="none"
 			render
 			{
-				0="image(x0+6,y0+2,x8,y1,graphics/fluent/icons/navbar/sidebar/color/download)"
-				1="image(x0+6,y0+2,x8,y1,graphics/fluent/icons/navbar/sidebar/hover)"
-				2="image(x0+6,y0+2,x8,y1,graphics/fluent/icons/navbar/sidebar/hover)"
+				0="image(x0,y0+2,x8,y1,graphics/assets/accent/icons/sidebar/download)"
+				1="image(x0,y0+2,x8,y1,graphics/fluent/icons/navbar/sidebar/hover)"
+				2="image(x0,y0+2,x8,y1,graphics/fluent/icons/navbar/sidebar/hover)"
 
 			}
 		}
@@ -38,8 +38,8 @@
 			textcolor="none"
 			render
 			{
-				0="image(x0+6,y0+2,x8,y1,graphics/fluent/icons/navbar/sidebar/color/download)"
-				1="image(x0+6,y0+2,x8,y1,graphics/fluent/icons/navbar/sidebar/hover)"
+				0="image(x0,y0+2,x8,y1,graphics/assets/accent/icons/sidebar/download)"
+				1="image(x0,y0+2,x8,y1,graphics/fluent/icons/navbar/sidebar/hover)"
 				
 			}
 		}
@@ -49,7 +49,7 @@
 			textcolor="none"
 			render
 			{
-				0="image(x0+6,y0+2,x8,y1,graphics/fluent/icons/navbar/sidebar/color/download)"
+				0="image(x0+6,y0+2,x8,y1,graphics/assets/accent/icons/sidebar/download)"
 				1="image(x0+6,y0+2,x8,y1,graphics/fluent/icons/navbar/sidebar/hover)"
 				
 			}

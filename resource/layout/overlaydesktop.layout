@@ -8,30 +8,30 @@
 			sidemenu {
 			font-size=18
 			font-family=semibold2
-			textcolor=darkblue
+			textcolor=accent
 			padding-left=8
 			padding-right=8
 			font-style=none
 			  render_bg {
 
-				0="fill(x0+10,y0+0,x1-9,y1+1,135EF2xx12 )"
+				0="fill(x0+10,y0+0,x1-9,y1+1,accent_alpha_31 )"
 			
              			
 				//////////////////////////for esquina "izquierda"  superior///////////////////////////////////////////
-				5="image(x0+0,y0-0,x0,y0, materiales/135EF2%12/ti)"
+				5="image(x0+0,y0-0,x0,y0, graphics/assets/accent/materiales/accent_alpha_31_url/ti)"
       
 	  			///////////////////for esquina "izquierda" inferior/////////////////////////////
 				////////left, bottom  ,left bottom
-				1="image(x0+0,y1-9,x0,y1, materiales/135EF2%12/ai)"
+				1="image(x0+0,y1-9,x0,y1, graphics/assets/accent/materiales/accent_alpha_31_url/ai)"
 
 					/////////////////////////for esquina derecha superior///////////////////////////////////////////////
-				7="image(x1-9,y0,x1,y0, materiales/135EF2%12/td)"
+				7="image(x1-9,y0,x1,y0, graphics/assets/accent/materiales/accent_alpha_31_url/td)"
 				/////////////////////for esquina inferior derecha//////////////////////////////////////////////////////
-				8="image(x1-9,y1-9,x1,y1, materiales/135EF2%12/ad)"
+				8="image(x1-9,y1-9,x1,y1, graphics/assets/accent/materiales/accent_alpha_31_url/ad)"
 			}
 		}
 		sidemenu:hover {
-			textcolor=bluesito
+			textcolor=accent_h
 			
 		}
 			
@@ -45,26 +45,26 @@
 		{
 			font-size=18
 			font-family=semibold2
-			textcolor=darkblue
+			textcolor=accent
 			padding-left=8
 			padding-right=8
 			font-style=none
 			  render_bg {
 
-				0="fill(x0+10,y0+0,x1-9,y1+1,135EF2xx12 )"
+				0="fill(x0+10,y0+0,x1-9,y1+1,accent_alpha_31 )"
 			
              			
 				//////////////////////////for esquina "izquierda"  superior///////////////////////////////////////////
-				5="image(x0+0,y0-0,x0,y0, materiales/135EF2%12/ti)"
+				5="image(x0+0,y0-0,x0,y0, graphics/assets/accent/materiales/accent_alpha_31_url/ti)"
       
 	  			///////////////////for esquina "izquierda" inferior/////////////////////////////
 				////////left, bottom  ,left bottom
-				1="image(x0+0,y1-9,x0,y1, materiales/135EF2%12/ai)"
+				1="image(x0+0,y1-9,x0,y1, graphics/assets/accent/materiales/accent_alpha_31_url/ai)"
 
 					/////////////////////////for esquina derecha superior///////////////////////////////////////////////
-				7="image(x1-9,y0,x1,y0, materiales/135EF2%12/td)"
+				7="image(x1-9,y0,x1,y0, graphics/assets/accent/materiales/accent_alpha_31_url/td)"
 				/////////////////////for esquina inferior derecha//////////////////////////////////////////////////////
-				8="image(x1-9,y1-9,x1,y1, materiales/135EF2%12/ad)"
+				8="image(x1-9,y1-9,x1,y1, graphics/assets/accent/materiales/accent_alpha_31_url/ad)"
 			}
 		
 		}
@@ -78,30 +78,44 @@
 		/////hora real
 		topbar
 		{
-			textcolor="none"
-			font-family="cachetazo"
-			font-style="regular"
-			font-size="32"
-			
+			textcolor="white45"
+			inset="26 57 0 0"
+			font-family="basefont"
+			font-size=16
+			font-family=semibold2
+			bgcolor=none
+			render_bg
+			{
+				2="image( x0, y0+0, x0, y0+0, graphics/overlay/bottom/clock)"
+				
+				
+			}
+		}
+		topbar:hover
+		{
+			textcolor="white"
+			font-family="basefont"
+			font-size=16
+			font-family=semibold2
+			bgcolor=none
+			render_bg
+			{
+				1="image( x0, y0+0, x0, y0+0, graphics/overlay/bottom/hover)"
+				2="image( x0, y0+0, x0, y0+0, graphics/overlay/bottom/hover/clock)"
+				
+			}
 		}
 	}
 	layout
 	{
 		//botones quitar, workshop etc//
-		region {
-
-			name="bottom"
-			align=bottom
-			height=140
-			
-
-		}
+		
 		
 		place { 
 			
 			region="botones"
 			control=",WorkshopButton,EditControllerConfig, ForceQuitButton, WebSiteButton, GameGroupsButton, " 
-			spacing=12
+			spacing=8
 			dir=down
 			align=right
 			margin-top=42
@@ -169,11 +183,11 @@
 			
 		}
 
-        ////====Logros====////
+        ////====topbar clock====////
 		place {
 			
 			
-			control=" clock, clocksuffix"
+			control=" , clocksuffix"
 			align=bottom-right
 			margin-bottom=35
 			dir=down
@@ -187,31 +201,56 @@
 
 		////Tiempos de juegos//// ////===s==////
 		place { 
-			
+
 			control="SessionText,TwoWeeksText,ForeverText"
 			align=left
 			dir=down
+			spacing=8
 			margin-left=24		
 			margin-top=35
-			spacing=8
+			
 			
 			}
 
+	
+		
+
+
 
 		
+		region {
+
+			name="bottom"
+			align=bottom
+			height=140
+			
+
+		}
 	
+		place { 
+			
+			control="AchievementsDetailPanel"
+			width=320
+			dir=right
+			height=90
+			margin-left=12
+			start="CommunityDiscussionsDetailPanel"
+			spacing=8
+			
+			
+		}
 
 		place {	
 
 			region=bottom
-			control="CommunityHubDetailPanel,ScreenshotsDetailPanel, GuidesDetailPanel, CommunityDiscussionsDetailPanel,FriendsDetailPanel,AchievementsDetailPanel  ,"
+			control="CommunityHubDetailPanel,FriendsDetailPanel,ScreenshotsDetailPanel,clock,GuidesDetailPanel, CommunityDiscussionsDetailPanel"
+			margin-left=-320
 			align=top-center
 			height="90"
 			width="98"
 			align=left
 			margin-top=20
 			dir=right
-			
 			spacing=8
 			
 			

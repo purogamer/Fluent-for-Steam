@@ -2,16 +2,27 @@
 {
 	styles
 	{
-		Label
-	    {
+		RadioButton {
+			textcolor=white75
+			minimum-width=643
+		}
+		RadioButton:hover {
 			textcolor=white
-			font-family=light
-			font-weight=300
-	    }
+		}
+		RadioButton:selected {
+			textcolor=white
+		}
+	   "Label"
+		{
+			font-size=18
+			textcolor=white
+			font-family=basefont
+		}
 	}
 	layout
 	{
-		place {	control="Label1" x=6 y=16 }
-		place {	control="RadioButtonBackup,RadioButtonRestore" start=Label1 width=360 x=0 y=6 dir=down spacing=0 }
+		region { name="top" width=max margin=8 margin-top=30}
+		place { control="Label1," region=top dir=down  width=max }
+		place { region=top starT=label1 margin-top=6 spacing=2 dir=down control=RadioButtonBackup,RadioButtonRestore }
 	}
 }

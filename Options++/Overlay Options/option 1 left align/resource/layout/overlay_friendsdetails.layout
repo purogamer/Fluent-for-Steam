@@ -1,0 +1,88 @@
+"resource/layout/overlay_friendsdetails.layout"
+{
+	colors
+	{
+		
+	}	
+	
+	styles
+	{	
+		highlight {
+			textcolor=none
+		}
+	
+		Button
+		{
+			bgcolor="none"
+			textcolor="none"
+			render_bg
+			{
+				1="image( x0, y0+0, x0, y0+0, graphics/overlay/bottom/friends&chat)"
+			}
+		}
+		Button:hover
+		{
+			render_bg
+			{
+				1="image( x0, y0+0, x0, y0+0, graphics/overlay/bottom/hover)"
+				2="image( x0, y0+0, x0, y0+0, graphics/overlay/bottom/hover/friends&chat)"
+				
+			}	
+		}
+		Button:active
+		{
+			render_bg
+			{
+				1="image( x0, y0+0, x0, y0+0, graphics/overlay/bottom/hover)"
+				2="image( x0, y0+0, x0, y0+0, graphics/overlay/bottom/friends&chat)"
+			}		
+		}
+		
+		FriendsGrid
+		{
+			
+			bgcolor=none
+
+		}	
+	
+	}
+	
+	layout
+	{
+		///====label====///
+		place { controls=AllFriendsButton width=max height=max }
+
+		region {
+
+			name="text"
+			align=bottom
+						
+
+
+		}	
+		place { 
+			
+			
+			margin-top=65
+			align=top-center
+		    control="TitleText"   
+			
+	    }
+		region {
+
+			name="box"
+		    margin-left=9999
+
+
+		}	
+		
+		
+	
+		
+		place { controls="TextThisManyFriends" start= dir=down margin-top=2 region=text }
+	
+		
+		
+		place { controls=ViewPlayersButton,grid region=box spacing=10 align=bottom height=24  margin-left=9999 margin-bottom=20 }
+	}
+}
