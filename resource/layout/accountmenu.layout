@@ -10,8 +10,9 @@
           1="image(x0+12, y0+8, x1, y1, accountbutton/verperfil)"
           2="image(x0+12, y0+32, x1, y1, accountbutton/detallecuenta)"
           3="image(x0+12, y0+56, x1, y1, accountbutton/preferenciacuenta)"
-          4="image(x0+12, y0+80, x1, y1, accountbutton/billetera)"
-          5="image(x0+12, y0+104, x1, y1, accountbutton/cerrarsesion)"
+          4="image(x0+12, y0+128, x1, y1, accountbutton/billetera)"
+          5="image(x0+12, y0+80, x1, y1, accountbutton/cerrarsesion)"
+          6="image(x0+12, y0+104, x1, y1, accountbutton/changeacc)"
       }
     }
 
@@ -79,10 +80,6 @@
 			
 				
 		}
-
-			
-		
-    
     
   }
 
@@ -90,21 +87,27 @@
 
   {
     
-    place {       control="view_profile_button, "       align=left       margin-left=1       margin-top=4        height=24       width=max      }
+    place {     
 
-    place {       control="view_account_button"         align=left        margin-left=1        margin-top=28       height=24       width=max      }
-    
-    place { 
-      
-      control="change_user_button" 
-      align=left 
-      margin-left=1 
-      margin-top=100 
-      height=24 
-      width=max 
+       control="view_profile_button"       
+       align=left       
+       margin-left=1       
+       margin-top=4        
+       height=24       
+       width=max      
+       
+       }
+
+    place {       
+      control="view_account_button"        
+      align=left        
+      margin-left=1        
+      margin-top=28       
+      height=24       
+      width=max      
       
       }
-      
+
     place { 
       
       control="view_preferences_button" 
@@ -115,13 +118,32 @@
       width=max 
       
       }
-    
+    place { 
+      control="sign_out_button"  
+      align=left 
+      margin-left=1 
+      margin-top=76 
+      height=24 
+      width=max 
+      }
+
+    place { 
+      
+      control="change_user_button" 
+      align=left 
+      margin-left=1 
+      margin-top=100 
+      height=24 
+      width=max 
+      
+      }
+
     place { 
 
       control="view_wallet_button, " 
       align=left 
       margin-left=1 
-      margin-top=76 
+      margin-top=124
       height=24 
       width=max 
       
