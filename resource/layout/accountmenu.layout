@@ -12,6 +12,7 @@
           3="image(x0+12, y0+56, x1, y1, accountbutton/preferenciacuenta)"
           4="image(x0+12, y0+80, x1, y1, accountbutton/billetera)"
           5="image(x0+12, y0+104, x1, y1, accountbutton/cerrarsesion)"
+          // TODO: Another button for Steams new "Log Out" feature needs added here: "6="image(x0+12, y0+128, x1, y1, accountbutton/cerrarsteam)"" Should work after changes to 'accountbutton'
       }
     }
 
