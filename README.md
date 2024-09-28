@@ -57,7 +57,7 @@
 <!-- Sobre este projecto -->
 # About The Project 📢 - Update for new client Cooming Soon! - Sneak Peak.
 ![NVIDIA_Overlay_FTo2XI9THm](https://github.com/user-attachments/assets/aebe6570-1dbc-4612-b0fb-e608bc5d2e1f)
-
+![image](https://user-images.githubusercontent.com/87723899/145313137-8fd615a1-37b7-40a2-991e-e6733cb14a63.png)
 
 
 "This is a simple skin which turns the old steam design into a completely renewed one, this skin is inspired by the Microsft Store Fluent Design template launched with Windows 11." 
