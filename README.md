@@ -88,6 +88,8 @@ Fluent for Steam is a skin that is based on the "Windows 11 design principles". 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 # Support the project! 💰💸
+
+
 ![Steam](https://github.com/user-attachments/assets/dc3f8f28-fff5-47bc-9514-dac7e0f2a3e1)
 If you liked the work, think that every corner of this skin is made with dedication, and it is completely free! But time is not free and if you want this project to continue more and more active you can contribute by donating in the following networks
 
@@ -141,6 +143,8 @@ The rounded edges only work on Windows 11. This skin was created only for Window
 
 <!-- USAGE EXAMPLES -->
 # Screenshots 📷
+![NVIDIA_Overlay_0IxQqvd1p6](https://github.com/user-attachments/assets/06d9bdc5-19ec-4320-bd08-4ed0f4fec3c7)
+
 ![NVIDIA_Overlay_xSTpoVPALc](https://github.com/user-attachments/assets/dc3f8f28-fff5-47bc-9514-dac7e0f2a3e1)
 
 ![NVIDIA_Overlay_ObbYQTp6Lp](https://github.com/user-attachments/assets/dd84ecde-979f-4884-9ede-977293924ce7)
