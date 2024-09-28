@@ -57,7 +57,7 @@
 <!-- Sobre este projecto -->
 # About The Project 📢 - Update for new client Cooming Soon! - Sneak Peak.
 ![Steam1](https://github.com/user-attachments/assets/aebe6570-1dbc-4612-b0fb-e608bc5d2e1f)
-![Steam](https://github.com/user-attachments/assets/dc3f8f28-fff5-47bc-9514-dac7e0f2a3e1)
+
 
 
 "This is a simple skin which turns the old steam design into a completely renewed one, this skin is inspired by the Microsft Store Fluent Design template launched with Windows 11." 
@@ -88,7 +88,7 @@ Fluent for Steam is a skin that is based on the "Windows 11 design principles". 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 # Support the project! 💰💸
-
+![Steam](https://github.com/user-attachments/assets/dc3f8f28-fff5-47bc-9514-dac7e0f2a3e1)
 If you liked the work, think that every corner of this skin is made with dedication, and it is completely free! But time is not free and if you want this project to continue more and more active you can contribute by donating in the following networks
 
 <p align="right">(<a href="#top">back to top</a>)</p>
