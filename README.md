@@ -141,6 +141,7 @@ The rounded edges only work on Windows 11. This skin was created only for Window
 
 <!-- USAGE EXAMPLES -->
 # Screenshots 📷
+![NVIDIA_Overlay_ObbYQTp6Lp](https://github.com/user-attachments/assets/dd84ecde-979f-4884-9ede-977293924ce7)
 
 ##### Steam with Fluent For Steam and Microsoft Store comparision
 ![image](https://user-images.githubusercontent.com/87723899/145313137-8fd615a1-37b7-40a2-991e-e6733cb14a63.png)
