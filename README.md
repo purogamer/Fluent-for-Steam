@@ -32,7 +32,7 @@
     
   </a>
 
-
+## OUTDATED - NEW VERSION IN PROGRESS
 ## Special thanks to [JoTech](https://twitter.com/JoTechOfficial) for sponsoring the project.   ♥️
  
  
