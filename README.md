@@ -143,6 +143,10 @@ The rounded edges only work on Windows 11. This skin was created only for Window
 
 <!-- USAGE EXAMPLES -->
 # Screenshots 📷
+17/11/2024 Platform System WIP
+![NVIDIA_Overlay_4IcZxcSqPO](https://github.com/user-attachments/assets/5fff276d-364e-4aab-b66b-240e67932ba7)
+![steamwebhelper_3afiTXR8VL](https://github.com/user-attachments/assets/8cba15bb-8b0f-4b03-9288-967815999eaf)
+
 MORE PROGRESS
 30/10/24/
 ![E3x4fv5plk](https://github.com/user-attachments/assets/17a1f9cf-8d03-41ab-a05c-f0346cc33363)
