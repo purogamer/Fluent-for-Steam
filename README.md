@@ -143,6 +143,11 @@ The rounded edges only work on Windows 11. This skin was created only for Window
 
 <!-- USAGE EXAMPLES -->
 # Screenshots 📷
+23//11/2024 wip Integration with SteamGridDB V2 API
+This feature integrates with the SteamGridDB V2 API to automatically set 512x512 or 1024x1024 covers, always selecting the most upvoted artwork. It also works for non-Steam games, so you'll never need to manually select your artwork again.
+![NVIDIA_Overlay_QqtsJuHa8b](https://github.com/user-attachments/assets/7c0940d7-3eb8-424a-9a6e-54781119a3c6)
+
+
 17/11/2024 Platform System WIP
 ![NVIDIA_Overlay_4IcZxcSqPO](https://github.com/user-attachments/assets/5fff276d-364e-4aab-b66b-240e67932ba7)
 ![steamwebhelper_3afiTXR8VL](https://github.com/user-attachments/assets/8cba15bb-8b0f-4b03-9288-967815999eaf)
