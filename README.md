@@ -144,7 +144,8 @@ The rounded edges only work on Windows 11. This skin was created only for Window
 <!-- USAGE EXAMPLES -->
 # Screenshots 📷
 3/12/2024 wip collection icon & color
-![steamwebhelper_6TDpGooszl](https://github.com/user-attachments/assets/f8f40ab4-addf-4d6e-9926-b52c22ad7253)
+![steamwebhelper_odZDuSDX5S](https://github.com/user-attachments/assets/7f263c35-8f8b-4f27-9a2f-f4ad701b9503)
+
 
 ![steamwebhelper_6TDpGooszl](https://github.com/user-attachments/assets/434fd68b-de93-4ffd-9761-04c254617b34)
 
